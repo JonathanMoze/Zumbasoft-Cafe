@@ -1,0 +1,45 @@
+﻿using SQLite;
+using SQLiteNetExtensions.Attributes;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ZumbaSoft.Model
+{
+    public class Utilisateur : Personne
+    {
+
+        public string login { get; set; }
+
+        public string mot_de_passe { get; set; }
+
+        public string poste { get; set; }
+
+        public DateTime date_embauche { get; set; }
+
+        public int heures_par_semaine { get; set; }
+
+        //Association FicheDePaye
+        [OneToMany]
+        public List<FicheDePaye> ficheDePayes { get; set; }
+
+        //Association Panier
+        [OneToMany]
+        public List<Panier> paniersVendus { get; set; }
+
+        //Association Magasin
+        [OneToMany]
+        public List<Magasin> magasins { get; set; }
+
+        //Association Disponibilite
+        [OneToMany]
+        public List<Disponibilite> dispos { get; set; }
+
+        //Association Role
+        [OneToOne]
+        public Role role { get; set; }
+
+        [ForeignKey(typeof(Role))]
+        public int id_role { get; set; }
+    }
+}

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30128.74
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZumbaSoft", "ZumbaSoft\ZumbaSoft.csproj", "{D14FA8AE-1E41-45C6-876D-9C0F6A9AF7A6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D14FA8AE-1E41-45C6-876D-9C0F6A9AF7A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D14FA8AE-1E41-45C6-876D-9C0F6A9AF7A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D14FA8AE-1E41-45C6-876D-9C0F6A9AF7A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D14FA8AE-1E41-45C6-876D-9C0F6A9AF7A6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {01E241C1-98F1-40F3-B46B-74E3F92E2DC6}
+	EndGlobalSection
+EndGlobal
