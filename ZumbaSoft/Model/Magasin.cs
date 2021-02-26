@@ -40,5 +40,10 @@ namespace ZumbaSoft.Model
         [OneToMany]
         public List<Panier> paniers { get; set; }
 
+        public override string ToString()
+        {
+            return id_magasin.ToString();
+        }
+
     }
 }

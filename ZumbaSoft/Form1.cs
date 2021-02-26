@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Windows.Forms;
 using ZumbaSoft.Model;
+using ZumbaSoft.Fenetres_Magasin;
 
 namespace ZumbaSoft
 {
@@ -15,6 +16,8 @@ namespace ZumbaSoft
         {
             InitializeComponent();
             SQLiteConnection db = InitializeDataBase();
+            AccueilMagasin m = new AccueilMagasin(db);
+            m.Show();
             db.Close();
         }
 
