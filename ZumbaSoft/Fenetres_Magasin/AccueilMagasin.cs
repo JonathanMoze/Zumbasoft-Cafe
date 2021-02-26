@@ -14,5 +14,20 @@ namespace ZumbaSoft.Fenetres_Magasin
         {
             InitializeComponent();
         }
+
+        private void boutonSupprimer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void boutonModifier_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void boutonAjouter_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
