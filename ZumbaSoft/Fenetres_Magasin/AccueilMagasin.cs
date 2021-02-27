@@ -17,10 +17,6 @@ namespace ZumbaSoft.Fenetres_Magasin
         public AccueilMagasin(SQLiteConnection db)
         {
             InitializeComponent();
-            for(int i=0; i < 5; i++)
-            {
-                db.Insert(new Magasin() { mot_de_passe = i.ToString() });
-            }
             initListMagasin(db);
             
         }
