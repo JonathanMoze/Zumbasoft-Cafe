@@ -12,15 +12,15 @@ namespace ZumbaSoft.Model
         public int id_adresse { get; set; }
 
         [NotNull]
-        public int code_postal { get; set; }
+        public string adresse { get; set; }
+
+        [NotNull]
+        public string code_postal { get; set; }
 
         [NotNull]
         public string ville { get; set; }
 
         public string complement { get; set; }
 
-        //Association Personne
-        [OneToMany]
-        public List<Personne> personnes { get; set; }
     }
 }
