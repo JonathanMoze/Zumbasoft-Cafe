@@ -11,13 +11,10 @@ namespace ZumbaSoft.Model
         [PrimaryKey, AutoIncrement]
         public int id_adresse { get; set; }
 
-        [NotNull]
         public string adresse { get; set; }
 
-        [NotNull]
         public string code_postal { get; set; }
 
-        [NotNull]
         public string ville { get; set; }
 
         public string complement { get; set; }

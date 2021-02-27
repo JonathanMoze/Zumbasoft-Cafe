@@ -32,17 +32,17 @@ namespace ZumbaSoft.Fenetres_Magasin
 
         public bool fieldIsValid()
         {
-            if (textBoxAdresse.Text == null)
+            if (textBoxAdresse.Text == "")
             {
                 labelErreurAdr.Visible = true;
                 return false;
             }
-            if (textBoxCodePostal.Text == null)
+            if (textBoxCodePostal.Text == "")
             {
                 labelErreurCP.Visible = true;
                 return false;
             }
-            if (textBoxVille.Text == null)
+            if (textBoxVille.Text == "")
             {
                 labelErreurVille.Visible = true;
                 return false;

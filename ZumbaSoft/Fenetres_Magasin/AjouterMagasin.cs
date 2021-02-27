@@ -7,13 +7,16 @@ using System.Text;
 using System.Windows.Forms;
 using ZumbaSoft.Model;
 using SQLite;
+using SQLiteNetExtensions;
+using SQLiteNetExtensions.Extensions;
 
 namespace ZumbaSoft.Fenetres_Magasin
 {
     public partial class AjouterMagasin : Form
     {
-        SQLiteConnection DB;
-        Magasin mag;
+        private SQLiteConnection DB;
+        public Adresse adresse;
+        public Magasin magasin;
         public AjouterMagasin(SQLiteConnection db)
         {
             InitializeComponent();
@@ -22,22 +25,28 @@ namespace ZumbaSoft.Fenetres_Magasin
 
         public Magasin initObjectMagasin()
         {
-            Magasin magasin = new Magasin();
+            magasin = new Magasin();
             magasin.mot_de_passe = textBoxMdp.Text;
+            magasin.adresse = adresse;
             return magasin;
         }
 
         public bool fieldsIsValid()
         {
-            if (textBoxMdp.Text != null)
+            if (textBoxMdp.Text == "")
             {
-                if (textBoxMdp.Text.Length <= 8 && textBoxMdp.Text.Length >= 32)
+                labelErreurMdp.Visible = true;
+                return false;
+            }
+            else
+            {
+                if (textBoxMdp.Text.Length <= 8 || textBoxMdp.Text.Length >= 32)
                 {
                     labelErreurMdp.Visible = true;
                     return false;
                 }
             }
-            if (textBoxAdr.Text == null)
+            if (textBoxAdr.Text == "")
             {
                 labelErreurAdr.Visible = true;
                 return false;
@@ -47,8 +56,13 @@ namespace ZumbaSoft.Fenetres_Magasin
 
         private void buttonOKmdp_Click(object sender, EventArgs e)
         {
-            Magasin m = initObjectMagasin();
-            DB.Insert(m);
+            if (fieldsIsValid())
+            {
+                magasin = initObjectMagasin();
+                DB.InsertWithChildren(magasin);
+                DialogResult = DialogResult.OK;
+                this.Close();
+            }
         }
 
         private void buttonAdr_Click(object sender, EventArgs e)
@@ -56,7 +70,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             NouvelleAdresse newAdr = new NouvelleAdresse(DB);
             if (newAdr.ShowDialog() == DialogResult.OK)
             {
-                mag.adresse = newAdr.adr;
+                adresse = newAdr.adr;
                 textBoxAdr.Text = newAdr.adr.adresse;
             }
         }
@@ -75,6 +89,11 @@ namespace ZumbaSoft.Fenetres_Magasin
             {
                 labelErreurAdr.Visible = false;
             }
+        }
+
+        private void buttonAnnuler_Click(object sender, EventArgs e)
+        {
+            DB.Delete(magasin);
         }
     }
 }

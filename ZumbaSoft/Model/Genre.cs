@@ -11,7 +11,6 @@ namespace ZumbaSoft.Model
         [PrimaryKey, AutoIncrement]
         public int id_genre { get; set; }
 
-        [NotNull]
         public string intitule { get; set; }
 
         //Association Produit

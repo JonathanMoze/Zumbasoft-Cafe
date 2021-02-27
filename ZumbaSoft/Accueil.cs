@@ -10,15 +10,14 @@ using ZumbaSoft.Fenetres_Magasin;
 
 namespace ZumbaSoft
 {
-    public partial class Form1 : Form
+    public partial class Accueil : Form
     {
-        public Form1()
+        SQLiteConnection db;
+
+        public Accueil()
         {
             InitializeComponent();
-            SQLiteConnection db = InitializeDataBase();
-            AccueilMagasin m = new AccueilMagasin(db);
-            m.Show();
-            db.Close();
+            db = InitializeDataBase();
         }
 
         private SQLiteConnection InitializeDataBase()
@@ -45,5 +44,10 @@ namespace ZumbaSoft
             return db;
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AccueilMagasin m = new AccueilMagasin(db);
+            m.Show();
+        }
     }
 }

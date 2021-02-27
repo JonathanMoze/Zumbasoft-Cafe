@@ -13,17 +13,19 @@ namespace ZumbaSoft.Fenetres_Magasin
 {
     public partial class AccueilMagasin : Form
     {
+        SQLiteConnection DB;
 
         public AccueilMagasin(SQLiteConnection db)
         {
             InitializeComponent();
-            initListMagasin(db);
+            DB = db;
+            initListMagasin();
             
         }
 
-        public void initListMagasin(SQLiteConnection db)
+        public void initListMagasin()
         {
-            foreach(Magasin m in db.GetAllWithChildren<Magasin>()){
+            foreach(Magasin m in DB.GetAllWithChildren<Magasin>()){
                 listMagasin.Items.Add(m);
             }
         }
@@ -40,7 +42,13 @@ namespace ZumbaSoft.Fenetres_Magasin
 
         private void boutonAjouter_Click(object sender, EventArgs e)
         {
-
+            AjouterMagasin ajouterMagasin = new AjouterMagasin(DB);
+            if(ajouterMagasin.ShowDialog() == DialogResult.OK)
+            {
+                var mag = ajouterMagasin.magasin;
+                listMagasin.Items.Add(mag);
+                listMagasin.SelectedItem = mag;
+            }
         }
     }
 }
