@@ -40,7 +40,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             if(listMagasin.SelectedItem != null)
             {
                 Magasin m = (Magasin)listMagasin.SelectedItem;
-                ParamétrerMagasin paramétrer = new ParamétrerMagasin(m);
+                ParamétrerMagasin paramétrer = new ParamétrerMagasin(m,DB);
                 if (paramétrer.ShowDialog() == DialogResult.OK)
                 {
                     listMagasin.Refresh();

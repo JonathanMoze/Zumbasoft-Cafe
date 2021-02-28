@@ -27,5 +27,10 @@ namespace ZumbaSoft.Model
 
         public int quantite { get; set; }
 
+        public override string ToString()
+        {
+            return quantite.ToString() + " - " + produit.nom;
+        }
+
     }
 }

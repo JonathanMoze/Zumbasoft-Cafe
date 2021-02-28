@@ -6,38 +6,92 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using ZumbaSoft.Model;
+using SQLite;
 
 namespace ZumbaSoft.Fenetres_Magasin
 {
     public partial class ParamétrerMagasin : Form
     {
-        public ParamétrerMagasin(Magasin magasin)
+        Magasin magasin;
+        SQLiteConnection DB;
+        public ParamétrerMagasin(Magasin magasin, SQLiteConnection db)
         {
             InitializeComponent();
-            InitInfosField(magasin);
+            this.magasin = magasin;
+            this.DB = db;
+            InitInfoField();
 
         }
-        public void InitInfosField(Magasin magasin)
+        public void InitInfoField()
         {
-            labelNom.Text = magasin.mot_de_passe;
+            if (magasin.adresse != null)
+            {
+                labelCurrentAdresse.Text = magasin.adresse.adresse;
+            }
+            labelCurrentMdp.Text = magasin.mot_de_passe;
+            if(magasin.stock != null)
+            {
+                foreach(ProduitEnStock p in magasin.stock)
+                {
+                    listViewStock.Items.Add(p.ToString());
+                }
+            }
+            else { listViewStock.Items.Add("Aucun"); }
+            if (magasin.rapports != null)
+            {
+                foreach (Rapport r in magasin.rapports)
+                {
+                    listViewStock.Items.Add(r.ToString());
+                }
+            }
+            else { listViewRapports.Items.Add("Aucun"); }
+            if(magasin.commandes != null)
+            {
+                foreach (Commande c in magasin.commandes)
+                {
+                    listViewStock.Items.Add(c.ToString());
+                }
+            }
+            else { ListViewCommande.Items.Add("Aucun"); }
+            if(magasin.utilisateurs != null)
+            {
+                foreach (Utilisateur u in magasin.utilisateurs)
+                {
+                    listViewStock.Items.Add(u.ToString());
+                }
+            }
+            else { listViewEmployes.Items.Add("Aucun"); }
         }
 
         public bool isFieldValid()
         {
-            if (true)
+            if (textBoxMdp.Visible)
             {
+                if(!(textBoxMdp.Text.Length <=32) || !(textBoxMdp.Text.Length >= 8))
+                {
+                    labelErrorMdp.Visible = true;
+                    return false;
+                }
             }
             return true;
         }
 
         private void buttonOKParamMag_Click(object sender, EventArgs e)
         {
+            if (isFieldValid())
+            {
+                magasin.mot_de_passe = textBoxMdp.Text;
+                DB.Update(magasin);
+                DialogResult = DialogResult.OK;
+                this.Close();
+            }
 
         }
 
         private void buttonAnnulParamMag_Click(object sender, EventArgs e)
         {
-
+            DialogResult = DialogResult.Cancel;
+            this.Close();
         }
 
         private void ParamétrerMagasin_Load(object sender, EventArgs e)
@@ -45,5 +99,20 @@ namespace ZumbaSoft.Fenetres_Magasin
 
         }
 
+        private void buttonModifMdp_Click(object sender, EventArgs e)
+        {
+            if(textBoxMdp.Visible != true)
+            {
+                textBoxMdp.Visible = true;
+            }
+        }
+
+        private void textBoxMdp_TextChanged(object sender, EventArgs e)
+        {
+            if (labelErrorMdp.Visible == true)
+            {
+                labelErrorMdp.Visible = false;
+            }
+        }
     }
 }
