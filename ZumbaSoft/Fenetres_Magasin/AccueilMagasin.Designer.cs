@@ -41,28 +41,31 @@ namespace ZumbaSoft.Fenetres_Magasin
             // 
             this.listMagasin.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.listMagasin.FormattingEnabled = true;
-            this.listMagasin.ItemHeight = 24;
-            this.listMagasin.Location = new System.Drawing.Point(12, 119);
+            this.listMagasin.ItemHeight = 17;
+            this.listMagasin.Location = new System.Drawing.Point(8, 71);
+            this.listMagasin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listMagasin.Name = "listMagasin";
-            this.listMagasin.Size = new System.Drawing.Size(497, 364);
+            this.listMagasin.Size = new System.Drawing.Size(349, 208);
             this.listMagasin.TabIndex = 0;
             // 
             // labelTitre
             // 
             this.labelTitre.AutoSize = true;
             this.labelTitre.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelTitre.Location = new System.Drawing.Point(13, 13);
+            this.labelTitre.Location = new System.Drawing.Point(9, 8);
+            this.labelTitre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTitre.Name = "labelTitre";
-            this.labelTitre.Size = new System.Drawing.Size(170, 42);
+            this.labelTitre.Size = new System.Drawing.Size(120, 30);
             this.labelTitre.TabIndex = 1;
             this.labelTitre.Text = "Magasins";
             // 
             // boutonAjouter
             // 
             this.boutonAjouter.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.boutonAjouter.Location = new System.Drawing.Point(552, 166);
+            this.boutonAjouter.Location = new System.Drawing.Point(386, 100);
+            this.boutonAjouter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.boutonAjouter.Name = "boutonAjouter";
-            this.boutonAjouter.Size = new System.Drawing.Size(112, 39);
+            this.boutonAjouter.Size = new System.Drawing.Size(78, 23);
             this.boutonAjouter.TabIndex = 2;
             this.boutonAjouter.Text = "Ajouter";
             this.boutonAjouter.UseVisualStyleBackColor = true;
@@ -71,9 +74,10 @@ namespace ZumbaSoft.Fenetres_Magasin
             // boutonSupprimer
             // 
             this.boutonSupprimer.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.boutonSupprimer.Location = new System.Drawing.Point(552, 358);
+            this.boutonSupprimer.Location = new System.Drawing.Point(386, 215);
+            this.boutonSupprimer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.boutonSupprimer.Name = "boutonSupprimer";
-            this.boutonSupprimer.Size = new System.Drawing.Size(112, 39);
+            this.boutonSupprimer.Size = new System.Drawing.Size(78, 23);
             this.boutonSupprimer.TabIndex = 3;
             this.boutonSupprimer.Text = "Supprimer";
             this.boutonSupprimer.UseVisualStyleBackColor = true;
@@ -82,9 +86,10 @@ namespace ZumbaSoft.Fenetres_Magasin
             // boutonModifier
             // 
             this.boutonModifier.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.boutonModifier.Location = new System.Drawing.Point(552, 266);
+            this.boutonModifier.Location = new System.Drawing.Point(386, 160);
+            this.boutonModifier.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.boutonModifier.Name = "boutonModifier";
-            this.boutonModifier.Size = new System.Drawing.Size(112, 34);
+            this.boutonModifier.Size = new System.Drawing.Size(78, 23);
             this.boutonModifier.TabIndex = 4;
             this.boutonModifier.Text = "Modifier";
             this.boutonModifier.UseVisualStyleBackColor = true;
@@ -94,23 +99,25 @@ namespace ZumbaSoft.Fenetres_Magasin
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(13, 92);
+            this.label1.Location = new System.Drawing.Point(9, 55);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 24);
+            this.label1.Size = new System.Drawing.Size(117, 17);
             this.label1.TabIndex = 5;
             this.label1.Text = "Liste des magasins :";
             // 
             // AccueilMagasin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(714, 506);
+            this.ClientSize = new System.Drawing.Size(500, 304);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.boutonModifier);
             this.Controls.Add(this.boutonSupprimer);
             this.Controls.Add(this.boutonAjouter);
             this.Controls.Add(this.labelTitre);
             this.Controls.Add(this.listMagasin);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AccueilMagasin";
             this.Text = "AccueilMagasin";
             this.ResumeLayout(false);
