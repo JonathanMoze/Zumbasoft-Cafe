@@ -14,5 +14,25 @@ namespace ZumbaSoft.Fenetres_Magasin
         {
             InitializeComponent();
         }
+
+        public bool isFieldValid()
+        {
+            if (field 1 is not valid){
+
+
+        }
     }
-}
+
+        private void buttonOKParamMag_Click(object sender, EventArgs e)
+        {
+            if (isFieldValid())
+            {
+                //TODO
+            }
+        }
+
+        private void buttonAnnulParamMag_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
