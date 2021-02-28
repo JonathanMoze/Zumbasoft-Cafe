@@ -93,7 +93,7 @@ namespace ZumbaSoft.Fenetres_Magasin
 
         private void buttonAnnuler_Click(object sender, EventArgs e)
         {
-            DB.Delete(magasin);
+            DialogResult = DialogResult.Cancel;
         }
     }
 }
