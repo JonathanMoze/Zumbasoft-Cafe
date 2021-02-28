@@ -7,6 +7,7 @@ using System.IO;
 using System.Windows.Forms;
 using ZumbaSoft.Model;
 using ZumbaSoft.Fenetres_Magasin;
+using ZumbaSoft.Fenetres_Roles;
 
 namespace ZumbaSoft
 {
@@ -48,6 +49,12 @@ namespace ZumbaSoft
         {
             AccueilMagasin m = new AccueilMagasin(db);
             m.Show();
+        }
+
+        private void RoleButton_Click(object sender, EventArgs e)
+        {
+            Roles r = new Roles(db);
+            r.Show();
         }
     }
 }
