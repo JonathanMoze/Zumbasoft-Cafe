@@ -39,5 +39,11 @@ namespace ZumbaSoft.Fenetres_Magasin
         {
 
         }
+
+        private void ParamétrerMagasin_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
