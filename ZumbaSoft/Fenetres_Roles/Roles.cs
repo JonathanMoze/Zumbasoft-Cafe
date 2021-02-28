@@ -27,6 +27,7 @@ namespace ZumbaSoft.Fenetres_Roles
         {
             foreach (Role role in DB.GetAllWithChildren<Role>())
             {
+                choixRoles.Items.Clear();
                 choixRoles.Items.Add(role);
             }
         }
@@ -51,7 +52,7 @@ namespace ZumbaSoft.Fenetres_Roles
             {
                 Role r = (Role)choixRoles.SelectedItem;
                 DB.Delete(r);
-                initListRoles();
+                choixRoles.Items.Remove(r);
             }
         }
     }

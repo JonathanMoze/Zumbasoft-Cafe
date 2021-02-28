@@ -12,5 +12,11 @@ namespace ZumbaSoft.Model
         public int id_droit { get; set; }
 
         public string intitule { get; set; }
+
+        [OneToMany]
+        public List<Role> roles { get; set; }
+
+        [ForeignKey(typeof(Role))]
+        public int id_roles { get; set; }
     }
 }

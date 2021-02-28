@@ -18,5 +18,10 @@ namespace ZumbaSoft.Model
         [OneToMany]
         public List<Droit> droits { get; set; }
 
+        public override string ToString()
+        {
+            return nom;
+        }
+
     }
 }
