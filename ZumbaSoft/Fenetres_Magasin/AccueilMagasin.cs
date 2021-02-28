@@ -37,7 +37,15 @@ namespace ZumbaSoft.Fenetres_Magasin
 
         private void boutonModifier_Click(object sender, EventArgs e)
         {
-
+            if(listMagasin.SelectedItem != null)
+            {
+                Magasin m = (Magasin)listMagasin.SelectedItem;
+                ParamétrerMagasin paramétrer = new ParamétrerMagasin(m);
+                if (paramétrer.ShowDialog() == DialogResult.OK)
+                {
+                    listMagasin.Refresh();
+                }
+            }
         }
 
         private void boutonAjouter_Click(object sender, EventArgs e)
