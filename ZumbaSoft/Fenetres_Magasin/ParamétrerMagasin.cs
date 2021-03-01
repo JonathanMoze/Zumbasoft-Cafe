@@ -29,7 +29,7 @@ namespace ZumbaSoft.Fenetres_Magasin
                 labelCurrentAdresse.Text = magasin.adresse.adresse;
             }
             labelCurrentMdp.Text = magasin.mot_de_passe;
-            if(magasin.stock != null)
+            if(magasin.stock.Count != 0)
             {
                 foreach(ProduitEnStock p in magasin.stock)
                 {
@@ -37,27 +37,27 @@ namespace ZumbaSoft.Fenetres_Magasin
                 }
             }
             else { listViewStock.Items.Add("Aucun"); }
-            if (magasin.rapports != null)
+            if (magasin.rapports.Count != 0)
             {
                 foreach (Rapport r in magasin.rapports)
                 {
-                    listViewStock.Items.Add(r.ToString());
+                    listViewRapports.Items.Add(r.ToString());
                 }
             }
             else { listViewRapports.Items.Add("Aucun"); }
-            if(magasin.commandes != null)
+            if(magasin.commandes.Count != 0)
             {
                 foreach (Commande c in magasin.commandes)
                 {
-                    listViewStock.Items.Add(c.ToString());
+                    listViewCommandes.Items.Add(c.ToString());
                 }
             }
-            else { ListViewCommande.Items.Add("Aucun"); }
-            if(magasin.utilisateurs != null)
+            else { listViewCommandes.Items.Add("Aucun"); }
+            if(magasin.utilisateurs.Count != 0)
             {
                 foreach (Utilisateur u in magasin.utilisateurs)
                 {
-                    listViewStock.Items.Add(u.ToString());
+                    listViewEmployes.Items.Add(u.ToString());
                 }
             }
             else { listViewEmployes.Items.Add("Aucun"); }

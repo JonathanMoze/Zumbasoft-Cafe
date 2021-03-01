@@ -45,16 +45,16 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.labelRapports = new System.Windows.Forms.Label();
             this.labelCurrentMdp = new System.Windows.Forms.Label();
             this.labelCurrentAdresse = new System.Windows.Forms.Label();
-            this.listViewStock = new System.Windows.Forms.ListView();
-            this.ListViewCommande = new System.Windows.Forms.ListView();
-            this.listViewEmployes = new System.Windows.Forms.ListView();
-            this.listViewRapports = new System.Windows.Forms.ListView();
             this.buttonModifStock = new System.Windows.Forms.Button();
             this.buttonModifRprt = new System.Windows.Forms.Button();
             this.buttonModifEmpl = new System.Windows.Forms.Button();
             this.buttonModifCmd = new System.Windows.Forms.Button();
             this.buttonModifMdp = new System.Windows.Forms.Button();
             this.labelErrorMdp = new System.Windows.Forms.Label();
+            this.listViewStock = new System.Windows.Forms.ListView();
+            this.listViewCommandes = new System.Windows.Forms.ListView();
+            this.listViewEmployes = new System.Windows.Forms.ListView();
+            this.listViewRapports = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // infosMag
@@ -180,46 +180,6 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.labelCurrentAdresse.TabIndex = 21;
             this.labelCurrentAdresse.Text = "Aucune";
             // 
-            // listViewStock
-            // 
-            this.listViewStock.HideSelection = false;
-            this.listViewStock.Location = new System.Drawing.Point(14, 292);
-            this.listViewStock.Margin = new System.Windows.Forms.Padding(2);
-            this.listViewStock.Name = "listViewStock";
-            this.listViewStock.Size = new System.Drawing.Size(285, 265);
-            this.listViewStock.TabIndex = 22;
-            this.listViewStock.UseCompatibleStateImageBehavior = false;
-            // 
-            // ListViewCommande
-            // 
-            this.ListViewCommande.HideSelection = false;
-            this.ListViewCommande.Location = new System.Drawing.Point(318, 292);
-            this.ListViewCommande.Margin = new System.Windows.Forms.Padding(2);
-            this.ListViewCommande.Name = "ListViewCommande";
-            this.ListViewCommande.Size = new System.Drawing.Size(293, 265);
-            this.ListViewCommande.TabIndex = 23;
-            this.ListViewCommande.UseCompatibleStateImageBehavior = false;
-            // 
-            // listViewEmployes
-            // 
-            this.listViewEmployes.HideSelection = false;
-            this.listViewEmployes.Location = new System.Drawing.Point(628, 292);
-            this.listViewEmployes.Margin = new System.Windows.Forms.Padding(2);
-            this.listViewEmployes.Name = "listViewEmployes";
-            this.listViewEmployes.Size = new System.Drawing.Size(293, 265);
-            this.listViewEmployes.TabIndex = 24;
-            this.listViewEmployes.UseCompatibleStateImageBehavior = false;
-            // 
-            // listViewRapports
-            // 
-            this.listViewRapports.HideSelection = false;
-            this.listViewRapports.Location = new System.Drawing.Point(940, 292);
-            this.listViewRapports.Margin = new System.Windows.Forms.Padding(2);
-            this.listViewRapports.Name = "listViewRapports";
-            this.listViewRapports.Size = new System.Drawing.Size(295, 265);
-            this.listViewRapports.TabIndex = 25;
-            this.listViewRapports.UseCompatibleStateImageBehavior = false;
-            // 
             // buttonModifStock
             // 
             this.buttonModifStock.Location = new System.Drawing.Point(88, 580);
@@ -280,21 +240,57 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.labelErrorMdp.Text = "Veuillez saisir un mot de passe valide.";
             this.labelErrorMdp.Visible = false;
             // 
+            // listViewStock
+            // 
+            this.listViewStock.HideSelection = false;
+            this.listViewStock.Location = new System.Drawing.Point(12, 291);
+            this.listViewStock.Name = "listViewStock";
+            this.listViewStock.Size = new System.Drawing.Size(299, 284);
+            this.listViewStock.TabIndex = 32;
+            this.listViewStock.UseCompatibleStateImageBehavior = false;
+            // 
+            // listViewCommandes
+            // 
+            this.listViewCommandes.HideSelection = false;
+            this.listViewCommandes.Location = new System.Drawing.Point(318, 291);
+            this.listViewCommandes.Name = "listViewCommandes";
+            this.listViewCommandes.Size = new System.Drawing.Size(299, 284);
+            this.listViewCommandes.TabIndex = 33;
+            this.listViewCommandes.UseCompatibleStateImageBehavior = false;
+            // 
+            // listViewEmployes
+            // 
+            this.listViewEmployes.HideSelection = false;
+            this.listViewEmployes.Location = new System.Drawing.Point(623, 291);
+            this.listViewEmployes.Name = "listViewEmployes";
+            this.listViewEmployes.Size = new System.Drawing.Size(299, 284);
+            this.listViewEmployes.TabIndex = 34;
+            this.listViewEmployes.UseCompatibleStateImageBehavior = false;
+            // 
+            // listViewRapports
+            // 
+            this.listViewRapports.HideSelection = false;
+            this.listViewRapports.Location = new System.Drawing.Point(928, 291);
+            this.listViewRapports.Name = "listViewRapports";
+            this.listViewRapports.Size = new System.Drawing.Size(299, 284);
+            this.listViewRapports.TabIndex = 35;
+            this.listViewRapports.UseCompatibleStateImageBehavior = false;
+            // 
             // ParamétrerMagasin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1261, 799);
+            this.Controls.Add(this.listViewRapports);
+            this.Controls.Add(this.listViewEmployes);
+            this.Controls.Add(this.listViewCommandes);
+            this.Controls.Add(this.listViewStock);
             this.Controls.Add(this.labelErrorMdp);
             this.Controls.Add(this.buttonModifMdp);
             this.Controls.Add(this.buttonModifCmd);
             this.Controls.Add(this.buttonModifEmpl);
             this.Controls.Add(this.buttonModifRprt);
             this.Controls.Add(this.buttonModifStock);
-            this.Controls.Add(this.listViewRapports);
-            this.Controls.Add(this.listViewEmployes);
-            this.Controls.Add(this.ListViewCommande);
-            this.Controls.Add(this.listViewStock);
             this.Controls.Add(this.labelCurrentAdresse);
             this.Controls.Add(this.labelCurrentMdp);
             this.Controls.Add(this.labelRapports);
@@ -332,15 +328,15 @@ namespace ZumbaSoft.Fenetres_Magasin
         private System.Windows.Forms.Label labelRapports;
         private System.Windows.Forms.Label labelCurrentMdp;
         private System.Windows.Forms.Label labelCurrentAdresse;
-        private System.Windows.Forms.ListView listViewStock;
-        private System.Windows.Forms.ListView ListViewCommande;
-        private System.Windows.Forms.ListView listViewEmployes;
-        private System.Windows.Forms.ListView listViewRapports;
         private System.Windows.Forms.Button buttonModifStock;
         private System.Windows.Forms.Button buttonModifRprt;
         private System.Windows.Forms.Button buttonModifEmpl;
         private System.Windows.Forms.Button buttonModifCmd;
         private System.Windows.Forms.Button buttonModifMdp;
         private System.Windows.Forms.Label labelErrorMdp;
+        private System.Windows.Forms.ListView listViewStock;
+        private System.Windows.Forms.ListView listViewCommandes;
+        private System.Windows.Forms.ListView listViewEmployes;
+        private System.Windows.Forms.ListView listViewRapports;
     }
 }
