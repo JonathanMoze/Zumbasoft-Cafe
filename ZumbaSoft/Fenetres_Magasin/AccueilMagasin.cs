@@ -32,7 +32,12 @@ namespace ZumbaSoft.Fenetres_Magasin
 
         private void boutonSupprimer_Click(object sender, EventArgs e)
         {
-
+            var m = (Magasin)listMagasin.SelectedItem;
+            SupprimerMagasin supprimer = new SupprimerMagasin(m, DB);
+            if(supprimer.ShowDialog() == DialogResult.OK)
+            {
+                listMagasin.Items.Remove(m);
+            }
         }
 
         private void boutonModifier_Click(object sender, EventArgs e)

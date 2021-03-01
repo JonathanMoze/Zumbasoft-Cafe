@@ -189,6 +189,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.buttonModifStock.TabIndex = 26;
             this.buttonModifStock.Text = "Modifier";
             this.buttonModifStock.UseVisualStyleBackColor = true;
+            this.buttonModifStock.Click += new System.EventHandler(this.buttonModifStock_Click);
             // 
             // buttonModifRprt
             // 
@@ -199,6 +200,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.buttonModifRprt.TabIndex = 27;
             this.buttonModifRprt.Text = "Modifier";
             this.buttonModifRprt.UseVisualStyleBackColor = true;
+            this.buttonModifRprt.Click += new System.EventHandler(this.buttonModifRprt_Click);
             // 
             // buttonModifEmpl
             // 
@@ -209,6 +211,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.buttonModifEmpl.TabIndex = 28;
             this.buttonModifEmpl.Text = "Modifier";
             this.buttonModifEmpl.UseVisualStyleBackColor = true;
+            this.buttonModifEmpl.Click += new System.EventHandler(this.buttonModifEmpl_Click);
             // 
             // buttonModifCmd
             // 
@@ -219,6 +222,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.buttonModifCmd.TabIndex = 29;
             this.buttonModifCmd.Text = "Modifier";
             this.buttonModifCmd.UseVisualStyleBackColor = true;
+            this.buttonModifCmd.Click += new System.EventHandler(this.buttonModifCmd_Click);
             // 
             // buttonModifMdp
             // 

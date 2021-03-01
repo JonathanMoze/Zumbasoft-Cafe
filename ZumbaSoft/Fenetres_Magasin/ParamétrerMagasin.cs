@@ -114,5 +114,25 @@ namespace ZumbaSoft.Fenetres_Magasin
                 labelErrorMdp.Visible = false;
             }
         }
+
+        private void buttonModifStock_Click(object sender, EventArgs e)
+        {
+            //TODO
+        }
+
+        private void buttonModifEmpl_Click(object sender, EventArgs e)
+        {
+            //TODO
+        }
+
+        private void buttonModifCmd_Click(object sender, EventArgs e)
+        {
+            //TODO
+        }
+
+        private void buttonModifRprt_Click(object sender, EventArgs e)
+        {
+            //TODO
+        }
     }
 }
