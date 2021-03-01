@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using ZumbaSoft.Model;
 using ZumbaSoft.Fenetres_Magasin;
 using ZumbaSoft.Fenetres_Roles;
+using ZumbaSoft.Fenetres_Stock;
 
 namespace ZumbaSoft
 {
@@ -50,20 +51,32 @@ namespace ZumbaSoft
             return db;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            AccueilMagasin m = new AccueilMagasin(db);
-            this.Visible = false;
-            if(m.ShowDialog() == DialogResult.OK)
-            {
-                this.Visible = true;
-            }
-        }
+        
 
         private void RoleButton_Click(object sender, EventArgs e)
         {
             Roles r = new Roles(db);
             r.Show();
+        }
+
+        private void buttonGestionStock_Click(object sender, EventArgs e)
+        {
+            AccueilStock m = new AccueilStock(db);
+            this.Visible = false;
+            if (m.ShowDialog() == DialogResult.OK)
+            {
+                this.Visible = true;
+            }
+        }
+
+        private void buttonGestionMag_Click(object sender, EventArgs e)
+        {
+            AccueilMagasin m = new AccueilMagasin(db);
+            this.Visible = false;
+            if (m.ShowDialog() == DialogResult.OK)
+            {
+                this.Visible = true;
+            }
         }
     }
 }

@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonGestionMag = new System.Windows.Forms.Button();
             this.RoleButton = new System.Windows.Forms.Button();
+            this.buttonGestionStock = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -44,17 +45,17 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Accueil";
             // 
-            // button1
+            // buttonGestionMag
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(10, 126);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(158, 52);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Gestion des Magasins";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonGestionMag.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonGestionMag.Location = new System.Drawing.Point(10, 126);
+            this.buttonGestionMag.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonGestionMag.Name = "buttonGestionMag";
+            this.buttonGestionMag.Size = new System.Drawing.Size(158, 52);
+            this.buttonGestionMag.TabIndex = 1;
+            this.buttonGestionMag.Text = "Gestion des Magasins";
+            this.buttonGestionMag.UseVisualStyleBackColor = true;
+            this.buttonGestionMag.Click += new System.EventHandler(this.buttonGestionMag_Click);
             // 
             // RoleButton
             // 
@@ -68,13 +69,24 @@
             this.RoleButton.UseVisualStyleBackColor = true;
             this.RoleButton.Click += new System.EventHandler(this.RoleButton_Click);
             // 
+            // buttonGestionStock
+            // 
+            this.buttonGestionStock.Location = new System.Drawing.Point(12, 267);
+            this.buttonGestionStock.Name = "buttonGestionStock";
+            this.buttonGestionStock.Size = new System.Drawing.Size(156, 48);
+            this.buttonGestionStock.TabIndex = 3;
+            this.buttonGestionStock.Text = "Gestion des Stocks";
+            this.buttonGestionStock.UseVisualStyleBackColor = true;
+            this.buttonGestionStock.Click += new System.EventHandler(this.buttonGestionStock_Click);
+            // 
             // Accueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(640, 360);
+            this.Controls.Add(this.buttonGestionStock);
             this.Controls.Add(this.RoleButton);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonGestionMag);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Accueil";
@@ -87,8 +99,9 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonGestionMag;
         private System.Windows.Forms.Button RoleButton;
+        private System.Windows.Forms.Button buttonGestionStock;
     }
 }
 
