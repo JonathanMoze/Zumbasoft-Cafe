@@ -42,29 +42,28 @@ namespace ZumbaSoft.Fenetres_Magasin
             // 
             // textBoxMdp
             // 
-            this.textBoxMdp.Location = new System.Drawing.Point(364, 142);
-            this.textBoxMdp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxMdp.Location = new System.Drawing.Point(255, 85);
+            this.textBoxMdp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxMdp.Name = "textBoxMdp";
-            this.textBoxMdp.Size = new System.Drawing.Size(155, 31);
+            this.textBoxMdp.Size = new System.Drawing.Size(110, 23);
             this.textBoxMdp.TabIndex = 0;
             this.textBoxMdp.TextChanged += new System.EventHandler(this.textBoxMdp_TextChanged);
             // 
             // labelMdp
             // 
             this.labelMdp.AutoSize = true;
-            this.labelMdp.Location = new System.Drawing.Point(225, 146);
-            this.labelMdp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelMdp.Location = new System.Drawing.Point(158, 88);
             this.labelMdp.Name = "labelMdp";
-            this.labelMdp.Size = new System.Drawing.Size(129, 25);
+            this.labelMdp.Size = new System.Drawing.Size(83, 15);
             this.labelMdp.TabIndex = 1;
             this.labelMdp.Text = "Mot de passe :";
             // 
             // buttonOKmdp
             // 
-            this.buttonOKmdp.Location = new System.Drawing.Point(317, 360);
-            this.buttonOKmdp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonOKmdp.Location = new System.Drawing.Point(222, 216);
+            this.buttonOKmdp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonOKmdp.Name = "buttonOKmdp";
-            this.buttonOKmdp.Size = new System.Drawing.Size(118, 36);
+            this.buttonOKmdp.Size = new System.Drawing.Size(83, 22);
             this.buttonOKmdp.TabIndex = 2;
             this.buttonOKmdp.Text = "OK";
             this.buttonOKmdp.UseVisualStyleBackColor = true;
@@ -73,19 +72,18 @@ namespace ZumbaSoft.Fenetres_Magasin
             // labelAdr
             // 
             this.labelAdr.AutoSize = true;
-            this.labelAdr.Location = new System.Drawing.Point(271, 231);
-            this.labelAdr.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelAdr.Location = new System.Drawing.Point(190, 139);
             this.labelAdr.Name = "labelAdr";
-            this.labelAdr.Size = new System.Drawing.Size(84, 25);
+            this.labelAdr.Size = new System.Drawing.Size(54, 15);
             this.labelAdr.TabIndex = 3;
             this.labelAdr.Text = "Adresse :";
             // 
             // buttonAdr
             // 
-            this.buttonAdr.Location = new System.Drawing.Point(552, 225);
-            this.buttonAdr.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonAdr.Location = new System.Drawing.Point(386, 135);
+            this.buttonAdr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAdr.Name = "buttonAdr";
-            this.buttonAdr.Size = new System.Drawing.Size(196, 36);
+            this.buttonAdr.Size = new System.Drawing.Size(137, 22);
             this.buttonAdr.TabIndex = 4;
             this.buttonAdr.Text = "Nouvelle adresse";
             this.buttonAdr.UseVisualStyleBackColor = true;
@@ -94,20 +92,19 @@ namespace ZumbaSoft.Fenetres_Magasin
             // textBoxAdr
             // 
             this.textBoxAdr.Enabled = false;
-            this.textBoxAdr.Location = new System.Drawing.Point(364, 228);
-            this.textBoxAdr.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxAdr.Location = new System.Drawing.Point(255, 137);
+            this.textBoxAdr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxAdr.Name = "textBoxAdr";
-            this.textBoxAdr.Size = new System.Drawing.Size(155, 31);
+            this.textBoxAdr.Size = new System.Drawing.Size(110, 23);
             this.textBoxAdr.TabIndex = 5;
             this.textBoxAdr.TextChanged += new System.EventHandler(this.textBoxAdr_TextChanged);
             // 
             // labelErreurMdp
             // 
             this.labelErreurMdp.AutoSize = true;
-            this.labelErreurMdp.Location = new System.Drawing.Point(552, 146);
-            this.labelErreurMdp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelErreurMdp.Location = new System.Drawing.Point(386, 88);
             this.labelErreurMdp.Name = "labelErreurMdp";
-            this.labelErreurMdp.Size = new System.Drawing.Size(303, 25);
+            this.labelErreurMdp.Size = new System.Drawing.Size(199, 15);
             this.labelErreurMdp.TabIndex = 6;
             this.labelErreurMdp.Text = "Veuillez saisir un mot de passe valide";
             this.labelErreurMdp.Visible = false;
@@ -115,20 +112,19 @@ namespace ZumbaSoft.Fenetres_Magasin
             // labelErreurAdr
             // 
             this.labelErreurAdr.AutoSize = true;
-            this.labelErreurAdr.Location = new System.Drawing.Point(271, 279);
-            this.labelErreurAdr.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelErreurAdr.Location = new System.Drawing.Point(190, 167);
             this.labelErreurAdr.Name = "labelErreurAdr";
-            this.labelErreurAdr.Size = new System.Drawing.Size(264, 25);
+            this.labelErreurAdr.Size = new System.Drawing.Size(174, 15);
             this.labelErreurAdr.TabIndex = 7;
             this.labelErreurAdr.Text = "Veuillez saisir une adresse valide";
             this.labelErreurAdr.Visible = false;
             // 
             // buttonAnnuler
             // 
-            this.buttonAnnuler.Location = new System.Drawing.Point(443, 360);
-            this.buttonAnnuler.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonAnnuler.Location = new System.Drawing.Point(310, 216);
+            this.buttonAnnuler.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAnnuler.Name = "buttonAnnuler";
-            this.buttonAnnuler.Size = new System.Drawing.Size(118, 36);
+            this.buttonAnnuler.Size = new System.Drawing.Size(83, 22);
             this.buttonAnnuler.TabIndex = 8;
             this.buttonAnnuler.Text = "Annuler";
             this.buttonAnnuler.UseVisualStyleBackColor = true;
@@ -136,9 +132,9 @@ namespace ZumbaSoft.Fenetres_Magasin
             // 
             // AjouterMagasin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 562);
+            this.ClientSize = new System.Drawing.Size(700, 337);
             this.Controls.Add(this.buttonAnnuler);
             this.Controls.Add(this.labelErreurAdr);
             this.Controls.Add(this.labelErreurMdp);
@@ -148,9 +144,10 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.Controls.Add(this.buttonOKmdp);
             this.Controls.Add(this.labelMdp);
             this.Controls.Add(this.textBoxMdp);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AjouterMagasin";
             this.Text = "AjouterMagasin";
+            this.Load += new System.EventHandler(this.AjouterMagasin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

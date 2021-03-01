@@ -95,5 +95,10 @@ namespace ZumbaSoft.Fenetres_Magasin
         {
             DialogResult = DialogResult.Cancel;
         }
+
+        private void AjouterMagasin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
