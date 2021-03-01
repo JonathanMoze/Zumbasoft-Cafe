@@ -19,5 +19,10 @@ namespace ZumbaSoft.Model
 
         public string complement { get; set; }
 
+        public override string ToString()
+        {
+            return adresse;
+        }
+
     }
 }

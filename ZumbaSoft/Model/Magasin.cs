@@ -42,7 +42,7 @@ namespace ZumbaSoft.Model
 
         public override string ToString()
         {
-            return id_magasin.ToString();
+            return "OUATELSE"+ " " +adresse.ville;
         }
 
     }

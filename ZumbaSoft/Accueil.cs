@@ -20,6 +20,11 @@ namespace ZumbaSoft
             InitializeComponent();
             db = InitializeDataBase();
         }
+        public Accueil(SQLiteConnection db)
+        {
+            InitializeComponent();
+            this.db = db;
+        }
 
         private SQLiteConnection InitializeDataBase()
         {
@@ -48,7 +53,11 @@ namespace ZumbaSoft
         private void button1_Click(object sender, EventArgs e)
         {
             AccueilMagasin m = new AccueilMagasin(db);
-            m.Show();
+            this.Visible = false;
+            if(m.ShowDialog() == DialogResult.OK)
+            {
+                this.Visible = true;
+            }
         }
 
         private void RoleButton_Click(object sender, EventArgs e)

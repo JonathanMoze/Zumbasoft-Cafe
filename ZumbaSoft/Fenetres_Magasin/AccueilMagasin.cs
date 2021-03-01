@@ -63,5 +63,11 @@ namespace ZumbaSoft.Fenetres_Magasin
                 listMagasin.SelectedItem = mag;
             }
         }
+
+        private void buttonAccueil_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.OK;
+            this.Close();
+        }
     }
 }
