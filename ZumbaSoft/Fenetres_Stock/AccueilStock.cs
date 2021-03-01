@@ -41,12 +41,25 @@ namespace ZumbaSoft.Fenetres_Stock
 
         private void buttonModifierStock_Click(object sender, EventArgs e)
         {
-
+            if (listStock.SelectedItem != null)
+            {
+                ProduitEnStock ps = (ProduitEnStock)listStock.SelectedItem;
+                ModifierStock modifStock = new ModifierStock(ps, DB);
+                if (modifStock.ShowDialog() == DialogResult.OK)
+                {
+                    listStock.Refresh();
+                }
+            }
         }
 
         private void buttonSuppStock_Click(object sender, EventArgs e)
         {
-
+            var ps = (ProduitEnStock)listStock.SelectedItem;
+            SupprimerStock supprimer = new SupprimerStock(ps, DB);
+            if (supprimer.ShowDialog() == DialogResult.OK)
+            {
+                listStock.Items.Remove(ps);
+            }
         }
 
         private void buttonAccueil_Click(object sender, EventArgs e)
