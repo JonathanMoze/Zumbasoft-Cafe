@@ -25,10 +25,22 @@ namespace ZumbaSoft.Fenetres_Roles
 
         public void initListRoles()
         {
+            choixRoles.Items.Clear();
+            int nb = 0;
+
             foreach (Role role in DB.GetAllWithChildren<Role>())
             {
-                choixRoles.Items.Clear();
                 choixRoles.Items.Add(role);
+                nb++;
+            }
+
+            if (nb > 0)
+            {
+               erreurListevide.Visible = false;
+            }
+            else
+            {
+                erreurListevide.Visible = true;
             }
         }
 
@@ -42,8 +54,24 @@ namespace ZumbaSoft.Fenetres_Roles
                 DB.Insert(r);
                 initListRoles();
                 nomRole.Text = "";
+                erreurAjout.Visible = false;
+                confirmationAjout.Visible = true;
             }
-            
+            else
+            {
+                confirmationAjout.Visible = false;
+                erreurAjout.Visible = true;
+            }
+            var t = new Timer();
+            t.Interval = 5000; // Durée de l'affichage du message
+            t.Tick += (s, e) =>
+            {
+                confirmationAjout.Visible = false;
+                erreurAjout.Visible = false;
+                t.Stop();
+            };
+            t.Start();
+
         }
 
         private void supprimerRole_Click(object sender, EventArgs e)
@@ -52,8 +80,14 @@ namespace ZumbaSoft.Fenetres_Roles
             {
                 Role r = (Role)choixRoles.SelectedItem;
                 DB.Delete(r);
-                choixRoles.Items.Remove(r);
+                initListRoles();
+                ConfirmationSR.ForeColor = System.Drawing.Color.Black;
+            } else
+            {
+                ConfirmationSR.ForeColor = System.Drawing.Color.Red;
+
             }
         }
+
     }
 }
