@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using ZumbaSoft.Model;
 using ZumbaSoft.Fenetres_Magasin;
 using ZumbaSoft.Fenetres_Roles;
+using ZumbaSoft.Fenetres_Identification;
 
 namespace ZumbaSoft
 {
@@ -55,6 +56,12 @@ namespace ZumbaSoft
         {
             Roles r = new Roles(db);
             r.Show();
+        }
+
+        private void buttonID_Click(object sender, EventArgs e)
+        {
+            Identification i = new Identification(db);
+            i.Show();
         }
     }
 }
