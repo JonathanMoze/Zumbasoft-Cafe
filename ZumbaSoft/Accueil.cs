@@ -12,7 +12,7 @@ namespace ZumbaSoft
 {
     public partial class Accueil : Form
     {
-        SQLiteConnection db;
+        public static SQLiteConnection db;
 
         public Accueil()
         {
