@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace ZumbaSoft.Fenetres_Magasin
@@ -24,10 +19,15 @@ namespace ZumbaSoft.Fenetres_Magasin
         /// <param name="e"></param>
         private void validation_Click(object sender, EventArgs e)
         {
-            if (true)
+            string login = addresse.Text;
+            string pass = mdp.Text;
+            string textRetour = "";
+            if (login != null && pass != null)
             {
-                //TODO trouver condition
-                //TODO check
+                if (login.Length > 64)
+                {
+                    //TODO
+                }
             }
         }
     }
