@@ -32,12 +32,25 @@ namespace ZumbaSoft.Fenetres_Magasin
 
         private void boutonSupprimer_Click(object sender, EventArgs e)
         {
-
+            var m = (Magasin)listMagasin.SelectedItem;
+            SupprimerMagasin supprimer = new SupprimerMagasin(m, DB);
+            if(supprimer.ShowDialog() == DialogResult.OK)
+            {
+                listMagasin.Items.Remove(m);
+            }
         }
 
         private void boutonModifier_Click(object sender, EventArgs e)
         {
-
+            if(listMagasin.SelectedItem != null)
+            {
+                Magasin m = (Magasin)listMagasin.SelectedItem;
+                ParamétrerMagasin paramétrer = new ParamétrerMagasin(m,DB);
+                if (paramétrer.ShowDialog() == DialogResult.OK)
+                {
+                    listMagasin.Refresh();
+                }
+            }
         }
 
         private void boutonAjouter_Click(object sender, EventArgs e)
@@ -49,6 +62,12 @@ namespace ZumbaSoft.Fenetres_Magasin
                 listMagasin.Items.Add(mag);
                 listMagasin.SelectedItem = mag;
             }
+        }
+
+        private void buttonAccueil_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.OK;
+            this.Close();
         }
     }
 }

@@ -30,5 +30,10 @@ namespace ZumbaSoft.Model
 
         [OneToOne]
         public Fournisseur fournisseur { get; set; }
+
+        public override string ToString()
+        {
+            return id_commande.ToString() + " - " + fournisseur.ToString();
+        }
     }
 }

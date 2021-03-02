@@ -21,10 +21,15 @@ namespace ZumbaSoft
             InitializeComponent();
             db = InitializeDataBase();
         }
+        public Accueil(SQLiteConnection db)
+        {
+            InitializeComponent();
+            this.db = db;
+        }
 
         private SQLiteConnection InitializeDataBase()
         {
-            string databasePath = System.IO.Path.GetFullPath("./DataBase.db");
+            string databasePath = System.IO.Path.GetFullPath("./../../../DataBase.db");
             SQLiteConnection db = new SQLiteConnection(databasePath);
             db.CreateTable<Adresse>();
             db.CreateTable<Genre>();
@@ -49,7 +54,11 @@ namespace ZumbaSoft
         private void button1_Click(object sender, EventArgs e)
         {
             AccueilMagasin m = new AccueilMagasin(db);
-            m.Show();
+            this.Visible = false;
+            if(m.ShowDialog() == DialogResult.OK)
+            {
+                this.Visible = true;
+            }
         }
 
         private void RoleButton_Click(object sender, EventArgs e)

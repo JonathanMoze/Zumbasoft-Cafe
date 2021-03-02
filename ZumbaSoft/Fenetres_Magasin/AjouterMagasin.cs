@@ -28,6 +28,10 @@ namespace ZumbaSoft.Fenetres_Magasin
             magasin = new Magasin();
             magasin.mot_de_passe = textBoxMdp.Text;
             magasin.adresse = adresse;
+            magasin.commandes = new List<Commande>();
+            magasin.rapports = new List<Rapport>();
+            magasin.stock = new List<ProduitEnStock>();
+            magasin.utilisateurs = new List<Utilisateur>();
             return magasin;
         }
 

@@ -38,10 +38,13 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.labelErreurMdp = new System.Windows.Forms.Label();
             this.labelErreurAdr = new System.Windows.Forms.Label();
             this.buttonAnnuler = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBoxMdp
             // 
+            this.textBoxMdp.Location = new System.Drawing.Point(200, 139);
+            this.textBoxMdp.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxMdp.Location = new System.Drawing.Point(255, 85);
             this.textBoxMdp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxMdp.Name = "textBoxMdp";
@@ -52,6 +55,8 @@ namespace ZumbaSoft.Fenetres_Magasin
             // labelMdp
             // 
             this.labelMdp.AutoSize = true;
+            this.labelMdp.Location = new System.Drawing.Point(13, 142);
+            this.labelMdp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelMdp.Location = new System.Drawing.Point(158, 88);
             this.labelMdp.Name = "labelMdp";
             this.labelMdp.Size = new System.Drawing.Size(83, 15);
@@ -60,6 +65,8 @@ namespace ZumbaSoft.Fenetres_Magasin
             // 
             // buttonOKmdp
             // 
+            this.buttonOKmdp.Location = new System.Drawing.Point(200, 360);
+            this.buttonOKmdp.Margin = new System.Windows.Forms.Padding(4);
             this.buttonOKmdp.Location = new System.Drawing.Point(222, 216);
             this.buttonOKmdp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonOKmdp.Name = "buttonOKmdp";
@@ -106,7 +113,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.labelErreurMdp.Name = "labelErreurMdp";
             this.labelErreurMdp.Size = new System.Drawing.Size(199, 15);
             this.labelErreurMdp.TabIndex = 6;
-            this.labelErreurMdp.Text = "Veuillez saisir un mot de passe valide";
+            this.labelErreurMdp.Text = "Veuillez saisir un mot de passe valide\r\n(compris entre 8 et 32)";
             this.labelErreurMdp.Visible = false;
             // 
             // labelErreurAdr
@@ -129,6 +136,16 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.buttonAnnuler.Text = "Annuler";
             this.buttonAnnuler.UseVisualStyleBackColor = true;
             this.buttonAnnuler.Click += new System.EventHandler(this.buttonAnnuler_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(105, 31);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Ajouter";
             // 
             // AjouterMagasin
             // 
@@ -164,5 +181,6 @@ namespace ZumbaSoft.Fenetres_Magasin
         private System.Windows.Forms.Label labelErreurMdp;
         private System.Windows.Forms.Label labelErreurAdr;
         private System.Windows.Forms.Button buttonAnnuler;
+        private System.Windows.Forms.Label label1;
     }
 }
