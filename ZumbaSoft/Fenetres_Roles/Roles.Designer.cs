@@ -29,6 +29,7 @@ namespace ZumbaSoft.Fenetres_Roles
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Roles));
             this.panel1 = new System.Windows.Forms.Panel();
             this.erreurListevide = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -55,18 +56,18 @@ namespace ZumbaSoft.Fenetres_Roles
             this.panel1.Controls.Add(this.erreurListevide);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.choixRoles);
-            this.panel1.Location = new System.Drawing.Point(30, 23);
+            this.panel1.Location = new System.Drawing.Point(45, 263);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(275, 204);
+            this.panel1.Size = new System.Drawing.Size(890, 261);
             this.panel1.TabIndex = 0;
             // 
             // erreurListevide
             // 
             this.erreurListevide.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.erreurListevide.ForeColor = System.Drawing.Color.DarkGray;
-            this.erreurListevide.Location = new System.Drawing.Point(10, 90);
+            this.erreurListevide.Location = new System.Drawing.Point(0, 59);
             this.erreurListevide.Name = "erreurListevide";
-            this.erreurListevide.Size = new System.Drawing.Size(247, 61);
+            this.erreurListevide.Size = new System.Drawing.Size(890, 202);
             this.erreurListevide.TabIndex = 8;
             this.erreurListevide.Text = "Aucun rôle n\'est enregistré";
             this.erreurListevide.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -81,7 +82,7 @@ namespace ZumbaSoft.Fenetres_Roles
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(275, 51);
+            this.label1.Size = new System.Drawing.Size(890, 59);
             this.label1.TabIndex = 4;
             this.label1.Text = "Choix d\'un rôle";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -93,9 +94,9 @@ namespace ZumbaSoft.Fenetres_Roles
             this.choixRoles.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.choixRoles.FormattingEnabled = true;
             this.choixRoles.ItemHeight = 30;
-            this.choixRoles.Location = new System.Drawing.Point(16, 65);
+            this.choixRoles.Location = new System.Drawing.Point(15, 69);
             this.choixRoles.Name = "choixRoles";
-            this.choixRoles.Size = new System.Drawing.Size(241, 120);
+            this.choixRoles.Size = new System.Drawing.Size(861, 180);
             this.choixRoles.TabIndex = 2;
             // 
             // panel2
@@ -107,16 +108,16 @@ namespace ZumbaSoft.Fenetres_Roles
             this.panel2.Controls.Add(this.ajouterRoles);
             this.panel2.Controls.Add(this.nomRole);
             this.panel2.Controls.Add(this.intituleRole);
-            this.panel2.Location = new System.Drawing.Point(346, 23);
+            this.panel2.Location = new System.Drawing.Point(45, 34);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(275, 204);
+            this.panel2.Size = new System.Drawing.Size(415, 204);
             this.panel2.TabIndex = 2;
             // 
             // confirmationAjout
             // 
             this.confirmationAjout.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.confirmationAjout.ForeColor = System.Drawing.Color.Lime;
-            this.confirmationAjout.Location = new System.Drawing.Point(14, 101);
+            this.confirmationAjout.Location = new System.Drawing.Point(94, 102);
             this.confirmationAjout.Name = "confirmationAjout";
             this.confirmationAjout.Size = new System.Drawing.Size(247, 50);
             this.confirmationAjout.TabIndex = 7;
@@ -128,7 +129,7 @@ namespace ZumbaSoft.Fenetres_Roles
             // 
             this.erreurAjout.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.erreurAjout.ForeColor = System.Drawing.Color.Red;
-            this.erreurAjout.Location = new System.Drawing.Point(14, 101);
+            this.erreurAjout.Location = new System.Drawing.Point(94, 102);
             this.erreurAjout.Name = "erreurAjout";
             this.erreurAjout.Size = new System.Drawing.Size(247, 50);
             this.erreurAjout.TabIndex = 4;
@@ -146,7 +147,7 @@ namespace ZumbaSoft.Fenetres_Roles
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(275, 51);
+            this.label2.Size = new System.Drawing.Size(415, 51);
             this.label2.TabIndex = 5;
             this.label2.Text = "Ajouter un rôle";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -155,9 +156,9 @@ namespace ZumbaSoft.Fenetres_Roles
             // 
             this.ajouterRoles.AutoSize = true;
             this.ajouterRoles.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ajouterRoles.Location = new System.Drawing.Point(64, 154);
+            this.ajouterRoles.Location = new System.Drawing.Point(108, 154);
             this.ajouterRoles.Name = "ajouterRoles";
-            this.ajouterRoles.Size = new System.Drawing.Size(152, 40);
+            this.ajouterRoles.Size = new System.Drawing.Size(208, 40);
             this.ajouterRoles.TabIndex = 6;
             this.ajouterRoles.Text = "Ajouter";
             this.ajouterRoles.UseVisualStyleBackColor = true;
@@ -166,16 +167,16 @@ namespace ZumbaSoft.Fenetres_Roles
             // nomRole
             // 
             this.nomRole.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.nomRole.Location = new System.Drawing.Point(95, 62);
+            this.nomRole.Location = new System.Drawing.Point(127, 63);
             this.nomRole.Name = "nomRole";
-            this.nomRole.Size = new System.Drawing.Size(166, 36);
+            this.nomRole.Size = new System.Drawing.Size(271, 36);
             this.nomRole.TabIndex = 3;
             // 
             // intituleRole
             // 
             this.intituleRole.AutoSize = true;
             this.intituleRole.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.intituleRole.Location = new System.Drawing.Point(14, 67);
+            this.intituleRole.Location = new System.Drawing.Point(15, 67);
             this.intituleRole.Name = "intituleRole";
             this.intituleRole.Size = new System.Drawing.Size(90, 30);
             this.intituleRole.TabIndex = 2;
@@ -187,9 +188,9 @@ namespace ZumbaSoft.Fenetres_Roles
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.supprimerRole);
             this.panel3.Controls.Add(this.ConfirmationSR);
-            this.panel3.Location = new System.Drawing.Point(660, 23);
+            this.panel3.Location = new System.Drawing.Point(512, 34);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(275, 204);
+            this.panel3.Size = new System.Drawing.Size(423, 204);
             this.panel3.TabIndex = 3;
             // 
             // label3
@@ -202,7 +203,7 @@ namespace ZumbaSoft.Fenetres_Roles
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(275, 51);
+            this.label3.Size = new System.Drawing.Size(423, 51);
             this.label3.TabIndex = 7;
             this.label3.Text = "Supprimer un rôle";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -211,9 +212,9 @@ namespace ZumbaSoft.Fenetres_Roles
             // 
             this.supprimerRole.AutoSize = true;
             this.supprimerRole.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.supprimerRole.Location = new System.Drawing.Point(63, 154);
+            this.supprimerRole.Location = new System.Drawing.Point(108, 154);
             this.supprimerRole.Name = "supprimerRole";
-            this.supprimerRole.Size = new System.Drawing.Size(152, 40);
+            this.supprimerRole.Size = new System.Drawing.Size(208, 40);
             this.supprimerRole.TabIndex = 5;
             this.supprimerRole.Text = "Supprimer";
             this.supprimerRole.UseVisualStyleBackColor = true;
@@ -223,7 +224,7 @@ namespace ZumbaSoft.Fenetres_Roles
             // 
             this.ConfirmationSR.AutoSize = true;
             this.ConfirmationSR.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ConfirmationSR.Location = new System.Drawing.Point(22, 67);
+            this.ConfirmationSR.Location = new System.Drawing.Point(99, 67);
             this.ConfirmationSR.Name = "ConfirmationSR";
             this.ConfirmationSR.Size = new System.Drawing.Size(240, 32);
             this.ConfirmationSR.TabIndex = 2;
@@ -235,6 +236,7 @@ namespace ZumbaSoft.Fenetres_Roles
             this.AutoScaleDimensions = new System.Drawing.SizeF(20F, 48F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(982, 563);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
