@@ -28,7 +28,7 @@ namespace ZumbaSoft
 
         private SQLiteConnection InitializeDataBase()
         {
-            string databasePath = System.IO.Path.GetFullPath("./DataBase.db");
+            string databasePath = System.IO.Path.GetFullPath("./../../../DataBase.db");
             SQLiteConnection db = new SQLiteConnection(databasePath);
             db.CreateTable<Adresse>();
             db.CreateTable<Genre>();
