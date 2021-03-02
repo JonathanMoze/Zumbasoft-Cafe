@@ -20,8 +20,21 @@ namespace ZumbaSoft.Fenetres_Roles
             InitializeComponent();
             DB = database;
             initListRoles();
+            initItemsColors();
+
         }
 
+        public void initItemsColors()
+        {
+            panel1.BackColor = Color.FromArgb(95, 12, 12, 12);
+            panel2.BackColor = Color.FromArgb(95, 12, 12, 12);
+            panel3.BackColor = Color.FromArgb(95, 12, 12, 12);
+            panel4.BackColor = Color.FromArgb(80, 12, 12, 12);
+            ajouterRoles.BackColor = Color.FromArgb(80, 12, 12, 12);
+            supprimerRole.BackColor = Color.FromArgb(80, 12, 12, 12);
+            msgBDstatusOK.ForeColor = Color.FromArgb(80, 235, 235, 235);
+            magasinSelectionne.ForeColor = Color.FromArgb(80, 235, 235, 235);
+        }
 
         public void initListRoles()
         {
@@ -84,10 +97,14 @@ namespace ZumbaSoft.Fenetres_Roles
                 ConfirmationSR.ForeColor = System.Drawing.Color.Black;
             } else
             {
-                ConfirmationSR.ForeColor = System.Drawing.Color.Red;
+                ConfirmationSR.ForeColor = System.Drawing.Color.Tomato;
 
             }
         }
 
+        private void goBackButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
