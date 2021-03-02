@@ -29,7 +29,10 @@ namespace ZumbaSoft.Fenetres_Magasin
             adresse.ville = textBoxVille.Text;
             return adresse;
         }
-
+        /// <summary>
+        /// Permet de vérifier si les champs saisit par l'utilisateur sont valides.
+        /// </summary>
+        /// <returns>true si ils sont valides sinon false</returns>
         public bool fieldIsValid()
         {
             if (textBoxAdresse.Text == "")
@@ -37,7 +40,24 @@ namespace ZumbaSoft.Fenetres_Magasin
                 labelErreurAdr.Visible = true;
                 return false;
             }
-            if (textBoxCodePostal.Text == "")
+            if (!(textBoxCodePostal.Text == ""))
+            {
+                int n;
+                foreach(char c in textBoxCodePostal.Text.ToCharArray())
+                {
+                    if (!Int32.TryParse(c.ToString(),out n))
+                    {
+                        labelErreurCP.Visible = true;
+                        return false;
+                    }
+                    if(textBoxCodePostal.Text.Length != 5)
+                    {
+                        labelErreurCP.Visible = true;
+                        return false;
+                    }
+                }
+            }
+            else
             {
                 labelErreurCP.Visible = true;
                 return false;

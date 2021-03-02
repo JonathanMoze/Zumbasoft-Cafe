@@ -33,5 +33,10 @@ namespace ZumbaSoft.Model
 
         [OneToOne]
         public Adresse adresse { get; set; }
+
+        public override string ToString()
+        {
+            return nom;
+        }
     }
 }

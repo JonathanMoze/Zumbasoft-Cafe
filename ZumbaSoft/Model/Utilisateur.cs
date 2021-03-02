@@ -44,5 +44,10 @@ namespace ZumbaSoft.Model
 
         [ForeignKey(typeof(Role))]
         public int id_role { get; set; }
+
+        public override string ToString()
+        {
+            return prenom + " " + nom;
+        }
     }
 }

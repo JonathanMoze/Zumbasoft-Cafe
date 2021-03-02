@@ -35,13 +35,14 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.boutonSupprimer = new System.Windows.Forms.Button();
             this.boutonModifier = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonAccueil = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listMagasin
             // 
-            this.listMagasin.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.listMagasin.Font = new System.Drawing.Font("Microsoft YaHei", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.listMagasin.FormattingEnabled = true;
-            this.listMagasin.ItemHeight = 24;
+            this.listMagasin.ItemHeight = 30;
             this.listMagasin.Location = new System.Drawing.Point(12, 119);
             this.listMagasin.Name = "listMagasin";
             this.listMagasin.Size = new System.Drawing.Size(497, 364);
@@ -100,11 +101,22 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.label1.TabIndex = 5;
             this.label1.Text = "Liste des magasins :";
             // 
+            // buttonAccueil
+            // 
+            this.buttonAccueil.Location = new System.Drawing.Point(552, 424);
+            this.buttonAccueil.Name = "buttonAccueil";
+            this.buttonAccueil.Size = new System.Drawing.Size(112, 34);
+            this.buttonAccueil.TabIndex = 6;
+            this.buttonAccueil.Text = "Accueil";
+            this.buttonAccueil.UseVisualStyleBackColor = true;
+            this.buttonAccueil.Click += new System.EventHandler(this.buttonAccueil_Click);
+            // 
             // AccueilMagasin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(714, 506);
+            this.Controls.Add(this.buttonAccueil);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.boutonModifier);
             this.Controls.Add(this.boutonSupprimer);
@@ -126,5 +138,6 @@ namespace ZumbaSoft.Fenetres_Magasin
         private System.Windows.Forms.Button boutonSupprimer;
         private System.Windows.Forms.Button boutonModifier;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonAccueil;
     }
 }

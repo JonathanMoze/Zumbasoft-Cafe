@@ -22,5 +22,10 @@ namespace ZumbaSoft.Model
 
         [OneToOne]
         public Magasin magasin { get; set; }
+
+        public override string ToString()
+        {
+            return texte.Substring(0, 10).Insert(10, "...");
+        }
     }
 }
