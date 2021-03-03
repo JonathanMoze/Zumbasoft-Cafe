@@ -31,7 +31,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.buttonGestionMag = new System.Windows.Forms.Button();
             this.RoleButton = new System.Windows.Forms.Button();
-            this.buttonGestionStock = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -69,22 +68,11 @@
             this.RoleButton.UseVisualStyleBackColor = true;
             this.RoleButton.Click += new System.EventHandler(this.RoleButton_Click);
             // 
-            // buttonGestionStock
-            // 
-            this.buttonGestionStock.Location = new System.Drawing.Point(12, 267);
-            this.buttonGestionStock.Name = "buttonGestionStock";
-            this.buttonGestionStock.Size = new System.Drawing.Size(156, 48);
-            this.buttonGestionStock.TabIndex = 3;
-            this.buttonGestionStock.Text = "Gestion des Stocks";
-            this.buttonGestionStock.UseVisualStyleBackColor = true;
-            this.buttonGestionStock.Click += new System.EventHandler(this.buttonGestionStock_Click);
-            // 
             // Accueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(640, 360);
-            this.Controls.Add(this.buttonGestionStock);
             this.Controls.Add(this.RoleButton);
             this.Controls.Add(this.buttonGestionMag);
             this.Controls.Add(this.label1);
@@ -101,7 +89,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonGestionMag;
         private System.Windows.Forms.Button RoleButton;
-        private System.Windows.Forms.Button buttonGestionStock;
     }
 }
 
