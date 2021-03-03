@@ -16,11 +16,11 @@ namespace ZumbaSoft.Fenetres_Stock
         Magasin magasin;
         SQLiteConnection DB;
 
-        public AccueilStock(SQLiteConnection db)
+        public AccueilStock(SQLiteConnection db, Magasin m)
         {
             InitializeComponent();
             DB = db;
-            magasin = new Magasin();
+            magasin = m;
             initListStock(magasin);
         }
         public void initListStock(Magasin m)

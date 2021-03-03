@@ -16,6 +16,7 @@ namespace ZumbaSoft
     public partial class Accueil : Form
     {
         SQLiteConnection db;
+        Magasin magasin;
 
         public Accueil()
         {
@@ -60,16 +61,6 @@ namespace ZumbaSoft
             r.Show();
         }
 
-        private void buttonGestionStock_Click(object sender, EventArgs e)
-        {
-            AccueilStock m = new AccueilStock(db);
-            this.Visible = false;
-            if (m.ShowDialog() == DialogResult.OK)
-            {
-                this.Visible = true;
-            }
-        }
-
         private void buttonGestionMag_Click(object sender, EventArgs e)
         {
             AccueilMagasin m = new AccueilMagasin(db);
@@ -86,10 +77,9 @@ namespace ZumbaSoft
             i.Show();
         }
 
-        private void buttonGestionStock_Click_1(object sender, EventArgs e)
+        private void buttonSeConnecter_Click(object sender, EventArgs e)
         {
-            AccueilStock m = new AccueilStock(db);
-
+            Identification m = new Identification(db);
             this.Visible = false;
             if (m.ShowDialog() == DialogResult.OK)
             {
@@ -97,11 +87,11 @@ namespace ZumbaSoft
             }
         }
 
-        private void buttonSeConnecter_Click(object sender, EventArgs e)
+        private void buttonGestionStock_Click(object sender, EventArgs e)
         {
-            Identification m = new Identification(db);
+            AccueilStock s = new AccueilStock(db, magasin);
             this.Visible = false;
-            if (m.ShowDialog() == DialogResult.OK)
+            if (s.ShowDialog() == DialogResult.OK)
             {
                 this.Visible = true;
             }

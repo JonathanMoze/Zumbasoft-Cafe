@@ -44,20 +44,20 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label1.Location = new System.Drawing.Point(322, 271);
+            this.label1.Location = new System.Drawing.Point(402, 339);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 25);
+            this.label1.Size = new System.Drawing.Size(98, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Accueil";
             // 
             // buttonGestionMag
             // 
             this.buttonGestionMag.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonGestionMag.Location = new System.Drawing.Point(102, 323);
+            this.buttonGestionMag.Location = new System.Drawing.Point(128, 404);
             this.buttonGestionMag.Margin = new System.Windows.Forms.Padding(2);
             this.buttonGestionMag.Name = "buttonGestionMag";
-            this.buttonGestionMag.Size = new System.Drawing.Size(152, 65);
+            this.buttonGestionMag.Size = new System.Drawing.Size(190, 81);
             this.buttonGestionMag.TabIndex = 1;
             this.buttonGestionMag.Text = "Gestion des Magasins";
             this.buttonGestionMag.UseVisualStyleBackColor = true;
@@ -66,10 +66,10 @@
             // RoleButton
             // 
             this.RoleButton.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.RoleButton.Location = new System.Drawing.Point(289, 323);
+            this.RoleButton.Location = new System.Drawing.Point(361, 404);
             this.RoleButton.Margin = new System.Windows.Forms.Padding(2);
             this.RoleButton.Name = "RoleButton";
-            this.RoleButton.Size = new System.Drawing.Size(158, 65);
+            this.RoleButton.Size = new System.Drawing.Size(198, 81);
             this.RoleButton.TabIndex = 2;
             this.RoleButton.Text = "Gestion des Rôles";
             this.RoleButton.UseVisualStyleBackColor = true;
@@ -81,10 +81,10 @@
             this.title.BackColor = System.Drawing.Color.Transparent;
             this.title.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.title.ForeColor = System.Drawing.Color.Gainsboro;
-            this.title.Location = new System.Drawing.Point(196, 110);
+            this.title.Location = new System.Drawing.Point(245, 138);
             this.title.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(351, 67);
+            this.title.Size = new System.Drawing.Size(417, 79);
             this.title.TabIndex = 3;
             this.title.Text = "OUATELSE";
             // 
@@ -94,32 +94,32 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.Aquamarine;
-            this.label2.Location = new System.Drawing.Point(289, 37);
+            this.label2.Location = new System.Drawing.Point(361, 46);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(137, 25);
+            this.label2.Size = new System.Drawing.Size(161, 29);
             this.label2.TabIndex = 4;
             this.label2.Text = "ZUMBASOFT";
             // 
             // buttonGestionStock
             // 
             this.buttonGestionStock.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonGestionStock.Location = new System.Drawing.Point(483, 323);
+            this.buttonGestionStock.Location = new System.Drawing.Point(604, 404);
             this.buttonGestionStock.Margin = new System.Windows.Forms.Padding(2);
             this.buttonGestionStock.Name = "buttonGestionStock";
-            this.buttonGestionStock.Size = new System.Drawing.Size(158, 65);
+            this.buttonGestionStock.Size = new System.Drawing.Size(198, 81);
             this.buttonGestionStock.TabIndex = 5;
             this.buttonGestionStock.Text = "Gestion des Stock";
             this.buttonGestionStock.UseVisualStyleBackColor = true;
-            this.buttonGestionStock.Click += new System.EventHandler(this.buttonGestionStock_Click_1);
+            this.buttonGestionStock.Click += new System.EventHandler(this.buttonGestionStock_Click);
             // 
             // buttonSeConnecter
             // 
             this.buttonSeConnecter.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonSeConnecter.Location = new System.Drawing.Point(289, 416);
+            this.buttonSeConnecter.Location = new System.Drawing.Point(361, 520);
             this.buttonSeConnecter.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSeConnecter.Name = "buttonSeConnecter";
-            this.buttonSeConnecter.Size = new System.Drawing.Size(158, 36);
+            this.buttonSeConnecter.Size = new System.Drawing.Size(198, 45);
             this.buttonSeConnecter.TabIndex = 6;
             this.buttonSeConnecter.Text = "Se connecter";
             this.buttonSeConnecter.UseVisualStyleBackColor = true;
@@ -127,10 +127,10 @@
             // 
             // Accueil
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(735, 476);
+            this.ClientSize = new System.Drawing.Size(919, 595);
             this.Controls.Add(this.buttonSeConnecter);
             this.Controls.Add(this.buttonGestionStock);
             this.Controls.Add(this.label2);
