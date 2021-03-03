@@ -13,18 +13,29 @@ namespace ZumbaSoft.Fenetres_Stock
 {
     public partial class AccueilStock : Form
     {
+        Magasin magasin;
         SQLiteConnection DB;
-        public AccueilStock(SQLiteConnection db)
+
+        public AccueilStock(SQLiteConnection db, Magasin m)
         {
             InitializeComponent();
-            db = DB;
-            initListStock();
+            DB = db;
+            magasin = m;
+            initListStock(magasin);
         }
-        public void initListStock()
+        public void initListStock(Magasin m)
         {
-            foreach (ProduitEnStock ps in DB.GetAllWithChildren<ProduitEnStock>())
+            List<ProduitEnStock> stock = DB.Table<ProduitEnStock>().Where(ps => ps.magasin == m).ToList();
+            if(stock.Count >= 1)
             {
-                listStock.Items.Add(ps);
+                foreach (ProduitEnStock ps in stock)
+                {
+                    listStock.Items.Add(ps);
+                }
+            }
+            else
+            {
+                listStock.Items.Add("Aucun produit en stock.");
             }
         }
 
