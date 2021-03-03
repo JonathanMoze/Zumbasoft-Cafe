@@ -28,29 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Accueil));
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.RoleButton = new System.Windows.Forms.Button();
+            this.title = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(10, 10);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Sofia Pro", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label1.Location = new System.Drawing.Point(349, 253);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 27);
+            this.label1.Size = new System.Drawing.Size(94, 30);
             this.label1.TabIndex = 0;
             this.label1.Text = "Accueil";
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(10, 126);
+            this.button1.Location = new System.Drawing.Point(162, 336);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(158, 52);
+            this.button1.Size = new System.Drawing.Size(198, 65);
             this.button1.TabIndex = 1;
             this.button1.Text = "Gestion des Magasins";
             this.button1.UseVisualStyleBackColor = true;
@@ -59,20 +64,49 @@
             // RoleButton
             // 
             this.RoleButton.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.RoleButton.Location = new System.Drawing.Point(10, 194);
+            this.RoleButton.Location = new System.Drawing.Point(434, 336);
             this.RoleButton.Margin = new System.Windows.Forms.Padding(2);
             this.RoleButton.Name = "RoleButton";
-            this.RoleButton.Size = new System.Drawing.Size(158, 52);
+            this.RoleButton.Size = new System.Drawing.Size(198, 65);
             this.RoleButton.TabIndex = 2;
             this.RoleButton.Text = "Gestion des Rôles";
             this.RoleButton.UseVisualStyleBackColor = true;
             this.RoleButton.Click += new System.EventHandler(this.RoleButton_Click);
             // 
+            // title
+            // 
+            this.title.AutoSize = true;
+            this.title.BackColor = System.Drawing.Color.Transparent;
+            this.title.Font = new System.Drawing.Font("Sofia Pro", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.title.ForeColor = System.Drawing.Color.Gainsboro;
+            this.title.Location = new System.Drawing.Point(211, 114);
+            this.title.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.title.Name = "title";
+            this.title.Size = new System.Drawing.Size(378, 87);
+            this.title.TabIndex = 3;
+            this.title.Text = "OUATELSE";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Sofia Pro", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.Aquamarine;
+            this.label2.Location = new System.Drawing.Point(327, 23);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(155, 29);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "ZUMBASOFT";
+            // 
             // Accueil
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(640, 360);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.title);
             this.Controls.Add(this.RoleButton);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
@@ -89,6 +123,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button RoleButton;
+        private System.Windows.Forms.Label title;
+        private System.Windows.Forms.Label label2;
     }
 }
 
