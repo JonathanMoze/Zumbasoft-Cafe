@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Accueil));
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonGestionMag = new System.Windows.Forms.Button();
             this.RoleButton = new System.Windows.Forms.Button();
             this.title = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,22 +40,22 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Sofia Pro", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label1.Location = new System.Drawing.Point(7, 6);
+            this.label1.Location = new System.Drawing.Point(349, 253);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 27);
+            this.label1.Size = new System.Drawing.Size(94, 30);
             this.label1.TabIndex = 0;
             this.label1.Text = "Accueil";
             // 
-            // button1
+            // buttonGestionMag
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(130, 269);
+            this.button1.Location = new System.Drawing.Point(162, 336);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(158, 52);
+            this.button1.Size = new System.Drawing.Size(198, 65);
             this.button1.TabIndex = 1;
             this.button1.Text = "Gestion des Magasins";
             this.button1.UseVisualStyleBackColor = true;
@@ -104,11 +104,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(672, 421);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.title);
             this.Controls.Add(this.RoleButton);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonGestionMag);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Accueil";
@@ -121,7 +121,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonGestionMag;
         private System.Windows.Forms.Button RoleButton;
         private System.Windows.Forms.Label title;
         private System.Windows.Forms.Label label2;
