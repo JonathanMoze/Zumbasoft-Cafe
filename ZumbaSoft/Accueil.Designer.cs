@@ -34,6 +34,8 @@
             this.RoleButton = new System.Windows.Forms.Button();
             this.title = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.buttonGestionStock = new System.Windows.Forms.Button();
+            this.buttonSeConnecter = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -52,7 +54,7 @@
             // buttonGestionMag
             // 
             this.buttonGestionMag.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonGestionMag.Location = new System.Drawing.Point(142, 323);
+            this.buttonGestionMag.Location = new System.Drawing.Point(102, 323);
             this.buttonGestionMag.Margin = new System.Windows.Forms.Padding(2);
             this.buttonGestionMag.Name = "buttonGestionMag";
             this.buttonGestionMag.Size = new System.Drawing.Size(152, 65);
@@ -64,7 +66,7 @@
             // RoleButton
             // 
             this.RoleButton.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.RoleButton.Location = new System.Drawing.Point(422, 323);
+            this.RoleButton.Location = new System.Drawing.Point(289, 323);
             this.RoleButton.Margin = new System.Windows.Forms.Padding(2);
             this.RoleButton.Name = "RoleButton";
             this.RoleButton.Size = new System.Drawing.Size(158, 65);
@@ -99,12 +101,38 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "ZUMBASOFT";
             // 
+            // buttonGestionStock
+            // 
+            this.buttonGestionStock.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonGestionStock.Location = new System.Drawing.Point(483, 323);
+            this.buttonGestionStock.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonGestionStock.Name = "buttonGestionStock";
+            this.buttonGestionStock.Size = new System.Drawing.Size(158, 65);
+            this.buttonGestionStock.TabIndex = 5;
+            this.buttonGestionStock.Text = "Gestion des Stock";
+            this.buttonGestionStock.UseVisualStyleBackColor = true;
+            this.buttonGestionStock.Click += new System.EventHandler(this.buttonGestionStock_Click_1);
+            // 
+            // buttonSeConnecter
+            // 
+            this.buttonSeConnecter.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonSeConnecter.Location = new System.Drawing.Point(289, 416);
+            this.buttonSeConnecter.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonSeConnecter.Name = "buttonSeConnecter";
+            this.buttonSeConnecter.Size = new System.Drawing.Size(158, 36);
+            this.buttonSeConnecter.TabIndex = 6;
+            this.buttonSeConnecter.Text = "Se connecter";
+            this.buttonSeConnecter.UseVisualStyleBackColor = true;
+            this.buttonSeConnecter.Click += new System.EventHandler(this.buttonSeConnecter_Click);
+            // 
             // Accueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(735, 450);
+            this.ClientSize = new System.Drawing.Size(735, 476);
+            this.Controls.Add(this.buttonSeConnecter);
+            this.Controls.Add(this.buttonGestionStock);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.title);
             this.Controls.Add(this.RoleButton);
@@ -125,6 +153,8 @@
         private System.Windows.Forms.Button RoleButton;
         private System.Windows.Forms.Label title;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button buttonGestionStock;
+        private System.Windows.Forms.Button buttonSeConnecter;
     }
 }
 

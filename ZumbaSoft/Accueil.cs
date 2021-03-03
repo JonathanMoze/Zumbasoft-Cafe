@@ -85,5 +85,25 @@ namespace ZumbaSoft
             Identification i = new Identification(db);
             i.Show();
         }
+
+        private void buttonGestionStock_Click_1(object sender, EventArgs e)
+        {
+            AccueilStock m = new AccueilStock(db);
+            this.Visible = false;
+            if (m.ShowDialog() == DialogResult.OK)
+            {
+                this.Visible = true;
+            }
+        }
+
+        private void buttonSeConnecter_Click(object sender, EventArgs e)
+        {
+            Identification m = new Identification(db);
+            this.Visible = false;
+            if (m.ShowDialog() == DialogResult.OK)
+            {
+                this.Visible = true;
+            }
+        }
     }
 }
