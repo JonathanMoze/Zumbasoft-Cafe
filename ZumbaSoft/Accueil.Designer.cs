@@ -40,34 +40,34 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Sofia Pro", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label1.Location = new System.Drawing.Point(349, 253);
+            this.label1.Location = new System.Drawing.Point(322, 271);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 30);
+            this.label1.Size = new System.Drawing.Size(83, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Accueil";
             // 
             // buttonGestionMag
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(162, 336);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(198, 65);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Gestion des Magasins";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonGestionMag.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonGestionMag.Location = new System.Drawing.Point(142, 323);
+            this.buttonGestionMag.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonGestionMag.Name = "buttonGestionMag";
+            this.buttonGestionMag.Size = new System.Drawing.Size(152, 65);
+            this.buttonGestionMag.TabIndex = 1;
+            this.buttonGestionMag.Text = "Gestion des Magasins";
+            this.buttonGestionMag.UseVisualStyleBackColor = true;
+            this.buttonGestionMag.Click += new System.EventHandler(this.buttonGestionMag_Click);
             // 
             // RoleButton
             // 
             this.RoleButton.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.RoleButton.Location = new System.Drawing.Point(347, 269);
+            this.RoleButton.Location = new System.Drawing.Point(422, 323);
             this.RoleButton.Margin = new System.Windows.Forms.Padding(2);
             this.RoleButton.Name = "RoleButton";
-            this.RoleButton.Size = new System.Drawing.Size(158, 52);
+            this.RoleButton.Size = new System.Drawing.Size(158, 65);
             this.RoleButton.TabIndex = 2;
             this.RoleButton.Text = "Gestion des Rôles";
             this.RoleButton.UseVisualStyleBackColor = true;
@@ -79,7 +79,7 @@
             this.title.BackColor = System.Drawing.Color.Transparent;
             this.title.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.title.ForeColor = System.Drawing.Color.Gainsboro;
-            this.title.Location = new System.Drawing.Point(169, 91);
+            this.title.Location = new System.Drawing.Point(196, 110);
             this.title.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.title.Name = "title";
             this.title.Size = new System.Drawing.Size(351, 67);
@@ -92,7 +92,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.Aquamarine;
-            this.label2.Location = new System.Drawing.Point(262, 18);
+            this.label2.Location = new System.Drawing.Point(289, 37);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(137, 25);
@@ -104,7 +104,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(735, 450);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.title);
             this.Controls.Add(this.RoleButton);
