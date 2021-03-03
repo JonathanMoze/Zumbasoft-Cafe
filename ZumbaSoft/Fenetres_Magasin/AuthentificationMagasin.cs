@@ -1,4 +1,5 @@
 ﻿using System;
+using SQLite;
 using System.Windows.Forms;
 
 namespace ZumbaSoft.Fenetres_Magasin
@@ -24,10 +25,27 @@ namespace ZumbaSoft.Fenetres_Magasin
             string textRetour = "";
             if (login != null && pass != null)
             {
-                if (login.Length > 64)
+                #region checklogin
+                //TODO faire un check dans la base pour savoir si on connaît le login;
+                string waitedPass = "";
+                #endregion
+                if (true)
                 {
-                    //TODO
+                    if (pass == waitedPass)
+                    {
+                        //TODO init session
+                    }
                 }
+                else
+                {
+                    textRetour = "Veuillez entrer un identifiant valide.";
+                    MessageBox.Show(textRetour);
+                }
+            }
+            else
+            {
+                textRetour = "Veuillez renseigner votre mot de passe ou votre identifiant.";
+                MessageBox.Show(textRetour);
             }
         }
     }
