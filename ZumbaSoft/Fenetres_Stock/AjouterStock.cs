@@ -14,12 +14,25 @@ namespace ZumbaSoft.Fenetres_Stock
     public partial class AjouterStock : Form
     {
         SQLiteConnection DB;
+
         public ProduitEnStock produitEnStock;
-        public AjouterStock(SQLiteConnection db)
+        public Magasin magasin;
+
+        public AjouterStock(SQLiteConnection db, Magasin m)
         {
             InitializeComponent();
-            db = DB;
+            DB = db;
+            magasin = m;
+
+            initListProd();
         }
+
+        public void initListProd()
+        {
+            List<Produit> produits = DB.Table<Produit>().ToList();
+            listBoxProduits.Items.Add(produits);
+        }
+         
         public ProduitEnStock initObjectStock()
         {
             produitEnStock = new ProduitEnStock();
@@ -38,6 +51,11 @@ namespace ZumbaSoft.Fenetres_Stock
         private void buttonAnnulerStock_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
