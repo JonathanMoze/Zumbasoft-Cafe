@@ -41,7 +41,7 @@ namespace ZumbaSoft.Fenetres_Stock
 
         private void buttonAjouterStock_Click(object sender, EventArgs e)
         {
-            AjouterStock ajouterStock = new AjouterStock(DB);
+            AjouterStock ajouterStock = new AjouterStock(DB,magasin);
             if (ajouterStock.ShowDialog() == DialogResult.OK)
             {
                 var s = ajouterStock.produitEnStock;
