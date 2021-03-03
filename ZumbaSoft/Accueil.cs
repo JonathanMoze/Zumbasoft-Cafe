@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Windows.Forms;
+using System.Drawing;
+using System.Text;
 using ZumbaSoft.Model;
 using ZumbaSoft.Fenetres_Magasin;
 using ZumbaSoft.Fenetres_Roles;
@@ -21,11 +23,22 @@ namespace ZumbaSoft
         {
             InitializeComponent();
             db = InitializeDataBase();
+            initItemsColors();
         }
         public Accueil(SQLiteConnection db)
         {
             InitializeComponent();
             this.db = db;
+        }
+
+        public void initItemsColors()
+        {
+            backgroundBlock.BackColor = Color.FromArgb(50, 12, 12, 12);
+            buttonGestionMag.BackColor = Color.FromArgb(80, 12, 12, 12);
+            buttonGestionRoles.BackColor = Color.FromArgb(80, 12, 12, 12);
+            buttonGestionStock.BackColor = Color.FromArgb(80, 12, 12, 12);
+            buttonSeConnecter.BackColor = Color.FromArgb(80, 12, 12, 12);
+
         }
 
         private SQLiteConnection InitializeDataBase()

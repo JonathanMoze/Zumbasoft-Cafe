@@ -71,7 +71,7 @@ namespace ZumbaSoft.Fenetres_Roles
             this.ajouterRoles.FlatAppearance.BorderSize = 0;
             this.ajouterRoles.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.ajouterRoles.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.ajouterRoles.Font = new System.Drawing.Font("Sofia Pro", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ajouterRoles.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ajouterRoles.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ajouterRoles.Location = new System.Drawing.Point(117, 152);
             this.ajouterRoles.Name = "ajouterRoles";
@@ -87,7 +87,7 @@ namespace ZumbaSoft.Fenetres_Roles
             this.supprimerRole.FlatAppearance.BorderSize = 0;
             this.supprimerRole.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.supprimerRole.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.supprimerRole.Font = new System.Drawing.Font("Sofia Pro", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.supprimerRole.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.supprimerRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.supprimerRole.Location = new System.Drawing.Point(135, 151);
             this.supprimerRole.Name = "supprimerRole";
@@ -110,7 +110,7 @@ namespace ZumbaSoft.Fenetres_Roles
             // 
             // erreurListevide
             // 
-            this.erreurListevide.Font = new System.Drawing.Font("Sofia Pro", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.erreurListevide.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.erreurListevide.ForeColor = System.Drawing.Color.Transparent;
             this.erreurListevide.Location = new System.Drawing.Point(0, 56);
             this.erreurListevide.Name = "erreurListevide";
@@ -125,7 +125,7 @@ namespace ZumbaSoft.Fenetres_Roles
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
-            this.label1.Font = new System.Drawing.Font("Sofia Pro", 9.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
@@ -138,13 +138,13 @@ namespace ZumbaSoft.Fenetres_Roles
             // 
             this.choixRoles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(90)))), ((int)(((byte)(101)))));
             this.choixRoles.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.choixRoles.Font = new System.Drawing.Font("Sofia Pro", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.choixRoles.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.choixRoles.ForeColor = System.Drawing.Color.White;
             this.choixRoles.FormattingEnabled = true;
-            this.choixRoles.ItemHeight = 24;
+            this.choixRoles.ItemHeight = 25;
             this.choixRoles.Location = new System.Drawing.Point(0, 59);
             this.choixRoles.Name = "choixRoles";
-            this.choixRoles.Size = new System.Drawing.Size(951, 144);
+            this.choixRoles.Size = new System.Drawing.Size(951, 125);
             this.choixRoles.TabIndex = 2;
             // 
             // panel2
@@ -164,9 +164,9 @@ namespace ZumbaSoft.Fenetres_Roles
             // confirmationAjout
             // 
             this.confirmationAjout.BackColor = System.Drawing.Color.Transparent;
-            this.confirmationAjout.Font = new System.Drawing.Font("Sofia Pro", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.confirmationAjout.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.confirmationAjout.ForeColor = System.Drawing.Color.Lime;
-            this.confirmationAjout.Location = new System.Drawing.Point(94, 112);
+            this.confirmationAjout.Location = new System.Drawing.Point(94, 110);
             this.confirmationAjout.Name = "confirmationAjout";
             this.confirmationAjout.Size = new System.Drawing.Size(258, 35);
             this.confirmationAjout.TabIndex = 7;
@@ -177,7 +177,7 @@ namespace ZumbaSoft.Fenetres_Roles
             // erreurAjout
             // 
             this.erreurAjout.BackColor = System.Drawing.Color.Transparent;
-            this.erreurAjout.Font = new System.Drawing.Font("Sofia Pro", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.erreurAjout.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.erreurAjout.ForeColor = System.Drawing.Color.Tomato;
             this.erreurAjout.Location = new System.Drawing.Point(94, 102);
             this.erreurAjout.Name = "erreurAjout";
@@ -193,7 +193,7 @@ namespace ZumbaSoft.Fenetres_Roles
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
-            this.label2.Font = new System.Drawing.Font("Sofia Pro", 9.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
@@ -216,11 +216,11 @@ namespace ZumbaSoft.Fenetres_Roles
             // 
             this.intituleRole.AutoSize = true;
             this.intituleRole.BackColor = System.Drawing.Color.Transparent;
-            this.intituleRole.Font = new System.Drawing.Font("Sofia Pro", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.intituleRole.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.intituleRole.ForeColor = System.Drawing.SystemColors.Control;
-            this.intituleRole.Location = new System.Drawing.Point(14, 71);
+            this.intituleRole.Location = new System.Drawing.Point(42, 77);
             this.intituleRole.Name = "intituleRole";
-            this.intituleRole.Size = new System.Drawing.Size(83, 24);
+            this.intituleRole.Size = new System.Drawing.Size(68, 21);
             this.intituleRole.TabIndex = 2;
             this.intituleRole.Text = "Intitulé :";
             // 
@@ -241,7 +241,7 @@ namespace ZumbaSoft.Fenetres_Roles
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
-            this.label3.Font = new System.Drawing.Font("Sofia Pro", 9.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Name = "label3";
@@ -254,11 +254,11 @@ namespace ZumbaSoft.Fenetres_Roles
             // 
             this.ConfirmationSR.AutoSize = true;
             this.ConfirmationSR.BackColor = System.Drawing.Color.Transparent;
-            this.ConfirmationSR.Font = new System.Drawing.Font("Sofia Pro", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ConfirmationSR.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ConfirmationSR.ForeColor = System.Drawing.SystemColors.Control;
-            this.ConfirmationSR.Location = new System.Drawing.Point(113, 92);
+            this.ConfirmationSR.Location = new System.Drawing.Point(135, 93);
             this.ConfirmationSR.Name = "ConfirmationSR";
-            this.ConfirmationSR.Size = new System.Drawing.Size(253, 28);
+            this.ConfirmationSR.Size = new System.Drawing.Size(210, 25);
             this.ConfirmationSR.TabIndex = 2;
             this.ConfirmationSR.Text = "Confirmer la procédure";
             this.ConfirmationSR.UseVisualStyleBackColor = false;
@@ -281,12 +281,12 @@ namespace ZumbaSoft.Fenetres_Roles
             // programName
             // 
             this.programName.BackColor = System.Drawing.Color.Transparent;
-            this.programName.Font = new System.Drawing.Font("Sofia Pro", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.programName.Font = new System.Drawing.Font("Microsoft YaHei UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.programName.ForeColor = System.Drawing.Color.Snow;
             this.programName.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.programName.Location = new System.Drawing.Point(848, 0);
+            this.programName.Location = new System.Drawing.Point(794, 0);
             this.programName.Name = "programName";
-            this.programName.Size = new System.Drawing.Size(197, 49);
+            this.programName.Size = new System.Drawing.Size(203, 49);
             this.programName.TabIndex = 15;
             this.programName.Text = "OUATELSE v.0";
             this.programName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -331,10 +331,10 @@ namespace ZumbaSoft.Fenetres_Roles
             // magasinSelectionne
             // 
             this.magasinSelectionne.BackColor = System.Drawing.Color.Transparent;
-            this.magasinSelectionne.Font = new System.Drawing.Font("Sofia Pro", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.magasinSelectionne.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.magasinSelectionne.ForeColor = System.Drawing.Color.Snow;
             this.magasinSelectionne.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.magasinSelectionne.Location = new System.Drawing.Point(432, 0);
+            this.magasinSelectionne.Location = new System.Drawing.Point(424, 0);
             this.magasinSelectionne.Name = "magasinSelectionne";
             this.magasinSelectionne.Size = new System.Drawing.Size(245, 49);
             this.magasinSelectionne.TabIndex = 11;
@@ -344,10 +344,10 @@ namespace ZumbaSoft.Fenetres_Roles
             // msgBDstatusERROR
             // 
             this.msgBDstatusERROR.BackColor = System.Drawing.Color.Transparent;
-            this.msgBDstatusERROR.Font = new System.Drawing.Font("Sofia Pro", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.msgBDstatusERROR.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.msgBDstatusERROR.ForeColor = System.Drawing.Color.Tomato;
             this.msgBDstatusERROR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.msgBDstatusERROR.Location = new System.Drawing.Point(88, 0);
+            this.msgBDstatusERROR.Location = new System.Drawing.Point(72, 0);
             this.msgBDstatusERROR.Name = "msgBDstatusERROR";
             this.msgBDstatusERROR.Size = new System.Drawing.Size(299, 49);
             this.msgBDstatusERROR.TabIndex = 10;
@@ -358,7 +358,7 @@ namespace ZumbaSoft.Fenetres_Roles
             // msgBDstatusOK
             // 
             this.msgBDstatusOK.BackColor = System.Drawing.Color.Transparent;
-            this.msgBDstatusOK.Font = new System.Drawing.Font("Sofia Pro", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.msgBDstatusOK.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.msgBDstatusOK.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.msgBDstatusOK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.msgBDstatusOK.Location = new System.Drawing.Point(72, 0);
@@ -384,11 +384,11 @@ namespace ZumbaSoft.Fenetres_Roles
             this.goBackButton.FlatAppearance.BorderSize = 0;
             this.goBackButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.goBackButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.goBackButton.Font = new System.Drawing.Font("Sofia Pro", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.goBackButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.goBackButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.goBackButton.Location = new System.Drawing.Point(376, 4);
+            this.goBackButton.Location = new System.Drawing.Point(361, 0);
             this.goBackButton.Name = "goBackButton";
-            this.goBackButton.Size = new System.Drawing.Size(283, 42);
+            this.goBackButton.Size = new System.Drawing.Size(328, 47);
             this.goBackButton.TabIndex = 8;
             this.goBackButton.Text = "RETOUR À L\'ACCUEIL";
             this.goBackButton.UseVisualStyleBackColor = false;
