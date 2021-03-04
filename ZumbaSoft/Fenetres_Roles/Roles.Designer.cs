@@ -105,16 +105,16 @@ namespace ZumbaSoft.Fenetres_Roles
             this.panel1.Controls.Add(this.choixRoles);
             this.panel1.Location = new System.Drawing.Point(45, 320);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(951, 204);
+            this.panel1.Size = new System.Drawing.Size(951, 212);
             this.panel1.TabIndex = 0;
             // 
             // erreurListevide
             // 
             this.erreurListevide.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.erreurListevide.ForeColor = System.Drawing.Color.Transparent;
-            this.erreurListevide.Location = new System.Drawing.Point(0, 56);
+            this.erreurListevide.Location = new System.Drawing.Point(-1, 56);
             this.erreurListevide.Name = "erreurListevide";
-            this.erreurListevide.Size = new System.Drawing.Size(951, 147);
+            this.erreurListevide.Size = new System.Drawing.Size(951, 153);
             this.erreurListevide.TabIndex = 8;
             this.erreurListevide.Text = "Aucun rôle n\'est enregistré";
             this.erreurListevide.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -144,7 +144,7 @@ namespace ZumbaSoft.Fenetres_Roles
             this.choixRoles.ItemHeight = 25;
             this.choixRoles.Location = new System.Drawing.Point(0, 59);
             this.choixRoles.Name = "choixRoles";
-            this.choixRoles.Size = new System.Drawing.Size(951, 125);
+            this.choixRoles.Size = new System.Drawing.Size(951, 150);
             this.choixRoles.TabIndex = 2;
             // 
             // panel2

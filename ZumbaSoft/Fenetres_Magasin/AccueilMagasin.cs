@@ -20,14 +20,38 @@ namespace ZumbaSoft.Fenetres_Magasin
             InitializeComponent();
             DB = db;
             initListMagasin();
+            initItemsColors();
             
         }
 
         public void initListMagasin()
         {
-            foreach(Magasin m in DB.GetAllWithChildren<Magasin>()){
+            int nb = 0;
+            foreach (Magasin m in DB.GetAllWithChildren<Magasin>()){
                 listMagasin.Items.Add(m);
+                nb++;
             }
+
+            if (nb > 0)
+            {
+                erreurListevide.Visible = false;
+            }
+            else
+            {
+                erreurListevide.Visible = true;
+            }
+        }
+
+        public void initItemsColors()
+        {
+            backgroundBlock.BackColor = Color.FromArgb(50, 12, 12, 12);
+            buttonAjouterMagasin.BackColor = Color.FromArgb(50, 12, 12, 12);
+            buttonModifierMagasin.BackColor = Color.FromArgb(50, 12, 12, 12);
+            buttonSupprimerMagasin.BackColor = Color.FromArgb(50, 12, 12, 12);
+            erreurListevide.BackColor = Color.FromArgb(50, 12, 12, 12);
+            panel1.BackColor = Color.FromArgb(50, 12, 12, 12);
+            panel4.BackColor = Color.FromArgb(80, 12, 12, 12);
+
         }
 
         private void boutonSupprimer_Click(object sender, EventArgs e)
@@ -65,6 +89,12 @@ namespace ZumbaSoft.Fenetres_Magasin
         }
 
         private void buttonAccueil_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.OK;
+            this.Close();
+        }
+
+        private void goBackButton_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;
             this.Close();

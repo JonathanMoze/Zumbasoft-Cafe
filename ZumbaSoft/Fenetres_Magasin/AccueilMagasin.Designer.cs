@@ -29,123 +29,281 @@ namespace ZumbaSoft.Fenetres_Magasin
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AccueilMagasin));
             this.listMagasin = new System.Windows.Forms.ListBox();
-            this.labelTitre = new System.Windows.Forms.Label();
-            this.boutonAjouter = new System.Windows.Forms.Button();
-            this.boutonSupprimer = new System.Windows.Forms.Button();
-            this.boutonModifier = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.buttonAccueil = new System.Windows.Forms.Button();
+            this.buttonAjouterMagasin = new System.Windows.Forms.Button();
+            this.buttonSupprimerMagasin = new System.Windows.Forms.Button();
+            this.buttonModifierMagasin = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.programName = new System.Windows.Forms.Label();
+            this.dbERROR = new System.Windows.Forms.PictureBox();
+            this.dbOK = new System.Windows.Forms.PictureBox();
+            this.msgBDstatusERROR = new System.Windows.Forms.Label();
+            this.msgBDstatusOK = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.erreurListevide = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.backgroundBlock = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.goBackButton = new System.Windows.Forms.Button();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dbERROR)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbOK)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.backgroundBlock.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // listMagasin
             // 
-            this.listMagasin.Font = new System.Drawing.Font("Microsoft YaHei", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.listMagasin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(90)))), ((int)(((byte)(101)))));
+            this.listMagasin.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listMagasin.Font = new System.Drawing.Font("Microsoft YaHei Light", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.listMagasin.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.listMagasin.FormattingEnabled = true;
-            this.listMagasin.ItemHeight = 24;
-            this.listMagasin.Location = new System.Drawing.Point(10, 95);
+            this.listMagasin.ItemHeight = 30;
+            this.listMagasin.Location = new System.Drawing.Point(0, 54);
             this.listMagasin.Margin = new System.Windows.Forms.Padding(2);
             this.listMagasin.Name = "listMagasin";
-            this.listMagasin.Size = new System.Drawing.Size(398, 292);
+            this.listMagasin.Size = new System.Drawing.Size(365, 210);
             this.listMagasin.TabIndex = 0;
             // 
-            // labelTitre
+            // buttonAjouterMagasin
             // 
-            this.labelTitre.AutoSize = true;
-            this.labelTitre.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelTitre.Location = new System.Drawing.Point(10, 10);
-            this.labelTitre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelTitre.Name = "labelTitre";
-            this.labelTitre.Size = new System.Drawing.Size(145, 36);
-            this.labelTitre.TabIndex = 1;
-            this.labelTitre.Text = "Magasins";
+            this.buttonAjouterMagasin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonAjouterMagasin.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonAjouterMagasin.ForeColor = System.Drawing.Color.Transparent;
+            this.buttonAjouterMagasin.Location = new System.Drawing.Point(41, 35);
+            this.buttonAjouterMagasin.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonAjouterMagasin.Name = "buttonAjouterMagasin";
+            this.buttonAjouterMagasin.Size = new System.Drawing.Size(429, 47);
+            this.buttonAjouterMagasin.TabIndex = 2;
+            this.buttonAjouterMagasin.Text = "Ajouter un nouveau magasin";
+            this.buttonAjouterMagasin.UseVisualStyleBackColor = true;
+            this.buttonAjouterMagasin.Click += new System.EventHandler(this.boutonAjouter_Click);
             // 
-            // boutonAjouter
+            // buttonSupprimerMagasin
             // 
-            this.boutonAjouter.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.boutonAjouter.Location = new System.Drawing.Point(442, 133);
-            this.boutonAjouter.Margin = new System.Windows.Forms.Padding(2);
-            this.boutonAjouter.Name = "boutonAjouter";
-            this.boutonAjouter.Size = new System.Drawing.Size(101, 31);
-            this.boutonAjouter.TabIndex = 2;
-            this.boutonAjouter.Text = "Ajouter";
-            this.boutonAjouter.UseVisualStyleBackColor = true;
-            this.boutonAjouter.Click += new System.EventHandler(this.boutonAjouter_Click);
+            this.buttonSupprimerMagasin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonSupprimerMagasin.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonSupprimerMagasin.ForeColor = System.Drawing.Color.Transparent;
+            this.buttonSupprimerMagasin.Location = new System.Drawing.Point(41, 189);
+            this.buttonSupprimerMagasin.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonSupprimerMagasin.Name = "buttonSupprimerMagasin";
+            this.buttonSupprimerMagasin.Size = new System.Drawing.Size(429, 47);
+            this.buttonSupprimerMagasin.TabIndex = 3;
+            this.buttonSupprimerMagasin.Text = "Supprimer le magasin sélectionné";
+            this.buttonSupprimerMagasin.UseVisualStyleBackColor = true;
+            this.buttonSupprimerMagasin.Click += new System.EventHandler(this.boutonSupprimer_Click);
             // 
-            // boutonSupprimer
+            // buttonModifierMagasin
             // 
-            this.boutonSupprimer.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.boutonSupprimer.Location = new System.Drawing.Point(442, 268);
-            this.boutonSupprimer.Margin = new System.Windows.Forms.Padding(2);
-            this.boutonSupprimer.Name = "boutonSupprimer";
-            this.boutonSupprimer.Size = new System.Drawing.Size(101, 31);
-            this.boutonSupprimer.TabIndex = 3;
-            this.boutonSupprimer.Text = "Supprimer";
-            this.boutonSupprimer.UseVisualStyleBackColor = true;
-            this.boutonSupprimer.Click += new System.EventHandler(this.boutonSupprimer_Click);
+            this.buttonModifierMagasin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonModifierMagasin.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonModifierMagasin.ForeColor = System.Drawing.Color.Transparent;
+            this.buttonModifierMagasin.Location = new System.Drawing.Point(41, 113);
+            this.buttonModifierMagasin.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonModifierMagasin.Name = "buttonModifierMagasin";
+            this.buttonModifierMagasin.Size = new System.Drawing.Size(429, 47);
+            this.buttonModifierMagasin.TabIndex = 4;
+            this.buttonModifierMagasin.Text = "Modifier le magasin sélectionné";
+            this.buttonModifierMagasin.UseVisualStyleBackColor = true;
+            this.buttonModifierMagasin.Click += new System.EventHandler(this.boutonModifier_Click);
             // 
-            // boutonModifier
+            // panel4
             // 
-            this.boutonModifier.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.boutonModifier.Location = new System.Drawing.Point(442, 206);
-            this.boutonModifier.Margin = new System.Windows.Forms.Padding(2);
-            this.boutonModifier.Name = "boutonModifier";
-            this.boutonModifier.Size = new System.Drawing.Size(101, 30);
-            this.boutonModifier.TabIndex = 4;
-            this.boutonModifier.Text = "Modifier";
-            this.boutonModifier.UseVisualStyleBackColor = true;
-            this.boutonModifier.Click += new System.EventHandler(this.boutonModifier_Click);
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
+            this.panel4.Controls.Add(this.programName);
+            this.panel4.Controls.Add(this.dbERROR);
+            this.panel4.Controls.Add(this.dbOK);
+            this.panel4.Controls.Add(this.msgBDstatusERROR);
+            this.panel4.Controls.Add(this.msgBDstatusOK);
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1048, 49);
+            this.panel4.TabIndex = 7;
             // 
-            // label1
+            // programName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(10, 74);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 20);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Liste des magasins :";
+            this.programName.BackColor = System.Drawing.Color.Transparent;
+            this.programName.Font = new System.Drawing.Font("Microsoft YaHei UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.programName.ForeColor = System.Drawing.Color.Snow;
+            this.programName.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.programName.Location = new System.Drawing.Point(839, 1);
+            this.programName.Name = "programName";
+            this.programName.Size = new System.Drawing.Size(203, 49);
+            this.programName.TabIndex = 15;
+            this.programName.Text = "OUATELSE v.0";
+            this.programName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // buttonAccueil
+            // dbERROR
             // 
-            this.buttonAccueil.Location = new System.Drawing.Point(442, 335);
-            this.buttonAccueil.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonAccueil.Name = "buttonAccueil";
-            this.buttonAccueil.Size = new System.Drawing.Size(101, 32);
-            this.buttonAccueil.TabIndex = 6;
-            this.buttonAccueil.Text = "Accueil";
-            this.buttonAccueil.UseVisualStyleBackColor = true;
-            this.buttonAccueil.Click += new System.EventHandler(this.buttonAccueil_Click);
+            this.dbERROR.BackColor = System.Drawing.Color.Transparent;
+            this.dbERROR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.dbERROR.Image = ((System.Drawing.Image)(resources.GetObject("dbERROR.Image")));
+            this.dbERROR.Location = new System.Drawing.Point(46, 9);
+            this.dbERROR.Name = "dbERROR";
+            this.dbERROR.Size = new System.Drawing.Size(31, 30);
+            this.dbERROR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.dbERROR.TabIndex = 13;
+            this.dbERROR.TabStop = false;
+            this.dbERROR.Visible = false;
+            // 
+            // dbOK
+            // 
+            this.dbOK.BackColor = System.Drawing.Color.Transparent;
+            this.dbOK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.dbOK.Image = ((System.Drawing.Image)(resources.GetObject("dbOK.Image")));
+            this.dbOK.Location = new System.Drawing.Point(45, 9);
+            this.dbOK.Name = "dbOK";
+            this.dbOK.Size = new System.Drawing.Size(31, 30);
+            this.dbOK.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.dbOK.TabIndex = 12;
+            this.dbOK.TabStop = false;
+            // 
+            // msgBDstatusERROR
+            // 
+            this.msgBDstatusERROR.BackColor = System.Drawing.Color.Transparent;
+            this.msgBDstatusERROR.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.msgBDstatusERROR.ForeColor = System.Drawing.Color.Tomato;
+            this.msgBDstatusERROR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.msgBDstatusERROR.Location = new System.Drawing.Point(72, 5);
+            this.msgBDstatusERROR.Name = "msgBDstatusERROR";
+            this.msgBDstatusERROR.Size = new System.Drawing.Size(299, 37);
+            this.msgBDstatusERROR.TabIndex = 10;
+            this.msgBDstatusERROR.Text = "Base de données non connectée";
+            this.msgBDstatusERROR.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.msgBDstatusERROR.Visible = false;
+            // 
+            // msgBDstatusOK
+            // 
+            this.msgBDstatusOK.BackColor = System.Drawing.Color.Transparent;
+            this.msgBDstatusOK.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.msgBDstatusOK.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.msgBDstatusOK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.msgBDstatusOK.Location = new System.Drawing.Point(72, 2);
+            this.msgBDstatusOK.Name = "msgBDstatusOK";
+            this.msgBDstatusOK.Size = new System.Drawing.Size(299, 42);
+            this.msgBDstatusOK.TabIndex = 9;
+            this.msgBDstatusOK.Text = "Connecté à la base de données";
+            this.msgBDstatusOK.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
+            this.panel1.Controls.Add(this.erreurListevide);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.listMagasin);
+            this.panel1.Location = new System.Drawing.Point(69, 106);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(365, 264);
+            this.panel1.TabIndex = 8;
+            // 
+            // erreurListevide
+            // 
+            this.erreurListevide.BackColor = System.Drawing.Color.Transparent;
+            this.erreurListevide.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.erreurListevide.ForeColor = System.Drawing.Color.Transparent;
+            this.erreurListevide.Location = new System.Drawing.Point(0, 54);
+            this.erreurListevide.Name = "erreurListevide";
+            this.erreurListevide.Size = new System.Drawing.Size(365, 210);
+            this.erreurListevide.TabIndex = 8;
+            this.erreurListevide.Text = "Aucun magasin n\'est enregistré";
+            this.erreurListevide.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label2.Location = new System.Drawing.Point(0, -2);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(365, 54);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Choix d\'un magasin";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // backgroundBlock
+            // 
+            this.backgroundBlock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
+            this.backgroundBlock.Controls.Add(this.buttonAjouterMagasin);
+            this.backgroundBlock.Controls.Add(this.buttonModifierMagasin);
+            this.backgroundBlock.Controls.Add(this.buttonSupprimerMagasin);
+            this.backgroundBlock.Location = new System.Drawing.Point(472, 106);
+            this.backgroundBlock.Name = "backgroundBlock";
+            this.backgroundBlock.Size = new System.Drawing.Size(512, 264);
+            this.backgroundBlock.TabIndex = 9;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
+            this.panel5.Controls.Add(this.goBackButton);
+            this.panel5.Location = new System.Drawing.Point(2, 587);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1045, 49);
+            this.panel5.TabIndex = 10;
+            // 
+            // goBackButton
+            // 
+            this.goBackButton.AutoSize = true;
+            this.goBackButton.BackColor = System.Drawing.Color.Transparent;
+            this.goBackButton.FlatAppearance.BorderSize = 0;
+            this.goBackButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.goBackButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.goBackButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.goBackButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.goBackButton.Location = new System.Drawing.Point(361, 0);
+            this.goBackButton.Name = "goBackButton";
+            this.goBackButton.Size = new System.Drawing.Size(328, 47);
+            this.goBackButton.TabIndex = 8;
+            this.goBackButton.Text = "RETOUR À L\'ACCUEIL";
+            this.goBackButton.UseVisualStyleBackColor = false;
+            this.goBackButton.Click += new System.EventHandler(this.goBackButton_Click);
             // 
             // AccueilMagasin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(571, 405);
-            this.Controls.Add(this.buttonAccueil);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.boutonModifier);
-            this.Controls.Add(this.boutonSupprimer);
-            this.Controls.Add(this.boutonAjouter);
-            this.Controls.Add(this.labelTitre);
-            this.Controls.Add(this.listMagasin);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1048, 637);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.backgroundBlock);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AccueilMagasin";
-            this.Text = "AccueilMagasin";
+            this.Text = "Gestion des magasins";
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dbERROR)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbOK)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.backgroundBlock.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.ListBox listMagasin;
-        private System.Windows.Forms.Label labelTitre;
-        private System.Windows.Forms.Button boutonAjouter;
-        private System.Windows.Forms.Button boutonSupprimer;
-        private System.Windows.Forms.Button boutonModifier;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button buttonAccueil;
+        private System.Windows.Forms.Button buttonAjouterMagasin;
+        private System.Windows.Forms.Button buttonSupprimerMagasin;
+        private System.Windows.Forms.Button buttonModifierMagasin;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label programName;
+        private System.Windows.Forms.PictureBox dbERROR;
+        private System.Windows.Forms.PictureBox dbOK;
+        private System.Windows.Forms.Label msgBDstatusERROR;
+        private System.Windows.Forms.Label msgBDstatusOK;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label erreurListevide;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel backgroundBlock;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button goBackButton;
     }
 }

@@ -21,6 +21,7 @@ namespace ZumbaSoft.Fenetres_Magasin
         {
             InitializeComponent();
             DB = db;
+            initItemsColors();
         }
 
         public Magasin initObjectMagasin()
@@ -33,6 +34,16 @@ namespace ZumbaSoft.Fenetres_Magasin
             magasin.stock = new List<ProduitEnStock>();
             magasin.utilisateurs = new List<Utilisateur>();
             return magasin;
+        }
+
+        public void initItemsColors()
+        {
+            backgroundBlock1.BackColor = Color.FromArgb(50, 12, 12, 12);
+            backgroundBlock2.BackColor = Color.FromArgb(80, 12, 12, 12);
+            buttonAnnuler.BackColor = Color.FromArgb(50, 12, 12, 12);
+            buttonAdr.BackColor = Color.FromArgb(50, 12, 12, 12);
+            buttonOKmdp.BackColor = Color.FromArgb(50, 12, 12, 12);
+
         }
 
         public bool fieldsIsValid()
@@ -100,9 +111,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             DialogResult = DialogResult.Cancel;
         }
 
-        private void AjouterMagasin_Load(object sender, EventArgs e)
-        {
 
-        }
+
     }
 }

@@ -39,6 +39,7 @@ namespace ZumbaSoft
             buttonGestionRoles.BackColor = Color.FromArgb(80, 12, 12, 12);
             buttonGestionStock.BackColor = Color.FromArgb(80, 12, 12, 12);
             buttonSeConnecter.BackColor = Color.FromArgb(80, 12, 12, 12);
+            quitButton.BackColor = Color.FromArgb(80, 12, 12, 12);
 
         }
 
@@ -71,6 +72,7 @@ namespace ZumbaSoft
         private void RoleButton_Click(object sender, EventArgs e)
         {
             Roles r = new Roles(db);
+            this.Visible = false;
             r.Show();
         }
 
@@ -108,6 +110,11 @@ namespace ZumbaSoft
             {
                 this.Visible = true;
             }
+        }
+
+        private void quitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using SQLite;
 using SQLiteNetExtensions.Extensions;
+using ZumbaSoft.Fenetres_Magasin;
 using ZumbaSoft.Model;
 
 namespace ZumbaSoft.Fenetres_Roles
@@ -35,6 +36,8 @@ namespace ZumbaSoft.Fenetres_Roles
             msgBDstatusOK.ForeColor = Color.FromArgb(80, 235, 235, 235);
             magasinSelectionne.ForeColor = Color.FromArgb(80, 235, 235, 235);
         }
+
+
 
         public void initListRoles()
         {
@@ -105,6 +108,8 @@ namespace ZumbaSoft.Fenetres_Roles
         private void goBackButton_Click(object sender, EventArgs e)
         {
             this.Close();
+            Accueil m = new Accueil();
+            m.Show();
         }
     }
 }

@@ -37,6 +37,7 @@
             this.buttonGestionStock = new System.Windows.Forms.Button();
             this.buttonSeConnecter = new System.Windows.Forms.Button();
             this.backgroundBlock = new System.Windows.Forms.Panel();
+            this.quitButton = new System.Windows.Forms.Button();
             this.backgroundBlock.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -133,7 +134,7 @@
             this.buttonSeConnecter.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonSeConnecter.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonSeConnecter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.buttonSeConnecter.Location = new System.Drawing.Point(431, 636);
+            this.buttonSeConnecter.Location = new System.Drawing.Point(849, 11);
             this.buttonSeConnecter.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSeConnecter.Name = "buttonSeConnecter";
             this.buttonSeConnecter.Size = new System.Drawing.Size(258, 42);
@@ -153,12 +154,29 @@
             this.backgroundBlock.Size = new System.Drawing.Size(958, 107);
             this.backgroundBlock.TabIndex = 7;
             // 
+            // quitButton
+            // 
+            this.quitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
+            this.quitButton.FlatAppearance.BorderSize = 0;
+            this.quitButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.quitButton.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.quitButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.quitButton.Location = new System.Drawing.Point(431, 638);
+            this.quitButton.Margin = new System.Windows.Forms.Padding(2);
+            this.quitButton.Name = "quitButton";
+            this.quitButton.Size = new System.Drawing.Size(258, 42);
+            this.quitButton.TabIndex = 8;
+            this.quitButton.Text = "Quitter";
+            this.quitButton.UseVisualStyleBackColor = false;
+            this.quitButton.Click += new System.EventHandler(this.quitButton_Click);
+            // 
             // Accueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1118, 703);
+            this.Controls.Add(this.quitButton);
             this.Controls.Add(this.backgroundBlock);
             this.Controls.Add(this.buttonSeConnecter);
             this.Controls.Add(this.label2);
@@ -183,6 +201,7 @@
         private System.Windows.Forms.Button buttonGestionStock;
         private System.Windows.Forms.Button buttonSeConnecter;
         private System.Windows.Forms.Panel backgroundBlock;
+        private System.Windows.Forms.Button quitButton;
     }
 }
 
