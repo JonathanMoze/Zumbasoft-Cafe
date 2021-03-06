@@ -30,7 +30,10 @@ namespace ZumbaSoft.Fenetres_Roles
             panel1.BackColor = Color.FromArgb(95, 12, 12, 12);
             panel2.BackColor = Color.FromArgb(95, 12, 12, 12);
             panel3.BackColor = Color.FromArgb(95, 12, 12, 12);
-            panel4.BackColor = Color.FromArgb(80, 12, 12, 12);
+            panel4.BackColor = Color.FromArgb(95, 12, 12, 12);
+            infoBar.BackColor = Color.FromArgb(80, 12, 12, 12);
+            BottomBar.BackColor = Color.FromArgb(99, 12, 12, 12);
+            
             ajouterRoles.BackColor = Color.FromArgb(80, 12, 12, 12);
             supprimerRole.BackColor = Color.FromArgb(80, 12, 12, 12);
             msgBDstatusOK.ForeColor = Color.FromArgb(80, 235, 235, 235);
@@ -110,5 +113,6 @@ namespace ZumbaSoft.Fenetres_Roles
             DialogResult = DialogResult.OK;
             this.Close();
         }
+
     }
 }
