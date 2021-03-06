@@ -43,6 +43,7 @@ namespace ZumbaSoft.Fenetres_Roles
             this.nomRole = new System.Windows.Forms.TextBox();
             this.intituleRole = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.erreurSuppression = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.ConfirmationSR = new System.Windows.Forms.CheckBox();
             this.infoBar = new System.Windows.Forms.Panel();
@@ -56,7 +57,14 @@ namespace ZumbaSoft.Fenetres_Roles
             this.BottomBar = new System.Windows.Forms.Panel();
             this.goBackButton = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.choixPrivileges = new System.Windows.Forms.ListBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.showPrivilegeCheckBox = new System.Windows.Forms.CheckBox();
+            this.modifyPrivilegeCheckBox = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -66,6 +74,8 @@ namespace ZumbaSoft.Fenetres_Roles
             ((System.ComponentModel.ISupportInitialize)(this.dbOK)).BeginInit();
             this.BottomBar.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // ajouterRoles
@@ -230,6 +240,7 @@ namespace ZumbaSoft.Fenetres_Roles
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Gray;
+            this.panel3.Controls.Add(this.erreurSuppression);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.supprimerRole);
             this.panel3.Controls.Add(this.ConfirmationSR);
@@ -237,6 +248,19 @@ namespace ZumbaSoft.Fenetres_Roles
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(300, 200);
             this.panel3.TabIndex = 3;
+            // 
+            // erreurSuppression
+            // 
+            this.erreurSuppression.BackColor = System.Drawing.Color.Transparent;
+            this.erreurSuppression.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.erreurSuppression.ForeColor = System.Drawing.Color.Tomato;
+            this.erreurSuppression.Location = new System.Drawing.Point(44, 100);
+            this.erreurSuppression.Name = "erreurSuppression";
+            this.erreurSuppression.Size = new System.Drawing.Size(217, 52);
+            this.erreurSuppression.TabIndex = 7;
+            this.erreurSuppression.Text = "Erreur";
+            this.erreurSuppression.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.erreurSuppression.Visible = false;
             // 
             // label3
             // 
@@ -259,7 +283,7 @@ namespace ZumbaSoft.Fenetres_Roles
             this.ConfirmationSR.BackColor = System.Drawing.Color.Transparent;
             this.ConfirmationSR.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ConfirmationSR.ForeColor = System.Drawing.SystemColors.Control;
-            this.ConfirmationSR.Location = new System.Drawing.Point(47, 93);
+            this.ConfirmationSR.Location = new System.Drawing.Point(44, 73);
             this.ConfirmationSR.Name = "ConfirmationSR";
             this.ConfirmationSR.Size = new System.Drawing.Size(210, 25);
             this.ConfirmationSR.TabIndex = 2;
@@ -400,11 +424,79 @@ namespace ZumbaSoft.Fenetres_Roles
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Gray;
+            this.panel4.Controls.Add(this.choixPrivileges);
+            this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.panel6);
             this.panel4.Location = new System.Drawing.Point(41, 316);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(996, 337);
             this.panel4.TabIndex = 6;
+            // 
+            // choixPrivileges
+            // 
+            this.choixPrivileges.FormattingEnabled = true;
+            this.choixPrivileges.ItemHeight = 48;
+            this.choixPrivileges.Location = new System.Drawing.Point(19, 114);
+            this.choixPrivileges.Name = "choixPrivileges";
+            this.choixPrivileges.Size = new System.Drawing.Size(790, 196);
+            this.choixPrivileges.TabIndex = 9;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.DimGray;
+            this.panel5.Controls.Add(this.label5);
+            this.panel5.Controls.Add(this.showPrivilegeCheckBox);
+            this.panel5.Controls.Add(this.modifyPrivilegeCheckBox);
+            this.panel5.Location = new System.Drawing.Point(834, 95);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(161, 242);
+            this.panel5.TabIndex = 8;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label5.Location = new System.Drawing.Point(20, 20);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(123, 59);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "L\'utilisateur peut :";
+            // 
+            // showPrivilegeCheckBox
+            // 
+            this.showPrivilegeCheckBox.Appearance = System.Windows.Forms.Appearance.Button;
+            this.showPrivilegeCheckBox.BackColor = System.Drawing.Color.IndianRed;
+            this.showPrivilegeCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showPrivilegeCheckBox.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.showPrivilegeCheckBox.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.showPrivilegeCheckBox.Location = new System.Drawing.Point(20, 103);
+            this.showPrivilegeCheckBox.Name = "showPrivilegeCheckBox";
+            this.showPrivilegeCheckBox.Size = new System.Drawing.Size(123, 45);
+            this.showPrivilegeCheckBox.TabIndex = 4;
+            this.showPrivilegeCheckBox.Text = "Afficher";
+            this.showPrivilegeCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.showPrivilegeCheckBox.UseVisualStyleBackColor = false;
+            this.showPrivilegeCheckBox.CheckedChanged += new System.EventHandler(this.showPrivilegeCheckBox_CheckedChanged);
+            // 
+            // modifyPrivilegeCheckBox
+            // 
+            this.modifyPrivilegeCheckBox.Appearance = System.Windows.Forms.Appearance.Button;
+            this.modifyPrivilegeCheckBox.BackColor = System.Drawing.Color.IndianRed;
+            this.modifyPrivilegeCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.modifyPrivilegeCheckBox.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.modifyPrivilegeCheckBox.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.modifyPrivilegeCheckBox.Location = new System.Drawing.Point(20, 171);
+            this.modifyPrivilegeCheckBox.Name = "modifyPrivilegeCheckBox";
+            this.modifyPrivilegeCheckBox.Size = new System.Drawing.Size(123, 45);
+            this.modifyPrivilegeCheckBox.TabIndex = 3;
+            this.modifyPrivilegeCheckBox.Text = "Modifer";
+            this.modifyPrivilegeCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.modifyPrivilegeCheckBox.UseVisualStyleBackColor = false;
+            this.modifyPrivilegeCheckBox.Visible = false;
+            this.modifyPrivilegeCheckBox.CheckedChanged += new System.EventHandler(this.modifyPrivilegeCheckBox_CheckedChanged);
             // 
             // label4
             // 
@@ -420,6 +512,26 @@ namespace ZumbaSoft.Fenetres_Roles
             this.label4.TabIndex = 7;
             this.label4.Text = "Privilèges";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.DarkGray;
+            this.panel6.Controls.Add(this.label6);
+            this.panel6.Location = new System.Drawing.Point(0, 48);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(995, 47);
+            this.panel6.TabIndex = 9;
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label6.Location = new System.Drawing.Point(17, 11);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(941, 27);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Sélectionnez un privilège pour pouvoir l\'assigner";
             // 
             // Roles
             // 
@@ -449,6 +561,8 @@ namespace ZumbaSoft.Fenetres_Roles
             this.BottomBar.ResumeLayout(false);
             this.BottomBar.PerformLayout();
             this.panel4.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -482,5 +596,13 @@ namespace ZumbaSoft.Fenetres_Roles
         private System.Windows.Forms.Button goBackButton;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label erreurSuppression;
+        private System.Windows.Forms.ListBox choixPrivileges;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.CheckBox showPrivilegeCheckBox;
+        private System.Windows.Forms.CheckBox modifyPrivilegeCheckBox;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label6;
     }
 }
