@@ -107,9 +107,8 @@ namespace ZumbaSoft.Fenetres_Roles
 
         private void goBackButton_Click(object sender, EventArgs e)
         {
+            DialogResult = DialogResult.OK;
             this.Close();
-            Accueil m = new Accueil();
-            m.Show();
         }
     }
 }
