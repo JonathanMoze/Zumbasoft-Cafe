@@ -23,27 +23,28 @@ namespace ZumbaSoft.Fenetres_Stock
             InitializeComponent();
             DB = db;
             magasin = m;
-
             initListProd();
         }
 
         public void initListProd()
         {
             List<Produit> produits = DB.Table<Produit>().ToList();
-            listBoxProduits.Items.Add(produits);
+            produits.ForEach(p => listBoxProduits.Items.Add(p));
         }
          
         public ProduitEnStock initObjectStock()
         {
             produitEnStock = new ProduitEnStock();
-            //produitEnStock.quantite = barreQuantite;
-            return produitEnStock;
+            produitEnStock.quantite = (int)barreQuantite.Value;
+            produitEnStock.produit = (Produit)listBoxProduits.SelectedItem;
+            produitEnStock.magasin = magasin;
+            return produitEnStock
         }
 
         private void buttonOKstock_Click(object sender, EventArgs e)
         {
             produitEnStock = initObjectStock();
-            DB.InsertWithChildren(produitEnStock);
+            DB.InsertWithChildren(produitEnStock,true);
             DialogResult = DialogResult.OK;
             this.Close();
         }
@@ -55,7 +56,13 @@ namespace ZumbaSoft.Fenetres_Stock
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            string searche = textBox1.Text.ToUpper();
+            List<Produit> produitsSearched = DB.Table<Produit>().Where(p => p.nom.ToUpper().Contains(searche)).ToList();
+            listBoxProduits.Items.Clear();
+            foreach(Produit p in produitsSearched)
+            {
+                listBoxProduits.Items.Add(p);
+            }
         }
     }
 }

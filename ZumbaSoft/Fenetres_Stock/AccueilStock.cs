@@ -25,8 +25,8 @@ namespace ZumbaSoft.Fenetres_Stock
         }
         public void initListStock(Magasin m)
         {
-            List<ProduitEnStock> stock = DB.Table<ProduitEnStock>().Where(ps => ps.magasin == m).ToList();
-            if(stock.Count >= 1)
+            List<ProduitEnStock> stock = DB.GetAllWithChildren<ProduitEnStock>(); //Et non pas Table<T>().ToList() car sinon magasin et produit sont null
+            if(stock.Count > 0)
             {
                 foreach (ProduitEnStock ps in stock)
                 {
@@ -41,13 +41,21 @@ namespace ZumbaSoft.Fenetres_Stock
 
         private void buttonAjouterStock_Click(object sender, EventArgs e)
         {
-            AjouterStock ajouterStock = new AjouterStock(DB);
+            AjouterStock ajouterStock = new AjouterStock(DB,magasin);
             if (ajouterStock.ShowDialog() == DialogResult.OK)
             {
-                var s = ajouterStock.produitEnStock;
-                listStock.Items.Add(s);
-                listStock.SelectedItem = s;
+                var produitEnStock = ajouterStock.produitEnStock;
+                majListStock(produitEnStock);
             }
+        }
+
+        private void majListStock(ProduitEnStock produitEnStock)
+        {
+            if(listStock.Items[0].Equals("Aucun produit en stock."))
+            {
+                listStock.Items.Clear();
+            }
+            listStock.Items.Add(produitEnStock);
         }
 
         private void buttonModifierStock_Click(object sender, EventArgs e)
