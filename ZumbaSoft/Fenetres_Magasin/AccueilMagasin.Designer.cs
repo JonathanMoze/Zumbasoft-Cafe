@@ -31,7 +31,6 @@ namespace ZumbaSoft.Fenetres_Magasin
         {
             this.listMagasin = new System.Windows.Forms.ListBox();
             this.labelTitre = new System.Windows.Forms.Label();
-            this.bottonSupprimer = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonAccueil = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -86,13 +85,6 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.labelTitre.Size = new System.Drawing.Size(170, 42);
             this.labelTitre.TabIndex = 1;
             this.labelTitre.Text = "Magasins";
-            // 
-            // bottonSupprimer
-            // 
-            this.bottonSupprimer.Location = new System.Drawing.Point(0, 0);
-            this.bottonSupprimer.Name = "bottonSupprimer";
-            this.bottonSupprimer.Size = new System.Drawing.Size(75, 23);
-            this.bottonSupprimer.TabIndex = 57;
             // 
             // label1
             // 
@@ -455,7 +447,6 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.Controls.Add(this.textBoxNewMdp);
             this.Controls.Add(this.buttonAccueil);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.bottonSupprimer);
             this.Controls.Add(this.labelTitre);
             this.Controls.Add(this.listMagasin);
             this.Name = "AccueilMagasin";
@@ -469,7 +460,6 @@ namespace ZumbaSoft.Fenetres_Magasin
 
         private System.Windows.Forms.ListBox listMagasin;
         private System.Windows.Forms.Label labelTitre;
-        private System.Windows.Forms.Button bottonSupprimer;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonAccueil;
         private System.Windows.Forms.Label label2;
