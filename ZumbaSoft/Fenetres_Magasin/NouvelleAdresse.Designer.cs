@@ -46,8 +46,8 @@ namespace ZumbaSoft.Fenetres_Magasin
             // 
             // buttonOKAdr
             // 
-            this.buttonOKAdr.Location = new System.Drawing.Point(274, 345);
-            this.buttonOKAdr.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonOKAdr.Location = new System.Drawing.Point(91, 386);
+            this.buttonOKAdr.Margin = new System.Windows.Forms.Padding(4);
             this.buttonOKAdr.Name = "buttonOKAdr";
             this.buttonOKAdr.Size = new System.Drawing.Size(118, 36);
             this.buttonOKAdr.TabIndex = 0;
@@ -58,7 +58,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             // labelComplement
             // 
             this.labelComplement.AutoSize = true;
-            this.labelComplement.Location = new System.Drawing.Point(231, 275);
+            this.labelComplement.Location = new System.Drawing.Point(48, 316);
             this.labelComplement.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelComplement.Name = "labelComplement";
             this.labelComplement.Size = new System.Drawing.Size(124, 25);
@@ -67,8 +67,8 @@ namespace ZumbaSoft.Fenetres_Magasin
             // 
             // textBoxComplement
             // 
-            this.textBoxComplement.Location = new System.Drawing.Point(375, 266);
-            this.textBoxComplement.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxComplement.Location = new System.Drawing.Point(192, 307);
+            this.textBoxComplement.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxComplement.Name = "textBoxComplement";
             this.textBoxComplement.Size = new System.Drawing.Size(155, 31);
             this.textBoxComplement.TabIndex = 2;
@@ -76,7 +76,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             // labelVille
             // 
             this.labelVille.AutoSize = true;
-            this.labelVille.Location = new System.Drawing.Point(280, 206);
+            this.labelVille.Location = new System.Drawing.Point(97, 247);
             this.labelVille.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelVille.Name = "labelVille";
             this.labelVille.Size = new System.Drawing.Size(53, 25);
@@ -85,8 +85,8 @@ namespace ZumbaSoft.Fenetres_Magasin
             // 
             // textBoxVille
             // 
-            this.textBoxVille.Location = new System.Drawing.Point(375, 198);
-            this.textBoxVille.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxVille.Location = new System.Drawing.Point(192, 239);
+            this.textBoxVille.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxVille.Name = "textBoxVille";
             this.textBoxVille.Size = new System.Drawing.Size(155, 31);
             this.textBoxVille.TabIndex = 5;
@@ -95,7 +95,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             // labelCodePostal
             // 
             this.labelCodePostal.AutoSize = true;
-            this.labelCodePostal.Location = new System.Drawing.Point(242, 128);
+            this.labelCodePostal.Location = new System.Drawing.Point(59, 169);
             this.labelCodePostal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCodePostal.Name = "labelCodePostal";
             this.labelCodePostal.Size = new System.Drawing.Size(117, 25);
@@ -104,8 +104,8 @@ namespace ZumbaSoft.Fenetres_Magasin
             // 
             // textBoxCodePostal
             // 
-            this.textBoxCodePostal.Location = new System.Drawing.Point(375, 124);
-            this.textBoxCodePostal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxCodePostal.Location = new System.Drawing.Point(192, 165);
+            this.textBoxCodePostal.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxCodePostal.Name = "textBoxCodePostal";
             this.textBoxCodePostal.Size = new System.Drawing.Size(155, 31);
             this.textBoxCodePostal.TabIndex = 6;
@@ -113,8 +113,8 @@ namespace ZumbaSoft.Fenetres_Magasin
             // 
             // textBoxAdresse
             // 
-            this.textBoxAdresse.Location = new System.Drawing.Point(375, 60);
-            this.textBoxAdresse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxAdresse.Location = new System.Drawing.Point(192, 101);
+            this.textBoxAdresse.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxAdresse.Name = "textBoxAdresse";
             this.textBoxAdresse.Size = new System.Drawing.Size(155, 31);
             this.textBoxAdresse.TabIndex = 8;
@@ -123,7 +123,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             // labelAdresse
             // 
             this.labelAdresse.AutoSize = true;
-            this.labelAdresse.Location = new System.Drawing.Point(274, 64);
+            this.labelAdresse.Location = new System.Drawing.Point(91, 105);
             this.labelAdresse.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelAdresse.Name = "labelAdresse";
             this.labelAdresse.Size = new System.Drawing.Size(84, 25);
@@ -132,8 +132,8 @@ namespace ZumbaSoft.Fenetres_Magasin
             // 
             // buttonAnnulerNewAdr
             // 
-            this.buttonAnnulerNewAdr.Location = new System.Drawing.Point(414, 345);
-            this.buttonAnnulerNewAdr.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonAnnulerNewAdr.Location = new System.Drawing.Point(231, 386);
+            this.buttonAnnulerNewAdr.Margin = new System.Windows.Forms.Padding(4);
             this.buttonAnnulerNewAdr.Name = "buttonAnnulerNewAdr";
             this.buttonAnnulerNewAdr.Size = new System.Drawing.Size(118, 36);
             this.buttonAnnulerNewAdr.TabIndex = 9;
@@ -144,7 +144,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             // labelErreurAdr
             // 
             this.labelErreurAdr.AutoSize = true;
-            this.labelErreurAdr.Location = new System.Drawing.Point(562, 64);
+            this.labelErreurAdr.Location = new System.Drawing.Point(379, 105);
             this.labelErreurAdr.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelErreurAdr.Name = "labelErreurAdr";
             this.labelErreurAdr.Size = new System.Drawing.Size(264, 25);
@@ -155,7 +155,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             // labelErreurCP
             // 
             this.labelErreurCP.AutoSize = true;
-            this.labelErreurCP.Location = new System.Drawing.Point(562, 132);
+            this.labelErreurCP.Location = new System.Drawing.Point(379, 173);
             this.labelErreurCP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelErreurCP.Name = "labelErreurCP";
             this.labelErreurCP.Size = new System.Drawing.Size(288, 25);
@@ -166,7 +166,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             // labelErreurVille
             // 
             this.labelErreurVille.AutoSize = true;
-            this.labelErreurVille.Location = new System.Drawing.Point(562, 206);
+            this.labelErreurVille.Location = new System.Drawing.Point(379, 247);
             this.labelErreurVille.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelErreurVille.Name = "labelErreurVille";
             this.labelErreurVille.Size = new System.Drawing.Size(234, 25);
@@ -178,7 +178,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 562);
+            this.ClientSize = new System.Drawing.Size(679, 463);
             this.Controls.Add(this.labelErreurVille);
             this.Controls.Add(this.labelErreurCP);
             this.Controls.Add(this.labelErreurAdr);
@@ -192,7 +192,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.Controls.Add(this.textBoxComplement);
             this.Controls.Add(this.labelComplement);
             this.Controls.Add(this.buttonOKAdr);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "NouvelleAdresse";
             this.Text = "NouvelleAdresse";
             this.ResumeLayout(false);
