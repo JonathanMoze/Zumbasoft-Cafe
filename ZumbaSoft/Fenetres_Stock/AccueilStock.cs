@@ -23,7 +23,8 @@ namespace ZumbaSoft.Fenetres_Stock
             magasin = new Magasin();
             initListStock(magasin);
         }
-        public void initListStock(Magasin m)
+
+        private void initListStock(Magasin m)
         {
             List<ProduitEnStock> stock = DB.GetAllWithChildren<ProduitEnStock>(); //Et non pas Table<T>().ToList() car sinon magasin et produit sont null
             if(stock.Count > 0)
@@ -38,14 +39,37 @@ namespace ZumbaSoft.Fenetres_Stock
                 listStock.Items.Add("Aucun produit en stock.");
             }
         }
+        private ProduitEnStock initObjectStock()
+        {
+            ProduitEnStock produitEnStock = new ProduitEnStock();
+            produitEnStock.quantite = (int)barreQuantite.Value;
+            produitEnStock.produit = (Produit)listBoxProduits.SelectedItem;
+            produitEnStock.magasin = magasin;
+            return produitEnStock;
+        }
+
+        private bool isFieldNewPrdValid()
+        {
+            if(listBoxProduits.SelectedItem == null)
+            {
+                labelErreurListPrd.Visible = true;
+                return false;
+            }
+            if(barreQuantite.Value == 0)
+            {
+                labelErreurBarreQtt.Visible = true;
+                return false;
+            }
+            return true;
+        }
 
         private void buttonAjouterStock_Click(object sender, EventArgs e)
         {
-            AjouterStock ajouterStock = new AjouterStock(DB,magasin);
-            if (ajouterStock.ShowDialog() == DialogResult.OK)
+            if (isFieldNewPrdValid())
             {
-                var produitEnStock = ajouterStock.produitEnStock;
-                majListStock(produitEnStock);
+                ProduitEnStock produit = initObjectStock();
+                DB.InsertWithChildren(produit);
+                majListStock(produit);
             }
         }
 
@@ -86,5 +110,14 @@ namespace ZumbaSoft.Fenetres_Stock
             DialogResult = DialogResult.OK;
             this.Close();
         }
+
+        private void barreQuantite_ValueChanged(object sender, EventArgs e)
+        {
+            if (labelErreurBarreQtt.Visible)
+            {
+                labelErreurBarreQtt.Visible = false;
+            }
+        }
     }
+
 }

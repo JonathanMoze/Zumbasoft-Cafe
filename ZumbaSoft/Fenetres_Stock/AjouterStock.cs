@@ -38,7 +38,7 @@ namespace ZumbaSoft.Fenetres_Stock
             produitEnStock.quantite = (int)barreQuantite.Value;
             produitEnStock.produit = (Produit)listBoxProduits.SelectedItem;
             produitEnStock.magasin = magasin;
-            return produitEnStock
+            return produitEnStock;
         }
 
         private void buttonOKstock_Click(object sender, EventArgs e)
