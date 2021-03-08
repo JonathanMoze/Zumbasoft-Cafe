@@ -73,7 +73,10 @@ namespace ZumbaSoft
         {
             Roles r = new Roles(db);
             this.Visible = false;
-            r.Show();
+            if (r.ShowDialog() == DialogResult.OK)
+            {
+                this.Visible = true;
+            }
         }
 
         private void buttonGestionMag_Click(object sender, EventArgs e)
