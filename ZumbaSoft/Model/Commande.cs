@@ -31,6 +31,19 @@ namespace ZumbaSoft.Model
         [OneToOne]
         public Fournisseur fournisseur { get; set; }
 
+        public DateTime dateCommande { get; set; }
+
+        public DateTime dateReglement { get; set; }
+
+        public enum EnumEtatCmd
+        {
+            Commande, Livre, Receptionne
+        }
+
+        public EnumEtatCmd etat { get; set; }
+
+        public string reference { get; set; }
+
         public override string ToString()
         {
             return id_commande.ToString() + " - " + fournisseur.ToString();

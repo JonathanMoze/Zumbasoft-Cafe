@@ -44,6 +44,7 @@ namespace ZumbaSoft.Fenetres_Stock
             this.labelErreurListPrd = new System.Windows.Forms.Label();
             this.labelErreurBarreQtt = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.buttonCmd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.barreQuantite)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,7 +84,7 @@ namespace ZumbaSoft.Fenetres_Stock
             this.buttonSuppStock.Location = new System.Drawing.Point(497, 224);
             this.buttonSuppStock.Margin = new System.Windows.Forms.Padding(4);
             this.buttonSuppStock.Name = "buttonSuppStock";
-            this.buttonSuppStock.Size = new System.Drawing.Size(118, 36);
+            this.buttonSuppStock.Size = new System.Drawing.Size(132, 36);
             this.buttonSuppStock.TabIndex = 4;
             this.buttonSuppStock.Text = "Supprimer";
             this.buttonSuppStock.UseVisualStyleBackColor = true;
@@ -194,11 +195,21 @@ namespace ZumbaSoft.Fenetres_Stock
             this.label3.TabIndex = 31;
             this.label3.Text = "Stock du ";
             // 
+            // buttonCmd
+            // 
+            this.buttonCmd.Location = new System.Drawing.Point(497, 267);
+            this.buttonCmd.Name = "buttonCmd";
+            this.buttonCmd.Size = new System.Drawing.Size(132, 34);
+            this.buttonCmd.TabIndex = 32;
+            this.buttonCmd.Text = "Commander";
+            this.buttonCmd.UseVisualStyleBackColor = true;
+            // 
             // AccueilStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1663, 680);
+            this.Controls.Add(this.buttonCmd);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.labelErreurBarreQtt);
             this.Controls.Add(this.labelErreurListPrd);
@@ -240,5 +251,6 @@ namespace ZumbaSoft.Fenetres_Stock
         private System.Windows.Forms.Label labelErreurListPrd;
         private System.Windows.Forms.Label labelErreurBarreQtt;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button buttonCmd;
     }
 }

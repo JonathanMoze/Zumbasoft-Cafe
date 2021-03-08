@@ -29,12 +29,100 @@ namespace ZumbaSoft.Fenetres_Stock
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.buttonAnuuler = new System.Windows.Forms.Button();
+            this.buttonSupprimer = new System.Windows.Forms.Button();
+            this.labelTitle = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.barreQtt = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.barreQtt)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // buttonAnuuler
+            // 
+            this.buttonAnuuler.Location = new System.Drawing.Point(254, 251);
+            this.buttonAnuuler.Name = "buttonAnuuler";
+            this.buttonAnuuler.Size = new System.Drawing.Size(112, 34);
+            this.buttonAnuuler.TabIndex = 0;
+            this.buttonAnuuler.Text = "Annuler";
+            this.buttonAnuuler.UseVisualStyleBackColor = true;
+            this.buttonAnuuler.Click += new System.EventHandler(this.buttonAnuuler_Click);
+            // 
+            // buttonSupprimer
+            // 
+            this.buttonSupprimer.Location = new System.Drawing.Point(12, 251);
+            this.buttonSupprimer.Name = "buttonSupprimer";
+            this.buttonSupprimer.Size = new System.Drawing.Size(112, 34);
+            this.buttonSupprimer.TabIndex = 1;
+            this.buttonSupprimer.Text = "Supprimer";
+            this.buttonSupprimer.UseVisualStyleBackColor = true;
+            this.buttonSupprimer.Click += new System.EventHandler(this.buttonSupprimer_Click);
+            // 
+            // labelTitle
+            // 
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelTitle.Location = new System.Drawing.Point(12, 9);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(326, 32);
+            this.labelTitle.TabIndex = 2;
+            this.labelTitle.Text = "Supprimer produit des stocks";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(12, 95);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(302, 25);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Veuillez saisir la quantité à supprimer";
+            // 
+            // barreQtt
+            // 
+            this.barreQtt.Location = new System.Drawing.Point(12, 143);
+            this.barreQtt.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.barreQtt.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.barreQtt.Name = "barreQtt";
+            this.barreQtt.Size = new System.Drawing.Size(180, 31);
+            this.barreQtt.TabIndex = 4;
+            this.barreQtt.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // SupprimerStock
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(378, 309);
+            this.Controls.Add(this.barreQtt);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelTitle);
+            this.Controls.Add(this.buttonSupprimer);
+            this.Controls.Add(this.buttonAnuuler);
+            this.Name = "SupprimerStock";
             this.Text = "SupprimerStock";
+            ((System.ComponentModel.ISupportInitialize)(this.barreQtt)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button buttonAnuuler;
+        private System.Windows.Forms.Button buttonSupprimer;
+        private System.Windows.Forms.Label labelTitle;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.NumericUpDown barreQtt;
     }
 }
