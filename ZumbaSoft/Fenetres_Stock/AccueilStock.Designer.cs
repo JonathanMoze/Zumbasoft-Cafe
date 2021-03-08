@@ -45,6 +45,7 @@ namespace ZumbaSoft.Fenetres_Stock
             this.labelErreurBarreQtt = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.buttonCmd = new System.Windows.Forms.Button();
+            this.buttonNewCmd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.barreQuantite)).BeginInit();
             this.SuspendLayout();
             // 
@@ -116,6 +117,7 @@ namespace ZumbaSoft.Fenetres_Stock
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(308, 31);
             this.textBox1.TabIndex = 26;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // labelProduit
             // 
@@ -204,11 +206,21 @@ namespace ZumbaSoft.Fenetres_Stock
             this.buttonCmd.Text = "Commander";
             this.buttonCmd.UseVisualStyleBackColor = true;
             // 
+            // buttonNewCmd
+            // 
+            this.buttonNewCmd.Location = new System.Drawing.Point(13, 535);
+            this.buttonNewCmd.Name = "buttonNewCmd";
+            this.buttonNewCmd.Size = new System.Drawing.Size(204, 34);
+            this.buttonNewCmd.TabIndex = 33;
+            this.buttonNewCmd.Text = "Nouvelle commande";
+            this.buttonNewCmd.UseVisualStyleBackColor = true;
+            // 
             // AccueilStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1663, 680);
+            this.Controls.Add(this.buttonNewCmd);
             this.Controls.Add(this.buttonCmd);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.labelErreurBarreQtt);
@@ -252,5 +264,6 @@ namespace ZumbaSoft.Fenetres_Stock
         private System.Windows.Forms.Label labelErreurBarreQtt;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonCmd;
+        private System.Windows.Forms.Button buttonNewCmd;
     }
 }

@@ -9,6 +9,7 @@ using ZumbaSoft.Model;
 using ZumbaSoft.Fenetres_Magasin;
 using ZumbaSoft.Fenetres_Roles;
 using ZumbaSoft.Fenetres_Stock;
+using ZumbaSoft.Fenetres_Commande;
 
 namespace ZumbaSoft
 {
@@ -20,8 +21,8 @@ namespace ZumbaSoft
         {
             InitializeComponent();
             db = InitializeDataBase();
-            AccueilStock stock = new AccueilStock(db);
-            stock.Show();
+            AccueilCommande commandes = new AccueilCommande();
+            commandes.Show();
         }
         public Accueil(SQLiteConnection db)
         {

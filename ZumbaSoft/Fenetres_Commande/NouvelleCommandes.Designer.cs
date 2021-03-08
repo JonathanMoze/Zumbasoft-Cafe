@@ -1,5 +1,5 @@
 ﻿
-namespace ZumbaSoft.Fenetres_Stock
+namespace ZumbaSoft.Fenetres_Commande
 {
     partial class NouvelleCommandes
     {
@@ -44,7 +44,7 @@ namespace ZumbaSoft.Fenetres_Stock
             this.textBoxRegl = new System.Windows.Forms.TextBox();
             this.tableauProd = new System.Windows.Forms.DataGridView();
             this.buttonAnnulerCmd = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonAjouterProd = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.buttonEnregisterCmd = new System.Windows.Forms.Button();
@@ -197,14 +197,15 @@ namespace ZumbaSoft.Fenetres_Stock
             this.buttonAnnulerCmd.Text = "Annuler la commande";
             this.buttonAnnulerCmd.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // buttonAjouterProd
             // 
-            this.button1.Location = new System.Drawing.Point(214, 540);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(177, 34);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Ajouter des articles";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonAjouterProd.Location = new System.Drawing.Point(214, 540);
+            this.buttonAjouterProd.Name = "buttonAjouterProd";
+            this.buttonAjouterProd.Size = new System.Drawing.Size(190, 34);
+            this.buttonAjouterProd.TabIndex = 15;
+            this.buttonAjouterProd.Text = "Ajouter des produits";
+            this.buttonAjouterProd.UseVisualStyleBackColor = true;
+            this.buttonAjouterProd.Click += new System.EventHandler(this.buttonAjouterProd_Click);
             // 
             // label1
             // 
@@ -305,7 +306,7 @@ namespace ZumbaSoft.Fenetres_Stock
             this.Controls.Add(this.buttonEnregisterCmd);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonAjouterProd);
             this.Controls.Add(this.buttonAnnulerCmd);
             this.Controls.Add(this.tableauProd);
             this.Controls.Add(this.textBoxRegl);
@@ -346,7 +347,7 @@ namespace ZumbaSoft.Fenetres_Stock
         private System.Windows.Forms.TextBox textBoxRegl;
         private System.Windows.Forms.DataGridView tableauProd;
         private System.Windows.Forms.Button buttonAnnulerCmd;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonAjouterProd;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button buttonEnregisterCmd;

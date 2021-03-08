@@ -82,19 +82,6 @@ namespace ZumbaSoft.Fenetres_Stock
             listStock.Items.Add(produitEnStock);
         }
 
-        private void buttonModifierStock_Click(object sender, EventArgs e)
-        {
-            if (listStock.SelectedItem != null)
-            {
-                ProduitEnStock ps = (ProduitEnStock)listStock.SelectedItem;
-                ModifierStock modifStock = new ModifierStock(ps, DB);
-                if (modifStock.ShowDialog() == DialogResult.OK)
-                {
-                    listStock.Refresh();
-                }
-            }
-        }
-
         private void buttonSuppStock_Click(object sender, EventArgs e)
         {
             var ps = (ProduitEnStock)listStock.SelectedItem;
@@ -117,6 +104,18 @@ namespace ZumbaSoft.Fenetres_Stock
             {
                 labelErreurBarreQtt.Visible = false;
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            string searche = textBox1.Text.ToUpper();
+            List<Produit> produitsSearched = DB.Table<Produit>().Where(p => p.nom.ToUpper().Contains(searche)).ToList();
+            listBoxProduits.Items.Clear();
+            foreach (Produit p in produitsSearched)
+            {
+                listBoxProduits.Items.Add(p);
+            }
+
         }
     }
 
