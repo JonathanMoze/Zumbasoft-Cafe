@@ -29,7 +29,7 @@ namespace ZumbaSoft.Model
 
         public string marque { get; set; }
 
-        public string etat { get; set; }
+        public EtatEnum etat { get; set; }
 
         public string type { get; set; }
 

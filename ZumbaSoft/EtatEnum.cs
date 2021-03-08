@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ZumbaSoft
 {
-    enum EtatEnum
+    public enum EtatEnum
     {
         EnStock, Rupture, AttenteLivraison
     }
