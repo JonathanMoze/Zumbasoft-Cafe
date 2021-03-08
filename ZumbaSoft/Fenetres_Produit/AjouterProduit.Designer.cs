@@ -59,6 +59,8 @@ namespace ZumbaSoft.Fenetres_Produit
             this.comboBoxFournisseur = new System.Windows.Forms.ComboBox();
             this.buttonAnnuler = new System.Windows.Forms.Button();
             this.buttonValider = new System.Windows.Forms.Button();
+            this.buttonGenre = new System.Windows.Forms.Button();
+            this.buttonFournisseurs = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVHT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAHT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownATTC)).BeginInit();
@@ -171,7 +173,7 @@ namespace ZumbaSoft.Fenetres_Produit
             // labelFournisseur
             // 
             this.labelFournisseur.AutoSize = true;
-            this.labelFournisseur.Location = new System.Drawing.Point(601, 308);
+            this.labelFournisseur.Location = new System.Drawing.Point(601, 338);
             this.labelFournisseur.Name = "labelFournisseur";
             this.labelFournisseur.Size = new System.Drawing.Size(90, 20);
             this.labelFournisseur.TabIndex = 13;
@@ -298,7 +300,7 @@ namespace ZumbaSoft.Fenetres_Produit
             // comboBoxFournisseur
             // 
             this.comboBoxFournisseur.FormattingEnabled = true;
-            this.comboBoxFournisseur.Location = new System.Drawing.Point(697, 308);
+            this.comboBoxFournisseur.Location = new System.Drawing.Point(697, 338);
             this.comboBoxFournisseur.Name = "comboBoxFournisseur";
             this.comboBoxFournisseur.Size = new System.Drawing.Size(151, 28);
             this.comboBoxFournisseur.TabIndex = 30;
@@ -321,11 +323,31 @@ namespace ZumbaSoft.Fenetres_Produit
             this.buttonValider.Text = "Valider";
             this.buttonValider.UseVisualStyleBackColor = true;
             // 
+            // buttonGenre
+            // 
+            this.buttonGenre.Location = new System.Drawing.Point(747, 298);
+            this.buttonGenre.Name = "buttonGenre";
+            this.buttonGenre.Size = new System.Drawing.Size(167, 29);
+            this.buttonGenre.TabIndex = 33;
+            this.buttonGenre.Text = "Gestion Genres";
+            this.buttonGenre.UseVisualStyleBackColor = true;
+            // 
+            // buttonFournisseurs
+            // 
+            this.buttonFournisseurs.Location = new System.Drawing.Point(747, 372);
+            this.buttonFournisseurs.Name = "buttonFournisseurs";
+            this.buttonFournisseurs.Size = new System.Drawing.Size(167, 29);
+            this.buttonFournisseurs.TabIndex = 34;
+            this.buttonFournisseurs.Text = "Gestion Fournisseurs";
+            this.buttonFournisseurs.UseVisualStyleBackColor = true;
+            // 
             // AjouterProduit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(956, 534);
+            this.Controls.Add(this.buttonFournisseurs);
+            this.Controls.Add(this.buttonGenre);
             this.Controls.Add(this.buttonValider);
             this.Controls.Add(this.buttonAnnuler);
             this.Controls.Add(this.comboBoxFournisseur);
@@ -399,5 +421,8 @@ namespace ZumbaSoft.Fenetres_Produit
         private System.Windows.Forms.ComboBox comboBoxFournisseur;
         private System.Windows.Forms.Button buttonAnnuler;
         private System.Windows.Forms.Button buttonValider;
+        private System.Windows.Forms.Button buttonGenre;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonFournisseurs;
     }
 }
