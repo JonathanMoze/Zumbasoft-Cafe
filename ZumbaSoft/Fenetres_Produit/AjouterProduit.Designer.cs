@@ -331,6 +331,7 @@ namespace ZumbaSoft.Fenetres_Produit
             this.buttonGenre.TabIndex = 33;
             this.buttonGenre.Text = "Gestion Genres";
             this.buttonGenre.UseVisualStyleBackColor = true;
+            this.buttonGenre.Click += new System.EventHandler(this.buttonGenre_Click);
             // 
             // buttonFournisseurs
             // 
@@ -340,6 +341,7 @@ namespace ZumbaSoft.Fenetres_Produit
             this.buttonFournisseurs.TabIndex = 34;
             this.buttonFournisseurs.Text = "Gestion Fournisseurs";
             this.buttonFournisseurs.UseVisualStyleBackColor = true;
+            this.buttonFournisseurs.Click += new System.EventHandler(this.buttonFournisseurs_Click);
             // 
             // AjouterProduit
             // 
