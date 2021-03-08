@@ -18,7 +18,7 @@ namespace ZumbaSoft.Fenetres_Magasin
         {
             InitializeComponent();
             DB = db;
-            initItemsColors();
+            //initItemsColors();
         }
 
         public Adresse initObjectAdresse()
@@ -31,13 +31,13 @@ namespace ZumbaSoft.Fenetres_Magasin
             return adresse;
         }
 
-        public void initItemsColors()
-        {
-            backgroundBlock1.BackColor = Color.FromArgb(50, 12, 12, 12);
-            backgroundBlock2.BackColor = Color.FromArgb(80, 12, 12, 12);
-            buttonAnnulerNewAdr.BackColor = Color.FromArgb(50, 12, 12, 12);
-            buttonOKAdr.BackColor = Color.FromArgb(50, 12, 12, 12);
-        }
+        //public void initItemsColors()
+        //{
+        //    backgroundBlock1.BackColor = Color.FromArgb(50, 12, 12, 12);
+        //    backgroundBlock2.BackColor = Color.FromArgb(80, 12, 12, 12);
+        //    buttonAnnulerNewAdr.BackColor = Color.FromArgb(50, 12, 12, 12);
+        //    buttonOKAdr.BackColor = Color.FromArgb(50, 12, 12, 12);
+        //}
 
 
         /// <summary>
