@@ -31,7 +31,8 @@ namespace ZumbaSoft.Fenetres_Magasin
                 #endregion
                 if (true)
                 {
-                    if (pass == waitedPass)
+                    //TODO comparaison
+                    if (true)
                     {
                         //TODO init session
                     }
@@ -47,6 +48,20 @@ namespace ZumbaSoft.Fenetres_Magasin
                 textRetour = "Veuillez renseigner votre mot de passe ou votre identifiant.";
                 MessageBox.Show(textRetour);
             }
+        }
+
+        /// <summary>
+        /// Méthode pour récupérer le mot de passe crypté attendu pour la comparaison.
+        /// </summary>
+        /// <param name="login">Le login attendu pour la recherche.</param>
+        /// <returns>Le mot de passe crypté pour vérification.</returns>
+        private string getPass(string login)
+        {
+            string query = "select mot_de_passe from Utilisateur where login=" + login;
+            var mdp = Accueil.db.DeferredQuery(new TableMapping(typeof(string)),
+                "select mot_de_passe from Utilisateur where login=?", login);
+            //TODO
+            return null;
         }
     }
 }
