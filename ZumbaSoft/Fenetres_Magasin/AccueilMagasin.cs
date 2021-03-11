@@ -22,6 +22,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             InitializeComponent();
             DB = db;
             initListMagasin();
+            initItemsColors();
         }
 
         public void initListMagasin()
@@ -30,6 +31,31 @@ namespace ZumbaSoft.Fenetres_Magasin
             {
                 listMagasin.Items.Add(m);
             }
+        }
+
+        public void initItemsColors()
+        {
+            panel1.BackColor = Color.FromArgb(95, 12, 12, 12);
+            panel2.BackColor = Color.FromArgb(95, 12, 12, 12);
+            panel3.BackColor = Color.FromArgb(95, 12, 12, 12);
+            panel4.BackColor = Color.FromArgb(80, 12, 12, 12);
+            panel5.BackColor = Color.FromArgb(80, 12, 12, 12);
+            panel6.BackColor = Color.FromArgb(80, 12, 12, 12);
+            panel7.BackColor = Color.FromArgb(80, 12, 12, 12);
+            
+            button1.BackColor = Color.FromArgb(80, 12, 12, 12);
+            button2.BackColor = Color.FromArgb(80, 12, 12, 12);
+            buttonAccueil.BackColor = Color.FromArgb(80, 12, 12, 12);
+            buttonAdr.BackColor = Color.FromArgb(80, 12, 12, 12);
+            buttonAjouter.BackColor = Color.FromArgb(80, 12, 12, 12);
+            buttonModifCmd.BackColor = Color.FromArgb(80, 12, 12, 12);
+            buttonModifEmpl.BackColor = Color.FromArgb(80, 12, 12, 12);
+            buttonModifMdp.BackColor = Color.FromArgb(80, 12, 12, 12);
+            buttonModifRprt.BackColor = Color.FromArgb(80, 12, 12, 12);
+            buttonModifStock.BackColor = Color.FromArgb(80, 12, 12, 12);
+            buttonSupprimer.BackColor = Color.FromArgb(80, 12, 12, 12);
+
+
         }
 
         private void listMagasin_SelectedIndexChanged(object sender, EventArgs e)
@@ -242,6 +268,17 @@ namespace ZumbaSoft.Fenetres_Magasin
                 initListMagasin();
                 UpdateInfoField();
             }
+        }
+
+        private void AccueilMagasin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void goBackButton_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.OK;
+            this.Close();
         }
     }
 }
