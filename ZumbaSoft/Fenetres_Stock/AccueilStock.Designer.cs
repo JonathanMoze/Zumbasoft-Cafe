@@ -214,6 +214,7 @@ namespace ZumbaSoft.Fenetres_Stock
             this.buttonNewCmd.TabIndex = 33;
             this.buttonNewCmd.Text = "Nouvelle commande";
             this.buttonNewCmd.UseVisualStyleBackColor = true;
+            this.buttonNewCmd.Click += new System.EventHandler(this.buttonNewCmd_Click);
             // 
             // AccueilStock
             // 

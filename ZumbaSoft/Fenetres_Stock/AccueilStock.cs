@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using SQLite;
 using SQLiteNetExtensions.Extensions;
 using ZumbaSoft.Model;
+using ZumbaSoft.Fenetres_Commande;
 
 namespace ZumbaSoft.Fenetres_Stock
 {
@@ -116,6 +117,12 @@ namespace ZumbaSoft.Fenetres_Stock
                 listBoxProduits.Items.Add(p);
             }
 
+        }
+
+        private void buttonNewCmd_Click(object sender, EventArgs e)
+        {
+            NouvelleCommandes nc = new NouvelleCommandes(DB);
+            nc.Show();
         }
     }
 

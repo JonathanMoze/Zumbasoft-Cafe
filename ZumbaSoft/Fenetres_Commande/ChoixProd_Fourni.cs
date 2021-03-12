@@ -8,6 +8,8 @@ using System.Windows.Forms;
 using ZumbaSoft.Model;
 using SQLite;
 using SQLiteNetExtensions.Extensions;
+using System.Linq;
+using System.Diagnostics.CodeAnalysis;
 
 namespace ZumbaSoft.Fenetres_Commande
 {
@@ -21,11 +23,13 @@ namespace ZumbaSoft.Fenetres_Commande
         {
             InitializeComponent();
             DB = db;
+            initListProduit();
         }
+
         /// <summary>
         /// Permet de charger tous les produits dans la listes des produits.
         /// </summary>
-        private void initListStock()
+        private void initListProduit()
         {
             List<Produit> listProd = DB.GetAllWithChildren<Produit>(); //Et non pas Table<T>().ToList() car sinon on obtient pas le fournisseur
             if (listProd.Count > 0)
@@ -37,10 +41,53 @@ namespace ZumbaSoft.Fenetres_Commande
             }
             else
             {
-                listBoxProduits.Items.Add("Aucun produit en stock.");
+                listBoxProduits.Items.Add("Aucun produit.");
             }
         }
 
+        /// <summary>
+        /// Permet de charger tous les fournisseur possible en fonction du produit choisit.
+        /// </summary>
+        private void initListFournisseur()
+        {
+            
+            List<Fournisseur> listFourni = DB.GetAllWithChildren<Fournisseur>().FindAll(f => f.produits.Contains(produit,new ProduitComparer()));
+
+            if(listFourni.Count > 0)
+            {
+                foreach(Fournisseur f in listFourni)
+                {
+                    listBoxFournisseur.Items.Add(f);
+                }
+            }
+            else
+            {
+                listBoxFournisseur.Items.Add("Aucun Fournisseur ne propose le produit choisi.");
+            }
+        }
+
+        /// <summary>
+        /// Pour modifier la méthode de comparaison entre deux Produits.
+        /// </summary>
+        public class ProduitComparer : IEqualityComparer<Produit>
+        {
+            public bool Equals([AllowNull] Produit x, [AllowNull] Produit y)
+            {
+                return x.nom == y.nom;
+            }
+
+            public int GetHashCode([DisallowNull] Produit obj)
+            {
+                return obj.GetHashCode();
+            }
+        }
+
+
+        /// <summary>
+        /// Rend le boutton Selectionner clicable lorsqu'un produit est sélectionné.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void listBoxProduits_SelectedIndexChanged(object sender, EventArgs e)
         {
             buttonSelectionner.Enabled = true;
@@ -51,6 +98,11 @@ namespace ZumbaSoft.Fenetres_Commande
 
         }
 
+        /// <summary>
+        /// Annule la saisit en cour.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonAnnuler_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
@@ -67,6 +119,11 @@ namespace ZumbaSoft.Fenetres_Commande
 
         }
 
+        /// <summary>
+        /// Gestion de la barre de recherche des produits.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void textBoxRecherchePrd_TextChanged(object sender, EventArgs e)
         {
             string searche = textBoxRecherchePrd.Text.ToUpper();
@@ -78,6 +135,11 @@ namespace ZumbaSoft.Fenetres_Commande
             }
         }
 
+        /// <summary>
+        /// Permet de verrouiller un produit ainsi qu'une quantité avant de choisir le fournisseur.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonSelectionner_Click(object sender, EventArgs e)
         {
             if(barreQuantite.Value != 0)
@@ -91,6 +153,7 @@ namespace ZumbaSoft.Fenetres_Commande
                 labelErreurBarreQtt.Visible = true;
             }
         }
+
         /// <summary>
         /// Permet de rendre les champs de produit innaccessible et ceux de fournisseur accessible.
         /// </summary>
@@ -103,8 +166,14 @@ namespace ZumbaSoft.Fenetres_Commande
 
             textBoxRechercheFourni.Enabled = true;
             listBoxFournisseur.Enabled = true;
+            initListFournisseur();
         }
 
+        /// <summary>
+        /// Gestion du label d'erreur si l'utilisateur change la quantité.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void barreQuantite_ValueChanged(object sender, EventArgs e)
         {
             if (labelErreurBarreQtt.Visible)

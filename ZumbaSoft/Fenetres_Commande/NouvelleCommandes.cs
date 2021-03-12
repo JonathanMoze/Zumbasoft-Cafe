@@ -1,5 +1,8 @@
 ﻿using SQLite;
+using SQLiteNetExtensions.Extensions;
+using System.Collections.Generic;
 using System.Windows.Forms;
+using ZumbaSoft.Model;
 
 namespace ZumbaSoft.Fenetres_Commande
 {
@@ -7,9 +10,10 @@ namespace ZumbaSoft.Fenetres_Commande
     {
         SQLiteConnection DB;
 
-        public NouvelleCommandes()
+        public NouvelleCommandes(SQLiteConnection db)
         {
             InitializeComponent();
+            DB = db;
             initializeGrid();
         }
 
@@ -25,7 +29,7 @@ namespace ZumbaSoft.Fenetres_Commande
 
         private void buttonAjouterProd_Click(object sender, System.EventArgs e)
         {
-            ChoixProd_Fourni prodFourni = new ChoixProd_Fourni();
+            ChoixProd_Fourni prodFourni = new ChoixProd_Fourni(DB);
             if(prodFourni.ShowDialog() == DialogResult.OK)
             {
                 //TODO
