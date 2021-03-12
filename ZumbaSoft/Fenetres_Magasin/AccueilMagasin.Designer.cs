@@ -169,6 +169,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             // 
             this.buttonAdr.BackColor = System.Drawing.Color.Transparent;
             this.buttonAdr.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonAdr.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonAdr.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.buttonAdr.Location = new System.Drawing.Point(221, 174);
             this.buttonAdr.Margin = new System.Windows.Forms.Padding(4);
@@ -196,6 +197,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             // 
             this.buttonAjouter.BackColor = System.Drawing.Color.Transparent;
             this.buttonAjouter.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonAjouter.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonAjouter.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.buttonAjouter.Location = new System.Drawing.Point(269, 250);
             this.buttonAjouter.Margin = new System.Windows.Forms.Padding(4);
@@ -290,6 +292,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.buttonModifMdp.BackColor = System.Drawing.Color.Transparent;
             this.buttonModifMdp.Enabled = false;
             this.buttonModifMdp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonModifMdp.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonModifMdp.ForeColor = System.Drawing.Color.White;
             this.buttonModifMdp.Location = new System.Drawing.Point(178, 248);
             this.buttonModifMdp.Name = "buttonModifMdp";
@@ -304,6 +307,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.buttonModifCmd.BackColor = System.Drawing.Color.Transparent;
             this.buttonModifCmd.Enabled = false;
             this.buttonModifCmd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonModifCmd.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonModifCmd.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.buttonModifCmd.Location = new System.Drawing.Point(26, 229);
             this.buttonModifCmd.Margin = new System.Windows.Forms.Padding(2);
@@ -319,6 +323,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.buttonModifEmpl.BackColor = System.Drawing.Color.Transparent;
             this.buttonModifEmpl.Enabled = false;
             this.buttonModifEmpl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonModifEmpl.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonModifEmpl.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.buttonModifEmpl.Location = new System.Drawing.Point(266, 229);
             this.buttonModifEmpl.Margin = new System.Windows.Forms.Padding(2);
@@ -334,6 +339,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.buttonModifRprt.BackColor = System.Drawing.Color.Transparent;
             this.buttonModifRprt.Enabled = false;
             this.buttonModifRprt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonModifRprt.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonModifRprt.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.buttonModifRprt.Location = new System.Drawing.Point(26, 229);
             this.buttonModifRprt.Margin = new System.Windows.Forms.Padding(2);
@@ -349,6 +355,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.buttonModifStock.BackColor = System.Drawing.Color.Transparent;
             this.buttonModifStock.Enabled = false;
             this.buttonModifStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonModifStock.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonModifStock.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.buttonModifStock.Location = new System.Drawing.Point(508, 229);
             this.buttonModifStock.Margin = new System.Windows.Forms.Padding(2);
@@ -475,6 +482,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             // 
             this.buttonSupprimer.BackColor = System.Drawing.Color.Transparent;
             this.buttonSupprimer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonSupprimer.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonSupprimer.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.buttonSupprimer.Location = new System.Drawing.Point(23, 248);
             this.buttonSupprimer.Name = "buttonSupprimer";
@@ -502,7 +510,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.goBackButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.goBackButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.goBackButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.goBackButton.Location = new System.Drawing.Point(403, 0);
+            this.goBackButton.Location = new System.Drawing.Point(403, 1);
             this.goBackButton.Name = "goBackButton";
             this.goBackButton.Size = new System.Drawing.Size(328, 47);
             this.goBackButton.TabIndex = 8;
