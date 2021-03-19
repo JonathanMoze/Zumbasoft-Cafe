@@ -1,7 +1,7 @@
 ﻿
 namespace ZumbaSoft.Fenetres_Commande
 {
-    partial class NouvelleCommandes
+    partial class GestionDeLaCommande
     {
         /// <summary>
         /// Required designer variable.
@@ -31,17 +31,7 @@ namespace ZumbaSoft.Fenetres_Commande
         {
             this.labelTitle = new System.Windows.Forms.Label();
             this.textBoxRef = new System.Windows.Forms.TextBox();
-            this.textBoxRecep = new System.Windows.Forms.TextBox();
             this.labelRef = new System.Windows.Forms.Label();
-            this.labelMag = new System.Windows.Forms.Label();
-            this.labelEtat = new System.Windows.Forms.Label();
-            this.checkBoxCommande = new System.Windows.Forms.CheckBox();
-            this.checkBoxLivre = new System.Windows.Forms.CheckBox();
-            this.checkBoxRecept = new System.Windows.Forms.CheckBox();
-            this.labelDateCmd = new System.Windows.Forms.Label();
-            this.labelReglement = new System.Windows.Forms.Label();
-            this.textBoxCmdLe = new System.Windows.Forms.TextBox();
-            this.textBoxRegl = new System.Windows.Forms.TextBox();
             this.tableauProd = new System.Windows.Forms.DataGridView();
             this.buttonAnnulerCmd = new System.Windows.Forms.Button();
             this.buttonAjouterProd = new System.Windows.Forms.Button();
@@ -54,6 +44,16 @@ namespace ZumbaSoft.Fenetres_Commande
             this.buttonPlusPrd = new System.Windows.Forms.Button();
             this.buttonMoinsPrd = new System.Windows.Forms.Button();
             this.buttonSupprimerPrd = new System.Windows.Forms.Button();
+            this.labelEtat = new System.Windows.Forms.Label();
+            this.checkBoxCommande = new System.Windows.Forms.CheckBox();
+            this.checkBoxLivre = new System.Windows.Forms.CheckBox();
+            this.checkBoxRecept = new System.Windows.Forms.CheckBox();
+            this.labelDateCmd = new System.Windows.Forms.Label();
+            this.labelReglement = new System.Windows.Forms.Label();
+            this.textBoxCmdLe = new System.Windows.Forms.TextBox();
+            this.textBoxRegl = new System.Windows.Forms.TextBox();
+            this.labelMag = new System.Windows.Forms.Label();
+            this.textBoxRecep = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.tableauProd)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,14 +75,6 @@ namespace ZumbaSoft.Fenetres_Commande
             this.textBoxRef.Size = new System.Drawing.Size(150, 31);
             this.textBoxRef.TabIndex = 1;
             // 
-            // textBoxRecep
-            // 
-            this.textBoxRecep.Enabled = false;
-            this.textBoxRecep.Location = new System.Drawing.Point(150, 106);
-            this.textBoxRecep.Name = "textBoxRecep";
-            this.textBoxRecep.Size = new System.Drawing.Size(150, 31);
-            this.textBoxRecep.TabIndex = 2;
-            // 
             // labelRef
             // 
             this.labelRef.AutoSize = true;
@@ -91,88 +83,6 @@ namespace ZumbaSoft.Fenetres_Commande
             this.labelRef.Size = new System.Drawing.Size(97, 25);
             this.labelRef.TabIndex = 3;
             this.labelRef.Text = "Référence :";
-            // 
-            // labelMag
-            // 
-            this.labelMag.AutoSize = true;
-            this.labelMag.Location = new System.Drawing.Point(13, 109);
-            this.labelMag.Name = "labelMag";
-            this.labelMag.Size = new System.Drawing.Size(113, 25);
-            this.labelMag.TabIndex = 4;
-            this.labelMag.Text = "Réception à :";
-            // 
-            // labelEtat
-            // 
-            this.labelEtat.AutoSize = true;
-            this.labelEtat.Location = new System.Drawing.Point(404, 68);
-            this.labelEtat.Name = "labelEtat";
-            this.labelEtat.Size = new System.Drawing.Size(51, 25);
-            this.labelEtat.TabIndex = 5;
-            this.labelEtat.Text = "Etat :";
-            // 
-            // checkBoxCommande
-            // 
-            this.checkBoxCommande.AutoSize = true;
-            this.checkBoxCommande.Location = new System.Drawing.Point(461, 68);
-            this.checkBoxCommande.Name = "checkBoxCommande";
-            this.checkBoxCommande.Size = new System.Drawing.Size(131, 29);
-            this.checkBoxCommande.TabIndex = 6;
-            this.checkBoxCommande.Text = "Commandé";
-            this.checkBoxCommande.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxLivre
-            // 
-            this.checkBoxLivre.AutoSize = true;
-            this.checkBoxLivre.Location = new System.Drawing.Point(598, 68);
-            this.checkBoxLivre.Name = "checkBoxLivre";
-            this.checkBoxLivre.Size = new System.Drawing.Size(74, 29);
-            this.checkBoxLivre.TabIndex = 7;
-            this.checkBoxLivre.Text = "Livré";
-            this.checkBoxLivre.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxRecept
-            // 
-            this.checkBoxRecept.AutoSize = true;
-            this.checkBoxRecept.Location = new System.Drawing.Point(678, 68);
-            this.checkBoxRecept.Name = "checkBoxRecept";
-            this.checkBoxRecept.Size = new System.Drawing.Size(135, 29);
-            this.checkBoxRecept.TabIndex = 8;
-            this.checkBoxRecept.Text = "Réceptionné";
-            this.checkBoxRecept.UseVisualStyleBackColor = true;
-            // 
-            // labelDateCmd
-            // 
-            this.labelDateCmd.AutoSize = true;
-            this.labelDateCmd.Location = new System.Drawing.Point(351, 109);
-            this.labelDateCmd.Name = "labelDateCmd";
-            this.labelDateCmd.Size = new System.Drawing.Size(132, 25);
-            this.labelDateCmd.TabIndex = 9;
-            this.labelDateCmd.Text = "Commandé le :";
-            // 
-            // labelReglement
-            // 
-            this.labelReglement.AutoSize = true;
-            this.labelReglement.Location = new System.Drawing.Point(645, 109);
-            this.labelReglement.Name = "labelReglement";
-            this.labelReglement.Size = new System.Drawing.Size(82, 25);
-            this.labelReglement.TabIndex = 10;
-            this.labelReglement.Text = "Reglé le :";
-            // 
-            // textBoxCmdLe
-            // 
-            this.textBoxCmdLe.Location = new System.Drawing.Point(489, 106);
-            this.textBoxCmdLe.Name = "textBoxCmdLe";
-            this.textBoxCmdLe.Size = new System.Drawing.Size(150, 31);
-            this.textBoxCmdLe.TabIndex = 11;
-            this.textBoxCmdLe.Text = "JJ/MM/AAAA";
-            // 
-            // textBoxRegl
-            // 
-            this.textBoxRegl.Location = new System.Drawing.Point(725, 106);
-            this.textBoxRegl.Name = "textBoxRegl";
-            this.textBoxRegl.Size = new System.Drawing.Size(150, 31);
-            this.textBoxRegl.TabIndex = 12;
-            this.textBoxRegl.Text = "JJ/MM/AAAA";
             // 
             // tableauProd
             // 
@@ -292,7 +202,97 @@ namespace ZumbaSoft.Fenetres_Commande
             this.buttonSupprimerPrd.Text = "Supprimer";
             this.buttonSupprimerPrd.UseVisualStyleBackColor = true;
             // 
-            // NouvelleCommandes
+            // labelEtat
+            // 
+            this.labelEtat.AutoSize = true;
+            this.labelEtat.Location = new System.Drawing.Point(404, 68);
+            this.labelEtat.Name = "labelEtat";
+            this.labelEtat.Size = new System.Drawing.Size(51, 25);
+            this.labelEtat.TabIndex = 5;
+            this.labelEtat.Text = "Etat :";
+            // 
+            // checkBoxCommande
+            // 
+            this.checkBoxCommande.AutoSize = true;
+            this.checkBoxCommande.Location = new System.Drawing.Point(461, 68);
+            this.checkBoxCommande.Name = "checkBoxCommande";
+            this.checkBoxCommande.Size = new System.Drawing.Size(131, 29);
+            this.checkBoxCommande.TabIndex = 6;
+            this.checkBoxCommande.Text = "Commandé";
+            this.checkBoxCommande.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxLivre
+            // 
+            this.checkBoxLivre.AutoSize = true;
+            this.checkBoxLivre.Location = new System.Drawing.Point(598, 68);
+            this.checkBoxLivre.Name = "checkBoxLivre";
+            this.checkBoxLivre.Size = new System.Drawing.Size(74, 29);
+            this.checkBoxLivre.TabIndex = 7;
+            this.checkBoxLivre.Text = "Livré";
+            this.checkBoxLivre.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxRecept
+            // 
+            this.checkBoxRecept.AutoSize = true;
+            this.checkBoxRecept.Location = new System.Drawing.Point(678, 68);
+            this.checkBoxRecept.Name = "checkBoxRecept";
+            this.checkBoxRecept.Size = new System.Drawing.Size(135, 29);
+            this.checkBoxRecept.TabIndex = 8;
+            this.checkBoxRecept.Text = "Réceptionné";
+            this.checkBoxRecept.UseVisualStyleBackColor = true;
+            // 
+            // labelDateCmd
+            // 
+            this.labelDateCmd.AutoSize = true;
+            this.labelDateCmd.Location = new System.Drawing.Point(351, 109);
+            this.labelDateCmd.Name = "labelDateCmd";
+            this.labelDateCmd.Size = new System.Drawing.Size(132, 25);
+            this.labelDateCmd.TabIndex = 9;
+            this.labelDateCmd.Text = "Commandé le :";
+            // 
+            // labelReglement
+            // 
+            this.labelReglement.AutoSize = true;
+            this.labelReglement.Location = new System.Drawing.Point(645, 109);
+            this.labelReglement.Name = "labelReglement";
+            this.labelReglement.Size = new System.Drawing.Size(82, 25);
+            this.labelReglement.TabIndex = 10;
+            this.labelReglement.Text = "Reglé le :";
+            // 
+            // textBoxCmdLe
+            // 
+            this.textBoxCmdLe.Location = new System.Drawing.Point(489, 106);
+            this.textBoxCmdLe.Name = "textBoxCmdLe";
+            this.textBoxCmdLe.Size = new System.Drawing.Size(150, 31);
+            this.textBoxCmdLe.TabIndex = 11;
+            this.textBoxCmdLe.Text = "JJ/MM/AAAA";
+            // 
+            // textBoxRegl
+            // 
+            this.textBoxRegl.Location = new System.Drawing.Point(725, 106);
+            this.textBoxRegl.Name = "textBoxRegl";
+            this.textBoxRegl.Size = new System.Drawing.Size(150, 31);
+            this.textBoxRegl.TabIndex = 12;
+            this.textBoxRegl.Text = "JJ/MM/AAAA";
+            // 
+            // labelMag
+            // 
+            this.labelMag.AutoSize = true;
+            this.labelMag.Location = new System.Drawing.Point(13, 109);
+            this.labelMag.Name = "labelMag";
+            this.labelMag.Size = new System.Drawing.Size(113, 25);
+            this.labelMag.TabIndex = 4;
+            this.labelMag.Text = "Réception à :";
+            // 
+            // textBoxRecep
+            // 
+            this.textBoxRecep.Enabled = false;
+            this.textBoxRecep.Location = new System.Drawing.Point(150, 106);
+            this.textBoxRecep.Name = "textBoxRecep";
+            this.textBoxRecep.Size = new System.Drawing.Size(150, 31);
+            this.textBoxRecep.TabIndex = 2;
+            // 
+            // GestionDeLaCommande
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -322,8 +322,8 @@ namespace ZumbaSoft.Fenetres_Commande
             this.Controls.Add(this.textBoxRecep);
             this.Controls.Add(this.textBoxRef);
             this.Controls.Add(this.labelTitle);
-            this.Name = "NouvelleCommandes";
-            this.Text = "NouvelleCommandes";
+            this.Name = "GestionDeLaCommande";
+            this.Text = "Gestion Commande";
             ((System.ComponentModel.ISupportInitialize)(this.tableauProd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -334,17 +334,7 @@ namespace ZumbaSoft.Fenetres_Commande
 
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.TextBox textBoxRef;
-        private System.Windows.Forms.TextBox textBoxRecep;
         private System.Windows.Forms.Label labelRef;
-        private System.Windows.Forms.Label labelMag;
-        private System.Windows.Forms.Label labelEtat;
-        private System.Windows.Forms.CheckBox checkBoxCommande;
-        private System.Windows.Forms.CheckBox checkBoxLivre;
-        private System.Windows.Forms.CheckBox checkBoxRecept;
-        private System.Windows.Forms.Label labelDateCmd;
-        private System.Windows.Forms.Label labelReglement;
-        private System.Windows.Forms.TextBox textBoxCmdLe;
-        private System.Windows.Forms.TextBox textBoxRegl;
         private System.Windows.Forms.DataGridView tableauProd;
         private System.Windows.Forms.Button buttonAnnulerCmd;
         private System.Windows.Forms.Button buttonAjouterProd;
@@ -357,5 +347,15 @@ namespace ZumbaSoft.Fenetres_Commande
         private System.Windows.Forms.Button buttonPlusPrd;
         private System.Windows.Forms.Button buttonMoinsPrd;
         private System.Windows.Forms.Button buttonSupprimerPrd;
+        private System.Windows.Forms.Label labelEtat;
+        private System.Windows.Forms.CheckBox checkBoxCommande;
+        private System.Windows.Forms.CheckBox checkBoxLivre;
+        private System.Windows.Forms.CheckBox checkBoxRecept;
+        private System.Windows.Forms.Label labelDateCmd;
+        private System.Windows.Forms.Label labelReglement;
+        private System.Windows.Forms.TextBox textBoxCmdLe;
+        private System.Windows.Forms.TextBox textBoxRegl;
+        private System.Windows.Forms.Label labelMag;
+        private System.Windows.Forms.TextBox textBoxRecep;
     }
 }

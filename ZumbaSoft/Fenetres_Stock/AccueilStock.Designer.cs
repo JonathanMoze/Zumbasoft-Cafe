@@ -44,8 +44,11 @@ namespace ZumbaSoft.Fenetres_Stock
             this.labelErreurListPrd = new System.Windows.Forms.Label();
             this.labelErreurBarreQtt = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.buttonCmd = new System.Windows.Forms.Button();
-            this.buttonNewCmd = new System.Windows.Forms.Button();
+            this.listBoxCommandes = new System.Windows.Forms.ListBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.buttonNouvelleCmd = new System.Windows.Forms.Button();
+            this.buttonModifierCmd = new System.Windows.Forms.Button();
+            this.buttonAnnulerCmd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.barreQuantite)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,7 +85,7 @@ namespace ZumbaSoft.Fenetres_Stock
             // 
             // buttonSuppStock
             // 
-            this.buttonSuppStock.Location = new System.Drawing.Point(497, 224);
+            this.buttonSuppStock.Location = new System.Drawing.Point(13, 535);
             this.buttonSuppStock.Margin = new System.Windows.Forms.Padding(4);
             this.buttonSuppStock.Name = "buttonSuppStock";
             this.buttonSuppStock.Size = new System.Drawing.Size(132, 36);
@@ -93,7 +96,7 @@ namespace ZumbaSoft.Fenetres_Stock
             // 
             // buttonAccueil
             // 
-            this.buttonAccueil.Location = new System.Drawing.Point(644, 540);
+            this.buttonAccueil.Location = new System.Drawing.Point(752, 631);
             this.buttonAccueil.Margin = new System.Windows.Forms.Padding(4);
             this.buttonAccueil.Name = "buttonAccueil";
             this.buttonAccueil.Size = new System.Drawing.Size(118, 36);
@@ -197,32 +200,64 @@ namespace ZumbaSoft.Fenetres_Stock
             this.label3.TabIndex = 31;
             this.label3.Text = "Stock du ";
             // 
-            // buttonCmd
+            // listBoxCommandes
             // 
-            this.buttonCmd.Location = new System.Drawing.Point(497, 267);
-            this.buttonCmd.Name = "buttonCmd";
-            this.buttonCmd.Size = new System.Drawing.Size(132, 34);
-            this.buttonCmd.TabIndex = 32;
-            this.buttonCmd.Text = "Commander";
-            this.buttonCmd.UseVisualStyleBackColor = true;
+            this.listBoxCommandes.FormattingEnabled = true;
+            this.listBoxCommandes.ItemHeight = 25;
+            this.listBoxCommandes.Location = new System.Drawing.Point(497, 174);
+            this.listBoxCommandes.Name = "listBoxCommandes";
+            this.listBoxCommandes.Size = new System.Drawing.Size(483, 354);
+            this.listBoxCommandes.TabIndex = 32;
             // 
-            // buttonNewCmd
+            // label2
             // 
-            this.buttonNewCmd.Location = new System.Drawing.Point(13, 535);
-            this.buttonNewCmd.Name = "buttonNewCmd";
-            this.buttonNewCmd.Size = new System.Drawing.Size(204, 34);
-            this.buttonNewCmd.TabIndex = 33;
-            this.buttonNewCmd.Text = "Nouvelle commande";
-            this.buttonNewCmd.UseVisualStyleBackColor = true;
-            this.buttonNewCmd.Click += new System.EventHandler(this.buttonNewCmd_Click);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(497, 145);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(239, 25);
+            this.label2.TabIndex = 33;
+            this.label2.Text = "Liste des comandes en cours";
+            // 
+            // buttonNouvelleCmd
+            // 
+            this.buttonNouvelleCmd.Location = new System.Drawing.Point(497, 535);
+            this.buttonNouvelleCmd.Name = "buttonNouvelleCmd";
+            this.buttonNouvelleCmd.Size = new System.Drawing.Size(112, 34);
+            this.buttonNouvelleCmd.TabIndex = 34;
+            this.buttonNouvelleCmd.Text = "Nouvelle";
+            this.buttonNouvelleCmd.UseVisualStyleBackColor = true;
+            this.buttonNouvelleCmd.Click += new System.EventHandler(this.buttonNouvelleCmd_Click);
+            // 
+            // buttonModifierCmd
+            // 
+            this.buttonModifierCmd.Location = new System.Drawing.Point(681, 534);
+            this.buttonModifierCmd.Name = "buttonModifierCmd";
+            this.buttonModifierCmd.Size = new System.Drawing.Size(112, 34);
+            this.buttonModifierCmd.TabIndex = 35;
+            this.buttonModifierCmd.Text = "Modifier";
+            this.buttonModifierCmd.UseVisualStyleBackColor = true;
+            this.buttonModifierCmd.Click += new System.EventHandler(this.buttonModifierCmd_Click);
+            // 
+            // buttonAnnulerCmd
+            // 
+            this.buttonAnnulerCmd.Location = new System.Drawing.Point(868, 534);
+            this.buttonAnnulerCmd.Name = "buttonAnnulerCmd";
+            this.buttonAnnulerCmd.Size = new System.Drawing.Size(112, 34);
+            this.buttonAnnulerCmd.TabIndex = 36;
+            this.buttonAnnulerCmd.Text = "Annuler";
+            this.buttonAnnulerCmd.UseVisualStyleBackColor = true;
+            this.buttonAnnulerCmd.Click += new System.EventHandler(this.buttonAnnulerCmd_Click);
             // 
             // AccueilStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1663, 680);
-            this.Controls.Add(this.buttonNewCmd);
-            this.Controls.Add(this.buttonCmd);
+            this.Controls.Add(this.buttonAnnulerCmd);
+            this.Controls.Add(this.buttonModifierCmd);
+            this.Controls.Add(this.buttonNouvelleCmd);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.listBoxCommandes);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.labelErreurBarreQtt);
             this.Controls.Add(this.labelErreurListPrd);
@@ -264,7 +299,10 @@ namespace ZumbaSoft.Fenetres_Stock
         private System.Windows.Forms.Label labelErreurListPrd;
         private System.Windows.Forms.Label labelErreurBarreQtt;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button buttonCmd;
-        private System.Windows.Forms.Button buttonNewCmd;
+        private System.Windows.Forms.ListBox listBoxCommandes;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button buttonNouvelleCmd;
+        private System.Windows.Forms.Button buttonModifierCmd;
+        private System.Windows.Forms.Button buttonAnnulerCmd;
     }
 }

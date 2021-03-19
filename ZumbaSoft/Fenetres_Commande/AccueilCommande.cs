@@ -21,7 +21,7 @@ namespace ZumbaSoft.Fenetres_Commande
 
         private void buttonNewCmd_Click(object sender, EventArgs e)
         {
-            NouvelleCommandes nCmd = new NouvelleCommandes(DB);
+            GestionDeLaCommande nCmd = new GestionDeLaCommande(DB);
             if(nCmd.ShowDialog() == DialogResult.OK)
             {
                 //TODO

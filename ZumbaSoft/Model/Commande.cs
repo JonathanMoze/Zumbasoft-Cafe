@@ -22,7 +22,7 @@ namespace ZumbaSoft.Model
         [ForeignKey(typeof(Produit))]
         public int id_produit { get; set; }
         [OneToMany]
-        public List<Produit> produits { get; set; }
+        public Dictionary<Produit, int> produits { get; set; } //Le produit et la quantite attendue
 
         //Association Fournisseur
         [ForeignKey(typeof(Fournisseur))]

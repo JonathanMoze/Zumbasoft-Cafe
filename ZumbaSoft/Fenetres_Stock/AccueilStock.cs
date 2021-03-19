@@ -22,10 +22,11 @@ namespace ZumbaSoft.Fenetres_Stock
             InitializeComponent();
             DB = db;
             magasin = new Magasin();
-            initListStock(magasin);
+            initListStock();
+            initListCommandes();
         }
 
-        private void initListStock(Magasin m)
+        private void initListStock()
         {
             List<ProduitEnStock> stock = DB.GetAllWithChildren<ProduitEnStock>(); //Et non pas Table<T>().ToList() car sinon magasin et produit sont null
             if(stock.Count > 0)
@@ -38,6 +39,22 @@ namespace ZumbaSoft.Fenetres_Stock
             else
             {
                 listStock.Items.Add("Aucun produit en stock.");
+            }
+        }
+
+        private void initListCommandes()
+        {
+            List<Commande> commandes = DB.GetAllWithChildren<Commande>();
+            if(commandes.Count > 0)
+            {
+                foreach(Commande cmd in commandes)
+                {
+                    listBoxCommandes.Items.Add(cmd);
+                }
+            }
+            else
+            {
+                listBoxCommandes.Items.Add("Aucune commande en cours.");
             }
         }
         private ProduitEnStock initObjectStock()
@@ -83,6 +100,15 @@ namespace ZumbaSoft.Fenetres_Stock
             listStock.Items.Add(produitEnStock);
         }
 
+        private void majListCommandes(Commande cmd)
+        {
+            if (listBoxCommandes.Items[0].Equals("Aucune commande en cours."))
+            {
+                listStock.Items.Clear();
+            }
+            listBoxCommandes.Items.Add(cmd);
+        }
+
         private void buttonSuppStock_Click(object sender, EventArgs e)
         {
             var ps = (ProduitEnStock)listStock.SelectedItem;
@@ -119,10 +145,23 @@ namespace ZumbaSoft.Fenetres_Stock
 
         }
 
-        private void buttonNewCmd_Click(object sender, EventArgs e)
+        private void buttonNouvelleCmd_Click(object sender, EventArgs e)
         {
-            NouvelleCommandes nc = new NouvelleCommandes(DB);
-            nc.Show();
+            GestionDeLaCommande gc = new GestionDeLaCommande(DB);
+            if(gc.ShowDialog() == DialogResult.OK)
+            {
+                majListCommandes(gc.commande);
+            }
+        }
+
+        private void buttonModifierCmd_Click(object sender, EventArgs e)
+        {
+            GestionDeLaCommande gc = new GestionDeLaCommande(DB, listBoxCommandes.SelectedItem);
+        }
+
+        private void buttonAnnulerCmd_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

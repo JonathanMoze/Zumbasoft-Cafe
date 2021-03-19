@@ -16,8 +16,9 @@ namespace ZumbaSoft.Fenetres_Commande
     public partial class ChoixProd_Fourni : Form
     {
         SQLiteConnection DB;
-        Produit produit;
-        int quantite;
+        public Produit produit;
+        public Fournisseur fournisseur;
+        public int quantite;
 
         public ChoixProd_Fourni(SQLiteConnection db)
         {
@@ -111,7 +112,16 @@ namespace ZumbaSoft.Fenetres_Commande
 
         private void buttonAjouterStock_Click(object sender, EventArgs e)
         {
-
+            if(listBoxFournisseur.SelectedIndex == 0)
+            {
+                fournisseur = (Fournisseur)listBoxFournisseur.Items[0];
+            }
+            else
+            {
+                fournisseur = (Fournisseur)listBoxFournisseur.SelectedItem;
+            }
+            DialogResult = DialogResult.OK;
+            this.Close();
         }
 
         private void buttonAjouterStock_TextChanged(object sender, EventArgs e)
