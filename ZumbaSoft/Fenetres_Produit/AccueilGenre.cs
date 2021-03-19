@@ -83,7 +83,7 @@ namespace ZumbaSoft.Fenetres_Produit
             AjouterGenre ajouterGenre = new AjouterGenre(DB);
             if (ajouterGenre.ShowDialog() == DialogResult.OK)
             {
-                var gen = ajouterGenre;
+                var gen = ajouterGenre.genre;
                 listGenre.Items.Add(gen);
                 listGenre.SelectedItem = gen;
             }

@@ -14,22 +14,25 @@ namespace ZumbaSoft.Fenetres_Produit
     {
         Fournisseur fournisseur;
         SQLiteConnection DB;
+        AccueilFournisseur af;
 
-        public ModifierFournisseur(Fournisseur f, SQLiteConnection db)
+        public ModifierFournisseur(AccueilFournisseur af, Fournisseur f, SQLiteConnection db)
         {
             InitializeComponent();
             this.fournisseur = f;
             this.DB = db;
+            this.af = af;
             InitInfoField();
         }
 
         public void InitInfoField()
         {
-            if (fournisseur.nom != null)
-            {
-                labelCurrentNom.Text = fournisseur.nom;
-            }
-            labelCurrentTelephone.Text = fournisseur.telephone;
+            textBoxNom.PlaceholderText = fournisseur.nom;
+            textBoxNewTel.PlaceholderText = fournisseur.telephone;
+            textBoxEmail.PlaceholderText = fournisseur.mail;
+            textBoxContrat.PlaceholderText = fournisseur.etat_contrat;
+
+            
 
             if (fournisseur.produits.Count != 0)
             {
@@ -56,8 +59,12 @@ namespace ZumbaSoft.Fenetres_Produit
 
         private void buttonOKParamMag_Click(object sender, EventArgs e)
         {
-            fournisseur.telephone = textBoxNewTel.Text;
+            fournisseur.telephone = textBoxNewTel.PlaceholderText;
+            fournisseur.nom = textBoxNom.PlaceholderText;
+            fournisseur.etat_contrat = textBoxContrat.PlaceholderText;
+            fournisseur.mail = textBoxEmail.PlaceholderText;
             DB.Update(fournisseur);
+            af.initListFournisseur();
             DialogResult = DialogResult.OK;
             this.Close();
         }
@@ -68,12 +75,32 @@ namespace ZumbaSoft.Fenetres_Produit
             this.Close();
         }
 
-        private void buttonModifTel_Click(object sender, EventArgs e)
+        private void buttonModifs_Click(object sender, EventArgs e)
         {
-            if (textBoxNewTel.Visible != true)
+            if(textBoxNom.Text != "")
             {
-                textBoxNewTel.Visible = true;
+                textBoxNom.PlaceholderText = textBoxNom.Text;
+                textBoxNom.Text = "";
             }
+
+            if (textBoxNewTel.Text != "")
+            {
+                textBoxNewTel.PlaceholderText = textBoxNewTel.Text;
+                textBoxNewTel.Text = "";
+            }
+
+            if (textBoxEmail.Text != "")
+            {
+                textBoxEmail.PlaceholderText = textBoxEmail.Text;
+                textBoxEmail.Text = "";
+            }
+
+            if (textBoxContrat.Text != "")
+            {
+                textBoxContrat.PlaceholderText = textBoxContrat.Text;
+                textBoxContrat.Text = "";
+            }
+
         }
 
         private void buttonModifProduits_Click(object sender, EventArgs e)

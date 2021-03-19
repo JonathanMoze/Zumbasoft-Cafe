@@ -25,6 +25,8 @@ namespace ZumbaSoft.Fenetres_Produit
 
         public void initListFournisseur()
         {
+
+            listFournisseur.Items.Clear();
             int nb = 0;
             foreach (Fournisseur f in DB.GetAllWithChildren<Fournisseur>())
             {
@@ -80,7 +82,7 @@ namespace ZumbaSoft.Fenetres_Produit
             if (listFournisseur.SelectedItem != null)
             {
                 Fournisseur f = (Fournisseur)listFournisseur.SelectedItem;
-                ModifierFournisseur paramétrer = new ModifierFournisseur(f, DB);
+                ModifierFournisseur paramétrer = new ModifierFournisseur(this, f, DB);
                 if (paramétrer.ShowDialog() == DialogResult.OK)
                 {
                     listFournisseur.Refresh();

@@ -36,20 +36,23 @@ namespace ZumbaSoft.Fenetres_Produit
             this.buttonModifProduits = new System.Windows.Forms.Button();
             this.labelCommande = new System.Windows.Forms.Label();
             this.labelStock = new System.Windows.Forms.Label();
-            this.labelCurrentNom = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.labelCurrentTelephone = new System.Windows.Forms.Label();
+            this.labelNom = new System.Windows.Forms.Label();
             this.textBoxNewTel = new System.Windows.Forms.TextBox();
-            this.buttonModifTel = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.buttonModifs = new System.Windows.Forms.Button();
+            this.labelTel = new System.Windows.Forms.Label();
             this.buttonAnnulParamMag = new System.Windows.Forms.Button();
             this.buttonOKParamMag = new System.Windows.Forms.Button();
+            this.textBoxNom = new System.Windows.Forms.TextBox();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.labelMail = new System.Windows.Forms.Label();
+            this.textBoxContrat = new System.Windows.Forms.TextBox();
+            this.labelContrat = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listViewCommandes
             // 
             this.listViewCommandes.HideSelection = false;
-            this.listViewCommandes.Location = new System.Drawing.Point(320, 199);
+            this.listViewCommandes.Location = new System.Drawing.Point(320, 245);
             this.listViewCommandes.Margin = new System.Windows.Forms.Padding(2);
             this.listViewCommandes.Name = "listViewCommandes";
             this.listViewCommandes.Size = new System.Drawing.Size(240, 228);
@@ -59,7 +62,7 @@ namespace ZumbaSoft.Fenetres_Produit
             // listViewProduits
             // 
             this.listViewProduits.HideSelection = false;
-            this.listViewProduits.Location = new System.Drawing.Point(30, 199);
+            this.listViewProduits.Location = new System.Drawing.Point(30, 245);
             this.listViewProduits.Margin = new System.Windows.Forms.Padding(2);
             this.listViewProduits.Name = "listViewProduits";
             this.listViewProduits.Size = new System.Drawing.Size(240, 228);
@@ -68,7 +71,7 @@ namespace ZumbaSoft.Fenetres_Produit
             // 
             // buttonModifEmpl
             // 
-            this.buttonModifEmpl.Location = new System.Drawing.Point(387, 434);
+            this.buttonModifEmpl.Location = new System.Drawing.Point(387, 480);
             this.buttonModifEmpl.Margin = new System.Windows.Forms.Padding(2);
             this.buttonModifEmpl.Name = "buttonModifEmpl";
             this.buttonModifEmpl.Size = new System.Drawing.Size(103, 27);
@@ -79,7 +82,7 @@ namespace ZumbaSoft.Fenetres_Produit
             // 
             // buttonModifProduits
             // 
-            this.buttonModifProduits.Location = new System.Drawing.Point(92, 433);
+            this.buttonModifProduits.Location = new System.Drawing.Point(92, 479);
             this.buttonModifProduits.Margin = new System.Windows.Forms.Padding(2);
             this.buttonModifProduits.Name = "buttonModifProduits";
             this.buttonModifProduits.Size = new System.Drawing.Size(106, 29);
@@ -91,7 +94,7 @@ namespace ZumbaSoft.Fenetres_Produit
             // labelCommande
             // 
             this.labelCommande.AutoSize = true;
-            this.labelCommande.Location = new System.Drawing.Point(322, 176);
+            this.labelCommande.Location = new System.Drawing.Point(322, 222);
             this.labelCommande.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCommande.Name = "labelCommande";
             this.labelCommande.Size = new System.Drawing.Size(92, 20);
@@ -101,91 +104,64 @@ namespace ZumbaSoft.Fenetres_Produit
             // labelStock
             // 
             this.labelStock.AutoSize = true;
-            this.labelStock.Location = new System.Drawing.Point(31, 176);
+            this.labelStock.Location = new System.Drawing.Point(31, 222);
             this.labelStock.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelStock.Name = "labelStock";
             this.labelStock.Size = new System.Drawing.Size(63, 20);
             this.labelStock.TabIndex = 34;
             this.labelStock.Text = "Produits";
             // 
-            // labelCurrentNom
+            // labelNom
             // 
-            this.labelCurrentNom.AutoSize = true;
-            this.labelCurrentNom.BackColor = System.Drawing.Color.Transparent;
-            this.labelCurrentNom.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelCurrentNom.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.labelCurrentNom.Location = new System.Drawing.Point(90, 31);
-            this.labelCurrentNom.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelCurrentNom.Name = "labelCurrentNom";
-            this.labelCurrentNom.Size = new System.Drawing.Size(65, 19);
-            this.labelCurrentNom.TabIndex = 41;
-            this.labelCurrentNom.Text = "Inconnu";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(35, 31);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 19);
-            this.label1.TabIndex = 40;
-            this.label1.Text = "Nom :";
-            // 
-            // labelCurrentTelephone
-            // 
-            this.labelCurrentTelephone.AutoSize = true;
-            this.labelCurrentTelephone.BackColor = System.Drawing.Color.Transparent;
-            this.labelCurrentTelephone.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelCurrentTelephone.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.labelCurrentTelephone.Location = new System.Drawing.Point(272, 78);
-            this.labelCurrentTelephone.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.labelCurrentTelephone.Name = "labelCurrentTelephone";
-            this.labelCurrentTelephone.Size = new System.Drawing.Size(53, 19);
-            this.labelCurrentTelephone.TabIndex = 45;
-            this.labelCurrentTelephone.Text = "Aucun";
+            this.labelNom.AutoSize = true;
+            this.labelNom.BackColor = System.Drawing.Color.Transparent;
+            this.labelNom.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelNom.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelNom.Location = new System.Drawing.Point(35, 31);
+            this.labelNom.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelNom.Name = "labelNom";
+            this.labelNom.Size = new System.Drawing.Size(51, 19);
+            this.labelNom.TabIndex = 40;
+            this.labelNom.Text = "Nom :";
             // 
             // textBoxNewTel
             // 
             this.textBoxNewTel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
             this.textBoxNewTel.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxNewTel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.textBoxNewTel.Location = new System.Drawing.Point(131, 108);
+            this.textBoxNewTel.Location = new System.Drawing.Point(128, 65);
             this.textBoxNewTel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxNewTel.Name = "textBoxNewTel";
-            this.textBoxNewTel.PlaceholderText = "veuillez entrer le nouvel numéro";
             this.textBoxNewTel.Size = new System.Drawing.Size(250, 27);
             this.textBoxNewTel.TabIndex = 44;
             // 
-            // buttonModifTel
+            // buttonModifs
             // 
-            this.buttonModifTel.Location = new System.Drawing.Point(34, 108);
-            this.buttonModifTel.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonModifTel.Name = "buttonModifTel";
-            this.buttonModifTel.Size = new System.Drawing.Size(90, 27);
-            this.buttonModifTel.TabIndex = 43;
-            this.buttonModifTel.Text = "Modifier";
-            this.buttonModifTel.UseVisualStyleBackColor = true;
-            this.buttonModifTel.Click += new System.EventHandler(this.buttonModifTel_Click);
+            this.buttonModifs.Location = new System.Drawing.Point(519, 69);
+            this.buttonModifs.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonModifs.Name = "buttonModifs";
+            this.buttonModifs.Size = new System.Drawing.Size(169, 62);
+            this.buttonModifs.TabIndex = 43;
+            this.buttonModifs.Text = "Valider les modifications";
+            this.buttonModifs.UseVisualStyleBackColor = true;
+            this.buttonModifs.Click += new System.EventHandler(this.buttonModifs_Click);
             // 
-            // label2
+            // labelTel
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(34, 77);
-            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(230, 19);
-            this.label2.TabIndex = 42;
-            this.label2.Text = "Téléphone actuel du fournisseur :";
+            this.labelTel.AutoSize = true;
+            this.labelTel.BackColor = System.Drawing.Color.Transparent;
+            this.labelTel.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelTel.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelTel.Location = new System.Drawing.Point(30, 69);
+            this.labelTel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.labelTel.Name = "labelTel";
+            this.labelTel.Size = new System.Drawing.Size(90, 19);
+            this.labelTel.TabIndex = 42;
+            this.labelTel.Text = " Téléphone :";
             // 
             // buttonAnnulParamMag
             // 
-            this.buttonAnnulParamMag.Location = new System.Drawing.Point(585, 532);
+            this.buttonAnnulParamMag.Location = new System.Drawing.Point(669, 486);
             this.buttonAnnulParamMag.Name = "buttonAnnulParamMag";
             this.buttonAnnulParamMag.Size = new System.Drawing.Size(94, 29);
             this.buttonAnnulParamMag.TabIndex = 47;
@@ -195,7 +171,7 @@ namespace ZumbaSoft.Fenetres_Produit
             // 
             // buttonOKParamMag
             // 
-            this.buttonOKParamMag.Location = new System.Drawing.Point(585, 477);
+            this.buttonOKParamMag.Location = new System.Drawing.Point(669, 431);
             this.buttonOKParamMag.Name = "buttonOKParamMag";
             this.buttonOKParamMag.Size = new System.Drawing.Size(94, 30);
             this.buttonOKParamMag.TabIndex = 46;
@@ -203,20 +179,82 @@ namespace ZumbaSoft.Fenetres_Produit
             this.buttonOKParamMag.UseVisualStyleBackColor = true;
             this.buttonOKParamMag.Click += new System.EventHandler(this.buttonOKParamMag_Click);
             // 
+            // textBoxNom
+            // 
+            this.textBoxNom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
+            this.textBoxNom.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxNom.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxNom.Location = new System.Drawing.Point(92, 27);
+            this.textBoxNom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxNom.Name = "textBoxNom";
+            this.textBoxNom.Size = new System.Drawing.Size(250, 27);
+            this.textBoxNom.TabIndex = 48;
+            // 
+            // textBoxEmail
+            // 
+            this.textBoxEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
+            this.textBoxEmail.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxEmail.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxEmail.Location = new System.Drawing.Point(92, 104);
+            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(250, 27);
+            this.textBoxEmail.TabIndex = 50;
+            // 
+            // labelMail
+            // 
+            this.labelMail.AutoSize = true;
+            this.labelMail.BackColor = System.Drawing.Color.Transparent;
+            this.labelMail.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelMail.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelMail.Location = new System.Drawing.Point(35, 112);
+            this.labelMail.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.labelMail.Name = "labelMail";
+            this.labelMail.Size = new System.Drawing.Size(52, 19);
+            this.labelMail.TabIndex = 49;
+            this.labelMail.Text = "Email :";
+            // 
+            // textBoxContrat
+            // 
+            this.textBoxContrat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
+            this.textBoxContrat.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxContrat.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxContrat.Location = new System.Drawing.Point(110, 140);
+            this.textBoxContrat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxContrat.Name = "textBoxContrat";
+            this.textBoxContrat.Size = new System.Drawing.Size(250, 27);
+            this.textBoxContrat.TabIndex = 52;
+            // 
+            // labelContrat
+            // 
+            this.labelContrat.AutoSize = true;
+            this.labelContrat.BackColor = System.Drawing.Color.Transparent;
+            this.labelContrat.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelContrat.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelContrat.Location = new System.Drawing.Point(34, 144);
+            this.labelContrat.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.labelContrat.Name = "labelContrat";
+            this.labelContrat.Size = new System.Drawing.Size(68, 19);
+            this.labelContrat.TabIndex = 51;
+            this.labelContrat.Text = "Contrat :";
+            // 
             // ModifierFournisseur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(712, 582);
+            this.ClientSize = new System.Drawing.Size(833, 582);
+            this.Controls.Add(this.textBoxContrat);
+            this.Controls.Add(this.labelContrat);
+            this.Controls.Add(this.textBoxEmail);
+            this.Controls.Add(this.labelMail);
+            this.Controls.Add(this.textBoxNom);
             this.Controls.Add(this.buttonAnnulParamMag);
             this.Controls.Add(this.buttonOKParamMag);
-            this.Controls.Add(this.labelCurrentTelephone);
             this.Controls.Add(this.textBoxNewTel);
-            this.Controls.Add(this.buttonModifTel);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.labelCurrentNom);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.buttonModifs);
+            this.Controls.Add(this.labelTel);
+            this.Controls.Add(this.labelNom);
             this.Controls.Add(this.listViewCommandes);
             this.Controls.Add(this.listViewProduits);
             this.Controls.Add(this.buttonModifEmpl);
@@ -239,13 +277,16 @@ namespace ZumbaSoft.Fenetres_Produit
         private System.Windows.Forms.Label labelCommande;
         private System.Windows.Forms.Label labelStock;
         private System.Windows.Forms.ListView l;
-        private System.Windows.Forms.Label labelCurrentNom;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label labelCurrentTelephone;
+        private System.Windows.Forms.Label labelNom;
         private System.Windows.Forms.TextBox textBoxNewTel;
-        private System.Windows.Forms.Button buttonModifTel;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button buttonModifs;
+        private System.Windows.Forms.Label labelTel;
         private System.Windows.Forms.Button buttonAnnulParamMag;
         private System.Windows.Forms.Button buttonOKParamMag;
+        private System.Windows.Forms.TextBox textBoxNom;
+        private System.Windows.Forms.TextBox textBoxEmail;
+        private System.Windows.Forms.Label labelMail;
+        private System.Windows.Forms.TextBox textBoxContrat;
+        private System.Windows.Forms.Label labelContrat;
     }
 }
