@@ -35,6 +35,10 @@ namespace ZumbaSoft.Fenetres_Identification
             {
                 //TODO
             }
+            else
+            {
+                MessageBox.Show("Mauvais mot de passe ou identifiant.");
+            }
             #endregion
         }
 
