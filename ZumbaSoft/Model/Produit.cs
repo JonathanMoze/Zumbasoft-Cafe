@@ -15,13 +15,13 @@ namespace ZumbaSoft.Model
 
         public string nom { get; set; }
 
-        public int prix_vente_HT { get; set; }
+        public decimal prix_vente_HT { get; set; }
 
-        public int prix_vente_TTC { get; set; }
+        public decimal prix_vente_TTC { get; set; }
 
-        public int prix_achat_HT { get; set; }
+        public decimal prix_achat_HT { get; set; }
 
-        public int prix_achat_TTC { get; set; }
+        public decimal prix_achat_TTC { get; set; }
 
         public string reference { get; set; }
 

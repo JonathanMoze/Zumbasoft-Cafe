@@ -16,5 +16,10 @@ namespace ZumbaSoft.Model
         //Association Produit
         [OneToMany]
         public List<Produit> produits { get; set; }
+
+        public override string ToString()
+        {
+            return this.intitule;
+        }
     }
 }

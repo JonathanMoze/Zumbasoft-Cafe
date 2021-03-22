@@ -56,7 +56,7 @@ namespace ZumbaSoft.Fenetres_Produit
 
         }
 
-        private void buttonSupprimerGenre_Click(object sender, EventArgs e)
+        private void buttonSupprimerFournisseur_Click(object sender, EventArgs e)
         {
             var f = (Fournisseur)listFournisseur.SelectedItem;
             SupprimerFournisseur supprimer = new SupprimerFournisseur(f, DB);
@@ -66,18 +66,16 @@ namespace ZumbaSoft.Fenetres_Produit
             }
         }
 
-        private void buttonAjouterGenre_Click(object sender, EventArgs e)
+        private void buttonAjouterFournisseur_Click(object sender, EventArgs e)
         {
             AjouterFournisseur ajoutFournisseur = new AjouterFournisseur(DB);
             if (ajoutFournisseur.ShowDialog() == DialogResult.OK)
             {
-                var fou = ajoutFournisseur.fournisseur;
-                listFournisseur.Items.Add(fou);
-                listFournisseur.SelectedItem = fou;
+                initListFournisseur();
             }
         }
 
-        private void buttonModifierGenre_Click(object sender, EventArgs e)
+        private void buttonModifierFournisseur_Click(object sender, EventArgs e)
         {
             if (listFournisseur.SelectedItem != null)
             {
@@ -85,9 +83,15 @@ namespace ZumbaSoft.Fenetres_Produit
                 ModifierFournisseur paramétrer = new ModifierFournisseur(this, f, DB);
                 if (paramétrer.ShowDialog() == DialogResult.OK)
                 {
-                    listFournisseur.Refresh();
+                    initListFournisseur();
                 }
             }
+        }
+
+        private void buttonAccueil_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.Cancel;
+            this.Close();
         }
     }
 }

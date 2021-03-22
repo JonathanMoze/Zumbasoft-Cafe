@@ -313,6 +313,7 @@ namespace ZumbaSoft.Fenetres_Produit
             this.buttonAnnuler.TabIndex = 31;
             this.buttonAnnuler.Text = "Annuler";
             this.buttonAnnuler.UseVisualStyleBackColor = true;
+            this.buttonAnnuler.Click += new System.EventHandler(this.buttonAnnuler_Click);
             // 
             // buttonValider
             // 
@@ -322,6 +323,7 @@ namespace ZumbaSoft.Fenetres_Produit
             this.buttonValider.TabIndex = 32;
             this.buttonValider.Text = "Valider";
             this.buttonValider.UseVisualStyleBackColor = true;
+            this.buttonValider.Click += new System.EventHandler(this.buttonValider_Click);
             // 
             // buttonGenre
             // 

@@ -26,6 +26,8 @@ namespace ZumbaSoft.Fenetres_Produit
 
         public void initListGenre()
         {
+            listGenre.Items.Clear();
+
             int nb = 0;
             foreach (Genre g in DB.GetAllWithChildren<Genre>())
             {
@@ -55,7 +57,30 @@ namespace ZumbaSoft.Fenetres_Produit
 
         }
 
-        private void boutonSupprimer_Click(object sender, EventArgs e)
+
+        private void buttonAjouterGenre_Click(object sender, EventArgs e)
+        {
+            AjouterGenre ajouterGenre = new AjouterGenre(DB);
+            if (ajouterGenre.ShowDialog() == DialogResult.OK)
+            {
+                initListGenre();
+            }
+        }
+
+        private void buttonModifierGenre_Click(object sender, EventArgs e)
+        {
+            if (listGenre.SelectedItem != null)
+            {
+                Genre g = (Genre)listGenre.SelectedItem;
+                ModifierGenre paramétrer = new ModifierGenre(g, DB);
+                if (paramétrer.ShowDialog() == DialogResult.OK)
+                {
+                    initListGenre();
+                }
+            }
+        }
+
+        private void buttonSupprimerGenre_Click(object sender, EventArgs e)
         {
             var g = (Genre)listGenre.SelectedItem;
             SupprimerGenre supprimer = new SupprimerGenre(g, DB);
@@ -65,41 +90,10 @@ namespace ZumbaSoft.Fenetres_Produit
             }
         }
 
-        private void boutonModifier_Click(object sender, EventArgs e)
-        {
-            if (listGenre.SelectedItem != null)
-            {
-                Genre g = (Genre)listGenre.SelectedItem;
-                ModifierGenre paramétrer = new ModifierGenre(g, DB);
-                if (paramétrer.ShowDialog() == DialogResult.OK)
-                {
-                    listGenre.Refresh();
-                }
-            }
-        }
-
-        private void boutonAjouter_Click(object sender, EventArgs e)
-        {
-            AjouterGenre ajouterGenre = new AjouterGenre(DB);
-            if (ajouterGenre.ShowDialog() == DialogResult.OK)
-            {
-                var gen = ajouterGenre.genre;
-                listGenre.Items.Add(gen);
-                listGenre.SelectedItem = gen;
-            }
-        }
-
         private void buttonAccueil_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;
             this.Close();
         }
-
-        private void goBackButton_Click(object sender, EventArgs e)
-        {
-            DialogResult = DialogResult.OK;
-            this.Close();
-        }
-
     }
 }

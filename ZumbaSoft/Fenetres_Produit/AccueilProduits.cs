@@ -25,10 +25,12 @@ namespace ZumbaSoft.Fenetres_Produit
 
         public void initListProduits()
         {
+            listProduits.Items.Clear();
+
             int nb = 0;
             foreach (Produit p in DB.GetAllWithChildren<Produit>())
             {
-                listGenre.Items.Add(p);
+                listProduits.Items.Add(p);
                 nb++;
             }
 
@@ -47,19 +49,19 @@ namespace ZumbaSoft.Fenetres_Produit
             backgroundBlock.BackColor = Color.FromArgb(50, 12, 12, 12);
             buttonAjouterProduit.BackColor = Color.FromArgb(50, 12, 12, 12);
             buttonModifierProduit.BackColor = Color.FromArgb(50, 12, 12, 12);
-            buttonSupprimerGenre.BackColor = Color.FromArgb(50, 12, 12, 12);
+            buttonSupprimerProduit.BackColor = Color.FromArgb(50, 12, 12, 12);
             erreurListevide.BackColor = Color.FromArgb(50, 12, 12, 12);
             panel1.BackColor = Color.FromArgb(50, 12, 12, 12);
             panel4.BackColor = Color.FromArgb(80, 12, 12, 12);
         }
 
-        private void buttonSupprimerGenre_Click(object sender, EventArgs e)
+        private void buttonSupprimerProduit_Click(object sender, EventArgs e)
         {
             var p = (Produit)listProduits.SelectedItem;
             SupprimerProduit supprimer = new SupprimerProduit(p, DB);
             if (supprimer.ShowDialog() == DialogResult.OK)
             {
-                listGenre.Items.Remove(p);
+                listProduits.Items.Remove(p);
             }
         }
 
@@ -81,14 +83,14 @@ namespace ZumbaSoft.Fenetres_Produit
             AjouterProduit ajouterproduit = new AjouterProduit(DB);
             if (ajouterproduit.ShowDialog() == DialogResult.OK)
             {
-                var pd = ajouterproduit.produit;
-                listProduits.Items.Add(pd);
-                listProduits.SelectedItem = pd;
+                initListProduits();
             }
         }
+
         private void buttonRetourAccueil_Click(object sender, EventArgs e)
         {
-            //TO DO
+            DialogResult = DialogResult.Cancel;
+            this.Close();
         }
     }
 }

@@ -39,13 +39,13 @@ namespace ZumbaSoft.Fenetres_Produit
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonRetourAccueil = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.listGenre = new System.Windows.Forms.ListBox();
             this.erreurListevide = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.backgroundBlock = new System.Windows.Forms.Panel();
             this.buttonAjouterProduit = new System.Windows.Forms.Button();
             this.buttonModifierProduit = new System.Windows.Forms.Button();
-            this.buttonSupprimerGenre = new System.Windows.Forms.Button();
+            this.buttonSupprimerProduit = new System.Windows.Forms.Button();
+            this.listProduits = new System.Windows.Forms.ListBox();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dbERROR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbOK)).BeginInit();
@@ -181,20 +181,6 @@ namespace ZumbaSoft.Fenetres_Produit
             this.label2.Text = "Choix d\'un produit";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // listGenre
-            // 
-            this.listGenre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(90)))), ((int)(((byte)(101)))));
-            this.listGenre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listGenre.Font = new System.Drawing.Font("Microsoft YaHei Light", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.listGenre.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.listGenre.FormattingEnabled = true;
-            this.listGenre.ItemHeight = 24;
-            this.listGenre.Location = new System.Drawing.Point(38, 142);
-            this.listGenre.Margin = new System.Windows.Forms.Padding(2);
-            this.listGenre.Name = "listGenre";
-            this.listGenre.Size = new System.Drawing.Size(292, 168);
-            this.listGenre.TabIndex = 16;
-            // 
             // erreurListevide
             // 
             this.erreurListevide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
@@ -226,7 +212,7 @@ namespace ZumbaSoft.Fenetres_Produit
             this.backgroundBlock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
             this.backgroundBlock.Controls.Add(this.buttonAjouterProduit);
             this.backgroundBlock.Controls.Add(this.buttonModifierProduit);
-            this.backgroundBlock.Controls.Add(this.buttonSupprimerGenre);
+            this.backgroundBlock.Controls.Add(this.buttonSupprimerProduit);
             this.backgroundBlock.Location = new System.Drawing.Point(351, 98);
             this.backgroundBlock.Margin = new System.Windows.Forms.Padding(2);
             this.backgroundBlock.Name = "backgroundBlock";
@@ -261,19 +247,33 @@ namespace ZumbaSoft.Fenetres_Produit
             this.buttonModifierProduit.UseVisualStyleBackColor = true;
             this.buttonModifierProduit.Click += new System.EventHandler(this.buttonModifierProduit_Click);
             // 
-            // buttonSupprimerGenre
+            // buttonSupprimerProduit
             // 
-            this.buttonSupprimerGenre.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonSupprimerGenre.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonSupprimerGenre.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonSupprimerGenre.Location = new System.Drawing.Point(33, 151);
-            this.buttonSupprimerGenre.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonSupprimerGenre.Name = "buttonSupprimerGenre";
-            this.buttonSupprimerGenre.Size = new System.Drawing.Size(343, 38);
-            this.buttonSupprimerGenre.TabIndex = 3;
-            this.buttonSupprimerGenre.Text = "Supprimer le produit sélectionné";
-            this.buttonSupprimerGenre.UseVisualStyleBackColor = true;
-            this.buttonSupprimerGenre.Click += new System.EventHandler(this.buttonSupprimerGenre_Click);
+            this.buttonSupprimerProduit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonSupprimerProduit.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonSupprimerProduit.ForeColor = System.Drawing.Color.Transparent;
+            this.buttonSupprimerProduit.Location = new System.Drawing.Point(33, 151);
+            this.buttonSupprimerProduit.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonSupprimerProduit.Name = "buttonSupprimerProduit";
+            this.buttonSupprimerProduit.Size = new System.Drawing.Size(343, 38);
+            this.buttonSupprimerProduit.TabIndex = 3;
+            this.buttonSupprimerProduit.Text = "Supprimer le produit sélectionné";
+            this.buttonSupprimerProduit.UseVisualStyleBackColor = true;
+            this.buttonSupprimerProduit.Click += new System.EventHandler(this.buttonSupprimerProduit_Click);
+            // 
+            // listProduits
+            // 
+            this.listProduits.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(90)))), ((int)(((byte)(101)))));
+            this.listProduits.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listProduits.Font = new System.Drawing.Font("Microsoft YaHei Light", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.listProduits.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.listProduits.FormattingEnabled = true;
+            this.listProduits.ItemHeight = 24;
+            this.listProduits.Location = new System.Drawing.Point(36, 141);
+            this.listProduits.Margin = new System.Windows.Forms.Padding(2);
+            this.listProduits.Name = "listProduits";
+            this.listProduits.Size = new System.Drawing.Size(292, 168);
+            this.listProduits.TabIndex = 18;
             // 
             // AccueilProduits
             // 
@@ -282,10 +282,11 @@ namespace ZumbaSoft.Fenetres_Produit
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 433);
             this.Controls.Add(this.backgroundBlock);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel4);
+            this.Controls.Add(this.listProduits);
             this.Name = "AccueilProduits";
             this.Text = "AccueilProduits";
             this.panel4.ResumeLayout(false);
@@ -309,14 +310,13 @@ namespace ZumbaSoft.Fenetres_Produit
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button buttonRetourAccueil;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListBox listProduits;
         private System.Windows.Forms.Label erreurListevide;
-        private System.Windows.Forms.ListBox listGenre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel backgroundBlock;
         private System.Windows.Forms.Button buttonAjouterProduit;
         private System.Windows.Forms.Button buttonModifierProduit;
-        private System.Windows.Forms.Button buttonSupprimerGenre;
+        private System.Windows.Forms.Button buttonSupprimerProduit;
         private System.Windows.Forms.Button ue;
+        private System.Windows.Forms.ListBox listProduits;
     }
 }

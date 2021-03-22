@@ -45,7 +45,7 @@ namespace ZumbaSoft.Fenetres_Produit
             this.msgBDstatusERROR = new System.Windows.Forms.Label();
             this.msgBDstatusOK = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonAccueil = new System.Windows.Forms.Button();
             this.listGenre = new System.Windows.Forms.ListBox();
             this.backgroundBlock.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -85,10 +85,10 @@ namespace ZumbaSoft.Fenetres_Produit
             this.erreurListevide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
             this.erreurListevide.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.erreurListevide.ForeColor = System.Drawing.Color.Transparent;
-            this.erreurListevide.Location = new System.Drawing.Point(52, 118);
+            this.erreurListevide.Location = new System.Drawing.Point(52, 117);
             this.erreurListevide.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.erreurListevide.Name = "erreurListevide";
-            this.erreurListevide.Size = new System.Drawing.Size(292, 168);
+            this.erreurListevide.Size = new System.Drawing.Size(292, 167);
             this.erreurListevide.TabIndex = 9;
             this.erreurListevide.Text = "Aucun genre n\'est enregistré";
             this.erreurListevide.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -133,6 +133,7 @@ namespace ZumbaSoft.Fenetres_Produit
             this.buttonAjouterGenre.TabIndex = 2;
             this.buttonAjouterGenre.Text = "Ajouter un nouveau genre";
             this.buttonAjouterGenre.UseVisualStyleBackColor = true;
+            this.buttonAjouterGenre.Click += new System.EventHandler(this.buttonAjouterGenre_Click);
             // 
             // buttonModifierGenre
             // 
@@ -146,6 +147,7 @@ namespace ZumbaSoft.Fenetres_Produit
             this.buttonModifierGenre.TabIndex = 4;
             this.buttonModifierGenre.Text = "Modifier/Renommer le genre sélectionné";
             this.buttonModifierGenre.UseVisualStyleBackColor = true;
+            this.buttonModifierGenre.Click += new System.EventHandler(this.buttonModifierGenre_Click);
             // 
             // buttonSupprimerGenre
             // 
@@ -159,6 +161,7 @@ namespace ZumbaSoft.Fenetres_Produit
             this.buttonSupprimerGenre.TabIndex = 3;
             this.buttonSupprimerGenre.Text = "Supprimer le genre sélectionné";
             this.buttonSupprimerGenre.UseVisualStyleBackColor = true;
+            this.buttonSupprimerGenre.Click += new System.EventHandler(this.buttonSupprimerGenre_Click);
             // 
             // panel4
             // 
@@ -247,29 +250,30 @@ namespace ZumbaSoft.Fenetres_Produit
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.buttonAccueil);
             this.panel1.Location = new System.Drawing.Point(1, 409);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(801, 39);
             this.panel1.TabIndex = 13;
             // 
-            // button1
+            // buttonAccueil
             // 
-            this.button1.AutoSize = true;
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button1.Location = new System.Drawing.Point(269, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(262, 39);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "RETOUR À L\'ACCUEIL";
-            this.button1.UseVisualStyleBackColor = false;
+            this.buttonAccueil.AutoSize = true;
+            this.buttonAccueil.BackColor = System.Drawing.Color.Transparent;
+            this.buttonAccueil.FlatAppearance.BorderSize = 0;
+            this.buttonAccueil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.buttonAccueil.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonAccueil.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonAccueil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonAccueil.Location = new System.Drawing.Point(269, 0);
+            this.buttonAccueil.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonAccueil.Name = "buttonAccueil";
+            this.buttonAccueil.Size = new System.Drawing.Size(262, 39);
+            this.buttonAccueil.TabIndex = 8;
+            this.buttonAccueil.Text = "RETOUR À L\'ACCUEIL";
+            this.buttonAccueil.UseVisualStyleBackColor = false;
+            this.buttonAccueil.Click += new System.EventHandler(this.buttonAccueil_Click);
             // 
             // listGenre
             // 
@@ -326,7 +330,7 @@ namespace ZumbaSoft.Fenetres_Produit
         private System.Windows.Forms.Label msgBDstatusERROR;
         private System.Windows.Forms.Label msgBDstatusOK;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonAccueil;
         private System.Windows.Forms.ListBox listGenre;
     }
 }
