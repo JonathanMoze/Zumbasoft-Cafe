@@ -54,6 +54,24 @@ namespace ZumbaSoft.Fenetres_Roles
                 dbERROR.Visible = true;
                 dbOK.Visible = false;
 
+                var t = new Timer();
+                t.Interval = 2000; // Durée de l'attente avant l'affichage du message
+                t.Tick += (s, e) =>
+                {
+                    panelERROR.Visible = true;
+                    t.Stop();
+                };
+                t.Start();
+
+                var t2 = new Timer();
+                t2.Interval = 8000; // Durée de l'affichage du message
+                t2.Tick += (s, e) =>
+                {
+                    panelERROR.Visible = false;
+                    t2.Stop();
+                };
+                t2.Start();
+
             }
             else
             {
@@ -140,7 +158,19 @@ namespace ZumbaSoft.Fenetres_Roles
 
         private void msgBDstatusERROR_Click(object sender, EventArgs e)
         {
-            panelERROR.Visible = true;
+            if (!panelERROR.Visible)
+            {
+                panelERROR.Visible = true;
+                var t = new Timer();
+                t.Interval = 8000; // Durée de l'affichage du message
+                t.Tick += (s, e) =>
+                {
+                    panelERROR.Visible = false;
+                    t.Stop();
+                };
+                t.Start();
+            }
+            
         }
 
 
@@ -151,7 +181,7 @@ namespace ZumbaSoft.Fenetres_Roles
             DateTime date = DateTime.Now;
             String emailAddress = "mrkafeine@gmail.com";
             String subject = "Rapport d'erreur - BD introuvable";
-            String body = "---------------------------------%0a%0aRapport d'erreur  OUATELSE : le " + date.ToString("MM/dd/yyyy") + " à " + date.ToString("HH:mm") + " : Impossible d'accéder à la base de données : le fichier correspondant à la base de données (Database.db) est introuvable.%0a%0aRépondez directement à ce mail pour échanger avec le magasin concerné.%0a%0a---------------------------------%0a%0aEntrez des détails ici (que s'est-il passé avant l'apparition de ce problème, d'éventuelles remarques...) :";
+            String body = "---------------------------------%0a%0aRapport d'erreur  OUATELSE : le " + date.ToString("MM/dd/yyyy") + " à " + date.ToString("HH:mm") + " : ERREUR 01 - Impossible d'accéder à la base de données : le fichier correspondant à la base de données (Database.db) est introuvable.%0a%0aRépondez directement à ce mail pour échanger avec le magasin concerné.%0a%0a---------------------------------%0a%0aEntrez des détails ici (que s'est-il passé avant l'apparition de ce problème, d'éventuelles remarques...) :";
 
             string filename = "mailto:" + emailAddress + "?subject=" + subject + "&body=" + body;
             Process myProcess = new Process();
