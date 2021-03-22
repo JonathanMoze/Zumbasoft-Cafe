@@ -19,6 +19,7 @@ namespace ZumbaSoft.Fenetres_Identification
             database = db;
         }
 
+        #region log-in
         /// <summary>
         /// Méthode gestionnaire d'évènements appelée lorsqu'on clique sur le bouton "se connecter".
         /// </summary>
@@ -27,19 +28,33 @@ namespace ZumbaSoft.Fenetres_Identification
         private void button1_Click(object sender, EventArgs e)
         {
             #region check login
-            SQLiteCommand cmd = database.CreateCommand("select password from users where login=?", loginField.Text);
-            #endregion
-            #region check password
-            string pass = get_pass(passwordField.Text);
-            if (pass != null)
+            string log_in = loginField.Text;
+            if (check_login(log_in))
             {
-                //TODO
-            }
-            else
-            {
-                MessageBox.Show("Mauvais mot de passe ou identifiant.");
+                #region check password
+                string pass = get_pass(passwordField.Text);
+                if (pass != null)
+                {
+                    //TODO
+                }
+                else
+                {
+                    MessageBox.Show("Mauvais mot de passe ou identifiant.");
+                }
+                #endregion
             }
             #endregion
+        }
+
+        /// <summary>
+        /// Méthode de traitement interne pour vérifier si le client est bien enregistré.
+        /// </summary>
+        /// <param name="client"></param>
+        /// <returns></returns>
+        private bool check_login(string client)
+        {
+            //TODO requêtes
+            return false;
         }
 
         /// <summary>
@@ -49,7 +64,9 @@ namespace ZumbaSoft.Fenetres_Identification
         /// <returns></returns>
         private string get_pass(string client)
         {
+            //TODO requêtes
             return "";
         }
+        #endregion
     }
 }
