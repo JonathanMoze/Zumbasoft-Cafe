@@ -29,37 +29,37 @@ namespace ZumbaSoft.Fenetres_Identification
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.connection_button = new System.Windows.Forms.Button();
+            this.loginField = new System.Windows.Forms.TextBox();
+            this.passwordField = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // connection_button
             // 
-            this.button1.Location = new System.Drawing.Point(504, 387);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(131, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Se connecter";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.connection_button.Location = new System.Drawing.Point(504, 387);
+            this.connection_button.Name = "connection_button";
+            this.connection_button.Size = new System.Drawing.Size(131, 23);
+            this.connection_button.TabIndex = 0;
+            this.connection_button.Text = "Se connecter";
+            this.connection_button.UseVisualStyleBackColor = true;
+            this.connection_button.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // loginField
             // 
-            this.textBox1.Location = new System.Drawing.Point(226, 115);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(134, 23);
-            this.textBox1.TabIndex = 1;
+            this.loginField.Location = new System.Drawing.Point(226, 115);
+            this.loginField.Name = "loginField";
+            this.loginField.Size = new System.Drawing.Size(134, 23);
+            this.loginField.TabIndex = 1;
             // 
-            // textBox2
+            // passwordField
             // 
-            this.textBox2.Location = new System.Drawing.Point(226, 196);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(133, 23);
-            this.textBox2.TabIndex = 2;
+            this.passwordField.Location = new System.Drawing.Point(226, 196);
+            this.passwordField.Name = "passwordField";
+            this.passwordField.Size = new System.Drawing.Size(133, 23);
+            this.passwordField.TabIndex = 2;
             // 
             // label1
             // 
@@ -69,7 +69,6 @@ namespace ZumbaSoft.Fenetres_Identification
             this.label1.Size = new System.Drawing.Size(37, 15);
             this.label1.TabIndex = 3;
             this.label1.Text = "Login";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -97,9 +96,9 @@ namespace ZumbaSoft.Fenetres_Identification
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.passwordField);
+            this.Controls.Add(this.loginField);
+            this.Controls.Add(this.connection_button);
             this.Name = "Identification";
             this.Text = "Identification";
             this.ResumeLayout(false);
@@ -109,9 +108,9 @@ namespace ZumbaSoft.Fenetres_Identification
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button connection_button;
+        private System.Windows.Forms.TextBox loginField;
+        private System.Windows.Forms.TextBox passwordField;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button2;
