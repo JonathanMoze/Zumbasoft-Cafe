@@ -55,6 +55,11 @@ namespace ZumbaSoft.Fenetres_Roles
             this.msgBDstatusOK = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.goBackButton = new System.Windows.Forms.Button();
+            this.panelERROR = new System.Windows.Forms.Panel();
+            this.buttonBackHome = new System.Windows.Forms.Button();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.buttonContactAdmin = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -63,6 +68,7 @@ namespace ZumbaSoft.Fenetres_Roles
             ((System.ComponentModel.ISupportInitialize)(this.dbERROR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbOK)).BeginInit();
             this.panel5.SuspendLayout();
+            this.panelERROR.SuspendLayout();
             this.SuspendLayout();
             // 
             // ajouterRoles
@@ -284,11 +290,11 @@ namespace ZumbaSoft.Fenetres_Roles
             this.programName.Font = new System.Drawing.Font("Microsoft YaHei UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.programName.ForeColor = System.Drawing.Color.Snow;
             this.programName.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.programName.Location = new System.Drawing.Point(794, 0);
+            this.programName.Location = new System.Drawing.Point(842, 0);
             this.programName.Name = "programName";
             this.programName.Size = new System.Drawing.Size(203, 49);
             this.programName.TabIndex = 15;
-            this.programName.Text = "OUATELSE v.0";
+            this.programName.Text = "OUATELSE";
             this.programName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // homeIcon
@@ -354,6 +360,7 @@ namespace ZumbaSoft.Fenetres_Roles
             this.msgBDstatusERROR.Text = "Base de données non connectée";
             this.msgBDstatusERROR.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.msgBDstatusERROR.Visible = false;
+            this.msgBDstatusERROR.Click += new System.EventHandler(this.msgBDstatusERROR_Click);
             // 
             // msgBDstatusOK
             // 
@@ -394,6 +401,73 @@ namespace ZumbaSoft.Fenetres_Roles
             this.goBackButton.UseVisualStyleBackColor = false;
             this.goBackButton.Click += new System.EventHandler(this.goBackButton_Click);
             // 
+            // panelERROR
+            // 
+            this.panelERROR.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panelERROR.Controls.Add(this.buttonBackHome);
+            this.panelERROR.Controls.Add(this.label17);
+            this.panelERROR.Controls.Add(this.label18);
+            this.panelERROR.Controls.Add(this.buttonContactAdmin);
+            this.panelERROR.Location = new System.Drawing.Point(-2, 47);
+            this.panelERROR.Name = "panelERROR";
+            this.panelERROR.Size = new System.Drawing.Size(1046, 127);
+            this.panelERROR.TabIndex = 64;
+            this.panelERROR.Visible = false;
+            // 
+            // buttonBackHome
+            // 
+            this.buttonBackHome.BackColor = System.Drawing.Color.Transparent;
+            this.buttonBackHome.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonBackHome.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonBackHome.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonBackHome.Location = new System.Drawing.Point(781, 79);
+            this.buttonBackHome.Name = "buttonBackHome";
+            this.buttonBackHome.Size = new System.Drawing.Size(241, 37);
+            this.buttonBackHome.TabIndex = 59;
+            this.buttonBackHome.Text = "Retour à l\'accueil";
+            this.buttonBackHome.UseVisualStyleBackColor = false;
+            this.buttonBackHome.Click += new System.EventHandler(this.buttonBackHome_Click);
+            // 
+            // label17
+            // 
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(23, 43);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(990, 33);
+            this.label17.TabIndex = 37;
+            this.label17.Text = "La base de données rattachée au logiciel est introuvable. Contactez votre adminis" +
+    "trateur si l\'erreur persiste après redémarrage.";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(21, 13);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(112, 25);
+            this.label18.TabIndex = 39;
+            this.label18.Text = "ERREUR 01";
+            // 
+            // buttonContactAdmin
+            // 
+            this.buttonContactAdmin.BackColor = System.Drawing.Color.Transparent;
+            this.buttonContactAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonContactAdmin.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonContactAdmin.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonContactAdmin.Location = new System.Drawing.Point(523, 79);
+            this.buttonContactAdmin.Name = "buttonContactAdmin";
+            this.buttonContactAdmin.Size = new System.Drawing.Size(241, 37);
+            this.buttonContactAdmin.TabIndex = 58;
+            this.buttonContactAdmin.Text = "Contacter l\'administrateur";
+            this.buttonContactAdmin.UseVisualStyleBackColor = false;
+            this.buttonContactAdmin.Click += new System.EventHandler(this.buttonContactAdmin_Click);
+            // 
             // Roles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(20F, 48F);
@@ -401,6 +475,7 @@ namespace ZumbaSoft.Fenetres_Roles
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1042, 620);
+            this.Controls.Add(this.panelERROR);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -420,6 +495,8 @@ namespace ZumbaSoft.Fenetres_Roles
             ((System.ComponentModel.ISupportInitialize)(this.dbOK)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.panelERROR.ResumeLayout(false);
+            this.panelERROR.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -451,5 +528,10 @@ namespace ZumbaSoft.Fenetres_Roles
         private System.Windows.Forms.Label programName;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button goBackButton;
+        private System.Windows.Forms.Panel panelERROR;
+        private System.Windows.Forms.Button buttonBackHome;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Button buttonContactAdmin;
     }
 }

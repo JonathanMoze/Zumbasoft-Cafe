@@ -91,6 +91,11 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.label11 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
+            this.panelERROR = new System.Windows.Forms.Panel();
+            this.buttonBackHome = new System.Windows.Forms.Button();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.buttonContactAdmin = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.homeIcon)).BeginInit();
@@ -101,6 +106,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.panelERROR.SuspendLayout();
             this.SuspendLayout();
             // 
             // listMagasin
@@ -609,6 +615,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.msgBDstatusERROR.Text = "Base de données non connectée";
             this.msgBDstatusERROR.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.msgBDstatusERROR.Visible = false;
+            this.msgBDstatusERROR.Click += new System.EventHandler(this.msgBDstatusERROR_Click);
             // 
             // msgBDstatusOK
             // 
@@ -897,12 +904,80 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.label15.Text = "Rapports";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // panelERROR
+            // 
+            this.panelERROR.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panelERROR.Controls.Add(this.buttonBackHome);
+            this.panelERROR.Controls.Add(this.label17);
+            this.panelERROR.Controls.Add(this.label18);
+            this.panelERROR.Controls.Add(this.buttonContactAdmin);
+            this.panelERROR.Location = new System.Drawing.Point(2, 48);
+            this.panelERROR.Name = "panelERROR";
+            this.panelERROR.Size = new System.Drawing.Size(1120, 127);
+            this.panelERROR.TabIndex = 63;
+            this.panelERROR.Visible = false;
+            // 
+            // buttonBackHome
+            // 
+            this.buttonBackHome.BackColor = System.Drawing.Color.Transparent;
+            this.buttonBackHome.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonBackHome.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonBackHome.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonBackHome.Location = new System.Drawing.Point(850, 79);
+            this.buttonBackHome.Name = "buttonBackHome";
+            this.buttonBackHome.Size = new System.Drawing.Size(241, 37);
+            this.buttonBackHome.TabIndex = 59;
+            this.buttonBackHome.Text = "Retour à l\'accueil";
+            this.buttonBackHome.UseVisualStyleBackColor = false;
+            this.buttonBackHome.Click += new System.EventHandler(this.buttonBackHome_Click);
+            // 
+            // label17
+            // 
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(23, 43);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(1084, 29);
+            this.label17.TabIndex = 37;
+            this.label17.Text = "La base de données rattachée au logiciel est introuvable. Contactez votre adminis" +
+    "trateur si l\'erreur persiste après redémarrage.";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(21, 13);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(112, 25);
+            this.label18.TabIndex = 39;
+            this.label18.Text = "ERREUR 01";
+            // 
+            // buttonContactAdmin
+            // 
+            this.buttonContactAdmin.BackColor = System.Drawing.Color.Transparent;
+            this.buttonContactAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonContactAdmin.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonContactAdmin.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonContactAdmin.Location = new System.Drawing.Point(590, 79);
+            this.buttonContactAdmin.Name = "buttonContactAdmin";
+            this.buttonContactAdmin.Size = new System.Drawing.Size(241, 37);
+            this.buttonContactAdmin.TabIndex = 58;
+            this.buttonContactAdmin.Text = "Contacter l\'administrateur";
+            this.buttonContactAdmin.UseVisualStyleBackColor = false;
+            this.buttonContactAdmin.Click += new System.EventHandler(this.buttonContactAdmin_Click);
+            // 
             // AccueilMagasin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1120, 750);
+            this.Controls.Add(this.panelERROR);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
@@ -929,6 +1004,8 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
+            this.panelERROR.ResumeLayout(false);
+            this.panelERROR.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -996,5 +1073,10 @@ namespace ZumbaSoft.Fenetres_Magasin
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Panel panelERROR;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Button buttonContactAdmin;
+        private System.Windows.Forms.Button buttonBackHome;
     }
 }
