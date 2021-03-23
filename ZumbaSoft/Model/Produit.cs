@@ -47,5 +47,10 @@ namespace ZumbaSoft.Model
         [ManyToOne]
         public Fournisseur fournisseur { get; set; }
 
+        public override string ToString()
+        {
+            return this.nom;
+        }
+
     }
 }

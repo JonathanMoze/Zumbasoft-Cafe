@@ -40,7 +40,6 @@ namespace ZumbaSoft.Fenetres_Produit
             this.buttonRetourAccueil = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.erreurListevide = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.backgroundBlock = new System.Windows.Forms.Panel();
             this.buttonAjouterProduit = new System.Windows.Forms.Button();
             this.buttonModifierProduit = new System.Windows.Forms.Button();
@@ -186,26 +185,13 @@ namespace ZumbaSoft.Fenetres_Produit
             this.erreurListevide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
             this.erreurListevide.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.erreurListevide.ForeColor = System.Drawing.Color.Transparent;
-            this.erreurListevide.Location = new System.Drawing.Point(254, 132);
+            this.erreurListevide.Location = new System.Drawing.Point(36, 141);
             this.erreurListevide.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.erreurListevide.Name = "erreurListevide";
             this.erreurListevide.Size = new System.Drawing.Size(292, 168);
-            this.erreurListevide.TabIndex = 17;
-            this.erreurListevide.Text = "Aucun genre n\'est enregistré";
+            this.erreurListevide.TabIndex = 16;
+            this.erreurListevide.Text = "Aucun produit n\'est enregistré";
             this.erreurListevide.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(37, 141);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(292, 168);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Aucun produit n\'est enregistré";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // backgroundBlock
             // 
@@ -284,7 +270,7 @@ namespace ZumbaSoft.Fenetres_Produit
             this.Controls.Add(this.backgroundBlock);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.erreurListevide);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.listProduits);
             this.Name = "AccueilProduits";
@@ -311,7 +297,6 @@ namespace ZumbaSoft.Fenetres_Produit
         private System.Windows.Forms.Button buttonRetourAccueil;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label erreurListevide;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel backgroundBlock;
         private System.Windows.Forms.Button buttonAjouterProduit;
         private System.Windows.Forms.Button buttonModifierProduit;
