@@ -15,11 +15,13 @@ namespace ZumbaSoft.Fenetres_Produit
     public partial class AccueilGenre : Form
     {
         SQLiteConnection DB;
+        FormProduit formPrecedent;
 
-        public AccueilGenre(SQLiteConnection db)
+        public AccueilGenre(SQLiteConnection db, FormProduit f)
         {
             InitializeComponent();
             DB = db;
+            formPrecedent = f;
             initListGenre();
             initItemsColors();
         }
@@ -94,6 +96,11 @@ namespace ZumbaSoft.Fenetres_Produit
         {
             DialogResult = DialogResult.OK;
             this.Close();
+        }
+
+        private void AccueilGenre_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            formPrecedent.initComboBoxes();
         }
     }
 }

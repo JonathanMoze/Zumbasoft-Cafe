@@ -15,10 +15,12 @@ namespace ZumbaSoft.Fenetres_Produit
     public partial class AccueilFournisseur : Form
     {
         SQLiteConnection DB;
-        public AccueilFournisseur(SQLiteConnection db)
+        FormProduit formPrecedent;
+        public AccueilFournisseur(SQLiteConnection db, FormProduit f)
         {
             InitializeComponent();
             DB = db;
+            formPrecedent = f;
             initListFournisseur();
             initItemsColors();
         }
@@ -92,6 +94,11 @@ namespace ZumbaSoft.Fenetres_Produit
         {
             DialogResult = DialogResult.Cancel;
             this.Close();
+        }
+
+        private void AccueilFournisseur_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            formPrecedent.initComboBoxes();
         }
     }
 }

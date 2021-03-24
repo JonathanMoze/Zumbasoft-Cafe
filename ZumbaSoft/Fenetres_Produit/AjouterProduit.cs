@@ -11,7 +11,7 @@ using ZumbaSoft.Model;
 
 namespace ZumbaSoft.Fenetres_Produit
 {
-    public partial class AjouterProduit : Form
+    public partial class AjouterProduit: Form, FormProduit
     {
         SQLiteConnection DB;
         public Produit produit;
@@ -23,7 +23,7 @@ namespace ZumbaSoft.Fenetres_Produit
             initComboBoxes();
         }
 
-        private void initComboBoxes()
+        public void initComboBoxes()
         {
             comboBoxFournisseur.Items.Clear();
             comboBoxGenre.Items.Clear();
@@ -74,14 +74,16 @@ namespace ZumbaSoft.Fenetres_Produit
 
         private void buttonGenre_Click(object sender, EventArgs e)
         {
-            AccueilGenre accGenre = new AccueilGenre(DB);
+            AccueilGenre accGenre = new AccueilGenre(DB, this);
             accGenre.Show();
+            initComboBoxes();
         }
 
         private void buttonFournisseurs_Click(object sender, EventArgs e)
         {
-            AccueilFournisseur accFourni = new AccueilFournisseur(DB);
+            AccueilFournisseur accFourni = new AccueilFournisseur(DB, this);
             accFourni.Show();
+            initComboBoxes();
         }
 
         private void buttonValider_Click(object sender, EventArgs e)

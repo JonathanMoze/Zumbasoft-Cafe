@@ -275,6 +275,7 @@ namespace ZumbaSoft.Fenetres_Produit
             this.Controls.Add(this.panel4);
             this.Name = "AccueilFournisseur";
             this.Text = "AccueilFournisseur";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AccueilFournisseur_FormClosed);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dbERROR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbOK)).EndInit();

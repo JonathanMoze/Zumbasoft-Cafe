@@ -303,6 +303,7 @@ namespace ZumbaSoft.Fenetres_Produit
             this.Controls.Add(this.listGenre);
             this.Name = "AccueilGenre";
             this.Text = "AccueilGenre";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AccueilGenre_FormClosed);
             this.backgroundBlock.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dbERROR)).EndInit();

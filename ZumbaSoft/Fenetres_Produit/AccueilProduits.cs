@@ -73,7 +73,7 @@ namespace ZumbaSoft.Fenetres_Produit
                 ModifierProduit paramétrer = new ModifierProduit(p, DB);
                 if (paramétrer.ShowDialog() == DialogResult.OK)
                 {
-                    listProduits.Refresh();
+                    initListProduits();
                 }
             }
         }
