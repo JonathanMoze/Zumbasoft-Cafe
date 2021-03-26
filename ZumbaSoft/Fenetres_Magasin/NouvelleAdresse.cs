@@ -35,8 +35,8 @@ namespace ZumbaSoft.Fenetres_Magasin
         {
             backgroundBlock1.BackColor = Color.FromArgb(50, 12, 12, 12);
             backgroundBlock2.BackColor = Color.FromArgb(80, 12, 12, 12);
-            buttonAnnulerNewAdr.BackColor = Color.FromArgb(50, 12, 12, 12);
-            buttonOKAdr.BackColor = Color.FromArgb(50, 12, 12, 12);
+            buttonOK.BackColor = Color.FromArgb(50, 12, 12, 12);
+            buttonAnnuler.BackColor = Color.FromArgb(50, 12, 12, 12);
         }
 
 
@@ -81,22 +81,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             return true;
         }
 
-        private void buttonNewAdresse_Click(object sender, EventArgs e)
-        {
-            if (fieldIsValid())
-            {
-                Adresse adresse = initObjectAdresse();
-                DB.Insert(adresse);
-                adr = adresse;
-                DialogResult = DialogResult.OK;
-                this.Close();
-            }
-        }
 
-        private void buttonAnnulerNewAdr_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
         private void textBoxAdresse_TextChanged(object sender, EventArgs e)
         {
@@ -122,6 +107,21 @@ namespace ZumbaSoft.Fenetres_Magasin
             }
         }
 
+        private void buttonOK_Click(object sender, EventArgs e)
+        {
+            if (fieldIsValid())
+            {
+                Adresse adresse = initObjectAdresse();
+                DB.Insert(adresse);
+                adr = adresse;
+                DialogResult = DialogResult.OK;
+                this.Close();
+            }
+        }
 
+        private void buttonAnnuler_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
