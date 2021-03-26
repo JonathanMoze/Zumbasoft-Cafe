@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using ZumbaSoft.Model;
 using SQLite;
 using SQLiteNetExtensions.Extensions;
 
@@ -32,10 +33,19 @@ namespace ZumbaSoft.Fenetres_Identification
             if (check_login(log_in))
             {
                 #region check password
-                string pass = get_pass(passwordField.Text);
+                string pass = get_pass(loginField.Text);
                 if (pass != null)
                 {
-                    //TODO
+                    if (pass.Equals(passwordField.Text))
+                    {
+                        Utilisateur current = database.Table<Utilisateur>().Where(x => x.login.Equals(loginField.Text)).ToList()[0];
+                        this.DialogResult = DialogResult.OK;//retour positif de la fenêtre.
+                        this.DestroyHandle();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Mauvais mot de passe ou identifiant.");
+                    }
                 }
                 else
                 {
@@ -53,19 +63,18 @@ namespace ZumbaSoft.Fenetres_Identification
         /// <returns></returns>
         private bool check_login(string client)
         {
-            //TODO requêtes
-            return false;
+            List<Utilisateur> test = database.Table<Utilisateur>().Where(x => x.login.Equals(client)).ToList();
+            return test[0]!=null;
         }
 
         /// <summary>
         /// Méthode de traitement interne pour obtenir un mot de passe dans la base.
         /// </summary>
         /// <param name="client">Le mot de passe entré par le client.</param>
-        /// <returns></returns>
+        /// <returns>Le mot de passe, avec un nullcheck à faire.</returns>
         private string get_pass(string client)
         {
-            //TODO requêtes
-            return "";
+            return database.Table<Utilisateur>().Where(x => x.login.Equals(client)).ToList()[0].mot_de_passe;
         }
         #endregion
     }
