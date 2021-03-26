@@ -15,13 +15,13 @@ namespace ZumbaSoft.Model
 
         public string nom { get; set; }
 
-        public int prix_vente_HT { get; set; }
+        public decimal prix_vente_HT { get; set; }
 
-        public int prix_vente_TTC { get; set; }
+        public decimal prix_vente_TTC { get; set; }
 
-        public int prix_achat_HT { get; set; }
+        public decimal prix_achat_HT { get; set; }
 
-        public int prix_achat_TTC { get; set; }
+        public decimal prix_achat_TTC { get; set; }
 
         public string reference { get; set; }
 
@@ -29,7 +29,7 @@ namespace ZumbaSoft.Model
 
         public string marque { get; set; }
 
-        public string etat { get; set; }
+        public EtatEnum etat { get; set; }
 
         public string type { get; set; }
 
@@ -46,6 +46,11 @@ namespace ZumbaSoft.Model
 
         [ManyToOne]
         public Fournisseur fournisseur { get; set; }
+
+        public override string ToString()
+        {
+            return this.nom;
+        }
 
     }
 }
