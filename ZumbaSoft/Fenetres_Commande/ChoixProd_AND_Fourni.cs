@@ -13,14 +13,13 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace ZumbaSoft.Fenetres_Commande
 {
-    public partial class ChoixProd_Fourni : Form
+    public partial class ChoixProd_AND_Fourni : Form
     {
         SQLiteConnection DB;
-        public Produit produit;
+        public ProduitToCommande pTc;
         public Fournisseur fournisseur;
-        public int quantite;
 
-        public ChoixProd_Fourni(SQLiteConnection db)
+        public ChoixProd_AND_Fourni(SQLiteConnection db)
         {
             InitializeComponent();
             DB = db;
@@ -47,27 +46,6 @@ namespace ZumbaSoft.Fenetres_Commande
         }
 
         /// <summary>
-        /// Permet de charger tous les fournisseur possible en fonction du produit choisit.
-        /// </summary>
-        private void initListFournisseur()
-        {
-            
-            List<Fournisseur> listFourni = DB.GetAllWithChildren<Fournisseur>().FindAll(f => f.produits.Contains(produit,new ProduitComparer()));
-
-            if(listFourni.Count > 0)
-            {
-                foreach(Fournisseur f in listFourni)
-                {
-                    listBoxFournisseur.Items.Add(f);
-                }
-            }
-            else
-            {
-                listBoxFournisseur.Items.Add("Aucun Fournisseur ne propose le produit choisi.");
-            }
-        }
-
-        /// <summary>
         /// Pour modifier la méthode de comparaison entre deux Produits.
         /// </summary>
         public class ProduitComparer : IEqualityComparer<Produit>
@@ -83,6 +61,26 @@ namespace ZumbaSoft.Fenetres_Commande
             }
         }
 
+        /// <summary>
+        /// Permet de charger tous les fournisseur possible en fonction du produit choisit.
+        /// </summary>
+        private void initListFournisseur()
+        {
+            ProduitComparer produitComparer = new ProduitComparer();
+            List<Fournisseur> listFourni = DB.GetAllWithChildren<Fournisseur>().FindAll(f => f.produits.Contains(pTc.produit,produitComparer));
+
+            if(listFourni.Count > 0)
+            {
+                foreach(Fournisseur f in listFourni)
+                {
+                    listBoxFournisseur.Items.Add(f);
+                }
+            }
+            else
+            {
+                listBoxFournisseur.Items.Add("Aucun Fournisseur ne propose le produit choisi.");
+            }
+        }
 
         /// <summary>
         /// Rend le boutton Selectionner clicable lorsqu'un produit est sélectionné.
@@ -92,11 +90,6 @@ namespace ZumbaSoft.Fenetres_Commande
         private void listBoxProduits_SelectedIndexChanged(object sender, EventArgs e)
         {
             buttonSelectionner.Enabled = true;
-        }
-
-        private void listBoxFournisseur_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         /// <summary>
@@ -112,21 +105,9 @@ namespace ZumbaSoft.Fenetres_Commande
 
         private void buttonAjouterStock_Click(object sender, EventArgs e)
         {
-            if(listBoxFournisseur.SelectedIndex == 0)
-            {
-                fournisseur = (Fournisseur)listBoxFournisseur.Items[0];
-            }
-            else
-            {
-                fournisseur = (Fournisseur)listBoxFournisseur.SelectedItem;
-            }
+            fournisseur = (Fournisseur)listBoxFournisseur.SelectedItem;
             DialogResult = DialogResult.OK;
             this.Close();
-        }
-
-        private void buttonAjouterStock_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         /// <summary>
@@ -154,8 +135,7 @@ namespace ZumbaSoft.Fenetres_Commande
         {
             if(barreQuantite.Value != 0)
             {
-                produit = (Produit)listBoxProduits.SelectedItem;
-                quantite = (int)barreQuantite.Value;
+                pTc = new ProduitToCommande() { produit = (Produit)listBoxProduits.SelectedItem, quantite = (int)barreQuantite.Value };
                 swithToFourni();
             }
             else

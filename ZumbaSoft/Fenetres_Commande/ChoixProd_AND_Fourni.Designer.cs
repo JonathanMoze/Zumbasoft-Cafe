@@ -1,7 +1,7 @@
 ﻿
 namespace ZumbaSoft.Fenetres_Commande
 {
-    partial class ChoixProd_Fourni
+    partial class ChoixProd_AND_Fourni
     {
         /// <summary>
         /// Required designer variable.
@@ -52,7 +52,7 @@ namespace ZumbaSoft.Fenetres_Commande
             // labelErreurBarreQtt
             // 
             this.labelErreurBarreQtt.AutoSize = true;
-            this.labelErreurBarreQtt.Location = new System.Drawing.Point(4, 277);
+            this.labelErreurBarreQtt.Location = new System.Drawing.Point(531, 262);
             this.labelErreurBarreQtt.Name = "labelErreurBarreQtt";
             this.labelErreurBarreQtt.Size = new System.Drawing.Size(170, 50);
             this.labelErreurBarreQtt.TabIndex = 39;
@@ -62,7 +62,7 @@ namespace ZumbaSoft.Fenetres_Commande
             // labelErreurListPrd
             // 
             this.labelErreurListPrd.AutoSize = true;
-            this.labelErreurListPrd.Location = new System.Drawing.Point(180, 402);
+            this.labelErreurListPrd.Location = new System.Drawing.Point(12, 447);
             this.labelErreurListPrd.Name = "labelErreurListPrd";
             this.labelErreurListPrd.Size = new System.Drawing.Size(219, 25);
             this.labelErreurListPrd.TabIndex = 38;
@@ -72,7 +72,7 @@ namespace ZumbaSoft.Fenetres_Commande
             // labelRechercheProd
             // 
             this.labelRechercheProd.AutoSize = true;
-            this.labelRechercheProd.Location = new System.Drawing.Point(180, 57);
+            this.labelRechercheProd.Location = new System.Drawing.Point(12, 102);
             this.labelRechercheProd.Name = "labelRechercheProd";
             this.labelRechercheProd.Size = new System.Drawing.Size(100, 25);
             this.labelRechercheProd.TabIndex = 37;
@@ -80,7 +80,7 @@ namespace ZumbaSoft.Fenetres_Commande
             // 
             // textBoxRecherchePrd
             // 
-            this.textBoxRecherchePrd.Location = new System.Drawing.Point(299, 54);
+            this.textBoxRecherchePrd.Location = new System.Drawing.Point(131, 99);
             this.textBoxRecherchePrd.Name = "textBoxRecherchePrd";
             this.textBoxRecherchePrd.Size = new System.Drawing.Size(308, 31);
             this.textBoxRecherchePrd.TabIndex = 36;
@@ -89,7 +89,7 @@ namespace ZumbaSoft.Fenetres_Commande
             // labelProduit
             // 
             this.labelProduit.AutoSize = true;
-            this.labelProduit.Location = new System.Drawing.Point(180, 12);
+            this.labelProduit.Location = new System.Drawing.Point(12, 57);
             this.labelProduit.Name = "labelProduit";
             this.labelProduit.Size = new System.Drawing.Size(79, 25);
             this.labelProduit.TabIndex = 35;
@@ -99,7 +99,7 @@ namespace ZumbaSoft.Fenetres_Commande
             // 
             this.listBoxProduits.FormattingEnabled = true;
             this.listBoxProduits.ItemHeight = 25;
-            this.listBoxProduits.Location = new System.Drawing.Point(180, 91);
+            this.listBoxProduits.Location = new System.Drawing.Point(12, 136);
             this.listBoxProduits.Name = "listBoxProduits";
             this.listBoxProduits.Size = new System.Drawing.Size(427, 304);
             this.listBoxProduits.TabIndex = 34;
@@ -107,7 +107,7 @@ namespace ZumbaSoft.Fenetres_Commande
             // 
             // barreQuantite
             // 
-            this.barreQuantite.Location = new System.Drawing.Point(30, 242);
+            this.barreQuantite.Location = new System.Drawing.Point(557, 227);
             this.barreQuantite.Margin = new System.Windows.Forms.Padding(4);
             this.barreQuantite.Name = "barreQuantite";
             this.barreQuantite.Size = new System.Drawing.Size(125, 31);
@@ -117,7 +117,7 @@ namespace ZumbaSoft.Fenetres_Commande
             // labelQuantiteStock
             // 
             this.labelQuantiteStock.AutoSize = true;
-            this.labelQuantiteStock.Location = new System.Drawing.Point(30, 200);
+            this.labelQuantiteStock.Location = new System.Drawing.Point(557, 185);
             this.labelQuantiteStock.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelQuantiteStock.Name = "labelQuantiteStock";
             this.labelQuantiteStock.Size = new System.Drawing.Size(94, 25);
@@ -137,20 +137,19 @@ namespace ZumbaSoft.Fenetres_Commande
             // 
             // buttonAjouterStock
             // 
-            this.buttonAjouterStock.Location = new System.Drawing.Point(1132, 404);
+            this.buttonAjouterStock.Location = new System.Drawing.Point(1132, 449);
             this.buttonAjouterStock.Margin = new System.Windows.Forms.Padding(4);
             this.buttonAjouterStock.Name = "buttonAjouterStock";
             this.buttonAjouterStock.Size = new System.Drawing.Size(118, 36);
             this.buttonAjouterStock.TabIndex = 30;
             this.buttonAjouterStock.Text = "Ajouter";
             this.buttonAjouterStock.UseVisualStyleBackColor = true;
-            this.buttonAjouterStock.TextChanged += new System.EventHandler(this.buttonAjouterStock_TextChanged);
             this.buttonAjouterStock.Click += new System.EventHandler(this.buttonAjouterStock_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(824, 57);
+            this.label2.Location = new System.Drawing.Point(824, 102);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 25);
             this.label2.TabIndex = 43;
@@ -159,7 +158,7 @@ namespace ZumbaSoft.Fenetres_Commande
             // textBoxRechercheFourni
             // 
             this.textBoxRechercheFourni.Enabled = false;
-            this.textBoxRechercheFourni.Location = new System.Drawing.Point(943, 54);
+            this.textBoxRechercheFourni.Location = new System.Drawing.Point(943, 99);
             this.textBoxRechercheFourni.Name = "textBoxRechercheFourni";
             this.textBoxRechercheFourni.Size = new System.Drawing.Size(308, 31);
             this.textBoxRechercheFourni.TabIndex = 42;
@@ -167,7 +166,7 @@ namespace ZumbaSoft.Fenetres_Commande
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(824, 13);
+            this.label3.Location = new System.Drawing.Point(824, 58);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(112, 25);
             this.label3.TabIndex = 41;
@@ -178,16 +177,15 @@ namespace ZumbaSoft.Fenetres_Commande
             this.listBoxFournisseur.Enabled = false;
             this.listBoxFournisseur.FormattingEnabled = true;
             this.listBoxFournisseur.ItemHeight = 25;
-            this.listBoxFournisseur.Location = new System.Drawing.Point(824, 91);
+            this.listBoxFournisseur.Location = new System.Drawing.Point(824, 136);
             this.listBoxFournisseur.Name = "listBoxFournisseur";
             this.listBoxFournisseur.Size = new System.Drawing.Size(427, 304);
             this.listBoxFournisseur.TabIndex = 40;
-            this.listBoxFournisseur.SelectedIndexChanged += new System.EventHandler(this.listBoxFournisseur_SelectedIndexChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(824, 409);
+            this.label4.Location = new System.Drawing.Point(824, 447);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(248, 25);
             this.label4.TabIndex = 44;
@@ -197,7 +195,7 @@ namespace ZumbaSoft.Fenetres_Commande
             // buttonSelectionner
             // 
             this.buttonSelectionner.Enabled = false;
-            this.buttonSelectionner.Location = new System.Drawing.Point(484, 404);
+            this.buttonSelectionner.Location = new System.Drawing.Point(557, 315);
             this.buttonSelectionner.Name = "buttonSelectionner";
             this.buttonSelectionner.Size = new System.Drawing.Size(123, 34);
             this.buttonSelectionner.TabIndex = 45;
@@ -207,7 +205,7 @@ namespace ZumbaSoft.Fenetres_Commande
             // 
             // buttonAnnuler
             // 
-            this.buttonAnnuler.Location = new System.Drawing.Point(665, 214);
+            this.buttonAnnuler.Location = new System.Drawing.Point(327, 451);
             this.buttonAnnuler.Name = "buttonAnnuler";
             this.buttonAnnuler.Size = new System.Drawing.Size(112, 34);
             this.buttonAnnuler.TabIndex = 46;
@@ -219,7 +217,7 @@ namespace ZumbaSoft.Fenetres_Commande
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1263, 450);
+            this.ClientSize = new System.Drawing.Size(1263, 536);
             this.Controls.Add(this.buttonAnnuler);
             this.Controls.Add(this.buttonSelectionner);
             this.Controls.Add(this.label4);

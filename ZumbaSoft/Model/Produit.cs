@@ -15,13 +15,13 @@ namespace ZumbaSoft.Model
 
         public string nom { get; set; }
 
-        public int prix_vente_HT { get; set; }
+        public float prix_vente_HT { get; set; }
 
-        public int prix_vente_TTC { get; set; }
+        public float prix_vente_TTC { get; set; }
 
-        public int prix_achat_HT { get; set; }
+        public float prix_achat_HT { get; set; }
 
-        public int prix_achat_TTC { get; set; }
+        public float prix_achat_TTC { get; set; }
 
         public string reference { get; set; }
 
@@ -47,10 +47,16 @@ namespace ZumbaSoft.Model
         [ManyToOne]
         public Fournisseur fournisseur { get; set; }
 
+        //Association Commande
+        [OneToMany]
+        public List<ProduitToCommande> commandes { get; set; }
+
         public override string ToString()
         {
             return nom;
         }
+
+        
 
     }
 }

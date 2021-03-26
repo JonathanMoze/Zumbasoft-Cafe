@@ -36,11 +36,10 @@ namespace ZumbaSoft.Fenetres_Commande
             this.buttonAnnulerCmd = new System.Windows.Forms.Button();
             this.buttonAjouterProd = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxTotalTTC = new System.Windows.Forms.TextBox();
             this.buttonEnregisterCmd = new System.Windows.Forms.Button();
             this.labelFournisseur = new System.Windows.Forms.Label();
             this.textBoxFournisseur = new System.Windows.Forms.TextBox();
-            this.buttonSearchFournisseur = new System.Windows.Forms.Button();
             this.buttonPlusPrd = new System.Windows.Forms.Button();
             this.buttonMoinsPrd = new System.Windows.Forms.Button();
             this.buttonSupprimerPrd = new System.Windows.Forms.Button();
@@ -106,6 +105,7 @@ namespace ZumbaSoft.Fenetres_Commande
             this.buttonAnnulerCmd.TabIndex = 14;
             this.buttonAnnulerCmd.Text = "Annuler la commande";
             this.buttonAnnulerCmd.UseVisualStyleBackColor = true;
+            this.buttonAnnulerCmd.Click += new System.EventHandler(this.buttonAnnulerCmd_Click);
             // 
             // buttonAjouterProd
             // 
@@ -127,22 +127,24 @@ namespace ZumbaSoft.Fenetres_Commande
             this.label1.TabIndex = 16;
             this.label1.Text = "Total TTC :";
             // 
-            // textBox1
+            // textBoxTotalTTC
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(774, 457);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(150, 31);
-            this.textBox1.TabIndex = 17;
+            this.textBoxTotalTTC.Enabled = false;
+            this.textBoxTotalTTC.Location = new System.Drawing.Point(774, 457);
+            this.textBoxTotalTTC.Name = "textBoxTotalTTC";
+            this.textBoxTotalTTC.Size = new System.Drawing.Size(150, 31);
+            this.textBoxTotalTTC.TabIndex = 17;
             // 
             // buttonEnregisterCmd
             // 
+            this.buttonEnregisterCmd.Enabled = false;
             this.buttonEnregisterCmd.Location = new System.Drawing.Point(725, 540);
             this.buttonEnregisterCmd.Name = "buttonEnregisterCmd";
             this.buttonEnregisterCmd.Size = new System.Drawing.Size(221, 34);
             this.buttonEnregisterCmd.TabIndex = 18;
             this.buttonEnregisterCmd.Text = "Enregistrer la commande";
             this.buttonEnregisterCmd.UseVisualStyleBackColor = true;
+            this.buttonEnregisterCmd.Click += new System.EventHandler(this.buttonEnregisterCmd_Click);
             // 
             // labelFournisseur
             // 
@@ -161,15 +163,6 @@ namespace ZumbaSoft.Fenetres_Commande
             this.textBoxFournisseur.Size = new System.Drawing.Size(150, 31);
             this.textBoxFournisseur.TabIndex = 20;
             // 
-            // buttonSearchFournisseur
-            // 
-            this.buttonSearchFournisseur.Location = new System.Drawing.Point(306, 145);
-            this.buttonSearchFournisseur.Name = "buttonSearchFournisseur";
-            this.buttonSearchFournisseur.Size = new System.Drawing.Size(34, 31);
-            this.buttonSearchFournisseur.TabIndex = 21;
-            this.buttonSearchFournisseur.Text = "...";
-            this.buttonSearchFournisseur.UseVisualStyleBackColor = true;
-            // 
             // buttonPlusPrd
             // 
             this.buttonPlusPrd.Enabled = false;
@@ -180,6 +173,7 @@ namespace ZumbaSoft.Fenetres_Commande
             this.buttonPlusPrd.TabIndex = 22;
             this.buttonPlusPrd.Text = "+";
             this.buttonPlusPrd.UseVisualStyleBackColor = true;
+            this.buttonPlusPrd.Click += new System.EventHandler(this.buttonPlusPrd_Click);
             // 
             // buttonMoinsPrd
             // 
@@ -191,6 +185,7 @@ namespace ZumbaSoft.Fenetres_Commande
             this.buttonMoinsPrd.TabIndex = 23;
             this.buttonMoinsPrd.Text = "-";
             this.buttonMoinsPrd.UseVisualStyleBackColor = true;
+            this.buttonMoinsPrd.Click += new System.EventHandler(this.buttonMoinsPrd_Click);
             // 
             // buttonSupprimerPrd
             // 
@@ -201,6 +196,7 @@ namespace ZumbaSoft.Fenetres_Commande
             this.buttonSupprimerPrd.TabIndex = 24;
             this.buttonSupprimerPrd.Text = "Supprimer";
             this.buttonSupprimerPrd.UseVisualStyleBackColor = true;
+            this.buttonSupprimerPrd.Click += new System.EventHandler(this.buttonSupprimerPrd_Click);
             // 
             // labelEtat
             // 
@@ -300,11 +296,10 @@ namespace ZumbaSoft.Fenetres_Commande
             this.Controls.Add(this.buttonSupprimerPrd);
             this.Controls.Add(this.buttonMoinsPrd);
             this.Controls.Add(this.buttonPlusPrd);
-            this.Controls.Add(this.buttonSearchFournisseur);
             this.Controls.Add(this.textBoxFournisseur);
             this.Controls.Add(this.labelFournisseur);
             this.Controls.Add(this.buttonEnregisterCmd);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxTotalTTC);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonAjouterProd);
             this.Controls.Add(this.buttonAnnulerCmd);
@@ -339,11 +334,10 @@ namespace ZumbaSoft.Fenetres_Commande
         private System.Windows.Forms.Button buttonAnnulerCmd;
         private System.Windows.Forms.Button buttonAjouterProd;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxTotalTTC;
         private System.Windows.Forms.Button buttonEnregisterCmd;
         private System.Windows.Forms.Label labelFournisseur;
         private System.Windows.Forms.TextBox textBoxFournisseur;
-        private System.Windows.Forms.Button buttonSearchFournisseur;
         private System.Windows.Forms.Button buttonPlusPrd;
         private System.Windows.Forms.Button buttonMoinsPrd;
         private System.Windows.Forms.Button buttonSupprimerPrd;

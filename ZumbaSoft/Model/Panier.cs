@@ -30,7 +30,7 @@ namespace ZumbaSoft.Model
         public Magasin magasin { get; set; }
 
         //Association Utlisateur
-        [ForeignKey(typeof(Magasin))]
+        [ForeignKey(typeof(Utilisateur))]
         public int id_utilisateur { get; set; }
 
         [OneToOne]
@@ -38,6 +38,6 @@ namespace ZumbaSoft.Model
 
         //Association ProduitCommande
         [OneToMany]
-        public List<ProduitCommande> produits { get; set; }
+        public List<PanierProduit> produits { get; set; }
     }
 }

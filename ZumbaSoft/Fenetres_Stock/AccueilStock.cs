@@ -102,11 +102,7 @@ namespace ZumbaSoft.Fenetres_Stock
 
         private void majListCommandes(Commande cmd)
         {
-            if (listBoxCommandes.Items[0].Equals("Aucune commande en cours."))
-            {
-                listStock.Items.Clear();
-            }
-            listBoxCommandes.Items.Add(cmd);
+            
         }
 
         private void buttonSuppStock_Click(object sender, EventArgs e)
@@ -147,16 +143,30 @@ namespace ZumbaSoft.Fenetres_Stock
 
         private void buttonNouvelleCmd_Click(object sender, EventArgs e)
         {
-            GestionDeLaCommande gc = new GestionDeLaCommande(DB);
+            GestionDeLaCommande gc = new GestionDeLaCommande(DB,magasin);
             if(gc.ShowDialog() == DialogResult.OK)
             {
-                majListCommandes(gc.commande);
+                if (listBoxCommandes.Items[0].Equals("Aucune commande en cours."))
+                {
+                    listStock.Items.Clear();
+                }
+                listBoxCommandes.Items.Add(gc.commande);
+
+                DB.InsertWithChildren(gc.commande);
             }
         }
 
         private void buttonModifierCmd_Click(object sender, EventArgs e)
         {
-            GestionDeLaCommande gc = new GestionDeLaCommande(DB, listBoxCommandes.SelectedItem);
+            GestionDeLaCommande gc = new GestionDeLaCommande(DB, (Commande)listBoxCommandes.SelectedItem);
+            if(gc.ShowDialog() == DialogResult.OK)
+            {
+                listBoxCommandes.Items.Remove(listBoxCommandes.SelectedItem);
+                listBoxCommandes.Items.Add(gc.commande);
+
+
+                DB.UpdateWithChildren(gc.commande);
+            }
         }
 
         private void buttonAnnulerCmd_Click(object sender, EventArgs e)
