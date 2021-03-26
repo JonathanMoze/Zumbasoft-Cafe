@@ -102,15 +102,5 @@ namespace ZumbaSoft.Fenetres_Produit
             }
 
         }
-
-        private void buttonModifProduits_Click(object sender, EventArgs e)
-        {
-            //TODO
-        }
-
-        private void buttonModifEmpl_Click(object sender, EventArgs e)
-        {
-            //TODO
-        }
     }
 }

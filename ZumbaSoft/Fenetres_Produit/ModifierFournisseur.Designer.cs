@@ -32,8 +32,6 @@ namespace ZumbaSoft.Fenetres_Produit
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModifierFournisseur));
             this.listViewCommandes = new System.Windows.Forms.ListView();
             this.listViewProduits = new System.Windows.Forms.ListView();
-            this.buttonModifEmpl = new System.Windows.Forms.Button();
-            this.buttonModifProduits = new System.Windows.Forms.Button();
             this.labelCommande = new System.Windows.Forms.Label();
             this.labelStock = new System.Windows.Forms.Label();
             this.labelNom = new System.Windows.Forms.Label();
@@ -68,28 +66,6 @@ namespace ZumbaSoft.Fenetres_Produit
             this.listViewProduits.Size = new System.Drawing.Size(240, 228);
             this.listViewProduits.TabIndex = 38;
             this.listViewProduits.UseCompatibleStateImageBehavior = false;
-            // 
-            // buttonModifEmpl
-            // 
-            this.buttonModifEmpl.Location = new System.Drawing.Point(387, 480);
-            this.buttonModifEmpl.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonModifEmpl.Name = "buttonModifEmpl";
-            this.buttonModifEmpl.Size = new System.Drawing.Size(103, 27);
-            this.buttonModifEmpl.TabIndex = 37;
-            this.buttonModifEmpl.Text = "Modifier";
-            this.buttonModifEmpl.UseVisualStyleBackColor = true;
-            this.buttonModifEmpl.Click += new System.EventHandler(this.buttonModifEmpl_Click);
-            // 
-            // buttonModifProduits
-            // 
-            this.buttonModifProduits.Location = new System.Drawing.Point(92, 479);
-            this.buttonModifProduits.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonModifProduits.Name = "buttonModifProduits";
-            this.buttonModifProduits.Size = new System.Drawing.Size(106, 29);
-            this.buttonModifProduits.TabIndex = 36;
-            this.buttonModifProduits.Text = "Modifier";
-            this.buttonModifProduits.UseVisualStyleBackColor = true;
-            this.buttonModifProduits.Click += new System.EventHandler(this.buttonModifProduits_Click);
             // 
             // labelCommande
             // 
@@ -257,8 +233,6 @@ namespace ZumbaSoft.Fenetres_Produit
             this.Controls.Add(this.labelNom);
             this.Controls.Add(this.listViewCommandes);
             this.Controls.Add(this.listViewProduits);
-            this.Controls.Add(this.buttonModifEmpl);
-            this.Controls.Add(this.buttonModifProduits);
             this.Controls.Add(this.labelCommande);
             this.Controls.Add(this.labelStock);
             this.Name = "ModifierFournisseur";
@@ -272,8 +246,6 @@ namespace ZumbaSoft.Fenetres_Produit
 
         private System.Windows.Forms.ListView listViewCommandes;
         private System.Windows.Forms.ListView listViewProduits;
-        private System.Windows.Forms.Button buttonModifEmpl;
-        private System.Windows.Forms.Button buttonModifProduits;
         private System.Windows.Forms.Label labelCommande;
         private System.Windows.Forms.Label labelStock;
         private System.Windows.Forms.ListView l;
