@@ -38,9 +38,10 @@ namespace ZumbaSoft.Fenetres_Identification
                 {
                     if (pass.Equals(passwordField.Text))
                     {
-                        Utilisateur current = database.Table<Utilisateur>().Where(x => x.login.Equals(loginField.Text)).ToList()[0];
+                        Accueil.connect = database.Table<Utilisateur>().Where(x => x.login.Equals(loginField.Text)).ToList()[0];
                         this.DialogResult = DialogResult.OK;//retour positif de la fenêtre.
                         this.DestroyHandle();
+                        MessageBox.Show("Vous êtes connecté.");
                     }
                     else
                     {
@@ -52,6 +53,37 @@ namespace ZumbaSoft.Fenetres_Identification
                     MessageBox.Show("Mauvais mot de passe ou identifiant.");
                 }
                 #endregion
+            }
+            #endregion
+        }
+
+        /// <summary>
+        /// Méthode gérant l'évènement de clic sur le bouton "créer un compte".
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button2_Click(object sender, EventArgs e)
+        {
+            #region check null
+            string log_in = loginField.Text;
+            string pass = passwordField.Text;
+            if (log_in != null && pass != null)
+            {
+                if (!check_login(log_in))
+                {
+                    Utilisateur user = new Utilisateur
+                    {
+                        login = log_in,
+                        mot_de_passe = pass
+                    };
+                    database.Insert(user);
+                    Accueil.connect = user;
+
+                }
+                else
+                {
+                    MessageBox.Show("veuillez renseigner le champ mot de passe et le champ login.");
+                }
             }
             #endregion
         }
