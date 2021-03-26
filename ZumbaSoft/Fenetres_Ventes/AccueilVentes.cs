@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace ZumbaSoft.Fenetres_Ventes
 {
-    public partial class buttonAnnulerCommande : Form
+    public partial class AccueilVente : Form
     {
-        public buttonAnnulerCommande()
+        public AccueilVente()
         {
             InitializeComponent();
             initChamps();

@@ -1,7 +1,7 @@
 ﻿
 namespace ZumbaSoft.Fenetres_Ventes
 {
-    partial class buttonAnnulerCommande
+    partial class AccueilVente
     {
         /// <summary>
         /// Required designer variable.
@@ -38,8 +38,8 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.textBoxRechercheClient = new System.Windows.Forms.TextBox();
             this.listBox1RechercheClient = new System.Windows.Forms.ListBox();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -149,15 +149,6 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.panel3.Size = new System.Drawing.Size(250, 42);
             this.panel3.TabIndex = 10;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(32, 23);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(0, 20);
-            this.label4.TabIndex = 5;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -166,6 +157,15 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.label3.Size = new System.Drawing.Size(102, 20);
             this.label3.TabIndex = 6;
             this.label3.Text = "Client existant";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(32, 23);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(0, 20);
+            this.label4.TabIndex = 5;
             // 
             // textBoxRechercheClient
             // 
@@ -306,7 +306,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.label7.TabIndex = 4;
             this.label7.Text = " Valider le ticket";
             // 
-            // buttonAnnulerCommande
+            // AccueilVente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -327,8 +327,8 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Name = "buttonAnnulerCommande";
-            this.Text = "Annuler la commande";
+            this.Name = "AccueilVente";
+            this.Text = "AccueilVente";
             this.Load += new System.EventHandler(this.AccueilVentes_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -347,7 +347,7 @@ namespace ZumbaSoft.Fenetres_Ventes
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListView listView1;
+        public System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Button buttonCatalogueProd;
         private System.Windows.Forms.Label labelCatalogue;
         private System.Windows.Forms.Label label2;

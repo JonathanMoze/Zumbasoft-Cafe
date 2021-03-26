@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using SQLiteNetExtensions.Extensions;
 using SQLite;
 using ZumbaSoft.Model;
+using ZumbaSoft.Fenetres_Ventes;
 
 namespace ZumbaSoft.Fenetres_Produit
 {
@@ -15,9 +16,20 @@ namespace ZumbaSoft.Fenetres_Produit
     {
 
         SQLiteConnection DB;
+        public AccueilVente formParent;
+
         public RechercheProduit(SQLiteConnection db)
         {
             this.DB = db;
+            InitializeComponent();
+            initListProduit();
+        }
+
+
+        public RechercheProduit(SQLiteConnection db, AccueilVente form)
+        {
+            this.DB = db;
+            formParent = form;
             InitializeComponent();
             initListProduit();
         }
@@ -61,6 +73,7 @@ namespace ZumbaSoft.Fenetres_Produit
         {
             if(listBoxProduits.SelectedItem != null)
             {
+                formParent.listView1.Items.Add(listBoxProduits.SelectedItem.ToString());
                 DialogResult = DialogResult.OK;
                 this.Close();
             }
