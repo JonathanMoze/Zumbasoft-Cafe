@@ -22,5 +22,18 @@ namespace ZumbaSoft.Fenetres_Produit
             this.produit = p;
 
         }
+
+        private void buttonSupprimer_Click(object sender, EventArgs e)
+        {
+            DB.Delete(produit);
+            DialogResult = DialogResult.OK;
+            this.Close();
+        }
+
+        private void buttonAnnuler_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.Cancel;
+            this.Close();
+        }
     }
 }
