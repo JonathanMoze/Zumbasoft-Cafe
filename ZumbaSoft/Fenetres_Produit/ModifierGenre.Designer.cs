@@ -31,7 +31,7 @@ namespace ZumbaSoft.Fenetres_Produit
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModifierGenre));
             this.backgroundBlock1 = new System.Windows.Forms.Panel();
-            this.labelTitle = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.backgroundBlock2 = new System.Windows.Forms.Panel();
             this.buttonAnnuler = new System.Windows.Forms.Button();
@@ -46,25 +46,25 @@ namespace ZumbaSoft.Fenetres_Produit
             // backgroundBlock1
             // 
             this.backgroundBlock1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
-            this.backgroundBlock1.Controls.Add(this.labelTitle);
+            this.backgroundBlock1.Controls.Add(this.label2);
             this.backgroundBlock1.Location = new System.Drawing.Point(0, 1);
             this.backgroundBlock1.Margin = new System.Windows.Forms.Padding(2);
             this.backgroundBlock1.Name = "backgroundBlock1";
             this.backgroundBlock1.Size = new System.Drawing.Size(419, 94);
             this.backgroundBlock1.TabIndex = 14;
             // 
-            // labelTitle
+            // label2
             // 
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.BackColor = System.Drawing.Color.Transparent;
-            this.labelTitle.Font = new System.Drawing.Font("Microsoft JhengHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelTitle.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.labelTitle.Location = new System.Drawing.Point(62, 30);
-            this.labelTitle.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(317, 38);
-            this.labelTitle.TabIndex = 11;
-            this.labelTitle.Text = "Renommer un genre";
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label2.Location = new System.Drawing.Point(22, 29);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(348, 36);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Modification d\'un genre";
             // 
             // label1
             // 
@@ -72,7 +72,7 @@ namespace ZumbaSoft.Fenetres_Produit
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(32, 134);
+            this.label1.Location = new System.Drawing.Point(29, 134);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(172, 19);
@@ -121,13 +121,16 @@ namespace ZumbaSoft.Fenetres_Produit
             // 
             // buttonModifMdp
             // 
-            this.buttonModifMdp.Location = new System.Drawing.Point(32, 179);
+            this.buttonModifMdp.BackColor = System.Drawing.Color.Transparent;
+            this.buttonModifMdp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonModifMdp.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonModifMdp.Location = new System.Drawing.Point(298, 173);
             this.buttonModifMdp.Margin = new System.Windows.Forms.Padding(2);
             this.buttonModifMdp.Name = "buttonModifMdp";
-            this.buttonModifMdp.Size = new System.Drawing.Size(90, 27);
+            this.buttonModifMdp.Size = new System.Drawing.Size(90, 32);
             this.buttonModifMdp.TabIndex = 31;
             this.buttonModifMdp.Text = "Modifier";
-            this.buttonModifMdp.UseVisualStyleBackColor = true;
+            this.buttonModifMdp.UseVisualStyleBackColor = false;
             this.buttonModifMdp.Click += new System.EventHandler(this.buttonModifMdp_Click);
             // 
             // textBoxIntitule
@@ -135,7 +138,7 @@ namespace ZumbaSoft.Fenetres_Produit
             this.textBoxIntitule.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
             this.textBoxIntitule.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxIntitule.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.textBoxIntitule.Location = new System.Drawing.Point(129, 179);
+            this.textBoxIntitule.Location = new System.Drawing.Point(32, 176);
             this.textBoxIntitule.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxIntitule.Name = "textBoxIntitule";
             this.textBoxIntitule.PlaceholderText = "veuillez entrer le nouvel intitulé";
@@ -148,7 +151,7 @@ namespace ZumbaSoft.Fenetres_Produit
             this.labelCurrentIntitule.BackColor = System.Drawing.Color.Transparent;
             this.labelCurrentIntitule.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelCurrentIntitule.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.labelCurrentIntitule.Location = new System.Drawing.Point(262, 134);
+            this.labelCurrentIntitule.Location = new System.Drawing.Point(295, 134);
             this.labelCurrentIntitule.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelCurrentIntitule.Name = "labelCurrentIntitule";
             this.labelCurrentIntitule.Size = new System.Drawing.Size(53, 19);
@@ -167,8 +170,9 @@ namespace ZumbaSoft.Fenetres_Produit
             this.Controls.Add(this.backgroundBlock2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.backgroundBlock1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ModifierGenre";
-            this.Text = "ModifierGenre";
+            this.Text = "Modification du genre";
             this.backgroundBlock1.ResumeLayout(false);
             this.backgroundBlock1.PerformLayout();
             this.backgroundBlock2.ResumeLayout(false);
@@ -180,7 +184,6 @@ namespace ZumbaSoft.Fenetres_Produit
         #endregion
 
         private System.Windows.Forms.Panel backgroundBlock1;
-        private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel backgroundBlock2;
         private System.Windows.Forms.Button buttonAnnuler;
@@ -188,5 +191,6 @@ namespace ZumbaSoft.Fenetres_Produit
         private System.Windows.Forms.Button buttonModifMdp;
         private System.Windows.Forms.TextBox textBoxIntitule;
         private System.Windows.Forms.Label labelCurrentIntitule;
+        private System.Windows.Forms.Label label2;
     }
 }

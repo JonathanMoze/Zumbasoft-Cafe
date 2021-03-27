@@ -12,6 +12,7 @@ using ZumbaSoft.Fenetres_Magasin;
 using ZumbaSoft.Fenetres_Roles;
 using ZumbaSoft.Fenetres_Stock;
 using ZumbaSoft.Fenetres_Identification;
+using ZumbaSoft.Fenetres_Produit;
 
 namespace ZumbaSoft
 {
@@ -34,12 +35,19 @@ namespace ZumbaSoft
 
         public void initItemsColors()
         {
-            backgroundBlock.BackColor = Color.FromArgb(50, 12, 12, 12);
+            backgroundBlock.BackColor = Color.FromArgb(99, 1, 1, 1);
             buttonGestionMag.BackColor = Color.FromArgb(80, 12, 12, 12);
             buttonGestionRoles.BackColor = Color.FromArgb(80, 12, 12, 12);
             buttonGestionStock.BackColor = Color.FromArgb(80, 12, 12, 12);
-            buttonSeConnecter.BackColor = Color.FromArgb(80, 12, 12, 12);
-            quitButton.BackColor = Color.FromArgb(80, 12, 12, 12);
+            buttonGestionProduits.BackColor = Color.FromArgb(80, 12, 12, 12);
+            buttonGestionVentes.BackColor = Color.FromArgb(80, 12, 12, 12);
+            buttonAcceptConditions.BackColor = Color.FromArgb(80, 1, 1, 1);
+
+            buttonSeConnecter.BackColor = Color.FromArgb(99, 1, 1, 1);
+            quitButton.BackColor = Color.FromArgb(99, 1, 1, 1);
+
+            panelConditions.Visible = false;
+            panelConditions.BackColor = Color.FromArgb(80, 1, 1, 1);
 
         }
 
@@ -119,6 +127,42 @@ namespace ZumbaSoft
         private void quitButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void buttonGestionProduits_Click(object sender, EventArgs e)
+        {
+            AccueilProduits p = new AccueilProduits(db);
+            this.Visible = false;
+            if (p.ShowDialog() == DialogResult.OK)
+            {
+                this.Visible = true;
+            }
+        }
+
+        private void buttonGestionStock_Click_1(object sender, EventArgs e)
+        {
+            AccueilStock st = new AccueilStock(db, magasin);
+            this.Visible = false;
+            if (st.ShowDialog() == DialogResult.OK)
+            {
+                this.Visible = true;
+            }
+        }
+
+        private void buttonAcceptConditions_Click(object sender, EventArgs e)
+        {
+            panelConditions.Visible = false;
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            if (panelConditions.Visible)
+            {
+                panelConditions.Visible = false;
+            } else
+            {
+                panelConditions.Visible = true;
+            }
         }
     }
 }

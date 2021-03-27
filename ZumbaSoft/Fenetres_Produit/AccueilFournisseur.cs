@@ -53,7 +53,7 @@ namespace ZumbaSoft.Fenetres_Produit
             buttonModifierGenre.BackColor = Color.FromArgb(50, 12, 12, 12);
             buttonSupprimerGenre.BackColor = Color.FromArgb(50, 12, 12, 12);
             erreurListevide.BackColor = Color.FromArgb(50, 12, 12, 12);
-            panel1.BackColor = Color.FromArgb(50, 12, 12, 12);
+            panel5.BackColor = Color.FromArgb(50, 12, 12, 12);
             panel4.BackColor = Color.FromArgb(80, 12, 12, 12);
 
         }
@@ -90,15 +90,18 @@ namespace ZumbaSoft.Fenetres_Produit
             }
         }
 
-        private void buttonAccueil_Click(object sender, EventArgs e)
-        {
-            DialogResult = DialogResult.Cancel;
-            this.Close();
-        }
+
 
         private void AccueilFournisseur_FormClosed(object sender, FormClosedEventArgs e)
         {
             formPrecedent.initComboBoxes();
         }
+
+        private void goBackButton_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.Cancel;
+            this.Close();
+        }
+
     }
 }

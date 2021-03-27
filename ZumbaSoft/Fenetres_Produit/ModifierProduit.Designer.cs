@@ -394,6 +394,7 @@ namespace ZumbaSoft.Fenetres_Produit
             this.Controls.Add(this.labelDescription);
             this.Controls.Add(this.LabelInfoGeneral);
             this.Controls.Add(this.TitreNomProduit);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ModifierProduit";
             this.Text = "ModifierProduit";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVTTC)).EndInit();

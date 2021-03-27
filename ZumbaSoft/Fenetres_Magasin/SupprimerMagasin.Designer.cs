@@ -1,7 +1,7 @@
 ﻿
 namespace ZumbaSoft.Fenetres_Magasin
 {
-    partial class SupprimerMagasin
+    partial class Confirmation
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace ZumbaSoft.Fenetres_Magasin
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SupprimerMagasin));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Confirmation));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonSupprimer = new System.Windows.Forms.Button();
@@ -47,7 +47,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(15, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(486, 42);
+            this.label1.Size = new System.Drawing.Size(411, 36);
             this.label1.TabIndex = 0;
             this.label1.Text = "Confirmation de suppression";
             // 
@@ -57,14 +57,14 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(28, 124);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(413, 23);
+            this.label2.Size = new System.Drawing.Size(342, 19);
             this.label2.TabIndex = 1;
             this.label2.Text = "Êtes vous sur de vouloir supprimer le magasin ?";
             // 
             // buttonSupprimer
             // 
             this.buttonSupprimer.BackColor = System.Drawing.Color.Transparent;
-            this.buttonSupprimer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonSupprimer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSupprimer.Location = new System.Drawing.Point(369, 14);
             this.buttonSupprimer.Name = "buttonSupprimer";
             this.buttonSupprimer.Size = new System.Drawing.Size(138, 37);
@@ -76,7 +76,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             // buttonAnnuler
             // 
             this.buttonAnnuler.BackColor = System.Drawing.Color.Transparent;
-            this.buttonAnnuler.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonAnnuler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAnnuler.Location = new System.Drawing.Point(204, 14);
             this.buttonAnnuler.Name = "buttonAnnuler";
             this.buttonAnnuler.Size = new System.Drawing.Size(138, 37);
@@ -104,9 +104,9 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.backgroundBlock2.Size = new System.Drawing.Size(524, 63);
             this.backgroundBlock2.TabIndex = 14;
             // 
-            // SupprimerMagasin
+            // Confirmation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(513, 243);
@@ -115,8 +115,9 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.Controls.Add(this.backgroundBlock1);
             this.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.Name = "SupprimerMagasin";
-            this.Text = "SupprimerMagasin";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "Confirmation";
+            this.Text = "Confirmation de suppression - Magasin";
             this.backgroundBlock1.ResumeLayout(false);
             this.backgroundBlock1.PerformLayout();
             this.backgroundBlock2.ResumeLayout(false);

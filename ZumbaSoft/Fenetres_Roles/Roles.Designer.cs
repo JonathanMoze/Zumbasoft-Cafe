@@ -76,7 +76,7 @@ namespace ZumbaSoft.Fenetres_Roles
             this.ajouterRoles.AutoSize = true;
             this.ajouterRoles.FlatAppearance.BorderSize = 0;
             this.ajouterRoles.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.ajouterRoles.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ajouterRoles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ajouterRoles.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ajouterRoles.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ajouterRoles.Location = new System.Drawing.Point(117, 152);
@@ -92,7 +92,7 @@ namespace ZumbaSoft.Fenetres_Roles
             this.supprimerRole.AutoSize = true;
             this.supprimerRole.FlatAppearance.BorderSize = 0;
             this.supprimerRole.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.supprimerRole.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.supprimerRole.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.supprimerRole.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.supprimerRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.supprimerRole.Location = new System.Drawing.Point(135, 151);
@@ -147,10 +147,10 @@ namespace ZumbaSoft.Fenetres_Roles
             this.choixRoles.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.choixRoles.ForeColor = System.Drawing.Color.White;
             this.choixRoles.FormattingEnabled = true;
-            this.choixRoles.ItemHeight = 25;
+            this.choixRoles.ItemHeight = 20;
             this.choixRoles.Location = new System.Drawing.Point(0, 59);
             this.choixRoles.Name = "choixRoles";
-            this.choixRoles.Size = new System.Drawing.Size(951, 150);
+            this.choixRoles.Size = new System.Drawing.Size(951, 140);
             this.choixRoles.TabIndex = 2;
             // 
             // panel2
@@ -215,7 +215,7 @@ namespace ZumbaSoft.Fenetres_Roles
             this.nomRole.ForeColor = System.Drawing.Color.White;
             this.nomRole.Location = new System.Drawing.Point(117, 67);
             this.nomRole.Name = "nomRole";
-            this.nomRole.Size = new System.Drawing.Size(309, 35);
+            this.nomRole.Size = new System.Drawing.Size(309, 31);
             this.nomRole.TabIndex = 3;
             // 
             // intituleRole
@@ -226,7 +226,7 @@ namespace ZumbaSoft.Fenetres_Roles
             this.intituleRole.ForeColor = System.Drawing.SystemColors.Control;
             this.intituleRole.Location = new System.Drawing.Point(42, 77);
             this.intituleRole.Name = "intituleRole";
-            this.intituleRole.Size = new System.Drawing.Size(68, 21);
+            this.intituleRole.Size = new System.Drawing.Size(57, 20);
             this.intituleRole.TabIndex = 2;
             this.intituleRole.Text = "Intitulé :";
             // 
@@ -264,7 +264,7 @@ namespace ZumbaSoft.Fenetres_Roles
             this.ConfirmationSR.ForeColor = System.Drawing.SystemColors.Control;
             this.ConfirmationSR.Location = new System.Drawing.Point(135, 93);
             this.ConfirmationSR.Name = "ConfirmationSR";
-            this.ConfirmationSR.Size = new System.Drawing.Size(210, 25);
+            this.ConfirmationSR.Size = new System.Drawing.Size(178, 24);
             this.ConfirmationSR.TabIndex = 2;
             this.ConfirmationSR.Text = "Confirmer la procédure";
             this.ConfirmationSR.UseVisualStyleBackColor = false;
@@ -290,9 +290,9 @@ namespace ZumbaSoft.Fenetres_Roles
             this.programName.Font = new System.Drawing.Font("Microsoft YaHei UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.programName.ForeColor = System.Drawing.Color.Snow;
             this.programName.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.programName.Location = new System.Drawing.Point(842, 0);
+            this.programName.Location = new System.Drawing.Point(905, 0);
             this.programName.Name = "programName";
-            this.programName.Size = new System.Drawing.Size(203, 49);
+            this.programName.Size = new System.Drawing.Size(140, 49);
             this.programName.TabIndex = 15;
             this.programName.Text = "OUATELSE";
             this.programName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -302,7 +302,7 @@ namespace ZumbaSoft.Fenetres_Roles
             this.homeIcon.BackColor = System.Drawing.Color.Transparent;
             this.homeIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.homeIcon.Image = ((System.Drawing.Image)(resources.GetObject("homeIcon.Image")));
-            this.homeIcon.Location = new System.Drawing.Point(396, 8);
+            this.homeIcon.Location = new System.Drawing.Point(300, 8);
             this.homeIcon.Name = "homeIcon";
             this.homeIcon.Size = new System.Drawing.Size(31, 30);
             this.homeIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -314,7 +314,7 @@ namespace ZumbaSoft.Fenetres_Roles
             this.dbERROR.BackColor = System.Drawing.Color.Transparent;
             this.dbERROR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.dbERROR.Image = ((System.Drawing.Image)(resources.GetObject("dbERROR.Image")));
-            this.dbERROR.Location = new System.Drawing.Point(46, 9);
+            this.dbERROR.Location = new System.Drawing.Point(13, 9);
             this.dbERROR.Name = "dbERROR";
             this.dbERROR.Size = new System.Drawing.Size(31, 30);
             this.dbERROR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -327,7 +327,7 @@ namespace ZumbaSoft.Fenetres_Roles
             this.dbOK.BackColor = System.Drawing.Color.Transparent;
             this.dbOK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.dbOK.Image = ((System.Drawing.Image)(resources.GetObject("dbOK.Image")));
-            this.dbOK.Location = new System.Drawing.Point(45, 9);
+            this.dbOK.Location = new System.Drawing.Point(13, 8);
             this.dbOK.Name = "dbOK";
             this.dbOK.Size = new System.Drawing.Size(31, 30);
             this.dbOK.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -340,9 +340,9 @@ namespace ZumbaSoft.Fenetres_Roles
             this.magasinSelectionne.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.magasinSelectionne.ForeColor = System.Drawing.Color.Snow;
             this.magasinSelectionne.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.magasinSelectionne.Location = new System.Drawing.Point(424, 0);
+            this.magasinSelectionne.Location = new System.Drawing.Point(337, 11);
             this.magasinSelectionne.Name = "magasinSelectionne";
-            this.magasinSelectionne.Size = new System.Drawing.Size(245, 49);
+            this.magasinSelectionne.Size = new System.Drawing.Size(188, 25);
             this.magasinSelectionne.TabIndex = 11;
             this.magasinSelectionne.Text = "Aucun magasin sélectionné";
             this.magasinSelectionne.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -353,9 +353,9 @@ namespace ZumbaSoft.Fenetres_Roles
             this.msgBDstatusERROR.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.msgBDstatusERROR.ForeColor = System.Drawing.Color.Tomato;
             this.msgBDstatusERROR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.msgBDstatusERROR.Location = new System.Drawing.Point(72, 0);
+            this.msgBDstatusERROR.Location = new System.Drawing.Point(50, 8);
             this.msgBDstatusERROR.Name = "msgBDstatusERROR";
-            this.msgBDstatusERROR.Size = new System.Drawing.Size(299, 49);
+            this.msgBDstatusERROR.Size = new System.Drawing.Size(217, 30);
             this.msgBDstatusERROR.TabIndex = 10;
             this.msgBDstatusERROR.Text = "Base de données non connectée";
             this.msgBDstatusERROR.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -368,9 +368,9 @@ namespace ZumbaSoft.Fenetres_Roles
             this.msgBDstatusOK.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.msgBDstatusOK.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.msgBDstatusOK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.msgBDstatusOK.Location = new System.Drawing.Point(72, 0);
+            this.msgBDstatusOK.Location = new System.Drawing.Point(50, 8);
             this.msgBDstatusOK.Name = "msgBDstatusOK";
-            this.msgBDstatusOK.Size = new System.Drawing.Size(299, 49);
+            this.msgBDstatusOK.Size = new System.Drawing.Size(211, 30);
             this.msgBDstatusOK.TabIndex = 9;
             this.msgBDstatusOK.Text = "Connecté à la base de données";
             this.msgBDstatusOK.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -450,7 +450,7 @@ namespace ZumbaSoft.Fenetres_Roles
             this.label18.Location = new System.Drawing.Point(21, 13);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(112, 25);
+            this.label18.Size = new System.Drawing.Size(91, 19);
             this.label18.TabIndex = 39;
             this.label18.Text = "ERREUR 01";
             // 
@@ -470,7 +470,7 @@ namespace ZumbaSoft.Fenetres_Roles
             // 
             // Roles
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(20F, 48F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 41F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
@@ -482,6 +482,7 @@ namespace ZumbaSoft.Fenetres_Roles
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Roles";
             this.Text = "Gestion des rôles";
             this.panel1.ResumeLayout(false);

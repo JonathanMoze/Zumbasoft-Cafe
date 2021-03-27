@@ -45,7 +45,7 @@ namespace ZumbaSoft.Fenetres_Roles
 
         public void checkDB()
         {
-            var database = new FileInfo("Dataddbase.db");
+            var database = new FileInfo("DataBase.db");
             if (!database.Exists)
             {
                 msgBDstatusERROR.Visible = true;

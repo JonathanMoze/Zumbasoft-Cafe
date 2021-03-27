@@ -73,6 +73,16 @@ namespace ZumbaSoft.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap background_home {
+            get {
+                object obj = ResourceManager.GetObject("background_home", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dbERROR {
             get {
                 object obj = ResourceManager.GetObject("dbERROR", resourceCulture);
@@ -96,6 +106,66 @@ namespace ZumbaSoft.Properties {
         internal static System.Drawing.Bitmap highdarkblacktransparent {
             get {
                 object obj = ResourceManager.GetObject("highdarkblacktransparent", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_add_tag_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_add_tag_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_computers_connecting_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-computers-connecting-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_grocery_store_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-grocery-store-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_no_network_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-no-network-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_remove_tag_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-remove-tag-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_update_tag_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-update-tag-48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

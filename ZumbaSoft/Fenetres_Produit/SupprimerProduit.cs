@@ -20,6 +20,16 @@ namespace ZumbaSoft.Fenetres_Produit
             InitializeComponent();
             DB = db;
             this.produit = p;
+            initItemsColors();
+
+        }
+
+        public void initItemsColors()
+        {
+            backgroundBlock1.BackColor = Color.FromArgb(90, System.Drawing.Color.Red);
+            backgroundBlock2.BackColor = Color.FromArgb(80, 12, 12, 12);
+            buttonAnnuler.BackColor = Color.FromArgb(50, 12, 12, 12);
+            buttonSupprimer.BackColor = Color.FromArgb(50, 12, 12, 12);
 
         }
 

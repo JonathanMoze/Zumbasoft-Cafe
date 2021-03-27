@@ -29,7 +29,7 @@ namespace ZumbaSoft.Fenetres_Produit
         /// </summary>
         private void InitializeComponent()
         {
-            this.TitreAjoutProduit = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AjouterProduit));
             this.LabelInfoGeneral = new System.Windows.Forms.Label();
             this.labelDescription = new System.Windows.Forms.Label();
             this.labelPrix = new System.Windows.Forms.Label();
@@ -57,279 +57,328 @@ namespace ZumbaSoft.Fenetres_Produit
             this.textBoxMarque = new System.Windows.Forms.TextBox();
             this.textBoxCouleur = new System.Windows.Forms.TextBox();
             this.comboBoxFournisseur = new System.Windows.Forms.ComboBox();
-            this.buttonAnnuler = new System.Windows.Forms.Button();
-            this.buttonValider = new System.Windows.Forms.Button();
             this.buttonGenre = new System.Windows.Forms.Button();
             this.buttonFournisseurs = new System.Windows.Forms.Button();
+            this.backgroundBlock2 = new System.Windows.Forms.Panel();
+            this.buttonCancel = new System.Windows.Forms.Button();
+            this.buttonOK = new System.Windows.Forms.Button();
+            this.backgroundBlock1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.backgroundBlock3 = new System.Windows.Forms.Panel();
+            this.backgroundBlock5 = new System.Windows.Forms.Panel();
+            this.backgroundBlock4 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVHT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAHT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownATTC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVTTC)).BeginInit();
+            this.backgroundBlock2.SuspendLayout();
+            this.backgroundBlock1.SuspendLayout();
+            this.backgroundBlock3.SuspendLayout();
+            this.backgroundBlock5.SuspendLayout();
+            this.backgroundBlock4.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // TitreAjoutProduit
-            // 
-            this.TitreAjoutProduit.AutoSize = true;
-            this.TitreAjoutProduit.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.TitreAjoutProduit.Location = new System.Drawing.Point(12, 9);
-            this.TitreAjoutProduit.Name = "TitreAjoutProduit";
-            this.TitreAjoutProduit.Size = new System.Drawing.Size(264, 38);
-            this.TitreAjoutProduit.TabIndex = 2;
-            this.TitreAjoutProduit.Text = "Ajouter un Produit";
             // 
             // LabelInfoGeneral
             // 
             this.LabelInfoGeneral.AutoSize = true;
-            this.LabelInfoGeneral.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LabelInfoGeneral.Location = new System.Drawing.Point(30, 71);
+            this.LabelInfoGeneral.BackColor = System.Drawing.Color.Transparent;
+            this.LabelInfoGeneral.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LabelInfoGeneral.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.LabelInfoGeneral.Location = new System.Drawing.Point(17, 13);
             this.LabelInfoGeneral.Name = "LabelInfoGeneral";
-            this.LabelInfoGeneral.Size = new System.Drawing.Size(211, 28);
+            this.LabelInfoGeneral.Size = new System.Drawing.Size(231, 27);
             this.LabelInfoGeneral.TabIndex = 3;
             this.LabelInfoGeneral.Text = "Informations générales";
             // 
             // labelDescription
             // 
             this.labelDescription.AutoSize = true;
-            this.labelDescription.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelDescription.Location = new System.Drawing.Point(590, 71);
+            this.labelDescription.BackColor = System.Drawing.Color.Transparent;
+            this.labelDescription.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelDescription.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelDescription.Location = new System.Drawing.Point(15, 13);
             this.labelDescription.Name = "labelDescription";
-            this.labelDescription.Size = new System.Drawing.Size(112, 28);
+            this.labelDescription.Size = new System.Drawing.Size(120, 27);
             this.labelDescription.TabIndex = 4;
             this.labelDescription.Text = "Description";
             // 
             // labelPrix
             // 
             this.labelPrix.AutoSize = true;
-            this.labelPrix.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelPrix.Location = new System.Drawing.Point(23, 249);
+            this.labelPrix.BackColor = System.Drawing.Color.Transparent;
+            this.labelPrix.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelPrix.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelPrix.Location = new System.Drawing.Point(17, 18);
             this.labelPrix.Name = "labelPrix";
-            this.labelPrix.Size = new System.Drawing.Size(44, 28);
+            this.labelPrix.Size = new System.Drawing.Size(47, 27);
             this.labelPrix.TabIndex = 5;
             this.labelPrix.Text = "Prix";
             // 
             // labelNom
             // 
             this.labelNom.AutoSize = true;
-            this.labelNom.Location = new System.Drawing.Point(24, 125);
+            this.labelNom.BackColor = System.Drawing.Color.Transparent;
+            this.labelNom.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelNom.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelNom.Location = new System.Drawing.Point(17, 68);
             this.labelNom.Name = "labelNom";
-            this.labelNom.Size = new System.Drawing.Size(49, 20);
+            this.labelNom.Size = new System.Drawing.Size(57, 23);
             this.labelNom.TabIndex = 6;
             this.labelNom.Text = "Nom :";
             // 
             // labelRef
             // 
             this.labelRef.AutoSize = true;
-            this.labelRef.Location = new System.Drawing.Point(24, 165);
+            this.labelRef.BackColor = System.Drawing.Color.Transparent;
+            this.labelRef.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelRef.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelRef.Location = new System.Drawing.Point(17, 106);
             this.labelRef.Name = "labelRef";
-            this.labelRef.Size = new System.Drawing.Size(82, 20);
+            this.labelRef.Size = new System.Drawing.Size(94, 23);
             this.labelRef.TabIndex = 7;
             this.labelRef.Text = "Référence :";
             // 
             // labelCodeB
             // 
             this.labelCodeB.AutoSize = true;
-            this.labelCodeB.Location = new System.Drawing.Point(24, 202);
+            this.labelCodeB.BackColor = System.Drawing.Color.Transparent;
+            this.labelCodeB.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelCodeB.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelCodeB.Location = new System.Drawing.Point(17, 141);
             this.labelCodeB.Name = "labelCodeB";
-            this.labelCodeB.Size = new System.Drawing.Size(92, 20);
+            this.labelCodeB.Size = new System.Drawing.Size(106, 23);
             this.labelCodeB.TabIndex = 8;
             this.labelCodeB.Text = "Code-Barre :";
             // 
             // labelType
             // 
             this.labelType.AutoSize = true;
-            this.labelType.Location = new System.Drawing.Point(596, 141);
+            this.labelType.BackColor = System.Drawing.Color.Transparent;
+            this.labelType.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelType.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelType.Location = new System.Drawing.Point(15, 80);
             this.labelType.Name = "labelType";
-            this.labelType.Size = new System.Drawing.Size(106, 20);
+            this.labelType.Size = new System.Drawing.Size(55, 23);
             this.labelType.TabIndex = 9;
-            this.labelType.Text = "Type d\'Article :";
+            this.labelType.Text = "Type :";
             // 
             // labelGenre
             // 
             this.labelGenre.AutoSize = true;
-            this.labelGenre.Location = new System.Drawing.Point(601, 272);
+            this.labelGenre.BackColor = System.Drawing.Color.Transparent;
+            this.labelGenre.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelGenre.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelGenre.Location = new System.Drawing.Point(15, 231);
             this.labelGenre.Name = "labelGenre";
-            this.labelGenre.Size = new System.Drawing.Size(55, 20);
+            this.labelGenre.Size = new System.Drawing.Size(65, 23);
             this.labelGenre.TabIndex = 10;
             this.labelGenre.Text = "Genre :";
             // 
             // labelMarque
             // 
             this.labelMarque.AutoSize = true;
-            this.labelMarque.Location = new System.Drawing.Point(601, 180);
+            this.labelMarque.BackColor = System.Drawing.Color.Transparent;
+            this.labelMarque.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelMarque.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelMarque.Location = new System.Drawing.Point(15, 119);
             this.labelMarque.Name = "labelMarque";
-            this.labelMarque.Size = new System.Drawing.Size(67, 20);
+            this.labelMarque.Size = new System.Drawing.Size(78, 23);
             this.labelMarque.TabIndex = 11;
             this.labelMarque.Text = "Marque :";
             // 
             // labelCouleur
             // 
             this.labelCouleur.AutoSize = true;
-            this.labelCouleur.Location = new System.Drawing.Point(601, 227);
+            this.labelCouleur.BackColor = System.Drawing.Color.Transparent;
+            this.labelCouleur.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelCouleur.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelCouleur.Location = new System.Drawing.Point(15, 158);
             this.labelCouleur.Name = "labelCouleur";
-            this.labelCouleur.Size = new System.Drawing.Size(67, 20);
+            this.labelCouleur.Size = new System.Drawing.Size(79, 23);
             this.labelCouleur.TabIndex = 12;
             this.labelCouleur.Text = "Couleur :";
             // 
             // labelFournisseur
             // 
             this.labelFournisseur.AutoSize = true;
-            this.labelFournisseur.Location = new System.Drawing.Point(601, 338);
+            this.labelFournisseur.BackColor = System.Drawing.Color.Transparent;
+            this.labelFournisseur.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelFournisseur.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelFournisseur.Location = new System.Drawing.Point(14, 340);
             this.labelFournisseur.Name = "labelFournisseur";
-            this.labelFournisseur.Size = new System.Drawing.Size(90, 20);
+            this.labelFournisseur.Size = new System.Drawing.Size(107, 23);
             this.labelFournisseur.TabIndex = 13;
             this.labelFournisseur.Text = "Fournisseur :";
             // 
             // labelAHT
             // 
             this.labelAHT.AutoSize = true;
-            this.labelAHT.Location = new System.Drawing.Point(23, 291);
+            this.labelAHT.BackColor = System.Drawing.Color.Transparent;
+            this.labelAHT.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelAHT.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelAHT.Location = new System.Drawing.Point(17, 57);
             this.labelAHT.Name = "labelAHT";
-            this.labelAHT.Size = new System.Drawing.Size(105, 20);
+            this.labelAHT.Size = new System.Drawing.Size(122, 23);
             this.labelAHT.TabIndex = 14;
             this.labelAHT.Text = "Prix Achat HT :";
             // 
             // ATTC
             // 
             this.ATTC.AutoSize = true;
-            this.ATTC.Location = new System.Drawing.Point(24, 332);
+            this.ATTC.BackColor = System.Drawing.Color.Transparent;
+            this.ATTC.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ATTC.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.ATTC.Location = new System.Drawing.Point(18, 96);
             this.ATTC.Name = "ATTC";
-            this.ATTC.Size = new System.Drawing.Size(110, 20);
+            this.ATTC.Size = new System.Drawing.Size(130, 23);
             this.ATTC.TabIndex = 15;
             this.ATTC.Text = "Prix Achat TTC :";
             // 
             // labelVHT
             // 
             this.labelVHT.AutoSize = true;
-            this.labelVHT.Location = new System.Drawing.Point(24, 374);
+            this.labelVHT.BackColor = System.Drawing.Color.Transparent;
+            this.labelVHT.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelVHT.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelVHT.Location = new System.Drawing.Point(18, 136);
             this.labelVHT.Name = "labelVHT";
-            this.labelVHT.Size = new System.Drawing.Size(104, 20);
+            this.labelVHT.Size = new System.Drawing.Size(122, 23);
             this.labelVHT.TabIndex = 16;
             this.labelVHT.Text = "Prix Vente HT :";
             // 
             // VTTC
             // 
             this.VTTC.AutoSize = true;
-            this.VTTC.Location = new System.Drawing.Point(23, 413);
+            this.VTTC.BackColor = System.Drawing.Color.Transparent;
+            this.VTTC.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.VTTC.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.VTTC.Location = new System.Drawing.Point(17, 173);
             this.VTTC.Name = "VTTC";
-            this.VTTC.Size = new System.Drawing.Size(109, 20);
+            this.VTTC.Size = new System.Drawing.Size(130, 23);
             this.VTTC.TabIndex = 17;
             this.VTTC.Text = "Prix Vente TTC :";
             // 
             // textBoxNom
             // 
-            this.textBoxNom.Location = new System.Drawing.Point(79, 122);
+            this.textBoxNom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
+            this.textBoxNom.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxNom.Location = new System.Drawing.Point(152, 65);
             this.textBoxNom.Name = "textBoxNom";
-            this.textBoxNom.Size = new System.Drawing.Size(125, 27);
+            this.textBoxNom.Size = new System.Drawing.Size(170, 27);
             this.textBoxNom.TabIndex = 18;
             // 
             // textBoxRef
             // 
-            this.textBoxRef.Location = new System.Drawing.Point(112, 158);
+            this.textBoxRef.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
+            this.textBoxRef.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxRef.Location = new System.Drawing.Point(152, 102);
             this.textBoxRef.Name = "textBoxRef";
-            this.textBoxRef.Size = new System.Drawing.Size(125, 27);
+            this.textBoxRef.Size = new System.Drawing.Size(170, 27);
             this.textBoxRef.TabIndex = 19;
             // 
             // textBoxCodeB
             // 
-            this.textBoxCodeB.Location = new System.Drawing.Point(122, 199);
+            this.textBoxCodeB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
+            this.textBoxCodeB.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxCodeB.Location = new System.Drawing.Point(152, 139);
             this.textBoxCodeB.Name = "textBoxCodeB";
-            this.textBoxCodeB.Size = new System.Drawing.Size(125, 27);
+            this.textBoxCodeB.Size = new System.Drawing.Size(170, 27);
             this.textBoxCodeB.TabIndex = 20;
             // 
             // numericUpDownVHT
             // 
+            this.numericUpDownVHT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
             this.numericUpDownVHT.DecimalPlaces = 2;
-            this.numericUpDownVHT.Location = new System.Drawing.Point(135, 372);
+            this.numericUpDownVHT.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.numericUpDownVHT.Location = new System.Drawing.Point(154, 134);
             this.numericUpDownVHT.Name = "numericUpDownVHT";
-            this.numericUpDownVHT.Size = new System.Drawing.Size(150, 27);
+            this.numericUpDownVHT.Size = new System.Drawing.Size(169, 27);
             this.numericUpDownVHT.TabIndex = 22;
             // 
             // numericUpDownAHT
             // 
+            this.numericUpDownAHT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
             this.numericUpDownAHT.DecimalPlaces = 2;
-            this.numericUpDownAHT.Location = new System.Drawing.Point(134, 289);
+            this.numericUpDownAHT.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.numericUpDownAHT.Location = new System.Drawing.Point(154, 56);
             this.numericUpDownAHT.Name = "numericUpDownAHT";
-            this.numericUpDownAHT.Size = new System.Drawing.Size(150, 27);
+            this.numericUpDownAHT.Size = new System.Drawing.Size(169, 27);
             this.numericUpDownAHT.TabIndex = 23;
             // 
             // numericUpDownATTC
             // 
+            this.numericUpDownATTC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
             this.numericUpDownATTC.DecimalPlaces = 2;
-            this.numericUpDownATTC.Location = new System.Drawing.Point(135, 331);
+            this.numericUpDownATTC.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.numericUpDownATTC.Location = new System.Drawing.Point(154, 95);
             this.numericUpDownATTC.Name = "numericUpDownATTC";
-            this.numericUpDownATTC.Size = new System.Drawing.Size(150, 27);
+            this.numericUpDownATTC.Size = new System.Drawing.Size(169, 27);
             this.numericUpDownATTC.TabIndex = 24;
             // 
             // numericUpDownVTTC
             // 
+            this.numericUpDownVTTC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
             this.numericUpDownVTTC.DecimalPlaces = 2;
-            this.numericUpDownVTTC.Location = new System.Drawing.Point(134, 413);
+            this.numericUpDownVTTC.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.numericUpDownVTTC.Location = new System.Drawing.Point(154, 171);
             this.numericUpDownVTTC.Name = "numericUpDownVTTC";
-            this.numericUpDownVTTC.Size = new System.Drawing.Size(150, 27);
+            this.numericUpDownVTTC.Size = new System.Drawing.Size(169, 27);
             this.numericUpDownVTTC.TabIndex = 25;
             // 
             // textBoxType
             // 
-            this.textBoxType.Location = new System.Drawing.Point(708, 138);
+            this.textBoxType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
+            this.textBoxType.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxType.Location = new System.Drawing.Point(123, 76);
             this.textBoxType.Name = "textBoxType";
-            this.textBoxType.Size = new System.Drawing.Size(125, 27);
+            this.textBoxType.Size = new System.Drawing.Size(169, 27);
             this.textBoxType.TabIndex = 26;
             // 
             // comboBoxGenre
             // 
+            this.comboBoxGenre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
+            this.comboBoxGenre.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.comboBoxGenre.FormattingEnabled = true;
-            this.comboBoxGenre.Location = new System.Drawing.Point(662, 264);
+            this.comboBoxGenre.Location = new System.Drawing.Point(123, 230);
             this.comboBoxGenre.Name = "comboBoxGenre";
-            this.comboBoxGenre.Size = new System.Drawing.Size(151, 28);
+            this.comboBoxGenre.Size = new System.Drawing.Size(169, 27);
             this.comboBoxGenre.TabIndex = 27;
             // 
             // textBoxMarque
             // 
-            this.textBoxMarque.Location = new System.Drawing.Point(674, 177);
+            this.textBoxMarque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
+            this.textBoxMarque.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxMarque.Location = new System.Drawing.Point(123, 115);
             this.textBoxMarque.Name = "textBoxMarque";
-            this.textBoxMarque.Size = new System.Drawing.Size(125, 27);
+            this.textBoxMarque.Size = new System.Drawing.Size(169, 27);
             this.textBoxMarque.TabIndex = 28;
             // 
             // textBoxCouleur
             // 
-            this.textBoxCouleur.Location = new System.Drawing.Point(674, 224);
+            this.textBoxCouleur.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
+            this.textBoxCouleur.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxCouleur.Location = new System.Drawing.Point(123, 154);
             this.textBoxCouleur.Name = "textBoxCouleur";
-            this.textBoxCouleur.Size = new System.Drawing.Size(125, 27);
+            this.textBoxCouleur.Size = new System.Drawing.Size(169, 27);
             this.textBoxCouleur.TabIndex = 29;
             // 
             // comboBoxFournisseur
             // 
+            this.comboBoxFournisseur.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
+            this.comboBoxFournisseur.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.comboBoxFournisseur.FormattingEnabled = true;
-            this.comboBoxFournisseur.Location = new System.Drawing.Point(697, 338);
+            this.comboBoxFournisseur.Location = new System.Drawing.Point(123, 339);
             this.comboBoxFournisseur.Name = "comboBoxFournisseur";
-            this.comboBoxFournisseur.Size = new System.Drawing.Size(151, 28);
+            this.comboBoxFournisseur.Size = new System.Drawing.Size(169, 27);
             this.comboBoxFournisseur.TabIndex = 30;
-            // 
-            // buttonAnnuler
-            // 
-            this.buttonAnnuler.Location = new System.Drawing.Point(787, 455);
-            this.buttonAnnuler.Name = "buttonAnnuler";
-            this.buttonAnnuler.Size = new System.Drawing.Size(94, 29);
-            this.buttonAnnuler.TabIndex = 31;
-            this.buttonAnnuler.Text = "Annuler";
-            this.buttonAnnuler.UseVisualStyleBackColor = true;
-            this.buttonAnnuler.Click += new System.EventHandler(this.buttonAnnuler_Click);
-            // 
-            // buttonValider
-            // 
-            this.buttonValider.Location = new System.Drawing.Point(662, 455);
-            this.buttonValider.Name = "buttonValider";
-            this.buttonValider.Size = new System.Drawing.Size(94, 29);
-            this.buttonValider.TabIndex = 32;
-            this.buttonValider.Text = "Valider";
-            this.buttonValider.UseVisualStyleBackColor = true;
-            this.buttonValider.Click += new System.EventHandler(this.buttonValider_Click);
             // 
             // buttonGenre
             // 
-            this.buttonGenre.Location = new System.Drawing.Point(747, 298);
+            this.buttonGenre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonGenre.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonGenre.Location = new System.Drawing.Point(123, 267);
             this.buttonGenre.Name = "buttonGenre";
-            this.buttonGenre.Size = new System.Drawing.Size(167, 29);
+            this.buttonGenre.Size = new System.Drawing.Size(169, 28);
             this.buttonGenre.TabIndex = 33;
             this.buttonGenre.Text = "Gestion Genres";
             this.buttonGenre.UseVisualStyleBackColor = true;
@@ -337,65 +386,169 @@ namespace ZumbaSoft.Fenetres_Produit
             // 
             // buttonFournisseurs
             // 
-            this.buttonFournisseurs.Location = new System.Drawing.Point(747, 372);
+            this.buttonFournisseurs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonFournisseurs.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonFournisseurs.Location = new System.Drawing.Point(123, 376);
             this.buttonFournisseurs.Name = "buttonFournisseurs";
-            this.buttonFournisseurs.Size = new System.Drawing.Size(167, 29);
+            this.buttonFournisseurs.Size = new System.Drawing.Size(169, 28);
             this.buttonFournisseurs.TabIndex = 34;
             this.buttonFournisseurs.Text = "Gestion Fournisseurs";
             this.buttonFournisseurs.UseVisualStyleBackColor = true;
             this.buttonFournisseurs.Click += new System.EventHandler(this.buttonFournisseurs_Click);
             // 
+            // backgroundBlock2
+            // 
+            this.backgroundBlock2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
+            this.backgroundBlock2.Controls.Add(this.buttonCancel);
+            this.backgroundBlock2.Controls.Add(this.buttonOK);
+            this.backgroundBlock2.Location = new System.Drawing.Point(0, 590);
+            this.backgroundBlock2.Margin = new System.Windows.Forms.Padding(2);
+            this.backgroundBlock2.Name = "backgroundBlock2";
+            this.backgroundBlock2.Size = new System.Drawing.Size(730, 50);
+            this.backgroundBlock2.TabIndex = 36;
+            // 
+            // buttonCancel
+            // 
+            this.buttonCancel.BackColor = System.Drawing.Color.Transparent;
+            this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCancel.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonCancel.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonCancel.Location = new System.Drawing.Point(445, 10);
+            this.buttonCancel.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(124, 28);
+            this.buttonCancel.TabIndex = 3;
+            this.buttonCancel.Text = "Annuler";
+            this.buttonCancel.UseVisualStyleBackColor = false;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
+            // 
+            // buttonOK
+            // 
+            this.buttonOK.BackColor = System.Drawing.Color.Transparent;
+            this.buttonOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonOK.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonOK.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonOK.Location = new System.Drawing.Point(594, 10);
+            this.buttonOK.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonOK.Name = "buttonOK";
+            this.buttonOK.Size = new System.Drawing.Size(124, 28);
+            this.buttonOK.TabIndex = 2;
+            this.buttonOK.Text = "Ajouter";
+            this.buttonOK.UseVisualStyleBackColor = false;
+            this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
+            // 
+            // backgroundBlock1
+            // 
+            this.backgroundBlock1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
+            this.backgroundBlock1.Controls.Add(this.label1);
+            this.backgroundBlock1.Location = new System.Drawing.Point(0, -2);
+            this.backgroundBlock1.Margin = new System.Windows.Forms.Padding(2);
+            this.backgroundBlock1.Name = "backgroundBlock1";
+            this.backgroundBlock1.Size = new System.Drawing.Size(730, 95);
+            this.backgroundBlock1.TabIndex = 35;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.Location = new System.Drawing.Point(26, 30);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(270, 36);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Ajout d\'un produit";
+            // 
+            // backgroundBlock3
+            // 
+            this.backgroundBlock3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
+            this.backgroundBlock3.Controls.Add(this.labelDescription);
+            this.backgroundBlock3.Controls.Add(this.labelType);
+            this.backgroundBlock3.Controls.Add(this.buttonFournisseurs);
+            this.backgroundBlock3.Controls.Add(this.labelGenre);
+            this.backgroundBlock3.Controls.Add(this.buttonGenre);
+            this.backgroundBlock3.Controls.Add(this.labelMarque);
+            this.backgroundBlock3.Controls.Add(this.comboBoxFournisseur);
+            this.backgroundBlock3.Controls.Add(this.labelCouleur);
+            this.backgroundBlock3.Controls.Add(this.textBoxCouleur);
+            this.backgroundBlock3.Controls.Add(this.labelFournisseur);
+            this.backgroundBlock3.Controls.Add(this.textBoxMarque);
+            this.backgroundBlock3.Controls.Add(this.textBoxType);
+            this.backgroundBlock3.Controls.Add(this.comboBoxGenre);
+            this.backgroundBlock3.Location = new System.Drawing.Point(393, 123);
+            this.backgroundBlock3.Margin = new System.Windows.Forms.Padding(2);
+            this.backgroundBlock3.Name = "backgroundBlock3";
+            this.backgroundBlock3.Size = new System.Drawing.Size(310, 436);
+            this.backgroundBlock3.TabIndex = 37;
+            // 
+            // backgroundBlock5
+            // 
+            this.backgroundBlock5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
+            this.backgroundBlock5.Controls.Add(this.LabelInfoGeneral);
+            this.backgroundBlock5.Controls.Add(this.labelNom);
+            this.backgroundBlock5.Controls.Add(this.labelRef);
+            this.backgroundBlock5.Controls.Add(this.labelCodeB);
+            this.backgroundBlock5.Controls.Add(this.textBoxNom);
+            this.backgroundBlock5.Controls.Add(this.textBoxRef);
+            this.backgroundBlock5.Controls.Add(this.textBoxCodeB);
+            this.backgroundBlock5.Location = new System.Drawing.Point(27, 123);
+            this.backgroundBlock5.Margin = new System.Windows.Forms.Padding(2);
+            this.backgroundBlock5.Name = "backgroundBlock5";
+            this.backgroundBlock5.Size = new System.Drawing.Size(345, 190);
+            this.backgroundBlock5.TabIndex = 38;
+            // 
+            // backgroundBlock4
+            // 
+            this.backgroundBlock4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
+            this.backgroundBlock4.Controls.Add(this.labelPrix);
+            this.backgroundBlock4.Controls.Add(this.labelAHT);
+            this.backgroundBlock4.Controls.Add(this.numericUpDownVTTC);
+            this.backgroundBlock4.Controls.Add(this.ATTC);
+            this.backgroundBlock4.Controls.Add(this.numericUpDownATTC);
+            this.backgroundBlock4.Controls.Add(this.labelVHT);
+            this.backgroundBlock4.Controls.Add(this.numericUpDownAHT);
+            this.backgroundBlock4.Controls.Add(this.VTTC);
+            this.backgroundBlock4.Controls.Add(this.numericUpDownVHT);
+            this.backgroundBlock4.Location = new System.Drawing.Point(27, 337);
+            this.backgroundBlock4.Margin = new System.Windows.Forms.Padding(2);
+            this.backgroundBlock4.Name = "backgroundBlock4";
+            this.backgroundBlock4.Size = new System.Drawing.Size(345, 222);
+            this.backgroundBlock4.TabIndex = 39;
+            // 
             // AjouterProduit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(956, 534);
-            this.Controls.Add(this.buttonFournisseurs);
-            this.Controls.Add(this.buttonGenre);
-            this.Controls.Add(this.buttonValider);
-            this.Controls.Add(this.buttonAnnuler);
-            this.Controls.Add(this.comboBoxFournisseur);
-            this.Controls.Add(this.textBoxCouleur);
-            this.Controls.Add(this.textBoxMarque);
-            this.Controls.Add(this.comboBoxGenre);
-            this.Controls.Add(this.textBoxType);
-            this.Controls.Add(this.numericUpDownVTTC);
-            this.Controls.Add(this.numericUpDownATTC);
-            this.Controls.Add(this.numericUpDownAHT);
-            this.Controls.Add(this.numericUpDownVHT);
-            this.Controls.Add(this.textBoxCodeB);
-            this.Controls.Add(this.textBoxRef);
-            this.Controls.Add(this.textBoxNom);
-            this.Controls.Add(this.VTTC);
-            this.Controls.Add(this.labelVHT);
-            this.Controls.Add(this.ATTC);
-            this.Controls.Add(this.labelAHT);
-            this.Controls.Add(this.labelFournisseur);
-            this.Controls.Add(this.labelCouleur);
-            this.Controls.Add(this.labelMarque);
-            this.Controls.Add(this.labelGenre);
-            this.Controls.Add(this.labelType);
-            this.Controls.Add(this.labelCodeB);
-            this.Controls.Add(this.labelRef);
-            this.Controls.Add(this.labelNom);
-            this.Controls.Add(this.labelPrix);
-            this.Controls.Add(this.labelDescription);
-            this.Controls.Add(this.LabelInfoGeneral);
-            this.Controls.Add(this.TitreAjoutProduit);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(729, 637);
+            this.Controls.Add(this.backgroundBlock2);
+            this.Controls.Add(this.backgroundBlock1);
+            this.Controls.Add(this.backgroundBlock3);
+            this.Controls.Add(this.backgroundBlock5);
+            this.Controls.Add(this.backgroundBlock4);
+            this.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "AjouterProduit";
-            this.Text = "AjouterProduit";
+            this.Text = "Ajouter un produit";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVHT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAHT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownATTC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVTTC)).EndInit();
+            this.backgroundBlock2.ResumeLayout(false);
+            this.backgroundBlock1.ResumeLayout(false);
+            this.backgroundBlock1.PerformLayout();
+            this.backgroundBlock3.ResumeLayout(false);
+            this.backgroundBlock3.PerformLayout();
+            this.backgroundBlock5.ResumeLayout(false);
+            this.backgroundBlock5.PerformLayout();
+            this.backgroundBlock4.ResumeLayout(false);
+            this.backgroundBlock4.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label TitreAjoutProduit;
         private System.Windows.Forms.Label LabelInfoGeneral;
         private System.Windows.Forms.Label labelDescription;
         private System.Windows.Forms.Label labelPrix;
@@ -423,10 +576,15 @@ namespace ZumbaSoft.Fenetres_Produit
         private System.Windows.Forms.TextBox textBoxMarque;
         private System.Windows.Forms.TextBox textBoxCouleur;
         private System.Windows.Forms.ComboBox comboBoxFournisseur;
-        private System.Windows.Forms.Button buttonAnnuler;
-        private System.Windows.Forms.Button buttonValider;
         private System.Windows.Forms.Button buttonGenre;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button buttonFournisseurs;
+        private System.Windows.Forms.Panel backgroundBlock2;
+        private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.Button buttonOK;
+        private System.Windows.Forms.Panel backgroundBlock1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel backgroundBlock3;
+        private System.Windows.Forms.Panel backgroundBlock5;
+        private System.Windows.Forms.Panel backgroundBlock4;
     }
 }

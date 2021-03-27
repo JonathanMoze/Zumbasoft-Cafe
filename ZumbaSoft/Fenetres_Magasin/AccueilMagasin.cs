@@ -304,7 +304,7 @@ namespace ZumbaSoft.Fenetres_Magasin
 
         private void buttonSupprimer_Click(object sender, EventArgs e)
         {
-            SupprimerMagasin supprimerMagasin = new SupprimerMagasin(magasin, DB);
+            Confirmation supprimerMagasin = new Confirmation(magasin, DB);
             if(supprimerMagasin.ShowDialog() == DialogResult.OK)
             {
                 var deletedMag = magasin;
