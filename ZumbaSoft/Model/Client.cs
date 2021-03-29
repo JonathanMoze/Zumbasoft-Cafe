@@ -25,5 +25,11 @@ namespace ZumbaSoft.Model
 
         [OneToOne]
         public Panier panier { get; set; }
+
+
+        public override string ToString()
+        {
+            return this.nom + " " + this.prenom;
+        }
     }
 }
