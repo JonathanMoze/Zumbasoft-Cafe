@@ -34,7 +34,6 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.buttonCatalogueProd = new System.Windows.Forms.Button();
             this.labelCatalogue = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.labelNomClient = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -43,18 +42,14 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.textBoxRechercheClient = new System.Windows.Forms.TextBox();
             this.listBox1RechercheClient = new System.Windows.Forms.ListBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.buttonNvClient = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBoxNom = new System.Windows.Forms.TextBox();
-            this.textBoxPrenom = new System.Windows.Forms.TextBox();
-            this.textBoxVille = new System.Windows.Forms.TextBox();
-            this.textBoxCP = new System.Windows.Forms.TextBox();
-            this.textBoxTel = new System.Windows.Forms.TextBox();
-            this.buttonEnregistrerClient = new System.Windows.Forms.Button();
             this.buttonAnnulerCommand = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.buttonFacture = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.labelNomClient = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -109,15 +104,6 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.label2.Size = new System.Drawing.Size(185, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = "Commande effectuée par :";
-            // 
-            // labelNomClient
-            // 
-            this.labelNomClient.AutoSize = true;
-            this.labelNomClient.Location = new System.Drawing.Point(70, 63);
-            this.labelNomClient.Name = "labelNomClient";
-            this.labelNomClient.Size = new System.Drawing.Size(100, 20);
-            this.labelNomClient.TabIndex = 6;
-            this.labelNomClient.Text = "nom du client";
             // 
             // panel1
             // 
@@ -175,6 +161,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.textBoxRechercheClient.Size = new System.Drawing.Size(250, 27);
             this.textBoxRechercheClient.TabIndex = 11;
             this.textBoxRechercheClient.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxRechercheClient.TextChanged += new System.EventHandler(this.textBoxRechercheClient_TextChanged);
             // 
             // listBox1RechercheClient
             // 
@@ -184,16 +171,28 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.listBox1RechercheClient.Name = "listBox1RechercheClient";
             this.listBox1RechercheClient.Size = new System.Drawing.Size(250, 124);
             this.listBox1RechercheClient.TabIndex = 12;
+            this.listBox1RechercheClient.SelectedIndexChanged += new System.EventHandler(this.listBox1RechercheClient_SelectedIndexChanged);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel4.Controls.Add(this.buttonNvClient);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.label6);
-            this.panel4.Location = new System.Drawing.Point(41, 413);
+            this.panel4.Location = new System.Drawing.Point(41, 443);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(250, 42);
+            this.panel4.Size = new System.Drawing.Size(250, 110);
             this.panel4.TabIndex = 11;
+            // 
+            // buttonNvClient
+            // 
+            this.buttonNvClient.Location = new System.Drawing.Point(50, 44);
+            this.buttonNvClient.Name = "buttonNvClient";
+            this.buttonNvClient.Size = new System.Drawing.Size(153, 51);
+            this.buttonNvClient.TabIndex = 5;
+            this.buttonNvClient.Text = "Enregistrer un nouveau client";
+            this.buttonNvClient.UseVisualStyleBackColor = true;
+            this.buttonNvClient.Click += new System.EventHandler(this.buttonNvClient_Click);
             // 
             // label5
             // 
@@ -212,60 +211,6 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(0, 20);
             this.label6.TabIndex = 5;
-            // 
-            // textBoxNom
-            // 
-            this.textBoxNom.Location = new System.Drawing.Point(41, 465);
-            this.textBoxNom.Name = "textBoxNom";
-            this.textBoxNom.PlaceholderText = "Nom";
-            this.textBoxNom.Size = new System.Drawing.Size(250, 27);
-            this.textBoxNom.TabIndex = 13;
-            this.textBoxNom.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBoxPrenom
-            // 
-            this.textBoxPrenom.Location = new System.Drawing.Point(41, 498);
-            this.textBoxPrenom.Name = "textBoxPrenom";
-            this.textBoxPrenom.PlaceholderText = "Prénom";
-            this.textBoxPrenom.Size = new System.Drawing.Size(250, 27);
-            this.textBoxPrenom.TabIndex = 14;
-            this.textBoxPrenom.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBoxVille
-            // 
-            this.textBoxVille.Location = new System.Drawing.Point(41, 532);
-            this.textBoxVille.Name = "textBoxVille";
-            this.textBoxVille.PlaceholderText = "Ville";
-            this.textBoxVille.Size = new System.Drawing.Size(151, 27);
-            this.textBoxVille.TabIndex = 15;
-            this.textBoxVille.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBoxCP
-            // 
-            this.textBoxCP.Location = new System.Drawing.Point(198, 532);
-            this.textBoxCP.Name = "textBoxCP";
-            this.textBoxCP.PlaceholderText = "Code Postal";
-            this.textBoxCP.Size = new System.Drawing.Size(93, 27);
-            this.textBoxCP.TabIndex = 16;
-            this.textBoxCP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBoxTel
-            // 
-            this.textBoxTel.Location = new System.Drawing.Point(41, 565);
-            this.textBoxTel.Name = "textBoxTel";
-            this.textBoxTel.PlaceholderText = "Téléphone";
-            this.textBoxTel.Size = new System.Drawing.Size(250, 27);
-            this.textBoxTel.TabIndex = 17;
-            this.textBoxTel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // buttonEnregistrerClient
-            // 
-            this.buttonEnregistrerClient.Location = new System.Drawing.Point(73, 600);
-            this.buttonEnregistrerClient.Name = "buttonEnregistrerClient";
-            this.buttonEnregistrerClient.Size = new System.Drawing.Size(185, 31);
-            this.buttonEnregistrerClient.TabIndex = 5;
-            this.buttonEnregistrerClient.Text = "Enregistrer le client";
-            this.buttonEnregistrerClient.UseVisualStyleBackColor = true;
             // 
             // buttonAnnulerCommand
             // 
@@ -306,19 +251,22 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.label7.TabIndex = 4;
             this.label7.Text = " Valider le ticket";
             // 
+            // labelNomClient
+            // 
+            this.labelNomClient.Location = new System.Drawing.Point(32, 64);
+            this.labelNomClient.Name = "labelNomClient";
+            this.labelNomClient.Size = new System.Drawing.Size(185, 20);
+            this.labelNomClient.TabIndex = 6;
+            this.labelNomClient.Text = "-";
+            this.labelNomClient.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // AccueilVente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1137, 644);
+            this.ClientSize = new System.Drawing.Size(1137, 615);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.buttonAnnulerCommand);
-            this.Controls.Add(this.buttonEnregistrerClient);
-            this.Controls.Add(this.textBoxTel);
-            this.Controls.Add(this.textBoxCP);
-            this.Controls.Add(this.textBoxVille);
-            this.Controls.Add(this.textBoxPrenom);
-            this.Controls.Add(this.textBoxNom);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.listBox1RechercheClient);
             this.Controls.Add(this.textBoxRechercheClient);
@@ -351,7 +299,6 @@ namespace ZumbaSoft.Fenetres_Ventes
         private System.Windows.Forms.Button buttonCatalogueProd;
         private System.Windows.Forms.Label labelCatalogue;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label labelNomClient;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
@@ -362,15 +309,11 @@ namespace ZumbaSoft.Fenetres_Ventes
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBoxNom;
-        private System.Windows.Forms.TextBox textBoxPrenom;
-        private System.Windows.Forms.TextBox textBoxVille;
-        private System.Windows.Forms.TextBox textBoxCP;
-        private System.Windows.Forms.TextBox textBoxTel;
-        private System.Windows.Forms.Button buttonEnregistrerClient;
         private System.Windows.Forms.Button buttonAnnulerCommand;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button buttonFacture;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button buttonNvClient;
+        private System.Windows.Forms.Label labelNomClient;
     }
 }

@@ -5,21 +5,34 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using SQLite;
+using SQLiteNetExtensions.Extensions;
+using ZumbaSoft.Model;
 
 namespace ZumbaSoft.Fenetres_Ventes
 {
     public partial class AccueilVente : Form
     {
-        public AccueilVente()
+        SQLiteConnection DB;
+        public Client client;
+        
+        public AccueilVente(SQLiteConnection db)
         {
             InitializeComponent();
-            initChamps();
+            DB = db;
+            initListClients();
         }
 
-        public void initChamps()
+
+        public void initListClients()
         {
-            
+            listBox1RechercheClient.Items.Clear();
+            foreach(Client c in DB.GetAllWithChildren<Client>())
+            {
+                listBox1RechercheClient.Items.Add(c);
+            }
         }
+
 
         private void AccueilVentes_Load(object sender, EventArgs e)
         {
@@ -46,6 +59,33 @@ namespace ZumbaSoft.Fenetres_Ventes
             itm = new ListViewItem(arr);
             listView1.Items.Add(itm);
             */
+        }
+
+        private void buttonNvClient_Click(object sender, EventArgs e)
+        {
+            NouveauClient nvc = new NouveauClient(DB);
+            if (nvc.ShowDialog() == DialogResult.OK)
+            {
+                initListClients();
+            }
+            
+        }
+
+        private void textBoxRechercheClient_TextChanged(object sender, EventArgs e)
+        {
+            listBox1RechercheClient.Items.Clear();
+            string searche = textBoxRechercheClient.Text.ToUpper();
+            List<Client> clientsSearched = DB.GetAllWithChildren<Client>().FindAll(p => p.nom.ToUpper().Contains(searche));
+            foreach (Client p in clientsSearched)
+            {
+                listBox1RechercheClient.Items.Add(p);
+            }
+        }
+
+        private void listBox1RechercheClient_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            client = (Client)listBox1RechercheClient.SelectedItem;
+            labelNomClient.Text = client.ToString();
         }
     }
 }
