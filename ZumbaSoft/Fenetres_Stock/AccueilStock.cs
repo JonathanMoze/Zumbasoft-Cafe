@@ -9,6 +9,8 @@ using SQLite;
 using SQLiteNetExtensions.Extensions;
 using ZumbaSoft.Model;
 using ZumbaSoft.Fenetres_Commande;
+using System.Diagnostics.CodeAnalysis;
+using System.Linq;
 
 namespace ZumbaSoft.Fenetres_Stock
 {
@@ -22,96 +24,45 @@ namespace ZumbaSoft.Fenetres_Stock
             InitializeComponent();
             DB = db;
             magasin = new Magasin();
-            initListStock();
-            initListCommandes();
+            initTableauAndFieldsStock();
+            initTableauCommandes();
         }
-
-        private void initListStock()
+        /// <summary>
+        /// Fill the grid of all product in stock using the DataBase.
+        /// </summary>
+        private void initTableauAndFieldsStock()
         {
-            List<ProduitEnStock> stock = DB.GetAllWithChildren<ProduitEnStock>(); //Et non pas Table<T>().ToList() car sinon magasin et produit sont null
-            if(stock.Count > 0)
+            //Init Tableau
+            int nbArticle = 0;
+            float valStock = 0F;
+            List<ProduitEnStock> stock = DB.GetAllWithChildren<ProduitEnStock>(); //.FindAll(p => p.magasin.id_magasin == magasin.id_magasin);
+            foreach (ProduitEnStock pEs in stock)
             {
-                foreach (ProduitEnStock ps in stock)
-                {
-                    listStock.Items.Add(ps);
-                }
+                nbArticle += pEs.quantite;
+                valStock += pEs.quantite * pEs.produit.prix_vente_TTC;
+                object[] row = { pEs.id_produit, pEs.produit.nom, pEs.produit.fournisseur, pEs.quantite, pEs.produit.prix_vente_TTC, pEs.produit.etat };
+                tableauStock.Rows.Add(row);
             }
-            else
-            {
-                listStock.Items.Add("Aucun produit en stock.");
-            }
+            //Init Fields
+            textBoxNbArticle.Text = nbArticle.ToString();
+            textBoxValeurStk.Text = valStock.ToString() + " €";
         }
-
-        private void initListCommandes()
+        /// <summary>
+        /// Fill the grid of all command using the DataBase.
+        /// </summary>
+        private void initTableauCommandes()
         {
             List<Commande> commandes = DB.GetAllWithChildren<Commande>();
-            if(commandes.Count > 0)
+            foreach (Commande commande in commandes)
             {
-                foreach(Commande cmd in commandes)
+                commande.PTC = DB.GetAllWithChildren<ProduitToCommande>().FindAll(ptc => ptc.id_commande == commande.id_commande);
+                float totalTTC = 0F;
+                foreach(ProduitToCommande pTc in commande.PTC)
                 {
-                    listBoxCommandes.Items.Add(cmd);
+                    totalTTC += pTc.produit.prix_achat_TTC * pTc.quantite;
                 }
-            }
-            else
-            {
-                listBoxCommandes.Items.Add("Aucune commande en cours.");
-            }
-        }
-        private ProduitEnStock initObjectStock()
-        {
-            ProduitEnStock produitEnStock = new ProduitEnStock();
-            produitEnStock.quantite = (int)barreQuantite.Value;
-            produitEnStock.produit = (Produit)listBoxProduits.SelectedItem;
-            produitEnStock.magasin = magasin;
-            return produitEnStock;
-        }
-
-        private bool isFieldNewPrdValid()
-        {
-            if(listBoxProduits.SelectedItem == null)
-            {
-                labelErreurListPrd.Visible = true;
-                return false;
-            }
-            if(barreQuantite.Value == 0)
-            {
-                labelErreurBarreQtt.Visible = true;
-                return false;
-            }
-            return true;
-        }
-
-        private void buttonAjouterStock_Click(object sender, EventArgs e)
-        {
-            if (isFieldNewPrdValid())
-            {
-                ProduitEnStock produit = initObjectStock();
-                DB.InsertWithChildren(produit);
-                majListStock(produit);
-            }
-        }
-
-        private void majListStock(ProduitEnStock produitEnStock)
-        {
-            if(listStock.Items[0].Equals("Aucun produit en stock."))
-            {
-                listStock.Items.Clear();
-            }
-            listStock.Items.Add(produitEnStock);
-        }
-
-        private void majListCommandes(Commande cmd)
-        {
-            
-        }
-
-        private void buttonSuppStock_Click(object sender, EventArgs e)
-        {
-            var ps = (ProduitEnStock)listStock.SelectedItem;
-            SupprimerStock supprimer = new SupprimerStock(ps, DB);
-            if (supprimer.ShowDialog() == DialogResult.OK)
-            {
-                listStock.Items.Remove(ps);
+                object[] row = { commande.reference, commande.dateCommande, commande.fournisseur, commande.etat, totalTTC };
+                tableauCommandes.Rows.Add(row);
             }
         }
 
@@ -121,57 +72,228 @@ namespace ZumbaSoft.Fenetres_Stock
             this.Close();
         }
 
-        private void barreQuantite_ValueChanged(object sender, EventArgs e)
-        {
-            if (labelErreurBarreQtt.Visible)
-            {
-                labelErreurBarreQtt.Visible = false;
-            }
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            string searche = textBox1.Text.ToUpper();
-            List<Produit> produitsSearched = DB.Table<Produit>().Where(p => p.nom.ToUpper().Contains(searche)).ToList();
-            listBoxProduits.Items.Clear();
-            foreach (Produit p in produitsSearched)
-            {
-                listBoxProduits.Items.Add(p);
-            }
-
-        }
-
         private void buttonNouvelleCmd_Click(object sender, EventArgs e)
         {
             GestionDeLaCommande gc = new GestionDeLaCommande(DB,magasin);
             if(gc.ShowDialog() == DialogResult.OK)
             {
-                if (listBoxCommandes.Items[0].Equals("Aucune commande en cours."))
+                float totalTTC = 0F;
+                foreach (ProduitToCommande pTc in gc.commande.PTC)
                 {
-                    listStock.Items.Clear();
+                    totalTTC += pTc.produit.prix_achat_TTC * pTc.quantite;
                 }
-                listBoxCommandes.Items.Add(gc.commande);
-
-                DB.InsertWithChildren(gc.commande);
+                object[] row = { gc.commande.reference, gc.commande.dateCommande, gc.commande.fournisseur, gc.commande.etat, totalTTC };
+                tableauCommandes.Rows.Add(row);
             }
         }
 
         private void buttonModifierCmd_Click(object sender, EventArgs e)
         {
-            GestionDeLaCommande gc = new GestionDeLaCommande(DB, (Commande)listBoxCommandes.SelectedItem);
-            if(gc.ShowDialog() == DialogResult.OK)
+            List<Commande> commandes = DB.GetAllWithChildren<Commande>();
+            Commande commande;
+            DataGridViewRow row;
+            if (tableauCommandes.SelectedRows.Count != 0)
             {
-                listBoxCommandes.Items.Remove(listBoxCommandes.SelectedItem);
-                listBoxCommandes.Items.Add(gc.commande);
+                row = tableauCommandes.SelectedRows[0];
+                commande = commandes.Find(c => c.reference == row.Cells[0].Value.ToString());
+            }
+            else
+            {
+                row = tableauCommandes.SelectedCells[0].OwningRow;
+                commande = commandes.Find(c => c.reference == row.Cells[0].Value.ToString());
+            }
 
+            commande.PTC = DB.GetAllWithChildren<ProduitToCommande>().FindAll(ptc => ptc.id_commande == commande.id_commande);
 
-                DB.UpdateWithChildren(gc.commande);
+            GestionDeLaCommande gc = new GestionDeLaCommande(DB, commande);
+            if (gc.ShowDialog() == DialogResult.OK)
+            {
+                float totalTTC;
+                switch (gc.commande.etat)
+                {
+                    case Commande.EnumEtatCmd.Commande:
+                        tableauCommandes.Rows.Remove(row);
+                        totalTTC = 0F;
+                        foreach (ProduitToCommande pTc in gc.commande.PTC)
+                        {
+                            totalTTC += pTc.produit.prix_achat_TTC * pTc.quantite;
+                        }
+                        object[] newRow1 = { gc.commande.reference, gc.commande.dateCommande, gc.commande.fournisseur, gc.commande.etat, totalTTC };
+                        tableauCommandes.Rows.Add(newRow1);
+                        break;
+
+                    case Commande.EnumEtatCmd.Livre:
+                        tableauCommandes.Rows.Remove(row);
+                        totalTTC = 0F;
+                        foreach (ProduitToCommande pTc in gc.commande.PTC)
+                        {
+                            totalTTC += pTc.produit.prix_achat_TTC * pTc.quantite;
+                        }
+                        object[] newRow2 = { gc.commande.reference, gc.commande.dateCommande, gc.commande.fournisseur, gc.commande.etat, totalTTC };
+                        tableauCommandes.Rows.Add(newRow2);
+                        transferToStock(commande);
+                        break;
+
+                    case Commande.EnumEtatCmd.Receptionne:
+                        tableauCommandes.Rows.Remove(row);
+                        totalTTC = 0F;
+                        foreach (ProduitToCommande pTc in gc.commande.PTC)
+                        {
+                            totalTTC += pTc.produit.prix_achat_TTC * pTc.quantite;
+                        }
+                        object[] newRow3 = { gc.commande.reference, gc.commande.dateCommande, gc.commande.fournisseur, gc.commande.etat, totalTTC };
+                        tableauCommandes.Rows.Add(newRow3);
+                        transferToStock(commande);
+                        break;
+                }
+            }
+            else if(gc.DialogResult == DialogResult.No)
+            {
+                foreach (ProduitToCommande ptc in commande.PTC)
+                {
+                    DB.Delete(ptc);
+                }
+                DB.Delete(commande);
+                tableauCommandes.Rows.Remove(row);
             }
         }
 
-        private void buttonAnnulerCmd_Click(object sender, EventArgs e)
+        private void transferToStock(Commande commande)
+        {
+            List<ProduitEnStock> allPes = DB.GetAllWithChildren<ProduitEnStock>().FindAll(pes => pes.id_magasin == commande.id_magasin);
+            List<Produit> stock = new List<Produit>();
+            foreach (ProduitEnStock pes in allPes)
+            {
+                stock.Add(pes.produit);
+            }
+
+            foreach (ProduitToCommande ptc in commande.PTC)
+            {
+                Produit produit = DB.GetWithChildren<Produit>(ptc.id_produit);
+
+                if (stock.Contains(produit, new ProduitComparer()))
+                {
+                    ProduitEnStock pes = allPes.Find(pes => pes.id_produit == produit.id_produit);
+                    switch (commande.etat)
+                    {
+                        case Commande.EnumEtatCmd.Livre:
+                            if(pes.produit.etat == EtatEnum.Rupture)
+                            {
+                                pes.produit.etat = EtatEnum.AttenteLivraison;
+                                DB.UpdateWithChildren(pes.produit);
+                                pes.quantite += ptc.quantite;
+                                DB.UpdateWithChildren(pes);
+                            }
+                            break;
+
+                        case Commande.EnumEtatCmd.Receptionne:
+                            if(pes.produit.etat == EtatEnum.EnStock)
+                            {
+                                pes.quantite += ptc.quantite;
+                                DB.UpdateWithChildren(pes);
+                            }else
+                            {
+                                pes.produit.etat = EtatEnum.EnStock;
+                                DB.UpdateWithChildren(pes.produit);
+                                pes.quantite += ptc.quantite;
+                                DB.UpdateWithChildren(pes);
+                            }
+                            break;
+                    }
+                }
+                else
+                {
+                    if(commande.etat == Commande.EnumEtatCmd.Livre)
+                    {
+                        produit.etat = EtatEnum.AttenteLivraison;
+                        DB.UpdateWithChildren(produit);
+
+                        ProduitEnStock pes = new ProduitEnStock() { magasin = commande.magasin, produit = produit, quantite = ptc.quantite };
+                        DB.InsertWithChildren(pes);
+                    }
+                    else
+                    {
+                        produit.etat = EtatEnum.EnStock;
+                        DB.UpdateWithChildren(produit);
+
+                        ProduitEnStock pes = new ProduitEnStock() { magasin = commande.magasin, produit = produit, quantite = ptc.quantite };
+                        DB.InsertWithChildren(pes);
+                    }
+                }
+            }
+            tableauStock.Rows.Clear();
+            initTableauAndFieldsStock();
+        }
+
+        public class ProduitComparer : IEqualityComparer<Produit>
+        {
+            public bool Equals([AllowNull] Produit x, [AllowNull] Produit y)
+            {
+                return x.nom == y.nom;
+            }
+
+            public int GetHashCode([DisallowNull] Produit obj)
+            {
+                return obj.GetHashCode();
+            }
+        }
+
+        private void buttonSuppCmd_Click(object sender, EventArgs e)
+        {
+            List<Commande> commandes = DB.GetAllWithChildren<Commande>();
+            Commande commande;
+            DataGridViewRow row;
+            if (tableauCommandes.SelectedRows.Count != 0)
+            {
+                row = tableauCommandes.SelectedRows[0];
+                commande = commandes.Find(c => c.reference == row.Cells[0].Value.ToString());
+            }
+            else
+            {
+                row = tableauCommandes.SelectedCells[0].OwningRow;
+                commande = commandes.Find(c => c.reference == row.Cells[0].Value.ToString());
+            }
+
+            ConfirmationSupressionCommande csc = new ConfirmationSupressionCommande();
+            if(csc.ShowDialog() == DialogResult.OK)
+            {
+                foreach(ProduitToCommande ptc in commande.PTC)
+                {
+                    DB.Delete(ptc);
+                }
+                DB.Delete(commande);
+                tableauCommandes.Rows.Remove(row);
+            }
+        }
+
+        private void buttonAjouterStk_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonSupprimerStk_Click(object sender, EventArgs e)
+        {
+            List<ProduitEnStock> allPes = DB.GetAllWithChildren<ProduitEnStock>();
+            ProduitEnStock pes;
+            DataGridViewRow row;
+            if (tableauStock.SelectedRows.Count != 0)
+            {
+                row = tableauStock.SelectedRows[0];
+                pes = allPes.Find(pes => pes.id_produit.ToString() == row.Cells[0].Value.ToString());
+            }
+            else
+            {
+                row = tableauStock.SelectedCells[0].OwningRow;
+                pes = allPes.Find(pes => pes.id_produit.ToString() == row.Cells[0].Value.ToString());
+            }
+
+            SupprimerStock ss = new SupprimerStock(pes,DB);
+            if(ss.ShowDialog() == DialogResult.OK)
+            {
+                tableauStock.Rows.Clear();
+                initTableauAndFieldsStock();
+            }
+            
         }
     }
 

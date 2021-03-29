@@ -29,74 +29,79 @@ namespace ZumbaSoft.Fenetres_Stock
         /// </summary>
         private void InitializeComponent()
         {
-            this.listStock = new System.Windows.Forms.ListBox();
             this.labelListProdStock = new System.Windows.Forms.Label();
-            this.buttonAjouterStock = new System.Windows.Forms.Button();
             this.buttonSuppStock = new System.Windows.Forms.Button();
             this.buttonAccueil = new System.Windows.Forms.Button();
-            this.labelRechercheProd = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.labelProduit = new System.Windows.Forms.Label();
-            this.listBoxProduits = new System.Windows.Forms.ListBox();
-            this.barreQuantite = new System.Windows.Forms.NumericUpDown();
-            this.labelQuantiteStock = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.labelErreurListPrd = new System.Windows.Forms.Label();
-            this.labelErreurBarreQtt = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.listBoxCommandes = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonNouvelleCmd = new System.Windows.Forms.Button();
             this.buttonModifierCmd = new System.Windows.Forms.Button();
-            this.buttonAnnulerCmd = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.barreQuantite)).BeginInit();
+            this.tableauCommandes = new System.Windows.Forms.DataGridView();
+            this.reference = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateDeCommande = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fournisseur = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.etat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prixTotalTTC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableauStock = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomArticle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantite = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prixUnitaire = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBoxValeurStk = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.buttonAjouterStk = new System.Windows.Forms.Button();
+            this.buttonSupprimerStk = new System.Windows.Forms.Button();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBoxNbArticle = new System.Windows.Forms.TextBox();
+            this.labelDate = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.tableauCommandes)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tableauStock)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // listStock
-            // 
-            this.listStock.FormattingEnabled = true;
-            this.listStock.ItemHeight = 25;
-            this.listStock.Location = new System.Drawing.Point(13, 174);
-            this.listStock.Margin = new System.Windows.Forms.Padding(4);
-            this.listStock.Name = "listStock";
-            this.listStock.Size = new System.Drawing.Size(476, 354);
-            this.listStock.TabIndex = 0;
             // 
             // labelListProdStock
             // 
+            this.labelListProdStock.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelListProdStock.AutoSize = true;
-            this.labelListProdStock.Location = new System.Drawing.Point(13, 145);
+            this.labelListProdStock.Location = new System.Drawing.Point(13, 113);
             this.labelListProdStock.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelListProdStock.Name = "labelListProdStock";
             this.labelListProdStock.Size = new System.Drawing.Size(223, 25);
             this.labelListProdStock.TabIndex = 1;
             this.labelListProdStock.Text = "Liste des produits en stock";
             // 
-            // buttonAjouterStock
-            // 
-            this.buttonAjouterStock.Location = new System.Drawing.Point(1532, 535);
-            this.buttonAjouterStock.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonAjouterStock.Name = "buttonAjouterStock";
-            this.buttonAjouterStock.Size = new System.Drawing.Size(118, 36);
-            this.buttonAjouterStock.TabIndex = 2;
-            this.buttonAjouterStock.Text = "Ajouter";
-            this.buttonAjouterStock.UseVisualStyleBackColor = true;
-            this.buttonAjouterStock.Click += new System.EventHandler(this.buttonAjouterStock_Click);
-            // 
             // buttonSuppStock
             // 
-            this.buttonSuppStock.Location = new System.Drawing.Point(13, 535);
-            this.buttonSuppStock.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonSuppStock.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSuppStock.Location = new System.Drawing.Point(10, 511);
+            this.buttonSuppStock.Margin = new System.Windows.Forms.Padding(10, 70, 10, 70);
             this.buttonSuppStock.Name = "buttonSuppStock";
-            this.buttonSuppStock.Size = new System.Drawing.Size(132, 36);
+            this.buttonSuppStock.Size = new System.Drawing.Size(125, 51);
             this.buttonSuppStock.TabIndex = 4;
             this.buttonSuppStock.Text = "Supprimer";
             this.buttonSuppStock.UseVisualStyleBackColor = true;
-            this.buttonSuppStock.Click += new System.EventHandler(this.buttonSuppStock_Click);
+            this.buttonSuppStock.Click += new System.EventHandler(this.buttonSuppCmd_Click);
             // 
             // buttonAccueil
             // 
-            this.buttonAccueil.Location = new System.Drawing.Point(752, 631);
+            this.buttonAccueil.Location = new System.Drawing.Point(13, 786);
             this.buttonAccueil.Margin = new System.Windows.Forms.Padding(4);
             this.buttonAccueil.Name = "buttonAccueil";
             this.buttonAccueil.Size = new System.Drawing.Size(118, 36);
@@ -105,124 +110,35 @@ namespace ZumbaSoft.Fenetres_Stock
             this.buttonAccueil.UseVisualStyleBackColor = true;
             this.buttonAccueil.Click += new System.EventHandler(this.buttonAccueil_Click);
             // 
-            // labelRechercheProd
-            // 
-            this.labelRechercheProd.AutoSize = true;
-            this.labelRechercheProd.Location = new System.Drawing.Point(1237, 190);
-            this.labelRechercheProd.Name = "labelRechercheProd";
-            this.labelRechercheProd.Size = new System.Drawing.Size(100, 25);
-            this.labelRechercheProd.TabIndex = 27;
-            this.labelRechercheProd.Text = "Recherche :";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(1343, 187);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(308, 31);
-            this.textBox1.TabIndex = 26;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // labelProduit
-            // 
-            this.labelProduit.AutoSize = true;
-            this.labelProduit.Location = new System.Drawing.Point(1139, 196);
-            this.labelProduit.Name = "labelProduit";
-            this.labelProduit.Size = new System.Drawing.Size(79, 25);
-            this.labelProduit.TabIndex = 25;
-            this.labelProduit.Text = "Produit :";
-            // 
-            // listBoxProduits
-            // 
-            this.listBoxProduits.FormattingEnabled = true;
-            this.listBoxProduits.ItemHeight = 25;
-            this.listBoxProduits.Location = new System.Drawing.Point(1224, 224);
-            this.listBoxProduits.Name = "listBoxProduits";
-            this.listBoxProduits.Size = new System.Drawing.Size(427, 304);
-            this.listBoxProduits.TabIndex = 24;
-            // 
-            // barreQuantite
-            // 
-            this.barreQuantite.Location = new System.Drawing.Point(1074, 375);
-            this.barreQuantite.Margin = new System.Windows.Forms.Padding(4);
-            this.barreQuantite.Name = "barreQuantite";
-            this.barreQuantite.Size = new System.Drawing.Size(125, 31);
-            this.barreQuantite.TabIndex = 21;
-            this.barreQuantite.ValueChanged += new System.EventHandler(this.barreQuantite_ValueChanged);
-            // 
-            // labelQuantiteStock
-            // 
-            this.labelQuantiteStock.AutoSize = true;
-            this.labelQuantiteStock.Location = new System.Drawing.Point(1074, 333);
-            this.labelQuantiteStock.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelQuantiteStock.Name = "labelQuantiteStock";
-            this.labelQuantiteStock.Size = new System.Drawing.Size(94, 25);
-            this.labelQuantiteStock.TabIndex = 20;
-            this.labelQuantiteStock.Text = "Quantité : ";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(1051, 140);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 31);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "Ajouter";
-            // 
-            // labelErreurListPrd
-            // 
-            this.labelErreurListPrd.AutoSize = true;
-            this.labelErreurListPrd.Location = new System.Drawing.Point(1224, 535);
-            this.labelErreurListPrd.Name = "labelErreurListPrd";
-            this.labelErreurListPrd.Size = new System.Drawing.Size(219, 25);
-            this.labelErreurListPrd.TabIndex = 28;
-            this.labelErreurListPrd.Text = "Veuillez choisir un produit.";
-            this.labelErreurListPrd.Visible = false;
-            // 
-            // labelErreurBarreQtt
-            // 
-            this.labelErreurBarreQtt.AutoSize = true;
-            this.labelErreurBarreQtt.Location = new System.Drawing.Point(1048, 410);
-            this.labelErreurBarreQtt.Name = "labelErreurBarreQtt";
-            this.labelErreurBarreQtt.Size = new System.Drawing.Size(170, 50);
-            this.labelErreurBarreQtt.TabIndex = 29;
-            this.labelErreurBarreQtt.Text = "Veuillez saisir la \r\nquantité de produit.";
-            this.labelErreurBarreQtt.Visible = false;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(13, 60);
+            this.label3.Location = new System.Drawing.Point(12, 31);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(131, 38);
             this.label3.TabIndex = 31;
             this.label3.Text = "Stock du ";
             // 
-            // listBoxCommandes
-            // 
-            this.listBoxCommandes.FormattingEnabled = true;
-            this.listBoxCommandes.ItemHeight = 25;
-            this.listBoxCommandes.Location = new System.Drawing.Point(497, 174);
-            this.listBoxCommandes.Name = "listBoxCommandes";
-            this.listBoxCommandes.Size = new System.Drawing.Size(483, 354);
-            this.listBoxCommandes.TabIndex = 32;
-            // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(497, 145);
+            this.label2.Location = new System.Drawing.Point(846, 113);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(239, 25);
+            this.label2.Size = new System.Drawing.Size(176, 25);
             this.label2.TabIndex = 33;
-            this.label2.Text = "Liste des comandes en cours";
+            this.label2.Text = "Liste des comandes :";
             // 
             // buttonNouvelleCmd
             // 
-            this.buttonNouvelleCmd.Location = new System.Drawing.Point(497, 535);
+            this.buttonNouvelleCmd.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonNouvelleCmd.Location = new System.Drawing.Point(10, 133);
+            this.buttonNouvelleCmd.Margin = new System.Windows.Forms.Padding(10, 70, 10, 70);
             this.buttonNouvelleCmd.Name = "buttonNouvelleCmd";
-            this.buttonNouvelleCmd.Size = new System.Drawing.Size(112, 34);
+            this.buttonNouvelleCmd.Size = new System.Drawing.Size(125, 49);
             this.buttonNouvelleCmd.TabIndex = 34;
             this.buttonNouvelleCmd.Text = "Nouvelle";
             this.buttonNouvelleCmd.UseVisualStyleBackColor = true;
@@ -230,79 +146,436 @@ namespace ZumbaSoft.Fenetres_Stock
             // 
             // buttonModifierCmd
             // 
-            this.buttonModifierCmd.Location = new System.Drawing.Point(681, 534);
+            this.buttonModifierCmd.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonModifierCmd.Location = new System.Drawing.Point(10, 302);
+            this.buttonModifierCmd.Margin = new System.Windows.Forms.Padding(10, 50, 10, 50);
             this.buttonModifierCmd.Name = "buttonModifierCmd";
-            this.buttonModifierCmd.Size = new System.Drawing.Size(112, 34);
+            this.buttonModifierCmd.Size = new System.Drawing.Size(125, 89);
             this.buttonModifierCmd.TabIndex = 35;
-            this.buttonModifierCmd.Text = "Modifier";
+            this.buttonModifierCmd.Text = "Afficher \r\n/\r\nModifier";
             this.buttonModifierCmd.UseVisualStyleBackColor = true;
             this.buttonModifierCmd.Click += new System.EventHandler(this.buttonModifierCmd_Click);
             // 
-            // buttonAnnulerCmd
+            // tableauCommandes
             // 
-            this.buttonAnnulerCmd.Location = new System.Drawing.Point(868, 534);
-            this.buttonAnnulerCmd.Name = "buttonAnnulerCmd";
-            this.buttonAnnulerCmd.Size = new System.Drawing.Size(112, 34);
-            this.buttonAnnulerCmd.TabIndex = 36;
-            this.buttonAnnulerCmd.Text = "Annuler";
-            this.buttonAnnulerCmd.UseVisualStyleBackColor = true;
-            this.buttonAnnulerCmd.Click += new System.EventHandler(this.buttonAnnulerCmd_Click);
+            this.tableauCommandes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableauCommandes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tableauCommandes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tableauCommandes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.reference,
+            this.dateDeCommande,
+            this.fournisseur,
+            this.etat,
+            this.prixTotalTTC});
+            this.tableauCommandes.Location = new System.Drawing.Point(834, 3);
+            this.tableauCommandes.MultiSelect = false;
+            this.tableauCommandes.Name = "tableauCommandes";
+            this.tableauCommandes.RowHeadersWidth = 62;
+            this.tableauCommandes.RowTemplate.Height = 33;
+            this.tableauCommandes.Size = new System.Drawing.Size(675, 632);
+            this.tableauCommandes.TabIndex = 37;
+            // 
+            // reference
+            // 
+            this.reference.HeaderText = "Référence";
+            this.reference.MinimumWidth = 8;
+            this.reference.Name = "reference";
+            // 
+            // dateDeCommande
+            // 
+            this.dateDeCommande.HeaderText = "Date de commande";
+            this.dateDeCommande.MinimumWidth = 8;
+            this.dateDeCommande.Name = "dateDeCommande";
+            // 
+            // fournisseur
+            // 
+            this.fournisseur.HeaderText = "Fournisseur";
+            this.fournisseur.MinimumWidth = 8;
+            this.fournisseur.Name = "fournisseur";
+            // 
+            // etat
+            // 
+            this.etat.HeaderText = "Etat";
+            this.etat.MinimumWidth = 8;
+            this.etat.Name = "etat";
+            // 
+            // prixTotalTTC
+            // 
+            this.prixTotalTTC.HeaderText = "Prix totale TTC";
+            this.prixTotalTTC.MinimumWidth = 8;
+            this.prixTotalTTC.Name = "prixTotalTTC";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.AutoSize = true;
+            this.tableLayoutPanel1.ColumnCount = 4;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 151F));
+            this.tableLayoutPanel1.Controls.Add(this.tableauCommandes, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.tableauStock, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 1, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 141);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1663, 638);
+            this.tableLayoutPanel1.TabIndex = 38;
+            // 
+            // tableauStock
+            // 
+            this.tableauStock.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableauStock.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tableauStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tableauStock.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.nomArticle,
+            this.dataGridViewTextBoxColumn2,
+            this.quantite,
+            this.prixUnitaire,
+            this.dataGridViewTextBoxColumn3});
+            this.tableauStock.Location = new System.Drawing.Point(3, 3);
+            this.tableauStock.Name = "tableauStock";
+            this.tableauStock.RowHeadersWidth = 62;
+            this.tableauStock.RowTemplate.Height = 33;
+            this.tableauStock.Size = new System.Drawing.Size(675, 632);
+            this.tableauStock.TabIndex = 38;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Identifiant";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // nomArticle
+            // 
+            this.nomArticle.HeaderText = "Article";
+            this.nomArticle.MinimumWidth = 8;
+            this.nomArticle.Name = "nomArticle";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Fournisseur";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // quantite
+            // 
+            this.quantite.HeaderText = "Quantité";
+            this.quantite.MinimumWidth = 8;
+            this.quantite.Name = "quantite";
+            // 
+            // prixUnitaire
+            // 
+            this.prixUnitaire.HeaderText = "Prix unitaire TTC";
+            this.prixUnitaire.MinimumWidth = 8;
+            this.prixUnitaire.Name = "prixUnitaire";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Etat";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Controls.Add(this.buttonSuppStock, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.buttonModifierCmd, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.buttonNouvelleCmd, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(1515, 3);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 4;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(145, 632);
+            this.tableLayoutPanel2.TabIndex = 39;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(139, 63);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "Gestion des commandes";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel5, 0, 5);
+            this.tableLayoutPanel3.Controls.Add(this.label4, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.label5, 0, 3);
+            this.tableLayoutPanel3.Controls.Add(this.buttonAjouterStk, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.buttonSupprimerStk, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 0, 4);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(684, 3);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 6;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(144, 632);
+            this.tableLayoutPanel3.TabIndex = 40;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel5.ColumnCount = 1;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Controls.Add(this.label7, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.textBoxValeurStk, 0, 1);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 507);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 2;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(138, 122);
+            this.tableLayoutPanel5.TabIndex = 5;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(3, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(132, 61);
+            this.label7.TabIndex = 39;
+            this.label7.Text = "Valeur des stocks :";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // textBoxValeurStk
+            // 
+            this.textBoxValeurStk.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxValeurStk.Enabled = false;
+            this.textBoxValeurStk.Location = new System.Drawing.Point(3, 71);
+            this.textBoxValeurStk.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
+            this.textBoxValeurStk.Name = "textBoxValeurStk";
+            this.textBoxValeurStk.Size = new System.Drawing.Size(132, 31);
+            this.textBoxValeurStk.TabIndex = 4;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label4.Location = new System.Drawing.Point(3, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(138, 63);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Gestion des stocks";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label5.Location = new System.Drawing.Point(3, 315);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(138, 63);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Infos sur les stocks";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // buttonAjouterStk
+            // 
+            this.buttonAjouterStk.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonAjouterStk.Location = new System.Drawing.Point(10, 103);
+            this.buttonAjouterStk.Margin = new System.Windows.Forms.Padding(10, 40, 10, 40);
+            this.buttonAjouterStk.Name = "buttonAjouterStk";
+            this.buttonAjouterStk.Size = new System.Drawing.Size(124, 46);
+            this.buttonAjouterStk.TabIndex = 2;
+            this.buttonAjouterStk.Text = "Ajouter";
+            this.buttonAjouterStk.UseVisualStyleBackColor = true;
+            this.buttonAjouterStk.Click += new System.EventHandler(this.buttonAjouterStk_Click);
+            // 
+            // buttonSupprimerStk
+            // 
+            this.buttonSupprimerStk.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSupprimerStk.Location = new System.Drawing.Point(10, 229);
+            this.buttonSupprimerStk.Margin = new System.Windows.Forms.Padding(10, 40, 10, 40);
+            this.buttonSupprimerStk.Name = "buttonSupprimerStk";
+            this.buttonSupprimerStk.Size = new System.Drawing.Size(124, 46);
+            this.buttonSupprimerStk.TabIndex = 3;
+            this.buttonSupprimerStk.Text = "Supprimer";
+            this.buttonSupprimerStk.UseVisualStyleBackColor = true;
+            this.buttonSupprimerStk.Click += new System.EventHandler(this.buttonSupprimerStk_Click);
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel4.ColumnCount = 1;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Controls.Add(this.label6, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.textBoxNbArticle, 0, 1);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 381);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 2;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(138, 120);
+            this.tableLayoutPanel4.TabIndex = 4;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(3, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(132, 60);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Nombre d\'articles :";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // textBoxNbArticle
+            // 
+            this.textBoxNbArticle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxNbArticle.Enabled = false;
+            this.textBoxNbArticle.Location = new System.Drawing.Point(3, 70);
+            this.textBoxNbArticle.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
+            this.textBoxNbArticle.Name = "textBoxNbArticle";
+            this.textBoxNbArticle.Size = new System.Drawing.Size(132, 31);
+            this.textBoxNbArticle.TabIndex = 5;
+            // 
+            // labelDate
+            // 
+            this.labelDate.AutoSize = true;
+            this.labelDate.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelDate.Location = new System.Drawing.Point(149, 31);
+            this.labelDate.Name = "labelDate";
+            this.labelDate.Size = new System.Drawing.Size(180, 38);
+            this.labelDate.TabIndex = 39;
+            this.labelDate.Text = "JJ/MM/AAAA";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(551, 31);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(139, 38);
+            this.label8.TabIndex = 40;
+            this.label8.Text = "MAGASIN";
             // 
             // AccueilStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1663, 680);
-            this.Controls.Add(this.buttonAnnulerCmd);
-            this.Controls.Add(this.buttonModifierCmd);
-            this.Controls.Add(this.buttonNouvelleCmd);
+            this.ClientSize = new System.Drawing.Size(1687, 835);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.labelDate);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.listBoxCommandes);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.labelErreurBarreQtt);
-            this.Controls.Add(this.labelErreurListPrd);
-            this.Controls.Add(this.labelRechercheProd);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.labelProduit);
-            this.Controls.Add(this.listBoxProduits);
-            this.Controls.Add(this.barreQuantite);
-            this.Controls.Add(this.labelQuantiteStock);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonAccueil);
-            this.Controls.Add(this.buttonSuppStock);
-            this.Controls.Add(this.buttonAjouterStock);
             this.Controls.Add(this.labelListProdStock);
-            this.Controls.Add(this.listStock);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AccueilStock";
             this.Text = "AccueilStock";
-            ((System.ComponentModel.ISupportInitialize)(this.barreQuantite)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableauCommandes)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tableauStock)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel5.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox listStock;
         private System.Windows.Forms.Label labelListProdStock;
-        private System.Windows.Forms.Button buttonAjouterStock;
         private System.Windows.Forms.Button buttonSuppStock;
         private System.Windows.Forms.Button buttonAccueil;
-        private System.Windows.Forms.Label labelRechercheProd;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label labelProduit;
-        private System.Windows.Forms.ListBox listBoxProduits;
-        private System.Windows.Forms.NumericUpDown barreQuantite;
-        private System.Windows.Forms.Label labelQuantiteStock;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label labelErreurListPrd;
-        private System.Windows.Forms.Label labelErreurBarreQtt;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListBox listBoxCommandes;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonNouvelleCmd;
         private System.Windows.Forms.Button buttonModifierCmd;
-        private System.Windows.Forms.Button buttonAnnulerCmd;
+        private System.Windows.Forms.DataGridView tableauCommandes;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.DataGridView tableauStock;
+        private System.Windows.Forms.DataGridViewTextBoxColumn reference;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateDeCommande;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fournisseur;
+        private System.Windows.Forms.DataGridViewTextBoxColumn etat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prixTotalTTC;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBoxValeurStk;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button buttonAjouterStk;
+        private System.Windows.Forms.Button buttonSupprimerStk;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBoxNbArticle;
+        private System.Windows.Forms.Label labelDate;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomArticle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantite;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prixUnitaire;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
     }
 }

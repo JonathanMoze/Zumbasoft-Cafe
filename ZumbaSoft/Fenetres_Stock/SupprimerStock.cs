@@ -15,7 +15,9 @@ namespace ZumbaSoft.Fenetres_Stock
     {
 
         SQLiteConnection DB;
-        ProduitEnStock PES;
+        public ProduitEnStock PES;
+        public bool allDeleted;
+
         public SupprimerStock(ProduitEnStock ps, SQLiteConnection db)
         {
             InitializeComponent();

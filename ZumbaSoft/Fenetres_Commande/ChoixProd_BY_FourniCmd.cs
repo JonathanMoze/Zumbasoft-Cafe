@@ -12,26 +12,35 @@ using ZumbaSoft.Model;
 
 namespace ZumbaSoft.Fenetres_Commande
 {
-    public partial class ChoixProd_BY_Fourni : Form
+    public partial class ChoixProd_BY_FourniCmd : Form
     {
         private SQLiteConnection DB;
         private Fournisseur fournisseur;
+        private List<Produit> produits;
         public ProduitToCommande pTc;
-        public ChoixProd_BY_Fourni(SQLiteConnection db, Fournisseur f)
+        public ChoixProd_BY_FourniCmd(SQLiteConnection db, Fournisseur f,List<Produit> p)
         {
             InitializeComponent();
             DB = db;
             fournisseur = f;
+            produits = p;
             labelProduit.Text += fournisseur.nom + " :";
             initListProd();
         }
 
         private void initListProd()
         {
-            List<Produit> produits = DB.GetAllWithChildren<Produit>().FindAll(p => p.fournisseur.nom == fournisseur.nom);
-            foreach (Produit produit in produits)
+            if(produits.Count > 0)
             {
-                listBoxProduits.Items.Add(produit);
+                foreach (Produit produit in produits)
+                {
+                    listBoxProduits.Items.Add(produit);
+                }
+            }
+            else
+            {
+                listBoxProduits.Items.Add("Aucun autre produit.");
+                buttonAjouter.Enabled = false;
             }
         }
 
@@ -45,7 +54,7 @@ namespace ZumbaSoft.Fenetres_Commande
         private void textBoxRecherchePrd_TextChanged(object sender, EventArgs e)
         {
             string searche = textBoxRecherchePrd.Text.ToUpper();
-            List<Produit> produitsSearched = DB.GetAllWithChildren<Produit>().FindAll(p => p.nom.ToUpper().Contains(searche) && p.fournisseur.nom == fournisseur.nom);
+            List<Produit> produitsSearched = produits.FindAll(p => p.nom.ToUpper().Contains(searche));
             listBoxProduits.Items.Clear();
             foreach (Produit p in produitsSearched)
             {

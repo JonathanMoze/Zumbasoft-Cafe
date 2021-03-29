@@ -34,7 +34,6 @@ namespace ZumbaSoft
         {
             string databasePath = System.IO.Path.GetFullPath("./../../../DataBase.db");
             SQLiteConnection db = new SQLiteConnection(databasePath);
-            db.DropTable<ProduitToCommande>();
             db.CreateTable<Adresse>();
             db.CreateTable<Genre>();
             db.CreateTable<Produit>();

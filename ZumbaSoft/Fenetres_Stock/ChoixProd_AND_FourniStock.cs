@@ -8,18 +8,18 @@ using System.Windows.Forms;
 using ZumbaSoft.Model;
 using SQLite;
 using SQLiteNetExtensions.Extensions;
-using System.Linq;
 using System.Diagnostics.CodeAnalysis;
+using System.Linq;
 
-namespace ZumbaSoft.Fenetres_Commande
+namespace ZumbaSoft.Fenetres_Stock
 {
-    public partial class ChoixProd_AND_Fourni : Form
+    public partial class ChoixProd_AND_FourniStock : Form
     {
         SQLiteConnection DB;
-        public ProduitToCommande pTc;
+        public ProduitEnStock pes;
         public Fournisseur fournisseur;
 
-        public ChoixProd_AND_Fourni(SQLiteConnection db)
+        public ChoixProd_AND_FourniStock(SQLiteConnection db)
         {
             InitializeComponent();
             DB = db;
@@ -66,12 +66,11 @@ namespace ZumbaSoft.Fenetres_Commande
         /// </summary>
         private void initListFournisseur()
         {
-            ProduitComparer produitComparer = new ProduitComparer();
-            List<Fournisseur> listFourni = DB.GetAllWithChildren<Fournisseur>().FindAll(f => f.produits.Contains(pTc.produit,produitComparer));
+            List<Fournisseur> listFourni = DB.GetAllWithChildren<Fournisseur>().FindAll(f => f.produits.Contains(pes.produit,new ProduitComparer()));
 
-            if(listFourni.Count > 0)
+            if (listFourni.Count > 0)
             {
-                foreach(Fournisseur f in listFourni)
+                foreach (Fournisseur f in listFourni)
                 {
                     listBoxFournisseur.Items.Add(f);
                 }
@@ -133,9 +132,9 @@ namespace ZumbaSoft.Fenetres_Commande
         /// <param name="e"></param>
         private void buttonSelectionner_Click(object sender, EventArgs e)
         {
-            if(barreQuantite.Value != 0)
+            if (barreQuantite.Value != 0)
             {
-                pTc = new ProduitToCommande() { produit = (Produit)listBoxProduits.SelectedItem, quantite = (int)barreQuantite.Value };
+                pes = new ProduitEnStock() { produit = (Produit)listBoxProduits.SelectedItem, quantite = (int)barreQuantite.Value };
                 swithToFourni();
             }
             else
@@ -171,5 +170,17 @@ namespace ZumbaSoft.Fenetres_Commande
                 labelErreurBarreQtt.Visible = false;
             }
         }
+
+        private void textBoxRechercheFourni_TextChanged(object sender, EventArgs e)
+        {
+            string searche = textBoxRechercheFourni.Text.ToUpper();
+            List<Fournisseur> fourniSearched = DB.GetAllWithChildren<Fournisseur>().FindAll(f => f.nom.ToUpper().Contains(searche) && f.produits.Contains<Produit>(pes.produit));
+            listBoxProduits.Items.Clear();
+            foreach (Fournisseur f in fourniSearched)
+            {
+                listBoxFournisseur.Items.Add(f);
+            }
+        }
+
     }
 }

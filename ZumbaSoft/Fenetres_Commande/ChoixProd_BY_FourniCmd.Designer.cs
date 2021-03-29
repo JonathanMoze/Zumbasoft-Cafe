@@ -1,7 +1,7 @@
 ﻿
 namespace ZumbaSoft.Fenetres_Commande
 {
-    partial class ChoixProd_BY_Fourni
+    partial class ChoixProd_BY_FourniCmd
     {
         /// <summary>
         /// Required designer variable.
