@@ -29,8 +29,14 @@ namespace ZumbaSoft.Fenetres_Ventes
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AccueilVente));
             this.label1 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.columnCB = new System.Windows.Forms.ColumnHeader();
+            this.columnNomProduit = new System.Windows.Forms.ColumnHeader();
+            this.columnPrixHT = new System.Windows.Forms.ColumnHeader();
+            this.columnPrixTTC = new System.Windows.Forms.ColumnHeader();
+            this.columnQuantite = new System.Windows.Forms.ColumnHeader();
             this.buttonCatalogueProd = new System.Windows.Forms.Button();
             this.labelCatalogue = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,6 +56,9 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.panel5 = new System.Windows.Forms.Panel();
             this.buttonFacture = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.labelQuantite = new System.Windows.Forms.Label();
+            this.buttonPlus = new System.Windows.Forms.Button();
+            this.buttonMoins = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -68,14 +77,47 @@ namespace ZumbaSoft.Fenetres_Ventes
             // 
             // listView1
             // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnCB,
+            this.columnNomProduit,
+            this.columnPrixHT,
+            this.columnPrixTTC,
+            this.columnQuantite});
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(354, 56);
+            this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(499, 497);
+            this.listView1.Size = new System.Drawing.Size(454, 482);
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            // 
+            // columnCB
+            // 
+            this.columnCB.Text = "Code Barre";
+            this.columnCB.Width = 90;
+            // 
+            // columnNomProduit
+            // 
+            this.columnNomProduit.Text = "Nom du produit";
+            this.columnNomProduit.Width = 150;
+            // 
+            // columnPrixHT
+            // 
+            this.columnPrixHT.Text = "Prix Hors Taxe";
+            this.columnPrixHT.Width = 70;
+            // 
+            // columnPrixTTC
+            // 
+            this.columnPrixTTC.Text = "Prix TTC";
+            this.columnPrixTTC.Width = 70;
+            // 
+            // columnQuantite
+            // 
+            this.columnQuantite.Text = "Quantite";
+            this.columnQuantite.Width = 70;
             // 
             // buttonCatalogueProd
             // 
@@ -261,11 +303,52 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.label7.TabIndex = 4;
             this.label7.Text = " Valider le ticket";
             // 
+            // labelQuantite
+            // 
+            this.labelQuantite.AutoSize = true;
+            this.labelQuantite.Location = new System.Drawing.Point(354, 550);
+            this.labelQuantite.Name = "labelQuantite";
+            this.labelQuantite.Size = new System.Drawing.Size(73, 20);
+            this.labelQuantite.TabIndex = 13;
+            this.labelQuantite.Text = "Quantité :";
+            this.labelQuantite.Visible = false;
+            // 
+            // buttonPlus
+            // 
+            this.buttonPlus.BackColor = System.Drawing.Color.Transparent;
+            this.buttonPlus.FlatAppearance.BorderSize = 0;
+            this.buttonPlus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPlus.Image = ((System.Drawing.Image)(resources.GetObject("buttonPlus.Image")));
+            this.buttonPlus.Location = new System.Drawing.Point(461, 544);
+            this.buttonPlus.Name = "buttonPlus";
+            this.buttonPlus.Size = new System.Drawing.Size(35, 33);
+            this.buttonPlus.TabIndex = 14;
+            this.buttonPlus.UseVisualStyleBackColor = false;
+            this.buttonPlus.Visible = false;
+            this.buttonPlus.Click += new System.EventHandler(this.buttonPlus_Click);
+            // 
+            // buttonMoins
+            // 
+            this.buttonMoins.BackColor = System.Drawing.Color.Transparent;
+            this.buttonMoins.FlatAppearance.BorderSize = 0;
+            this.buttonMoins.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMoins.Image = ((System.Drawing.Image)(resources.GetObject("buttonMoins.Image")));
+            this.buttonMoins.Location = new System.Drawing.Point(502, 544);
+            this.buttonMoins.Name = "buttonMoins";
+            this.buttonMoins.Size = new System.Drawing.Size(35, 33);
+            this.buttonMoins.TabIndex = 15;
+            this.buttonMoins.UseVisualStyleBackColor = false;
+            this.buttonMoins.Visible = false;
+            this.buttonMoins.Click += new System.EventHandler(this.buttonMoins_Click);
+            // 
             // AccueilVente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1137, 615);
+            this.Controls.Add(this.buttonMoins);
+            this.Controls.Add(this.buttonPlus);
+            this.Controls.Add(this.labelQuantite);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.buttonAnnulerCommand);
             this.Controls.Add(this.panel4);
@@ -316,5 +399,13 @@ namespace ZumbaSoft.Fenetres_Ventes
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button buttonNvClient;
         private System.Windows.Forms.Label labelNomClient;
+        private System.Windows.Forms.ColumnHeader columnCB;
+        private System.Windows.Forms.ColumnHeader columnNomProduit;
+        private System.Windows.Forms.ColumnHeader columnPrixHT;
+        private System.Windows.Forms.ColumnHeader columnPrixTTC;
+        private System.Windows.Forms.ColumnHeader columnQuantite;
+        private System.Windows.Forms.Label labelQuantite;
+        private System.Windows.Forms.Button buttonPlus;
+        private System.Windows.Forms.Button buttonMoins;
     }
 }
