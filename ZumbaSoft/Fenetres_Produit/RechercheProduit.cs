@@ -23,6 +23,7 @@ namespace ZumbaSoft.Fenetres_Produit
             this.DB = db;
             InitializeComponent();
             initListProduit();
+            initItemsColors();
         }
 
         public void initListProduit()
@@ -40,7 +41,13 @@ namespace ZumbaSoft.Fenetres_Produit
             }
         }
 
-
+        public void initItemsColors()
+        {
+            backgroundBlock1.BackColor = Color.FromArgb(50, 12, 12, 12);
+            backgroundBlock2.BackColor = Color.FromArgb(80, 12, 12, 12);
+            buttonAnnuler.BackColor = Color.FromArgb(50, 12, 12, 12);
+            buttonOK.BackColor = Color.FromArgb(50, 12, 12, 12);
+        }
 
         private void textBoxRecherche_TextChanged(object sender, EventArgs e)
         {
@@ -54,12 +61,6 @@ namespace ZumbaSoft.Fenetres_Produit
                 }
         }
 
-        private void buttonAnnuler_Click(object sender, EventArgs e)
-        {
-            DialogResult = DialogResult.Cancel;
-            this.Close();
-        }
-
         private void buttonValider_Click(object sender, EventArgs e)
         {
             if(listBoxProduits.SelectedItem != null)
@@ -69,5 +70,22 @@ namespace ZumbaSoft.Fenetres_Produit
                 this.Close();
             }
         }
+
+        private void buttonOK_Click(object sender, EventArgs e)
+        {
+            if (listBoxProduits.SelectedItem != null)
+            {
+                selectedPRoduit = (Produit)listBoxProduits.SelectedItem;
+                DialogResult = DialogResult.OK;
+                this.Close();
+            }
+        }
+
+        private void buttonAnnuler_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.Cancel;
+            this.Close();
+        }
+
     }
 }
