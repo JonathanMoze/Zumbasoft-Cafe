@@ -16,20 +16,11 @@ namespace ZumbaSoft.Fenetres_Produit
     {
 
         SQLiteConnection DB;
-        public AccueilVente formParent;
+        public Produit selectedPRoduit;
 
         public RechercheProduit(SQLiteConnection db)
         {
             this.DB = db;
-            InitializeComponent();
-            initListProduit();
-        }
-
-
-        public RechercheProduit(SQLiteConnection db, AccueilVente form)
-        {
-            this.DB = db;
-            formParent = form;
             InitializeComponent();
             initListProduit();
         }
@@ -73,7 +64,7 @@ namespace ZumbaSoft.Fenetres_Produit
         {
             if(listBoxProduits.SelectedItem != null)
             {
-                formParent.listView1.Items.Add(listBoxProduits.SelectedItem.ToString());
+                selectedPRoduit = (Produit)listBoxProduits.SelectedItem;
                 DialogResult = DialogResult.OK;
                 this.Close();
             }

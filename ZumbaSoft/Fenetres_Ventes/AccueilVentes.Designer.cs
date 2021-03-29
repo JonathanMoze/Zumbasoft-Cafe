@@ -35,6 +35,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.labelCatalogue = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelNomClient = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,7 +50,6 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.panel5 = new System.Windows.Forms.Panel();
             this.buttonFacture = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.labelNomClient = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -85,6 +85,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.buttonCatalogueProd.TabIndex = 3;
             this.buttonCatalogueProd.Text = "Catalogue produits";
             this.buttonCatalogueProd.UseVisualStyleBackColor = true;
+            this.buttonCatalogueProd.Click += new System.EventHandler(this.buttonCatalogueProd_Click);
             // 
             // labelCatalogue
             // 
@@ -114,6 +115,15 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(250, 114);
             this.panel1.TabIndex = 9;
+            // 
+            // labelNomClient
+            // 
+            this.labelNomClient.Location = new System.Drawing.Point(32, 64);
+            this.labelNomClient.Name = "labelNomClient";
+            this.labelNomClient.Size = new System.Drawing.Size(185, 20);
+            this.labelNomClient.TabIndex = 6;
+            this.labelNomClient.Text = "-";
+            this.labelNomClient.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
@@ -250,15 +260,6 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.label7.Size = new System.Drawing.Size(115, 20);
             this.label7.TabIndex = 4;
             this.label7.Text = " Valider le ticket";
-            // 
-            // labelNomClient
-            // 
-            this.labelNomClient.Location = new System.Drawing.Point(32, 64);
-            this.labelNomClient.Name = "labelNomClient";
-            this.labelNomClient.Size = new System.Drawing.Size(185, 20);
-            this.labelNomClient.TabIndex = 6;
-            this.labelNomClient.Text = "-";
-            this.labelNomClient.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // AccueilVente
             // 
