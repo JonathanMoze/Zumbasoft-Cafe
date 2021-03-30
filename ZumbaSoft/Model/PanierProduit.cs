@@ -6,7 +6,7 @@ using System.Text;
 
 namespace ZumbaSoft.Model
 {
-    public class ProduitCommande
+    public class PanierProduit
     {
 
         [PrimaryKey, AutoIncrement]

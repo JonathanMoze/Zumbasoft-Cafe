@@ -15,25 +15,36 @@ namespace ZumbaSoft.Model
         [ForeignKey(typeof(Magasin))]
         public int id_magasin { get; set; }
 
-        [OneToOne]
+        [ManyToOne]
         public Magasin magasin { get; set; }
 
         //Association Produit
-        [ForeignKey(typeof(Produit))]
-        public int id_produit { get; set; }
         [OneToMany]
-        public List<Produit> produits { get; set; }
+        public List<ProduitToCommande> PTC { get; set; }
 
         //Association Fournisseur
         [ForeignKey(typeof(Fournisseur))]
         public int id_fournisseur { get; set; }
 
-        [OneToOne]
+        [ManyToOne]
         public Fournisseur fournisseur { get; set; }
+
+        public DateTime dateCommande { get; set; }
+
+        public DateTime dateReglement { get; set; }
+
+        public enum EnumEtatCmd
+        {
+            Commande, Livre, Receptionne
+        }
+
+        public EnumEtatCmd etat { get; set; }
+
+        public string reference { get; set; }
 
         public override string ToString()
         {
-            return id_commande.ToString() + " - " + fournisseur.ToString();
+            return reference + " - " + fournisseur.ToString();
         }
     }
 }

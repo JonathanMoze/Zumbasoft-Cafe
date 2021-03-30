@@ -38,6 +38,6 @@ namespace ZumbaSoft.Model
 
         //Association ProduitCommande
         [OneToMany]
-        public List<ProduitCommande> produits { get; set; }
+        public List<PanierProduit> produits { get; set; }
     }
 }
