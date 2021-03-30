@@ -23,12 +23,33 @@ namespace ZumbaSoft.Fenetres_Stock
             InitializeComponent();
             DB = db;
             PES = ps;
-            barreQtt.Maximum = ps.quantite;
+            initField();
+            
+        }
+
+        private void initField()
+        {
+            if(PES.quantite == 0)
+            {
+                labelTexte.Text = "Voulez vous vraiment supprimer définitivement ce produit des stocks ?";
+                barreQtt.Visible = false;
+            }
+            else
+            {
+                barreQtt.Maximum = PES.quantite;
+            }
         }
 
         private void buttonSupprimer_Click(object sender, EventArgs e)
         {
-            deleteQtt();
+            if(PES.quantite == 0)
+            {
+                deletePES();
+            }
+            else
+            {
+                deleteQtt();
+            }
             DialogResult = DialogResult.OK;
             this.Close();
         }
@@ -36,15 +57,13 @@ namespace ZumbaSoft.Fenetres_Stock
 
         private void deleteQtt()
         {
-            if(barreQtt.Maximum == barreQtt.Value)
-            {
-                DB.Delete(PES);
-            }
-            else
-            {
-                PES.quantite -= (int)barreQtt.Value;
-                DB.UpdateWithChildren(PES);
-            }
+            PES.quantite -= (int)barreQtt.Value;
+            DB.UpdateWithChildren(PES);
+        }
+
+        private void deletePES()
+        {
+            DB.Delete(PES);
         }
 
         private void buttonAnuuler_Click(object sender, EventArgs e)

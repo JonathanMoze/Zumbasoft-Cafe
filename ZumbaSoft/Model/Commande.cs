@@ -31,7 +31,7 @@ namespace ZumbaSoft.Model
 
         public DateTime dateCommande { get; set; }
 
-        public DateTime dateReglement { get; set; }
+        public DateTime dateReception { get; set; }
 
         public enum EnumEtatCmd
         {

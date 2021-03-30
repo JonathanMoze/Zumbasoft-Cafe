@@ -23,7 +23,6 @@ namespace ZumbaSoft.Fenetres_Stock
         {
             InitializeComponent();
             DB = db;
-            magasin = DB.GetAllWithChildren<Magasin>().Find(m => m.adresse.ville == "Blanquefort");
 
             labelDate.Text = DateTime.Today.ToString("d");
             //labelMagasin.Text = magasin.ToString();
@@ -104,62 +103,73 @@ namespace ZumbaSoft.Fenetres_Stock
             }
             else
             {
-                row = tableauCommandes.SelectedCells[0].OwningRow;
-                commande = commandes.Find(c => c.reference == row.Cells[0].Value.ToString());
-            }
-
-            commande.PTC = DB.GetAllWithChildren<ProduitToCommande>().FindAll(ptc => ptc.id_commande == commande.id_commande);
-
-            GestionDeLaCommande gc = new GestionDeLaCommande(DB, commande);
-            if (gc.ShowDialog() == DialogResult.OK)
-            {
-                decimal totalTTC;
-                switch (gc.commande.etat)
+                if (tableauCommandes.SelectedCells.Count != 0 && tableauCommandes.SelectedCells[0].OwningRow.Cells[0].Value != null)
                 {
-                    case Commande.EnumEtatCmd.Commande:
-                        tableauCommandes.Rows.Remove(row);
-                        totalTTC = 0;
-                        foreach (ProduitToCommande pTc in gc.commande.PTC)
-                        {
-                            totalTTC += pTc.produit.prix_achat_TTC * pTc.quantite;
-                        }
-                        object[] newRow1 = { gc.commande.reference, gc.commande.dateCommande, gc.commande.fournisseur, gc.commande.etat, totalTTC };
-                        tableauCommandes.Rows.Add(newRow1);
-                        break;
-
-                    case Commande.EnumEtatCmd.Livre:
-                        tableauCommandes.Rows.Remove(row);
-                        totalTTC = 0;
-                        foreach (ProduitToCommande pTc in gc.commande.PTC)
-                        {
-                            totalTTC += pTc.produit.prix_achat_TTC * pTc.quantite;
-                        }
-                        object[] newRow2 = { gc.commande.reference, gc.commande.dateCommande, gc.commande.fournisseur, gc.commande.etat, totalTTC };
-                        tableauCommandes.Rows.Add(newRow2);
-                        transferToStock(commande);
-                        break;
-
-                    case Commande.EnumEtatCmd.Receptionne:
-                        tableauCommandes.Rows.Remove(row);
-                        totalTTC = 0;
-                        foreach (ProduitToCommande pTc in gc.commande.PTC)
-                        {
-                            totalTTC += pTc.produit.prix_achat_TTC * pTc.quantite;
-                        }
-                        object[] newRow3 = { gc.commande.reference, gc.commande.dateCommande, gc.commande.fournisseur, gc.commande.etat, totalTTC };
-                        tableauCommandes.Rows.Add(newRow3);
-                        transferToStock(commande);
-                        break;
+                    row = tableauCommandes.SelectedCells[0].OwningRow;
+                    commande = commandes.Find(c => c.reference == row.Cells[0].Value.ToString());
+                }
+                else
+                {
+                    commande = null;
+                    row = null;
+                    
                 }
             }
-            else if(gc.DialogResult == DialogResult.No)
+            if(commande != null && row != null)
             {
-                foreach (ProduitToCommande ptc in commande.PTC)
+                commande.PTC = DB.GetAllWithChildren<ProduitToCommande>().FindAll(ptc => ptc.id_commande == commande.id_commande);
+
+                GestionDeLaCommande gc = new GestionDeLaCommande(DB, commande);
+                if (gc.ShowDialog() == DialogResult.OK)
                 {
-                    DB.Delete(ptc);
+                    decimal totalTTC;
+                    switch (gc.commande.etat)
+                    {
+                        case Commande.EnumEtatCmd.Commande:
+                            tableauCommandes.Rows.Remove(row);
+                            totalTTC = 0;
+                            foreach (ProduitToCommande pTc in gc.commande.PTC)
+                            {
+                                totalTTC += pTc.produit.prix_achat_TTC * pTc.quantite;
+                            }
+                            object[] newRow1 = { gc.commande.reference, gc.commande.dateCommande, gc.commande.fournisseur, gc.commande.etat, totalTTC };
+                            tableauCommandes.Rows.Add(newRow1);
+                            break;
+
+                        case Commande.EnumEtatCmd.Livre:
+                            tableauCommandes.Rows.Remove(row);
+                            totalTTC = 0;
+                            foreach (ProduitToCommande pTc in gc.commande.PTC)
+                            {
+                                totalTTC += pTc.produit.prix_achat_TTC * pTc.quantite;
+                            }
+                            object[] newRow2 = { gc.commande.reference, gc.commande.dateCommande, gc.commande.fournisseur, gc.commande.etat, totalTTC };
+                            tableauCommandes.Rows.Add(newRow2);
+                            transferToStock(commande);
+                            break;
+
+                        case Commande.EnumEtatCmd.Receptionne:
+                            tableauCommandes.Rows.Remove(row);
+                            totalTTC = 0;
+                            foreach (ProduitToCommande pTc in gc.commande.PTC)
+                            {
+                                totalTTC += pTc.produit.prix_achat_TTC * pTc.quantite;
+                            }
+                            object[] newRow3 = { gc.commande.reference, gc.commande.dateCommande, gc.commande.fournisseur, gc.commande.etat, totalTTC };
+                            tableauCommandes.Rows.Add(newRow3);
+                            transferToStock(commande);
+                            break;
+                    }
                 }
-                DB.Delete(commande);
-                tableauCommandes.Rows.Remove(row);
+                else if (gc.DialogResult == DialogResult.No)
+                {
+                    foreach (ProduitToCommande ptc in commande.PTC)
+                    {
+                        DB.Delete(ptc);
+                    }
+                    DB.Delete(commande);
+                    tableauCommandes.Rows.Remove(row);
+                }
             }
         }
 
@@ -345,7 +355,7 @@ namespace ZumbaSoft.Fenetres_Stock
             }
             else
             {
-                if(tableauStock.SelectedCells.Count != 0)
+                if(tableauStock.SelectedCells.Count != 0 && tableauStock.SelectedCells[0].OwningRow.Cells[0].Value != null)
                 {
                     row = tableauStock.SelectedCells[0].OwningRow;
                     pes = allPes.Find(pes => pes.id_produit.ToString() == row.Cells[0].Value.ToString());

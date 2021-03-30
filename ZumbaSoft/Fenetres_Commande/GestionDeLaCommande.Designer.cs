@@ -33,6 +33,11 @@ namespace ZumbaSoft.Fenetres_Commande
             this.textBoxRef = new System.Windows.Forms.TextBox();
             this.labelRef = new System.Windows.Forms.Label();
             this.tableauProd = new System.Windows.Forms.DataGridView();
+            this.id_produit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nom_produit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantite_produit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prixUnitaire_TTC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prixTotale_TTC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonAnnulerCmd = new System.Windows.Forms.Button();
             this.buttonAjouterProd = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,19 +53,12 @@ namespace ZumbaSoft.Fenetres_Commande
             this.checkBoxLivre = new System.Windows.Forms.CheckBox();
             this.checkBoxRecept = new System.Windows.Forms.CheckBox();
             this.labelDateCmd = new System.Windows.Forms.Label();
-            this.labelReglement = new System.Windows.Forms.Label();
             this.textBoxCmdLe = new System.Windows.Forms.TextBox();
-            this.textBoxRegl = new System.Windows.Forms.TextBox();
             this.labelMag = new System.Windows.Forms.Label();
             this.textBoxRecep = new System.Windows.Forms.TextBox();
             this.flowLayoutPanelButtons = new System.Windows.Forms.FlowLayoutPanel();
             this.buttonAnnuler = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.id_produit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nom_produit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantite_produit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prixUnitaire_TTC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prixTotale_TTC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tableauProd)).BeginInit();
             this.flowLayoutPanelButtons.SuspendLayout();
             this.SuspendLayout();
@@ -111,6 +109,41 @@ namespace ZumbaSoft.Fenetres_Commande
             this.tableauProd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tableauProd.Size = new System.Drawing.Size(755, 340);
             this.tableauProd.TabIndex = 13;
+            // 
+            // id_produit
+            // 
+            this.id_produit.HeaderText = "Identifiant";
+            this.id_produit.MinimumWidth = 8;
+            this.id_produit.Name = "id_produit";
+            this.id_produit.Width = 150;
+            // 
+            // nom_produit
+            // 
+            this.nom_produit.HeaderText = "Nom";
+            this.nom_produit.MinimumWidth = 8;
+            this.nom_produit.Name = "nom_produit";
+            this.nom_produit.Width = 150;
+            // 
+            // quantite_produit
+            // 
+            this.quantite_produit.HeaderText = "Quantité";
+            this.quantite_produit.MinimumWidth = 8;
+            this.quantite_produit.Name = "quantite_produit";
+            this.quantite_produit.Width = 150;
+            // 
+            // prixUnitaire_TTC
+            // 
+            this.prixUnitaire_TTC.HeaderText = "Prix unitaire TTC";
+            this.prixUnitaire_TTC.MinimumWidth = 8;
+            this.prixUnitaire_TTC.Name = "prixUnitaire_TTC";
+            this.prixUnitaire_TTC.Width = 150;
+            // 
+            // prixTotale_TTC
+            // 
+            this.prixTotale_TTC.HeaderText = "Prix totale TTC";
+            this.prixTotale_TTC.MinimumWidth = 8;
+            this.prixTotale_TTC.Name = "prixTotale_TTC";
+            this.prixTotale_TTC.Width = 150;
             // 
             // buttonAnnulerCmd
             // 
@@ -267,15 +300,6 @@ namespace ZumbaSoft.Fenetres_Commande
             this.labelDateCmd.TabIndex = 9;
             this.labelDateCmd.Text = "Commandé le :";
             // 
-            // labelReglement
-            // 
-            this.labelReglement.AutoSize = true;
-            this.labelReglement.Location = new System.Drawing.Point(645, 109);
-            this.labelReglement.Name = "labelReglement";
-            this.labelReglement.Size = new System.Drawing.Size(82, 25);
-            this.labelReglement.TabIndex = 10;
-            this.labelReglement.Text = "Reglé le :";
-            // 
             // textBoxCmdLe
             // 
             this.textBoxCmdLe.Enabled = false;
@@ -283,14 +307,6 @@ namespace ZumbaSoft.Fenetres_Commande
             this.textBoxCmdLe.Name = "textBoxCmdLe";
             this.textBoxCmdLe.Size = new System.Drawing.Size(150, 31);
             this.textBoxCmdLe.TabIndex = 11;
-            // 
-            // textBoxRegl
-            // 
-            this.textBoxRegl.Enabled = false;
-            this.textBoxRegl.Location = new System.Drawing.Point(725, 106);
-            this.textBoxRegl.Name = "textBoxRegl";
-            this.textBoxRegl.Size = new System.Drawing.Size(150, 31);
-            this.textBoxRegl.TabIndex = 12;
             // 
             // labelMag
             // 
@@ -343,41 +359,6 @@ namespace ZumbaSoft.Fenetres_Commande
             this.label2.TabIndex = 26;
             this.label2.Text = "Produits :";
             // 
-            // id_produit
-            // 
-            this.id_produit.HeaderText = "Identifiant";
-            this.id_produit.MinimumWidth = 8;
-            this.id_produit.Name = "id_produit";
-            this.id_produit.Width = 150;
-            // 
-            // nom_produit
-            // 
-            this.nom_produit.HeaderText = "Nom";
-            this.nom_produit.MinimumWidth = 8;
-            this.nom_produit.Name = "nom_produit";
-            this.nom_produit.Width = 150;
-            // 
-            // quantite_produit
-            // 
-            this.quantite_produit.HeaderText = "Quantité";
-            this.quantite_produit.MinimumWidth = 8;
-            this.quantite_produit.Name = "quantite_produit";
-            this.quantite_produit.Width = 150;
-            // 
-            // prixUnitaire_TTC
-            // 
-            this.prixUnitaire_TTC.HeaderText = "Prix unitaire TTC";
-            this.prixUnitaire_TTC.MinimumWidth = 8;
-            this.prixUnitaire_TTC.Name = "prixUnitaire_TTC";
-            this.prixUnitaire_TTC.Width = 150;
-            // 
-            // prixTotale_TTC
-            // 
-            this.prixTotale_TTC.HeaderText = "Prix totale TTC";
-            this.prixTotale_TTC.MinimumWidth = 8;
-            this.prixTotale_TTC.Name = "prixTotale_TTC";
-            this.prixTotale_TTC.Width = 150;
-            // 
             // GestionDeLaCommande
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -393,9 +374,7 @@ namespace ZumbaSoft.Fenetres_Commande
             this.Controls.Add(this.textBoxTotalTTC);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tableauProd);
-            this.Controls.Add(this.textBoxRegl);
             this.Controls.Add(this.textBoxCmdLe);
-            this.Controls.Add(this.labelReglement);
             this.Controls.Add(this.labelDateCmd);
             this.Controls.Add(this.checkBoxRecept);
             this.Controls.Add(this.checkBoxLivre);
@@ -436,9 +415,7 @@ namespace ZumbaSoft.Fenetres_Commande
         private System.Windows.Forms.CheckBox checkBoxLivre;
         private System.Windows.Forms.CheckBox checkBoxRecept;
         private System.Windows.Forms.Label labelDateCmd;
-        private System.Windows.Forms.Label labelReglement;
         private System.Windows.Forms.TextBox textBoxCmdLe;
-        private System.Windows.Forms.TextBox textBoxRegl;
         private System.Windows.Forms.Label labelMag;
         private System.Windows.Forms.TextBox textBoxRecep;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelButtons;

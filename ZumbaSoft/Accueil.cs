@@ -108,7 +108,7 @@ namespace ZumbaSoft
 
         private void buttonGestionStock_Click(object sender, EventArgs e)
         {
-            AccueilStock s = new AccueilStock(db, magasin);
+            AccueilStock s = new AccueilStock(db);
             this.Visible = false;
             if (s.ShowDialog() == DialogResult.OK)
             {

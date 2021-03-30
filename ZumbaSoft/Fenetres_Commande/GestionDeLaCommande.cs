@@ -375,12 +375,11 @@ namespace ZumbaSoft.Fenetres_Commande
                 checkBoxLivre.Checked = false;
                 commande.etat = Commande.EnumEtatCmd.Receptionne;
                 textBoxRecep.Text = DateTime.Today.ToString("d");
-                textBoxRegl.Enabled = true;
+                commande.dateReception = DateTime.Today;
             }
             else
             {
                 textBoxRecep.Text = "";
-                textBoxRegl.Enabled = false;
             }
             
         }

@@ -126,6 +126,7 @@
             this.buttonGestionStock.TabIndex = 5;
             this.buttonGestionStock.Text = "Gestion des Stock";
             this.buttonGestionStock.UseVisualStyleBackColor = false;
+            this.buttonGestionStock.Click += new System.EventHandler(this.buttonGestionStock_Click);
             // 
             // buttonSeConnecter
             // 
