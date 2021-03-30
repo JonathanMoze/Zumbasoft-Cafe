@@ -165,7 +165,7 @@ namespace ZumbaSoft.Fenetres_Stock
 
         private void transferToStock(Commande commande)
         {
-            List<ProduitEnStock> allPes = DB.GetAllWithChildren<ProduitEnStock>().FindAll(pes => pes.id_magasin == commande.id_magasin);
+            List<ProduitEnStock> allPes = DB.GetAllWithChildren<ProduitEnStock>();//.FindAll(pes => pes.id_magasin == commande.id_magasin);
             List<Produit> stock = new List<Produit>();
             foreach (ProduitEnStock pes in allPes)
             {
@@ -184,22 +184,34 @@ namespace ZumbaSoft.Fenetres_Stock
                         case Commande.EnumEtatCmd.Livre:
                             if(pes.produit.etat == EtatEnum.Rupture)
                             {
-                                pes.produit.etat = EtatEnum.AttenteLivraison;
-                                DB.UpdateWithChildren(pes.produit);
+                                produit.etat = EtatEnum.AttenteLivraison;
+                                DB.UpdateWithChildren(produit);
+                                pes.quantite += ptc.quantite;
+                                DB.UpdateWithChildren(pes);
+                            }
+                            else if(pes.produit.etat == EtatEnum.AttenteLivraison)
+                            {
                                 pes.quantite += ptc.quantite;
                                 DB.UpdateWithChildren(pes);
                             }
                             break;
 
                         case Commande.EnumEtatCmd.Receptionne:
-                            if(pes.produit.etat == EtatEnum.EnStock)
+                            if (pes.produit.etat == EtatEnum.EnStock)
                             {
                                 pes.quantite += ptc.quantite;
                                 DB.UpdateWithChildren(pes);
-                            }else
+                            }
+
+                            else if(pes.produit.etat == EtatEnum.AttenteLivraison)
                             {
-                                pes.produit.etat = EtatEnum.EnStock;
-                                DB.UpdateWithChildren(pes.produit);
+                                produit.etat = EtatEnum.EnStock;
+                                DB.UpdateWithChildren(produit);
+                            }
+                            else
+                            {
+                                produit.etat = EtatEnum.EnStock;
+                                DB.UpdateWithChildren(produit);
                                 pes.quantite += ptc.quantite;
                                 DB.UpdateWithChildren(pes);
                             }
