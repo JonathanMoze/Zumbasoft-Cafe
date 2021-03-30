@@ -59,6 +59,8 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.labelQuantite = new System.Windows.Forms.Label();
             this.buttonPlus = new System.Windows.Forms.Button();
             this.buttonMoins = new System.Windows.Forms.Button();
+            this.labelPrixTotal = new System.Windows.Forms.Label();
+            this.labelErreur = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -106,7 +108,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             // 
             // columnPrixHT
             // 
-            this.columnPrixHT.Text = "Prix Hors Taxe";
+            this.columnPrixHT.Text = "Prix HT";
             this.columnPrixHT.Width = 70;
             // 
             // columnPrixTTC
@@ -274,6 +276,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.buttonAnnulerCommand.TabIndex = 5;
             this.buttonAnnulerCommand.Text = "Annuler la commande";
             this.buttonAnnulerCommand.UseVisualStyleBackColor = false;
+            this.buttonAnnulerCommand.Click += new System.EventHandler(this.buttonAnnulerCommand_Click);
             // 
             // panel5
             // 
@@ -287,12 +290,14 @@ namespace ZumbaSoft.Fenetres_Ventes
             // 
             // buttonFacture
             // 
+            this.buttonFacture.BackColor = System.Drawing.Color.LightGreen;
             this.buttonFacture.Location = new System.Drawing.Point(39, 53);
             this.buttonFacture.Name = "buttonFacture";
             this.buttonFacture.Size = new System.Drawing.Size(169, 42);
             this.buttonFacture.TabIndex = 3;
             this.buttonFacture.Text = "Générer la facture";
-            this.buttonFacture.UseVisualStyleBackColor = true;
+            this.buttonFacture.UseVisualStyleBackColor = false;
+            this.buttonFacture.Click += new System.EventHandler(this.buttonFacture_Click);
             // 
             // label7
             // 
@@ -341,11 +346,34 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.buttonMoins.Visible = false;
             this.buttonMoins.Click += new System.EventHandler(this.buttonMoins_Click);
             // 
+            // labelPrixTotal
+            // 
+            this.labelPrixTotal.AutoSize = true;
+            this.labelPrixTotal.Location = new System.Drawing.Point(646, 33);
+            this.labelPrixTotal.Name = "labelPrixTotal";
+            this.labelPrixTotal.Size = new System.Drawing.Size(107, 20);
+            this.labelPrixTotal.TabIndex = 16;
+            this.labelPrixTotal.Text = "Montant total :";
+            // 
+            // labelErreur
+            // 
+            this.labelErreur.ForeColor = System.Drawing.Color.Red;
+            this.labelErreur.Location = new System.Drawing.Point(852, 374);
+            this.labelErreur.Name = "labelErreur";
+            this.labelErreur.Size = new System.Drawing.Size(297, 66);
+            this.labelErreur.TabIndex = 17;
+            this.labelErreur.Text = "Erreur : veuillez verifier qu\'un client a été selectionné et que le panier n\'est " +
+    "pas vide";
+            this.labelErreur.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelErreur.Visible = false;
+            // 
             // AccueilVente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1137, 615);
+            this.ClientSize = new System.Drawing.Size(1161, 615);
+            this.Controls.Add(this.labelErreur);
+            this.Controls.Add(this.labelPrixTotal);
             this.Controls.Add(this.buttonMoins);
             this.Controls.Add(this.buttonPlus);
             this.Controls.Add(this.labelQuantite);
@@ -407,5 +435,7 @@ namespace ZumbaSoft.Fenetres_Ventes
         private System.Windows.Forms.Label labelQuantite;
         private System.Windows.Forms.Button buttonPlus;
         private System.Windows.Forms.Button buttonMoins;
+        private System.Windows.Forms.Label labelPrixTotal;
+        private System.Windows.Forms.Label labelErreur;
     }
 }

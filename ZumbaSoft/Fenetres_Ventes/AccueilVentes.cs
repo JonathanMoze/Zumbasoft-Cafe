@@ -79,6 +79,18 @@ namespace ZumbaSoft.Fenetres_Ventes
                 lst = new ListViewItem(arr);
                 listView1.Items.Add(lst);
             }
+
+            refreshPrixTotal();
+        }
+
+        public void refreshPrixTotal()
+        {
+            decimal somme = 0;
+            foreach (ProduitCommande p in panierClient.produits)
+            {
+                somme += (p.produit.prix_vente_TTC * p.quantite);
+            }
+            labelPrixTotal.Text = "Montant Total : " + somme + "€";
         }
 
 
@@ -158,6 +170,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             produit.quantite += 1;
             listView1.SelectedItems[0].SubItems[4].Text = produit.quantite.ToString();
             labelQuantite.Text = "Quantité : " + produit.quantite;
+            refreshPrixTotal();
         }
 
         private void buttonMoins_Click(object sender, EventArgs e)
@@ -180,6 +193,33 @@ namespace ZumbaSoft.Fenetres_Ventes
                     buttonPlus.Visible = false;
                     buttonMoins.Visible = false;
                 }
+            }
+
+            refreshPrixTotal();
+        }
+
+        private void buttonAnnulerCommand_Click(object sender, EventArgs e)
+        {
+            ConfirmationAnnulerPanier cp = new ConfirmationAnnulerPanier();
+            if(cp.ShowDialog() == DialogResult.OK)
+            {
+                this.Close();
+                AccueilVente av = new AccueilVente(DB, magasin);
+                av.Show();
+            }
+            
+        }
+
+        private void buttonFacture_Click(object sender, EventArgs e)
+        {
+            if(panierClient.client != null && panierClient.produits.Count > 0)
+            {
+                labelErreur.Visible = false;
+                DB.InsertWithChildren(panierClient);
+            }
+            else
+            {
+                labelErreur.Visible = true;
             }
         }
     }
