@@ -21,8 +21,6 @@ namespace ZumbaSoft
         {
             InitializeComponent();
             DB = InitializeDataBase();
-            AccueilStock stock = new AccueilStock(DB);
-            stock.Show();
         }
         public Accueil(SQLiteConnection db)
         {

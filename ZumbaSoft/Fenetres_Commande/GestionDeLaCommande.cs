@@ -329,6 +329,7 @@ namespace ZumbaSoft.Fenetres_Commande
             if (commande.PTC.Count == 0)
             {
                 buttonEnregisterCmd.Enabled = false;
+                commande.fournisseur = null;
             }
             tableauProd.Refresh();
         }

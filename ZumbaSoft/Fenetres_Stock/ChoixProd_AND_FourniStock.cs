@@ -16,13 +16,16 @@ namespace ZumbaSoft.Fenetres_Stock
     public partial class ChoixProd_AND_FourniStock : Form
     {
         SQLiteConnection DB;
+        Magasin magasin;
         public ProduitEnStock pes;
         public Fournisseur fournisseur;
 
-        public ChoixProd_AND_FourniStock(SQLiteConnection db)
+
+        public ChoixProd_AND_FourniStock(SQLiteConnection db, Magasin m)
         {
             InitializeComponent();
             DB = db;
+            magasin = m;
             initListProduit();
         }
 
@@ -134,7 +137,7 @@ namespace ZumbaSoft.Fenetres_Stock
         {
             if (barreQuantite.Value != 0)
             {
-                pes = new ProduitEnStock() { produit = (Produit)listBoxProduits.SelectedItem, quantite = (int)barreQuantite.Value };
+                pes = new ProduitEnStock() { produit = (Produit)listBoxProduits.SelectedItem, quantite = (int)barreQuantite.Value, magasin = magasin };
                 swithToFourni();
             }
             else

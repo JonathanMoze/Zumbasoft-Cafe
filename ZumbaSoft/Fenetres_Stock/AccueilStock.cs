@@ -23,7 +23,11 @@ namespace ZumbaSoft.Fenetres_Stock
         {
             InitializeComponent();
             DB = db;
-            magasin = new Magasin();
+            magasin = DB.GetAllWithChildren<Magasin>().Find(m => m.adresse.ville == "Blanquefort");
+
+            labelDate.Text = DateTime.Today.ToString("d");
+            labelMagasin.Text = magasin.ToString();
+
             initTableauAndFieldsStock();
             initTableauCommandes();
         }
@@ -40,7 +44,7 @@ namespace ZumbaSoft.Fenetres_Stock
             {
                 nbArticle += pEs.quantite;
                 valStock += pEs.quantite * pEs.produit.prix_vente_TTC;
-                object[] row = { pEs.id_produit, pEs.produit.nom, pEs.produit.fournisseur, pEs.quantite, pEs.produit.prix_vente_TTC, pEs.produit.etat };
+                object[] row = { pEs.id_produit, pEs.produit.nom, DB.Get<Fournisseur>(pEs.produit.id_fournisseur), pEs.quantite, pEs.produit.prix_vente_TTC, pEs.produit.etat };
                 tableauStock.Rows.Add(row);
             }
             //Init Fields
@@ -250,25 +254,67 @@ namespace ZumbaSoft.Fenetres_Stock
             }
             else
             {
-                row = tableauCommandes.SelectedCells[0].OwningRow;
-                commande = commandes.Find(c => c.reference == row.Cells[0].Value.ToString());
+                if(tableauCommandes.SelectedCells.Count != 0 && tableauCommandes.SelectedCells[0].OwningRow.Cells[0].Value != null)
+                {
+                    row = tableauCommandes.SelectedCells[0].OwningRow;
+                    commande = commandes.Find(c => c.reference == row.Cells[0].Value.ToString());
+                }
+                else
+                {
+                    commande = null;
+                    row = null;
+                }
             }
 
-            ConfirmationSupressionCommande csc = new ConfirmationSupressionCommande();
-            if(csc.ShowDialog() == DialogResult.OK)
+            if(commande != null)
             {
-                foreach(ProduitToCommande ptc in commande.PTC)
+                ConfirmationSupressionCommande csc = new ConfirmationSupressionCommande();
+                if (csc.ShowDialog() == DialogResult.OK)
                 {
-                    DB.Delete(ptc);
+                    foreach (ProduitToCommande ptc in commande.PTC)
+                    {
+                        if(ptc.commande.etat == Commande.EnumEtatCmd.Livre)
+                        {
+                            Produit produit = DB.Get<Produit>(ptc.id_produit);
+                            ProduitEnStock pes = DB.GetAllWithChildren<ProduitEnStock>().Find(pes => pes.produit.nom == produit.nom);
+                            DB.Delete(pes);
+                            tableauStock.Rows.Clear();
+                            initTableauAndFieldsStock();
+                        }
+                        DB.Delete(ptc);
+                    }
+                    DB.Delete(commande);
+                    tableauCommandes.Rows.Remove(row);
                 }
-                DB.Delete(commande);
-                tableauCommandes.Rows.Remove(row);
             }
         }
 
         private void buttonAjouterStk_Click(object sender, EventArgs e)
         {
+            List<ProduitEnStock> allPes = DB.GetAllWithChildren<ProduitEnStock>();
+            List<Produit> produits = new List<Produit>();
+            foreach(ProduitEnStock pes in allPes)
+            {
+                produits.Add(pes.produit);
+            }
 
+            ChoixProd_AND_FourniStock newprod = new ChoixProd_AND_FourniStock(DB, magasin);
+            if(newprod.ShowDialog() == DialogResult.OK)
+            {
+                if(produits.Contains(newprod.pes.produit, new ProduitComparer()))
+                {
+                    ProduitEnStock newPes = allPes.Find(pes => pes.produit.nom == newprod.pes.produit.nom);
+                    newPes.quantite += newprod.pes.quantite;
+                    DB.UpdateWithChildren(newPes);
+                }
+                else
+                {
+                    ProduitEnStock newPes = newprod.pes;
+                    DB.InsertOrReplaceWithChildren(newPes);
+                }
+                tableauStock.Rows.Clear();
+                initTableauAndFieldsStock();
+            }
         }
 
         private void buttonSupprimerStk_Click(object sender, EventArgs e)
@@ -283,15 +329,25 @@ namespace ZumbaSoft.Fenetres_Stock
             }
             else
             {
-                row = tableauStock.SelectedCells[0].OwningRow;
-                pes = allPes.Find(pes => pes.id_produit.ToString() == row.Cells[0].Value.ToString());
+                if(tableauStock.SelectedCells.Count != 0)
+                {
+                    row = tableauStock.SelectedCells[0].OwningRow;
+                    pes = allPes.Find(pes => pes.id_produit.ToString() == row.Cells[0].Value.ToString());
+                }
+                else
+                {
+                    pes = null;
+                }
             }
 
-            SupprimerStock ss = new SupprimerStock(pes,DB);
-            if(ss.ShowDialog() == DialogResult.OK)
+            if(pes != null)
             {
-                tableauStock.Rows.Clear();
-                initTableauAndFieldsStock();
+                SupprimerStock ss = new SupprimerStock(pes, DB);
+                if (ss.ShowDialog() == DialogResult.OK)
+                {
+                    tableauStock.Rows.Clear();
+                    initTableauAndFieldsStock();
+                }
             }
             
         }

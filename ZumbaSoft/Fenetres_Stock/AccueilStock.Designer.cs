@@ -64,7 +64,7 @@ namespace ZumbaSoft.Fenetres_Stock
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxNbArticle = new System.Windows.Forms.TextBox();
             this.labelDate = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.labelMagasin = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tableauCommandes)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableauStock)).BeginInit();
@@ -174,6 +174,7 @@ namespace ZumbaSoft.Fenetres_Stock
             this.tableauCommandes.Location = new System.Drawing.Point(834, 3);
             this.tableauCommandes.MultiSelect = false;
             this.tableauCommandes.Name = "tableauCommandes";
+            this.tableauCommandes.ReadOnly = true;
             this.tableauCommandes.RowHeadersWidth = 62;
             this.tableauCommandes.RowTemplate.Height = 33;
             this.tableauCommandes.Size = new System.Drawing.Size(675, 632);
@@ -184,30 +185,35 @@ namespace ZumbaSoft.Fenetres_Stock
             this.reference.HeaderText = "Référence";
             this.reference.MinimumWidth = 8;
             this.reference.Name = "reference";
+            this.reference.ReadOnly = true;
             // 
             // dateDeCommande
             // 
             this.dateDeCommande.HeaderText = "Date de commande";
             this.dateDeCommande.MinimumWidth = 8;
             this.dateDeCommande.Name = "dateDeCommande";
+            this.dateDeCommande.ReadOnly = true;
             // 
             // fournisseur
             // 
             this.fournisseur.HeaderText = "Fournisseur";
             this.fournisseur.MinimumWidth = 8;
             this.fournisseur.Name = "fournisseur";
+            this.fournisseur.ReadOnly = true;
             // 
             // etat
             // 
             this.etat.HeaderText = "Etat";
             this.etat.MinimumWidth = 8;
             this.etat.Name = "etat";
+            this.etat.ReadOnly = true;
             // 
             // prixTotalTTC
             // 
             this.prixTotalTTC.HeaderText = "Prix totale TTC";
             this.prixTotalTTC.MinimumWidth = 8;
             this.prixTotalTTC.Name = "prixTotalTTC";
+            this.prixTotalTTC.ReadOnly = true;
             // 
             // tableLayoutPanel1
             // 
@@ -245,7 +251,9 @@ namespace ZumbaSoft.Fenetres_Stock
             this.prixUnitaire,
             this.dataGridViewTextBoxColumn3});
             this.tableauStock.Location = new System.Drawing.Point(3, 3);
+            this.tableauStock.MultiSelect = false;
             this.tableauStock.Name = "tableauStock";
+            this.tableauStock.ReadOnly = true;
             this.tableauStock.RowHeadersWidth = 62;
             this.tableauStock.RowTemplate.Height = 33;
             this.tableauStock.Size = new System.Drawing.Size(675, 632);
@@ -256,36 +264,42 @@ namespace ZumbaSoft.Fenetres_Stock
             this.dataGridViewTextBoxColumn1.HeaderText = "Identifiant";
             this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // nomArticle
             // 
             this.nomArticle.HeaderText = "Article";
             this.nomArticle.MinimumWidth = 8;
             this.nomArticle.Name = "nomArticle";
+            this.nomArticle.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.HeaderText = "Fournisseur";
             this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // quantite
             // 
             this.quantite.HeaderText = "Quantité";
             this.quantite.MinimumWidth = 8;
             this.quantite.Name = "quantite";
+            this.quantite.ReadOnly = true;
             // 
             // prixUnitaire
             // 
             this.prixUnitaire.HeaderText = "Prix unitaire TTC";
             this.prixUnitaire.MinimumWidth = 8;
             this.prixUnitaire.Name = "prixUnitaire";
+            this.prixUnitaire.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.HeaderText = "Etat";
             this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // tableLayoutPanel2
             // 
@@ -498,23 +512,22 @@ namespace ZumbaSoft.Fenetres_Stock
             this.labelDate.TabIndex = 39;
             this.labelDate.Text = "JJ/MM/AAAA";
             // 
-            // label8
+            // labelMagasin
             // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(551, 31);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(139, 38);
-            this.label8.TabIndex = 40;
-            this.label8.Text = "MAGASIN";
+            this.labelMagasin.AutoSize = true;
+            this.labelMagasin.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelMagasin.Location = new System.Drawing.Point(374, 31);
+            this.labelMagasin.Name = "labelMagasin";
+            this.labelMagasin.Size = new System.Drawing.Size(139, 38);
+            this.labelMagasin.TabIndex = 40;
+            this.labelMagasin.Text = "MAGASIN";
             // 
             // AccueilStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1687, 835);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.labelMagasin);
             this.Controls.Add(this.labelDate);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label2);
@@ -570,7 +583,7 @@ namespace ZumbaSoft.Fenetres_Stock
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBoxNbArticle;
         private System.Windows.Forms.Label labelDate;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label labelMagasin;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomArticle;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
