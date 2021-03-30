@@ -126,7 +126,7 @@ namespace ZumbaSoft.Fenetres_Commande
             buttonEnregisterCmd.Enabled = true;
             enabledMoreLessDeleteButton();
 
-            float totalTTC = 0;
+            decimal totalTTC = 0;
             foreach(ProduitToCommande assos in commande.PTC)
             {
                 Produit prod = DB.Get<Produit>(assos.id_produit);
@@ -215,11 +215,11 @@ namespace ZumbaSoft.Fenetres_Commande
         /// </summary>
         private void updateTotalTTC()
         {
-            float total = 0F;
+            decimal total = 0;
             DataGridViewRowCollection dataGridView = tableauProd.Rows;
             foreach(DataGridViewRow row in dataGridView)
             {
-                total += (float)row.Cells[4].Value;
+                total += (decimal)row.Cells[4].Value;
             }
             textBoxTotalTTC.Text = total.ToString() + " €";
         }

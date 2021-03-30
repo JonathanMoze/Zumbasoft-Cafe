@@ -64,6 +64,7 @@ namespace ZumbaSoft.Fenetres_Produit
             produit.type = textBoxType.Text;
             produit.marque = textBoxMarque.Text;
             produit.couleur = textBoxCouleur.Text;
+            produit.etat = EtatEnum.Rupture;
             produit.genre = (Genre)comboBoxGenre.SelectedItem;
             produit.fournisseur = (Fournisseur)comboBoxFournisseur.SelectedItem;
 

@@ -171,7 +171,8 @@ namespace ZumbaSoft.Fenetres_Ventes
         {
             int index = listView1.SelectedItems[0].Index;
             ProduitCommande produit = panierClient.produits[index];
-            if(produit.produit.etat == EtatEnum.EnStock)
+            ProduitEnStock pStock = DB.Table<ProduitEnStock>().Where(p => p.id_produit == produit.id_produit).ToList()[0];
+            if(pStock.quantite>produit.quantite)
             {
                 produit.quantite += 1;
                 listView1.SelectedItems[0].SubItems[4].Text = produit.quantite.ToString();
@@ -226,16 +227,18 @@ namespace ZumbaSoft.Fenetres_Ventes
         {
             if(panierClient.client != null && panierClient.produits.Count > 0)
             {
-                foreach(ProduitCommande p in panierClient.produits)
+                foreach(ProduitCommande produit in panierClient.produits)
                 {
-                    ProduitEnStock pStock = DB.GetWithChildren<ProduitEnStock>(p.id_produit);
-                    pStock.quantite -= p.quantite;
+                    ProduitEnStock pStock = DB.GetAllWithChildren<ProduitEnStock>().Find(p => p.id_produit == produit.id_produit);
+                    pStock.quantite -= produit.quantite;
+                    Produit p = DB.GetWithChildren<Produit>(pStock.id_produit);
                     if(pStock.quantite == 0)
                     {
-                        pStock.produit.etat = EtatEnum.Rupture;
+                        p.etat = EtatEnum.Rupture;
                     }
-                    DB.UpdateWithChildren(pStock);
                     DB.UpdateWithChildren(p);
+                    DB.UpdateWithChildren(pStock);
+                    DB.UpdateWithChildren(produit);
                 }
 
                 labelErreur.Visible = false;

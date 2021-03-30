@@ -26,7 +26,7 @@ namespace ZumbaSoft.Fenetres_Stock
             magasin = DB.GetAllWithChildren<Magasin>().Find(m => m.adresse.ville == "Blanquefort");
 
             labelDate.Text = DateTime.Today.ToString("d");
-            labelMagasin.Text = magasin.ToString();
+            //labelMagasin.Text = magasin.ToString();
 
             initTableauAndFieldsStock();
             initTableauCommandes();
@@ -38,13 +38,14 @@ namespace ZumbaSoft.Fenetres_Stock
         {
             //Init Tableau
             int nbArticle = 0;
-            float valStock = 0F;
+            decimal valStock = 0;
             List<ProduitEnStock> stock = DB.GetAllWithChildren<ProduitEnStock>(); //.FindAll(p => p.magasin.id_magasin == magasin.id_magasin);
             foreach (ProduitEnStock pEs in stock)
             {
                 nbArticle += pEs.quantite;
                 valStock += pEs.quantite * pEs.produit.prix_vente_TTC;
-                object[] row = { pEs.id_produit, pEs.produit.nom, DB.Get<Fournisseur>(pEs.produit.id_fournisseur), pEs.quantite, pEs.produit.prix_vente_TTC, pEs.produit.etat };
+                Fournisseur f = DB.Get<Fournisseur>(pEs.produit.id_fournisseur);
+                object[] row = { pEs.id_produit, pEs.produit.nom, f, pEs.quantite, pEs.produit.prix_vente_TTC, pEs.produit.etat };
                 tableauStock.Rows.Add(row);
             }
             //Init Fields
@@ -60,7 +61,7 @@ namespace ZumbaSoft.Fenetres_Stock
             foreach (Commande commande in commandes)
             {
                 commande.PTC = DB.GetAllWithChildren<ProduitToCommande>().FindAll(ptc => ptc.id_commande == commande.id_commande);
-                float totalTTC = 0F;
+                decimal totalTTC = 0;
                 foreach(ProduitToCommande pTc in commande.PTC)
                 {
                     totalTTC += pTc.produit.prix_achat_TTC * pTc.quantite;
@@ -81,7 +82,7 @@ namespace ZumbaSoft.Fenetres_Stock
             GestionDeLaCommande gc = new GestionDeLaCommande(DB,magasin);
             if(gc.ShowDialog() == DialogResult.OK)
             {
-                float totalTTC = 0F;
+                decimal totalTTC = 0;
                 foreach (ProduitToCommande pTc in gc.commande.PTC)
                 {
                     totalTTC += pTc.produit.prix_achat_TTC * pTc.quantite;
@@ -112,12 +113,12 @@ namespace ZumbaSoft.Fenetres_Stock
             GestionDeLaCommande gc = new GestionDeLaCommande(DB, commande);
             if (gc.ShowDialog() == DialogResult.OK)
             {
-                float totalTTC;
+                decimal totalTTC;
                 switch (gc.commande.etat)
                 {
                     case Commande.EnumEtatCmd.Commande:
                         tableauCommandes.Rows.Remove(row);
-                        totalTTC = 0F;
+                        totalTTC = 0;
                         foreach (ProduitToCommande pTc in gc.commande.PTC)
                         {
                             totalTTC += pTc.produit.prix_achat_TTC * pTc.quantite;
@@ -128,7 +129,7 @@ namespace ZumbaSoft.Fenetres_Stock
 
                     case Commande.EnumEtatCmd.Livre:
                         tableauCommandes.Rows.Remove(row);
-                        totalTTC = 0F;
+                        totalTTC = 0;
                         foreach (ProduitToCommande pTc in gc.commande.PTC)
                         {
                             totalTTC += pTc.produit.prix_achat_TTC * pTc.quantite;
@@ -140,7 +141,7 @@ namespace ZumbaSoft.Fenetres_Stock
 
                     case Commande.EnumEtatCmd.Receptionne:
                         tableauCommandes.Rows.Remove(row);
-                        totalTTC = 0F;
+                        totalTTC = 0;
                         foreach (ProduitToCommande pTc in gc.commande.PTC)
                         {
                             totalTTC += pTc.produit.prix_achat_TTC * pTc.quantite;
@@ -310,6 +311,9 @@ namespace ZumbaSoft.Fenetres_Stock
                 else
                 {
                     ProduitEnStock newPes = newprod.pes;
+                    Produit p = DB.GetWithChildren<Produit>(newPes.produit.id_produit);
+                    p.etat = EtatEnum.EnStock;
+                    DB.UpdateWithChildren(p);
                     DB.InsertOrReplaceWithChildren(newPes);
                 }
                 tableauStock.Rows.Clear();

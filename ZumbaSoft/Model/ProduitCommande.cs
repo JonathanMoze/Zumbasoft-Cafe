@@ -4,9 +4,10 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+
 namespace ZumbaSoft.Model
 {
-    public class PanierProduit
+    public class ProduitCommande
     {
 
         [PrimaryKey, AutoIncrement]
@@ -32,5 +33,6 @@ namespace ZumbaSoft.Model
 
         //Entre 0 et 1
         public double reduc { get; set; }
+
     }
 }
