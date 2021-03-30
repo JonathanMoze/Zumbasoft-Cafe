@@ -23,8 +23,8 @@ namespace ZumbaSoft.Model
         [ForeignKey(typeof(Panier))]
         public int  id_panier { get; set; }
 
-        [OneToOne]
-        public Panier panier { get; set; }
+        [OneToMany]
+        public List<Panier> panier { get; set; }
 
 
         public override string ToString()

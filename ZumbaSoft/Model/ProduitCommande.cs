@@ -8,6 +8,11 @@ namespace ZumbaSoft.Model
 {
     public class ProduitCommande
     {
+
+        [PrimaryKey, AutoIncrement]
+        public int id_produitCommande { get; set; }
+
+
         //Association Produit
         [ForeignKey(typeof(Produit))]
         public int id_produit { get; set; }

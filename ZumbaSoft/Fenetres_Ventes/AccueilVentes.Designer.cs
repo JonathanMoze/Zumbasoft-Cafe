@@ -61,6 +61,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.buttonMoins = new System.Windows.Forms.Button();
             this.labelPrixTotal = new System.Windows.Forms.Label();
             this.labelErreur = new System.Windows.Forms.Label();
+            this.labelRuptureStock = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -367,11 +368,23 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.labelErreur.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelErreur.Visible = false;
             // 
+            // labelRuptureStock
+            // 
+            this.labelRuptureStock.AutoSize = true;
+            this.labelRuptureStock.ForeColor = System.Drawing.Color.Red;
+            this.labelRuptureStock.Location = new System.Drawing.Point(558, 550);
+            this.labelRuptureStock.Name = "labelRuptureStock";
+            this.labelRuptureStock.Size = new System.Drawing.Size(128, 20);
+            this.labelRuptureStock.TabIndex = 18;
+            this.labelRuptureStock.Text = "Rupture de stock !";
+            this.labelRuptureStock.Visible = false;
+            // 
             // AccueilVente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1161, 615);
+            this.Controls.Add(this.labelRuptureStock);
             this.Controls.Add(this.labelErreur);
             this.Controls.Add(this.labelPrixTotal);
             this.Controls.Add(this.buttonMoins);
@@ -437,5 +450,6 @@ namespace ZumbaSoft.Fenetres_Ventes
         private System.Windows.Forms.Button buttonMoins;
         private System.Windows.Forms.Label labelPrixTotal;
         private System.Windows.Forms.Label labelErreur;
+        private System.Windows.Forms.Label labelRuptureStock;
     }
 }

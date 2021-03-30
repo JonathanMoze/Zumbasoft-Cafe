@@ -17,7 +17,7 @@ namespace ZumbaSoft.Fenetres_Ventes
         Magasin magasin;
         SQLiteConnection DB;
         public Client client;
-        Panier panierClient;
+        public Panier panierClient;
         
         public AccueilVente(SQLiteConnection db, Magasin m)
         {
@@ -117,9 +117,9 @@ namespace ZumbaSoft.Fenetres_Ventes
 
         private void listBox1RechercheClient_SelectedIndexChanged(object sender, EventArgs e)
         {
-            client = (Client)listBox1RechercheClient.SelectedItem;
-            panierClient.client = client;
-            labelNomClient.Text = client.ToString();
+            Client c = (Client)listBox1RechercheClient.SelectedItem;
+            panierClient.client = (Client)listBox1RechercheClient.SelectedItem;
+            labelNomClient.Text = c.ToString();
         }
 
         private void buttonCatalogueProd_Click(object sender, EventArgs e)
@@ -135,10 +135,13 @@ namespace ZumbaSoft.Fenetres_Ventes
                     ProduitCommande p = new ProduitCommande();
                     p.produit = selectedProduit;
                     p.quantite = 1;
+                    p.panier = panierClient;
                     panierClient.produits.Add(p);
+                    DB.InsertWithChildren(p);
                 }
                 else
                 {
+                    pTest = DB.GetWithChildren<ProduitCommande>(pTest.id_produitCommande);
                     pTest.quantite += 1;
                 }
                 refreshListPanier();
@@ -147,6 +150,7 @@ namespace ZumbaSoft.Fenetres_Ventes
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            labelRuptureStock.Visible = false;
             try
             {
                 int index = listView1.SelectedItems[0].Index;
@@ -167,14 +171,22 @@ namespace ZumbaSoft.Fenetres_Ventes
         {
             int index = listView1.SelectedItems[0].Index;
             ProduitCommande produit = panierClient.produits[index];
-            produit.quantite += 1;
-            listView1.SelectedItems[0].SubItems[4].Text = produit.quantite.ToString();
-            labelQuantite.Text = "Quantité : " + produit.quantite;
-            refreshPrixTotal();
+            if(produit.produit.etat == EtatEnum.EnStock)
+            {
+                produit.quantite += 1;
+                listView1.SelectedItems[0].SubItems[4].Text = produit.quantite.ToString();
+                labelQuantite.Text = "Quantité : " + produit.quantite;
+                refreshPrixTotal();
+            }
+            else
+            {
+                labelRuptureStock.Visible = true;
+            }
         }
 
         private void buttonMoins_Click(object sender, EventArgs e)
         {
+            labelRuptureStock.Visible = false;
             int index = listView1.SelectedItems[0].Index;
             if(panierClient.produits[index].quantite > 1)
             {
@@ -214,6 +226,18 @@ namespace ZumbaSoft.Fenetres_Ventes
         {
             if(panierClient.client != null && panierClient.produits.Count > 0)
             {
+                foreach(ProduitCommande p in panierClient.produits)
+                {
+                    ProduitEnStock pStock = DB.GetWithChildren<ProduitEnStock>(p.id_produit);
+                    pStock.quantite -= p.quantite;
+                    if(pStock.quantite == 0)
+                    {
+                        pStock.produit.etat = EtatEnum.Rupture;
+                    }
+                    DB.UpdateWithChildren(pStock);
+                    DB.UpdateWithChildren(p);
+                }
+
                 labelErreur.Visible = false;
                 DB.InsertWithChildren(panierClient);
             }

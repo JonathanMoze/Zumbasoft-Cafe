@@ -31,7 +31,10 @@ namespace ZumbaSoft.Fenetres_Produit
             {
                 foreach (Produit p in DB.GetAllWithChildren<Produit>())
                 {
-                    listBoxProduits.Items.Add(p);
+                    if(p.etat == EtatEnum.EnStock)
+                    {
+                        listBoxProduits.Items.Add(p);
+                    }
                 }
             }
             else
@@ -50,7 +53,10 @@ namespace ZumbaSoft.Fenetres_Produit
                 listBoxProduits.Items.Clear();
                 foreach (Produit p in produitsSearched)
                 {
-                    listBoxProduits.Items.Add(p);
+                    if (p.etat == EtatEnum.EnStock)
+                    {
+                        listBoxProduits.Items.Add(p);
+                    }
                 }
         }
 
