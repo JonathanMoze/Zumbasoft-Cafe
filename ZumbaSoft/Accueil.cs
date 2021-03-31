@@ -29,10 +29,12 @@ namespace ZumbaSoft
             db = InitializeDataBase();
             initItemsColors();
         }
-        public Accueil(SQLiteConnection db)
+        public Accueil(SQLiteConnection database, Magasin mag)
         {
             InitializeComponent();
-            this.db = db;
+            db = database;
+            magasin = mag;
+            initItemsColors();
         }
 
         public void initItemsColors()
@@ -174,6 +176,11 @@ namespace ZumbaSoft
             {
                 this.Visible = true;
             }
+        }
+
+        private void Accueil_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            DialogResult = DialogResult.OK;
         }
     }
 }
