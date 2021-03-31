@@ -21,6 +21,7 @@ namespace ZumbaSoft.Fenetres_Produit
             InitializeComponent();
             DB = db;
             initComboBoxes();
+            initItemsColors();
         }
 
         public void initComboBoxes()
@@ -73,6 +74,20 @@ namespace ZumbaSoft.Fenetres_Produit
 
         }
 
+        public void initItemsColors()
+        {
+            backgroundBlock1.BackColor = Color.FromArgb(50, 12, 12, 12);
+            backgroundBlock2.BackColor = Color.FromArgb(80, 12, 12, 12);
+            backgroundBlock3.BackColor = Color.FromArgb(30, 12, 12, 12);
+            backgroundBlock4.BackColor = Color.FromArgb(30, 12, 12, 12);
+            backgroundBlock5.BackColor = Color.FromArgb(30, 12, 12, 12);
+            
+            buttonOK.BackColor = Color.FromArgb(50, 12, 12, 12);
+            buttonCancel.BackColor = Color.FromArgb(50, 12, 12, 12);
+            buttonGenre.BackColor = Color.FromArgb(50, 12, 12, 12);
+            buttonFournisseurs.BackColor = Color.FromArgb(50, 12, 12, 12);
+        }
+
         private void buttonGenre_Click(object sender, EventArgs e)
         {
             AccueilGenre accGenre = new AccueilGenre(DB, this);
@@ -87,7 +102,7 @@ namespace ZumbaSoft.Fenetres_Produit
             initComboBoxes();
         }
 
-        private void buttonValider_Click(object sender, EventArgs e)
+        private void buttonOK_Click(object sender, EventArgs e)
         {
             produit = initObjetProduit();
             DB.InsertWithChildren(produit);
@@ -95,7 +110,7 @@ namespace ZumbaSoft.Fenetres_Produit
             this.Close();
         }
 
-        private void buttonAnnuler_Click(object sender, EventArgs e)
+        private void buttonCancel_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
             this.Close();

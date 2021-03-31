@@ -92,7 +92,7 @@ namespace ZumbaSoft.Fenetres_Produit
             }
         }
 
-        private void buttonAccueil_Click(object sender, EventArgs e)
+        private void buttonRetour_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;
             this.Close();
@@ -102,5 +102,6 @@ namespace ZumbaSoft.Fenetres_Produit
         {
             formPrecedent.initComboBoxes();
         }
+
     }
 }

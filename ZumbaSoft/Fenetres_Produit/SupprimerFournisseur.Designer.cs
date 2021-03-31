@@ -45,7 +45,7 @@ namespace ZumbaSoft.Fenetres_Produit
             this.backgroundBlock2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
             this.backgroundBlock2.Controls.Add(this.buttonAnnuler);
             this.backgroundBlock2.Controls.Add(this.buttonSupprimer);
-            this.backgroundBlock2.Location = new System.Drawing.Point(0, 215);
+            this.backgroundBlock2.Location = new System.Drawing.Point(-12, 179);
             this.backgroundBlock2.Name = "backgroundBlock2";
             this.backgroundBlock2.Size = new System.Drawing.Size(524, 63);
             this.backgroundBlock2.TabIndex = 17;
@@ -53,7 +53,8 @@ namespace ZumbaSoft.Fenetres_Produit
             // buttonAnnuler
             // 
             this.buttonAnnuler.BackColor = System.Drawing.Color.Transparent;
-            this.buttonAnnuler.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonAnnuler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAnnuler.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonAnnuler.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.buttonAnnuler.Location = new System.Drawing.Point(204, 14);
             this.buttonAnnuler.Name = "buttonAnnuler";
@@ -66,7 +67,8 @@ namespace ZumbaSoft.Fenetres_Produit
             // buttonSupprimer
             // 
             this.buttonSupprimer.BackColor = System.Drawing.Color.Transparent;
-            this.buttonSupprimer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonSupprimer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSupprimer.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonSupprimer.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.buttonSupprimer.Location = new System.Drawing.Point(369, 14);
             this.buttonSupprimer.Name = "buttonSupprimer";
@@ -80,7 +82,7 @@ namespace ZumbaSoft.Fenetres_Produit
             // 
             this.backgroundBlock1.BackColor = System.Drawing.Color.Tomato;
             this.backgroundBlock1.Controls.Add(this.label1);
-            this.backgroundBlock1.Location = new System.Drawing.Point(0, 2);
+            this.backgroundBlock1.Location = new System.Drawing.Point(0, 0);
             this.backgroundBlock1.Name = "backgroundBlock1";
             this.backgroundBlock1.Size = new System.Drawing.Size(524, 91);
             this.backgroundBlock1.TabIndex = 18;
@@ -101,10 +103,11 @@ namespace ZumbaSoft.Fenetres_Produit
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(38, 145);
+            this.label2.Location = new System.Drawing.Point(30, 130);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(338, 20);
+            this.label2.Size = new System.Drawing.Size(361, 19);
             this.label2.TabIndex = 19;
             this.label2.Text = "Êtes vous sur de vouloir supprimer le fournisseur ?";
             // 
@@ -113,12 +116,13 @@ namespace ZumbaSoft.Fenetres_Produit
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(523, 278);
+            this.ClientSize = new System.Drawing.Size(513, 243);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.backgroundBlock1);
             this.Controls.Add(this.backgroundBlock2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "SupprimerFournisseur";
-            this.Text = "SupprimerFournisseur";
+            this.Text = "Confirmation de suppression - Fournisseur";
             this.backgroundBlock2.ResumeLayout(false);
             this.backgroundBlock1.ResumeLayout(false);
             this.backgroundBlock1.PerformLayout();

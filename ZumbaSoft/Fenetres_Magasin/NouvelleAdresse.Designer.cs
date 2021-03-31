@@ -56,20 +56,20 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.labelComplement.BackColor = System.Drawing.Color.Transparent;
             this.labelComplement.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelComplement.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.labelComplement.Location = new System.Drawing.Point(48, 374);
-            this.labelComplement.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelComplement.Location = new System.Drawing.Point(38, 299);
             this.labelComplement.Name = "labelComplement";
-            this.labelComplement.Size = new System.Drawing.Size(114, 21);
+            this.labelComplement.Size = new System.Drawing.Size(97, 20);
             this.labelComplement.TabIndex = 1;
             this.labelComplement.Text = "Complément :";
             // 
             // textBoxComplement
             // 
             this.textBoxComplement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
-            this.textBoxComplement.Location = new System.Drawing.Point(192, 369);
-            this.textBoxComplement.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxComplement.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxComplement.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxComplement.Location = new System.Drawing.Point(154, 295);
             this.textBoxComplement.Name = "textBoxComplement";
-            this.textBoxComplement.Size = new System.Drawing.Size(234, 31);
+            this.textBoxComplement.Size = new System.Drawing.Size(188, 27);
             this.textBoxComplement.TabIndex = 2;
             // 
             // labelVille
@@ -78,20 +78,20 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.labelVille.BackColor = System.Drawing.Color.Transparent;
             this.labelVille.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelVille.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.labelVille.Location = new System.Drawing.Point(97, 298);
-            this.labelVille.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelVille.Location = new System.Drawing.Point(78, 238);
             this.labelVille.Name = "labelVille";
-            this.labelVille.Size = new System.Drawing.Size(50, 21);
+            this.labelVille.Size = new System.Drawing.Size(42, 20);
             this.labelVille.TabIndex = 3;
             this.labelVille.Text = "Ville :";
             // 
             // textBoxVille
             // 
             this.textBoxVille.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
-            this.textBoxVille.Location = new System.Drawing.Point(192, 290);
-            this.textBoxVille.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxVille.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxVille.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxVille.Location = new System.Drawing.Point(154, 232);
             this.textBoxVille.Name = "textBoxVille";
-            this.textBoxVille.Size = new System.Drawing.Size(234, 31);
+            this.textBoxVille.Size = new System.Drawing.Size(188, 27);
             this.textBoxVille.TabIndex = 5;
             this.textBoxVille.TextChanged += new System.EventHandler(this.textBoxVille_TextChanged);
             // 
@@ -101,30 +101,31 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.labelCodePostal.BackColor = System.Drawing.Color.Transparent;
             this.labelCodePostal.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelCodePostal.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.labelCodePostal.Location = new System.Drawing.Point(59, 215);
-            this.labelCodePostal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelCodePostal.Location = new System.Drawing.Point(47, 172);
             this.labelCodePostal.Name = "labelCodePostal";
-            this.labelCodePostal.Size = new System.Drawing.Size(109, 21);
+            this.labelCodePostal.Size = new System.Drawing.Size(91, 20);
             this.labelCodePostal.TabIndex = 4;
             this.labelCodePostal.Text = "Code postal :";
             // 
             // textBoxCodePostal
             // 
             this.textBoxCodePostal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
-            this.textBoxCodePostal.Location = new System.Drawing.Point(192, 211);
-            this.textBoxCodePostal.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxCodePostal.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxCodePostal.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxCodePostal.Location = new System.Drawing.Point(154, 169);
             this.textBoxCodePostal.Name = "textBoxCodePostal";
-            this.textBoxCodePostal.Size = new System.Drawing.Size(101, 31);
+            this.textBoxCodePostal.Size = new System.Drawing.Size(82, 27);
             this.textBoxCodePostal.TabIndex = 6;
             this.textBoxCodePostal.TextChanged += new System.EventHandler(this.textBoxCodePostal_TextChanged);
             // 
             // textBoxAdresse
             // 
             this.textBoxAdresse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
-            this.textBoxAdresse.Location = new System.Drawing.Point(192, 139);
-            this.textBoxAdresse.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxAdresse.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxAdresse.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxAdresse.Location = new System.Drawing.Point(154, 111);
             this.textBoxAdresse.Name = "textBoxAdresse";
-            this.textBoxAdresse.Size = new System.Drawing.Size(234, 31);
+            this.textBoxAdresse.Size = new System.Drawing.Size(188, 27);
             this.textBoxAdresse.TabIndex = 8;
             this.textBoxAdresse.TextChanged += new System.EventHandler(this.textBoxAdresse_TextChanged);
             // 
@@ -134,10 +135,9 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.labelAdresse.BackColor = System.Drawing.Color.Transparent;
             this.labelAdresse.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelAdresse.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.labelAdresse.Location = new System.Drawing.Point(91, 143);
-            this.labelAdresse.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelAdresse.Location = new System.Drawing.Point(73, 114);
             this.labelAdresse.Name = "labelAdresse";
-            this.labelAdresse.Size = new System.Drawing.Size(78, 21);
+            this.labelAdresse.Size = new System.Drawing.Size(67, 20);
             this.labelAdresse.TabIndex = 7;
             this.labelAdresse.Text = "Adresse :";
             // 
@@ -146,10 +146,9 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.labelErreurAdr.BackColor = System.Drawing.Color.Transparent;
             this.labelErreurAdr.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelErreurAdr.ForeColor = System.Drawing.Color.Tomato;
-            this.labelErreurAdr.Location = new System.Drawing.Point(192, 174);
-            this.labelErreurAdr.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelErreurAdr.Location = new System.Drawing.Point(154, 139);
             this.labelErreurAdr.Name = "labelErreurAdr";
-            this.labelErreurAdr.Size = new System.Drawing.Size(264, 25);
+            this.labelErreurAdr.Size = new System.Drawing.Size(211, 20);
             this.labelErreurAdr.TabIndex = 10;
             this.labelErreurAdr.Text = "Veuillez saisir une adresse valide";
             this.labelErreurAdr.Visible = false;
@@ -159,10 +158,9 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.labelErreurCP.BackColor = System.Drawing.Color.Transparent;
             this.labelErreurCP.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelErreurCP.ForeColor = System.Drawing.Color.Tomato;
-            this.labelErreurCP.Location = new System.Drawing.Point(192, 250);
-            this.labelErreurCP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelErreurCP.Location = new System.Drawing.Point(154, 200);
             this.labelErreurCP.Name = "labelErreurCP";
-            this.labelErreurCP.Size = new System.Drawing.Size(288, 25);
+            this.labelErreurCP.Size = new System.Drawing.Size(230, 20);
             this.labelErreurCP.TabIndex = 11;
             this.labelErreurCP.Text = "Veuillez saisir un code postal valide";
             this.labelErreurCP.Visible = false;
@@ -172,10 +170,9 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.labelErreurVille.BackColor = System.Drawing.Color.Transparent;
             this.labelErreurVille.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelErreurVille.ForeColor = System.Drawing.Color.Tomato;
-            this.labelErreurVille.Location = new System.Drawing.Point(192, 329);
-            this.labelErreurVille.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelErreurVille.Location = new System.Drawing.Point(154, 263);
             this.labelErreurVille.Name = "labelErreurVille";
-            this.labelErreurVille.Size = new System.Drawing.Size(234, 25);
+            this.labelErreurVille.Size = new System.Drawing.Size(187, 20);
             this.labelErreurVille.TabIndex = 12;
             this.labelErreurVille.Text = "Veuillez saisir une ville valide";
             this.labelErreurVille.Visible = false;
@@ -185,20 +182,22 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.backgroundBlock2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
             this.backgroundBlock2.Controls.Add(this.buttonAnnuler);
             this.backgroundBlock2.Controls.Add(this.buttonOK);
-            this.backgroundBlock2.Location = new System.Drawing.Point(-6, 451);
+            this.backgroundBlock2.Location = new System.Drawing.Point(-5, 361);
+            this.backgroundBlock2.Margin = new System.Windows.Forms.Padding(2);
             this.backgroundBlock2.Name = "backgroundBlock2";
-            this.backgroundBlock2.Size = new System.Drawing.Size(524, 63);
+            this.backgroundBlock2.Size = new System.Drawing.Size(419, 50);
             this.backgroundBlock2.TabIndex = 17;
             // 
             // buttonAnnuler
             // 
             this.buttonAnnuler.BackColor = System.Drawing.Color.Transparent;
-            this.buttonAnnuler.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonAnnuler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAnnuler.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonAnnuler.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonAnnuler.Location = new System.Drawing.Point(204, 14);
+            this.buttonAnnuler.Location = new System.Drawing.Point(163, 11);
+            this.buttonAnnuler.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAnnuler.Name = "buttonAnnuler";
-            this.buttonAnnuler.Size = new System.Drawing.Size(138, 37);
+            this.buttonAnnuler.Size = new System.Drawing.Size(110, 30);
             this.buttonAnnuler.TabIndex = 3;
             this.buttonAnnuler.Text = "Annuler";
             this.buttonAnnuler.UseVisualStyleBackColor = false;
@@ -207,12 +206,13 @@ namespace ZumbaSoft.Fenetres_Magasin
             // buttonOK
             // 
             this.buttonOK.BackColor = System.Drawing.Color.Transparent;
-            this.buttonOK.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonOK.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonOK.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonOK.Location = new System.Drawing.Point(369, 14);
+            this.buttonOK.Location = new System.Drawing.Point(295, 11);
+            this.buttonOK.Margin = new System.Windows.Forms.Padding(2);
             this.buttonOK.Name = "buttonOK";
-            this.buttonOK.Size = new System.Drawing.Size(138, 37);
+            this.buttonOK.Size = new System.Drawing.Size(110, 30);
             this.buttonOK.TabIndex = 2;
             this.buttonOK.Text = "Ajouter";
             this.buttonOK.UseVisualStyleBackColor = false;
@@ -223,8 +223,9 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.backgroundBlock1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
             this.backgroundBlock1.Controls.Add(this.label1);
             this.backgroundBlock1.Location = new System.Drawing.Point(0, 1);
+            this.backgroundBlock1.Margin = new System.Windows.Forms.Padding(2);
             this.backgroundBlock1.Name = "backgroundBlock1";
-            this.backgroundBlock1.Size = new System.Drawing.Size(524, 91);
+            this.backgroundBlock1.Size = new System.Drawing.Size(419, 73);
             this.backgroundBlock1.TabIndex = 16;
             // 
             // label1
@@ -233,18 +234,19 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(15, 27);
+            this.label1.Location = new System.Drawing.Point(12, 22);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(342, 42);
+            this.label1.Size = new System.Drawing.Size(287, 36);
             this.label1.TabIndex = 0;
             this.label1.Text = "Ajout d\'une adresse";
             // 
             // NouvelleAdresse
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(518, 514);
+            this.ClientSize = new System.Drawing.Size(414, 411);
             this.Controls.Add(this.backgroundBlock2);
             this.Controls.Add(this.backgroundBlock1);
             this.Controls.Add(this.labelErreurVille);
@@ -258,9 +260,9 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.Controls.Add(this.labelVille);
             this.Controls.Add(this.textBoxComplement);
             this.Controls.Add(this.labelComplement);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "NouvelleAdresse";
-            this.Text = "NouvelleAdresse";
+            this.Text = "Ajout d\'une adresse";
             this.backgroundBlock2.ResumeLayout(false);
             this.backgroundBlock1.ResumeLayout(false);
             this.backgroundBlock1.PerformLayout();

@@ -9,6 +9,8 @@ using SQLite;
 using ZumbaSoft.Model;
 using SQLiteNetExtensions;
 using SQLiteNetExtensions.Extensions;
+using System.Diagnostics;
+using System.IO;
 
 namespace ZumbaSoft.Fenetres_Produit
 {
@@ -21,6 +23,7 @@ namespace ZumbaSoft.Fenetres_Produit
             DB = db;
             initListProduits();
             initItemsColors();
+            checkDB();
         }
 
         public void initListProduits()
@@ -51,17 +54,63 @@ namespace ZumbaSoft.Fenetres_Produit
             buttonModifierProduit.BackColor = Color.FromArgb(50, 12, 12, 12);
             buttonSupprimerProduit.BackColor = Color.FromArgb(50, 12, 12, 12);
             erreurListevide.BackColor = Color.FromArgb(50, 12, 12, 12);
-            panel1.BackColor = Color.FromArgb(50, 12, 12, 12);
+            panel5.BackColor = Color.FromArgb(50, 12, 12, 12);
             panel4.BackColor = Color.FromArgb(80, 12, 12, 12);
+            panelERROR.BackColor = Color.FromArgb(100, 120, 1, 1);
+            buttonModifierProduit.Enabled = false;
+            buttonSupprimerProduit.Enabled = false;
+        }
+
+        public void checkDB()
+        {
+            var database = new FileInfo("DataBase.db");
+            if (!database.Exists)
+            {
+                msgBDstatusERROR.Visible = true;
+                msgBDstatusOK.Visible = false;
+
+                dbERROR.Visible = true;
+                dbOK.Visible = false;
+
+                var t = new Timer();
+                t.Interval = 2000; // Durée de l'attente avant l'affichage du message
+                t.Tick += (s, e) =>
+                {
+                    panelERROR.Visible = true;
+                    t.Stop();
+                };
+                t.Start();
+
+                var t2 = new Timer();
+                t2.Interval = 8000; // Durée de l'affichage du message
+                t2.Tick += (s, e) =>
+                {
+                    panelERROR.Visible = false;
+                    t2.Stop();
+                };
+                t2.Start();
+
+            }
+            else
+            {
+                msgBDstatusERROR.Visible = false;
+                msgBDstatusOK.Visible = true;
+
+                dbERROR.Visible = false;
+                dbOK.Visible = true;
+            }
         }
 
         private void buttonSupprimerProduit_Click(object sender, EventArgs e)
         {
-            var p = (Produit)listProduits.SelectedItem;
-            SupprimerProduit supprimer = new SupprimerProduit(p, DB);
-            if (supprimer.ShowDialog() == DialogResult.OK)
+            if (listProduits.SelectedItem != null)
             {
-                listProduits.Items.Remove(p);
+                var p = (Produit)listProduits.SelectedItem;
+                SupprimerProduit supprimer = new SupprimerProduit(p, DB);
+                if (supprimer.ShowDialog() == DialogResult.OK)
+                {
+                    listProduits.Items.Remove(p);
+                }
             }
         }
 
@@ -87,10 +136,61 @@ namespace ZumbaSoft.Fenetres_Produit
             }
         }
 
-        private void buttonRetourAccueil_Click(object sender, EventArgs e)
+        private void goBackButton_Click(object sender, EventArgs e)
         {
-            DialogResult = DialogResult.Cancel;
+            DialogResult = DialogResult.OK;
             this.Close();
+        }
+
+        private void buttonContactAdmin_Click(object sender, EventArgs e)
+        {
+            Process OpenMailClient = new Process();
+            DateTime date = DateTime.Now;
+            String emailAddress = "mrkafeine@gmail.com";
+            String subject = "Rapport d'erreur - BD introuvable";
+            String body = "---------------------------------%0a%0aRapport d'erreur  OUATELSE : le " + date.ToString("MM/dd/yyyy") + " à " + date.ToString("HH:mm") + " : ERREUR 01 - Impossible d'accéder à la base de données : le fichier correspondant à la base de données (Database.db) est introuvable.%0a%0aRépondez directement à ce mail pour échanger avec le magasin concerné.%0a%0a---------------------------------%0a%0aEntrez des détails ici (que s'est-il passé avant l'apparition de ce problème, d'éventuelles remarques...) :";
+
+            string filename = "mailto:" + emailAddress + "?subject=" + subject + "&body=" + body;
+            Process myProcess = new Process();
+            myProcess.StartInfo.FileName = filename;
+            myProcess.StartInfo.UseShellExecute = true;
+            myProcess.StartInfo.RedirectStandardOutput = false;
+            myProcess.Start();
+        }
+
+        private void buttonBackHome_Click(object sender, EventArgs e)
+        {
+            panelERROR.Visible = false;
+            DialogResult = DialogResult.OK;
+            this.Close();
+        }
+
+        private void msgBDstatusERROR_Click(object sender, EventArgs e)
+        {
+            if (!panelERROR.Visible)
+            {
+                panelERROR.Visible = true;
+                var t = new Timer();
+                t.Interval = 8000; // Durée de l'affichage du message
+                t.Tick += (s, e) =>
+                {
+                    panelERROR.Visible = false;
+                    t.Stop();
+                };
+                t.Start();
+            }
+
+        }
+
+        private void listProduits_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            EnabledInfoField();
+        }
+
+        private void EnabledInfoField()
+        {
+            buttonModifierProduit.Enabled = true;
+            buttonSupprimerProduit.Enabled = true;
         }
     }
 }

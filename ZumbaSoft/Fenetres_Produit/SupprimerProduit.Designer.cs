@@ -29,6 +29,7 @@ namespace ZumbaSoft.Fenetres_Produit
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SupprimerProduit));
             this.backgroundBlock1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.labelSuppproduit = new System.Windows.Forms.Label();
@@ -64,10 +65,11 @@ namespace ZumbaSoft.Fenetres_Produit
             // 
             this.labelSuppproduit.AutoSize = true;
             this.labelSuppproduit.BackColor = System.Drawing.Color.Transparent;
+            this.labelSuppproduit.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelSuppproduit.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.labelSuppproduit.Location = new System.Drawing.Point(29, 135);
             this.labelSuppproduit.Name = "labelSuppproduit";
-            this.labelSuppproduit.Size = new System.Drawing.Size(315, 20);
+            this.labelSuppproduit.Size = new System.Drawing.Size(334, 19);
             this.labelSuppproduit.TabIndex = 16;
             this.labelSuppproduit.Text = "Êtes vous sur de vouloir supprimer le produit ?";
             // 
@@ -84,7 +86,7 @@ namespace ZumbaSoft.Fenetres_Produit
             // buttonAnnuler
             // 
             this.buttonAnnuler.BackColor = System.Drawing.Color.Transparent;
-            this.buttonAnnuler.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonAnnuler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAnnuler.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.buttonAnnuler.Location = new System.Drawing.Point(204, 14);
             this.buttonAnnuler.Name = "buttonAnnuler";
@@ -97,7 +99,7 @@ namespace ZumbaSoft.Fenetres_Produit
             // buttonSupprimer
             // 
             this.buttonSupprimer.BackColor = System.Drawing.Color.Transparent;
-            this.buttonSupprimer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonSupprimer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSupprimer.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.buttonSupprimer.Location = new System.Drawing.Point(369, 14);
             this.buttonSupprimer.Name = "buttonSupprimer";
@@ -111,13 +113,14 @@ namespace ZumbaSoft.Fenetres_Produit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::ZumbaSoft.Properties.Resources.background;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(524, 258);
             this.Controls.Add(this.backgroundBlock2);
             this.Controls.Add(this.labelSuppproduit);
             this.Controls.Add(this.backgroundBlock1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "SupprimerProduit";
-            this.Text = "SupprimerProduit";
+            this.Text = "Confirmation de suppression - Produit";
             this.backgroundBlock1.ResumeLayout(false);
             this.backgroundBlock1.PerformLayout();
             this.backgroundBlock2.ResumeLayout(false);

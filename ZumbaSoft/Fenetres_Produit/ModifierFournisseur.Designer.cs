@@ -235,6 +235,7 @@ namespace ZumbaSoft.Fenetres_Produit
             this.Controls.Add(this.listViewProduits);
             this.Controls.Add(this.labelCommande);
             this.Controls.Add(this.labelStock);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ModifierFournisseur";
             this.Text = "ModifierFournisseur";
             this.ResumeLayout(false);
@@ -248,7 +249,6 @@ namespace ZumbaSoft.Fenetres_Produit
         private System.Windows.Forms.ListView listViewProduits;
         private System.Windows.Forms.Label labelCommande;
         private System.Windows.Forms.Label labelStock;
-        private System.Windows.Forms.ListView l;
         private System.Windows.Forms.Label labelNom;
         private System.Windows.Forms.TextBox textBoxNewTel;
         private System.Windows.Forms.Button buttonModifs;

@@ -30,8 +30,6 @@ namespace ZumbaSoft.Fenetres_Produit
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AjouterFournisseur));
-            this.backgroundBlock1 = new System.Windows.Forms.Panel();
-            this.labelTitle = new System.Windows.Forms.Label();
             this.labelNomFournisseur = new System.Windows.Forms.Label();
             this.labelMailfourni = new System.Windows.Forms.Label();
             this.labelEtatContratFourni = new System.Windows.Forms.Label();
@@ -47,32 +45,11 @@ namespace ZumbaSoft.Fenetres_Produit
             this.backgroundBlock2 = new System.Windows.Forms.Panel();
             this.buttonAnnuler = new System.Windows.Forms.Button();
             this.buttonOK = new System.Windows.Forms.Button();
-            this.backgroundBlock1.SuspendLayout();
+            this.backgroundBlock1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.backgroundBlock2.SuspendLayout();
+            this.backgroundBlock1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // backgroundBlock1
-            // 
-            this.backgroundBlock1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
-            this.backgroundBlock1.Controls.Add(this.labelTitle);
-            this.backgroundBlock1.Location = new System.Drawing.Point(1, 1);
-            this.backgroundBlock1.Margin = new System.Windows.Forms.Padding(2);
-            this.backgroundBlock1.Name = "backgroundBlock1";
-            this.backgroundBlock1.Size = new System.Drawing.Size(419, 94);
-            this.backgroundBlock1.TabIndex = 14;
-            // 
-            // labelTitle
-            // 
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.BackColor = System.Drawing.Color.Transparent;
-            this.labelTitle.Font = new System.Drawing.Font("Microsoft JhengHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelTitle.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.labelTitle.Location = new System.Drawing.Point(43, 31);
-            this.labelTitle.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(342, 38);
-            this.labelTitle.TabIndex = 11;
-            this.labelTitle.Text = "Ajout d\'un fournisseur";
             // 
             // labelNomFournisseur
             // 
@@ -80,7 +57,7 @@ namespace ZumbaSoft.Fenetres_Produit
             this.labelNomFournisseur.BackColor = System.Drawing.Color.Transparent;
             this.labelNomFournisseur.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelNomFournisseur.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.labelNomFournisseur.Location = new System.Drawing.Point(44, 136);
+            this.labelNomFournisseur.Location = new System.Drawing.Point(40, 136);
             this.labelNomFournisseur.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelNomFournisseur.Name = "labelNomFournisseur";
             this.labelNomFournisseur.Size = new System.Drawing.Size(51, 19);
@@ -93,7 +70,7 @@ namespace ZumbaSoft.Fenetres_Produit
             this.labelMailfourni.BackColor = System.Drawing.Color.Transparent;
             this.labelMailfourni.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelMailfourni.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.labelMailfourni.Location = new System.Drawing.Point(44, 209);
+            this.labelMailfourni.Location = new System.Drawing.Point(40, 209);
             this.labelMailfourni.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelMailfourni.Name = "labelMailfourni";
             this.labelMailfourni.Size = new System.Drawing.Size(52, 19);
@@ -106,7 +83,7 @@ namespace ZumbaSoft.Fenetres_Produit
             this.labelEtatContratFourni.BackColor = System.Drawing.Color.Transparent;
             this.labelEtatContratFourni.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelEtatContratFourni.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.labelEtatContratFourni.Location = new System.Drawing.Point(44, 284);
+            this.labelEtatContratFourni.Location = new System.Drawing.Point(40, 284);
             this.labelEtatContratFourni.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelEtatContratFourni.Name = "labelEtatContratFourni";
             this.labelEtatContratFourni.Size = new System.Drawing.Size(117, 19);
@@ -119,7 +96,7 @@ namespace ZumbaSoft.Fenetres_Produit
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.Location = new System.Drawing.Point(44, 366);
+            this.label3.Location = new System.Drawing.Point(40, 366);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(166, 19);
@@ -198,7 +175,7 @@ namespace ZumbaSoft.Fenetres_Produit
             // buttonAdr
             // 
             this.buttonAdr.BackColor = System.Drawing.Color.Transparent;
-            this.buttonAdr.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonAdr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAdr.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonAdr.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.buttonAdr.Location = new System.Drawing.Point(44, 545);
@@ -216,7 +193,7 @@ namespace ZumbaSoft.Fenetres_Produit
             this.labelAdr.BackColor = System.Drawing.Color.Transparent;
             this.labelAdr.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelAdr.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.labelAdr.Location = new System.Drawing.Point(44, 448);
+            this.labelAdr.Location = new System.Drawing.Point(40, 448);
             this.labelAdr.Name = "labelAdr";
             this.labelAdr.Size = new System.Drawing.Size(69, 19);
             this.labelAdr.TabIndex = 23;
@@ -236,7 +213,7 @@ namespace ZumbaSoft.Fenetres_Produit
             // buttonAnnuler
             // 
             this.buttonAnnuler.BackColor = System.Drawing.Color.Transparent;
-            this.buttonAnnuler.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonAnnuler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAnnuler.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonAnnuler.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.buttonAnnuler.Location = new System.Drawing.Point(167, 11);
@@ -251,7 +228,7 @@ namespace ZumbaSoft.Fenetres_Produit
             // buttonOK
             // 
             this.buttonOK.BackColor = System.Drawing.Color.Transparent;
-            this.buttonOK.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonOK.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonOK.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.buttonOK.Location = new System.Drawing.Point(298, 11);
@@ -263,12 +240,36 @@ namespace ZumbaSoft.Fenetres_Produit
             this.buttonOK.UseVisualStyleBackColor = false;
             this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
             // 
+            // backgroundBlock1
+            // 
+            this.backgroundBlock1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
+            this.backgroundBlock1.Controls.Add(this.label1);
+            this.backgroundBlock1.Location = new System.Drawing.Point(1, 1);
+            this.backgroundBlock1.Margin = new System.Windows.Forms.Padding(2);
+            this.backgroundBlock1.Name = "backgroundBlock1";
+            this.backgroundBlock1.Size = new System.Drawing.Size(424, 95);
+            this.backgroundBlock1.TabIndex = 36;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.Location = new System.Drawing.Point(26, 30);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(323, 36);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Ajout d\'un fournisseur";
+            // 
             // AjouterFournisseur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(420, 673);
+            this.Controls.Add(this.backgroundBlock1);
             this.Controls.Add(this.backgroundBlock2);
             this.Controls.Add(this.labelErreurAdr);
             this.Controls.Add(this.textBoxAdr);
@@ -282,21 +283,18 @@ namespace ZumbaSoft.Fenetres_Produit
             this.Controls.Add(this.labelEtatContratFourni);
             this.Controls.Add(this.labelMailfourni);
             this.Controls.Add(this.labelNomFournisseur);
-            this.Controls.Add(this.backgroundBlock1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "AjouterFournisseur";
-            this.Text = "AjouterFournisseur";
+            this.Text = "Ajouter un fournisseur";
+            this.backgroundBlock2.ResumeLayout(false);
             this.backgroundBlock1.ResumeLayout(false);
             this.backgroundBlock1.PerformLayout();
-            this.backgroundBlock2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel backgroundBlock1;
-        private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Label labelNomFournisseur;
         private System.Windows.Forms.Label labelMailfourni;
         private System.Windows.Forms.Label labelEtatContratFourni;
@@ -305,14 +303,14 @@ namespace ZumbaSoft.Fenetres_Produit
         private System.Windows.Forms.TextBox textBoxMailFourni;
         private System.Windows.Forms.TextBox textBoxEtatFourni;
         private System.Windows.Forms.TextBox textBoxTelFourni;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label labelErreurAdr;
         private System.Windows.Forms.TextBox textBoxAdr;
         private System.Windows.Forms.Button buttonAdr;
         private System.Windows.Forms.Label labelAdr;
         private System.Windows.Forms.Panel backgroundBlock2;
         private System.Windows.Forms.Button buttonAnnuler;
-        private System.Windows.Forms.Button buttonOKmdp;
         private System.Windows.Forms.Button buttonOK;
+        private System.Windows.Forms.Panel backgroundBlock1;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -30,39 +30,16 @@ namespace ZumbaSoft.Fenetres_Produit
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AjouterGenre));
-            this.backgroundBlock1 = new System.Windows.Forms.Panel();
-            this.labelTitle = new System.Windows.Forms.Label();
             this.labelNomMagasin = new System.Windows.Forms.Label();
             this.textBoxNom = new System.Windows.Forms.TextBox();
             this.backgroundBlock2 = new System.Windows.Forms.Panel();
             this.buttonAnnuler = new System.Windows.Forms.Button();
             this.buttonOK = new System.Windows.Forms.Button();
-            this.backgroundBlock1.SuspendLayout();
+            this.backgroundBlock1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.backgroundBlock2.SuspendLayout();
+            this.backgroundBlock1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // backgroundBlock1
-            // 
-            this.backgroundBlock1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
-            this.backgroundBlock1.Controls.Add(this.labelTitle);
-            this.backgroundBlock1.Location = new System.Drawing.Point(1, 0);
-            this.backgroundBlock1.Margin = new System.Windows.Forms.Padding(2);
-            this.backgroundBlock1.Name = "backgroundBlock1";
-            this.backgroundBlock1.Size = new System.Drawing.Size(419, 94);
-            this.backgroundBlock1.TabIndex = 13;
-            // 
-            // labelTitle
-            // 
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.BackColor = System.Drawing.Color.Transparent;
-            this.labelTitle.Font = new System.Drawing.Font("Microsoft JhengHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelTitle.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.labelTitle.Location = new System.Drawing.Point(62, 30);
-            this.labelTitle.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(262, 38);
-            this.labelTitle.TabIndex = 11;
-            this.labelTitle.Text = "Ajout d\'un genre";
             // 
             // labelNomMagasin
             // 
@@ -70,7 +47,7 @@ namespace ZumbaSoft.Fenetres_Produit
             this.labelNomMagasin.BackColor = System.Drawing.Color.Transparent;
             this.labelNomMagasin.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelNomMagasin.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.labelNomMagasin.Location = new System.Drawing.Point(53, 131);
+            this.labelNomMagasin.Location = new System.Drawing.Point(49, 131);
             this.labelNomMagasin.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelNomMagasin.Name = "labelNomMagasin";
             this.labelNomMagasin.Size = new System.Drawing.Size(128, 19);
@@ -93,7 +70,7 @@ namespace ZumbaSoft.Fenetres_Produit
             this.backgroundBlock2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
             this.backgroundBlock2.Controls.Add(this.buttonAnnuler);
             this.backgroundBlock2.Controls.Add(this.buttonOK);
-            this.backgroundBlock2.Location = new System.Drawing.Point(1, 308);
+            this.backgroundBlock2.Location = new System.Drawing.Point(1, 239);
             this.backgroundBlock2.Margin = new System.Windows.Forms.Padding(2);
             this.backgroundBlock2.Name = "backgroundBlock2";
             this.backgroundBlock2.Size = new System.Drawing.Size(419, 50);
@@ -102,7 +79,7 @@ namespace ZumbaSoft.Fenetres_Produit
             // buttonAnnuler
             // 
             this.buttonAnnuler.BackColor = System.Drawing.Color.Transparent;
-            this.buttonAnnuler.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonAnnuler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAnnuler.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonAnnuler.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.buttonAnnuler.Location = new System.Drawing.Point(167, 11);
@@ -117,7 +94,7 @@ namespace ZumbaSoft.Fenetres_Produit
             // buttonOK
             // 
             this.buttonOK.BackColor = System.Drawing.Color.Transparent;
-            this.buttonOK.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonOK.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonOK.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.buttonOK.Location = new System.Drawing.Point(298, 11);
@@ -129,34 +106,57 @@ namespace ZumbaSoft.Fenetres_Produit
             this.buttonOK.UseVisualStyleBackColor = false;
             this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
             // 
+            // backgroundBlock1
+            // 
+            this.backgroundBlock1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
+            this.backgroundBlock1.Controls.Add(this.label1);
+            this.backgroundBlock1.Location = new System.Drawing.Point(1, 0);
+            this.backgroundBlock1.Margin = new System.Windows.Forms.Padding(2);
+            this.backgroundBlock1.Name = "backgroundBlock1";
+            this.backgroundBlock1.Size = new System.Drawing.Size(419, 95);
+            this.backgroundBlock1.TabIndex = 36;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.Location = new System.Drawing.Point(26, 30);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(247, 36);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Ajout d\'un genre";
+            // 
             // AjouterGenre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(421, 358);
+            this.ClientSize = new System.Drawing.Size(421, 288);
+            this.Controls.Add(this.backgroundBlock1);
             this.Controls.Add(this.backgroundBlock2);
             this.Controls.Add(this.textBoxNom);
             this.Controls.Add(this.labelNomMagasin);
-            this.Controls.Add(this.backgroundBlock1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "AjouterGenre";
-            this.Text = "AjouterGenre";
+            this.Text = "Ajouter un genre";
+            this.backgroundBlock2.ResumeLayout(false);
             this.backgroundBlock1.ResumeLayout(false);
             this.backgroundBlock1.PerformLayout();
-            this.backgroundBlock2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel backgroundBlock1;
-        private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Label labelNomMagasin;
         private System.Windows.Forms.TextBox textBoxNom;
         private System.Windows.Forms.Panel backgroundBlock2;
         private System.Windows.Forms.Button buttonAnnuler;
         private System.Windows.Forms.Button buttonOK;
+        private System.Windows.Forms.Panel backgroundBlock1;
+        private System.Windows.Forms.Label label1;
     }
 }

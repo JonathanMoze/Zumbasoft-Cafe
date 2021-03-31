@@ -22,12 +22,22 @@ namespace ZumbaSoft.Fenetres_Produit
             this.genre = genre;
             this.DB = db;
             InitInfoField();
+            initItemsColors();
 
         }
 
         public void InitInfoField()
         {
             labelCurrentIntitule.Text = genre.intitule;
+        }
+
+        public void initItemsColors()
+        {
+            backgroundBlock1.BackColor = Color.FromArgb(50, 12, 12, 12);
+            backgroundBlock2.BackColor = Color.FromArgb(80, 12, 12, 12);
+            buttonAnnuler.BackColor = Color.FromArgb(50, 12, 12, 12);
+            buttonOK.BackColor = Color.FromArgb(50, 12, 12, 12);
+            buttonModifMdp.BackColor = Color.FromArgb(50, 12, 12, 12);
         }
 
         private void buttonOK_Click(object sender, EventArgs e)
