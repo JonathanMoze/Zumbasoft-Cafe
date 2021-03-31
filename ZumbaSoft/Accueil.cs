@@ -13,6 +13,7 @@ using ZumbaSoft.Fenetres_Roles;
 using ZumbaSoft.Fenetres_Stock;
 using ZumbaSoft.Fenetres_Identification;
 using ZumbaSoft.Fenetres_Produit;
+using ZumbaSoft.Fenetres_Ventes;
 
 namespace ZumbaSoft
 {
@@ -162,6 +163,16 @@ namespace ZumbaSoft
             } else
             {
                 panelConditions.Visible = true;
+            }
+        }
+
+        private void buttonGestionVentes_Click(object sender, EventArgs e)
+        {
+            AccueilVente ve = new AccueilVente(db, magasin);
+            this.Visible = false;
+            if (ve.ShowDialog() == DialogResult.OK)
+            {
+                this.Visible = true;
             }
         }
     }

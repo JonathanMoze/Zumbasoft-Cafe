@@ -181,6 +181,7 @@
             this.buttonGestionVentes.TabIndex = 7;
             this.buttonGestionVentes.Text = "Ventes";
             this.buttonGestionVentes.UseVisualStyleBackColor = false;
+            this.buttonGestionVentes.Click += new System.EventHandler(this.buttonGestionVentes_Click);
             // 
             // buttonGestionProduits
             // 
