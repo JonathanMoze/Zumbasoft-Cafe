@@ -205,11 +205,11 @@ namespace ZumbaSoft.Fenetres_Roles
             // nomRole
             // 
             this.nomRole.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
-            this.nomRole.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.nomRole.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.nomRole.ForeColor = System.Drawing.Color.White;
             this.nomRole.Location = new System.Drawing.Point(117, 67);
             this.nomRole.Name = "nomRole";
-            this.nomRole.Size = new System.Drawing.Size(309, 36);
+            this.nomRole.Size = new System.Drawing.Size(309, 35);
             this.nomRole.TabIndex = 3;
             // 
             // intituleRole

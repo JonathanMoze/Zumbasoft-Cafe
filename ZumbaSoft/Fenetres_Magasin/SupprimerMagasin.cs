@@ -41,7 +41,7 @@ namespace ZumbaSoft.Fenetres_Magasin
 
         private void buttonSupprimer_Click(object sender, EventArgs e)
         {
-            DB.Delete(magasin);
+            DB.Delete(magasin,true);
             DialogResult = DialogResult.OK;
             this.Close();
         }

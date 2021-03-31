@@ -90,18 +90,19 @@ namespace ZumbaSoft
             }
         }
 
-        private void buttonID_Click(object sender, EventArgs e)
-        {
-            Identification i = new Identification(db);
-            i.Show();
-        }
-
         private void buttonSeConnecter_Click(object sender, EventArgs e)
         {
             Identification m = new Identification(db);
             this.Visible = false;
-            if (m.ShowDialog() == DialogResult.OK)
+            DialogResult dr = m.ShowDialog();
+            if ( dr == DialogResult.OK)
             {
+                // TODO
+                this.Visible = true;
+            }
+            if( dr == DialogResult.Cancel)
+            {
+                //DO NOTHING
                 this.Visible = true;
             }
         }

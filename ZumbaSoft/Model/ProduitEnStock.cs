@@ -15,7 +15,7 @@ namespace ZumbaSoft.Model
         [ForeignKey(typeof(Magasin))]
         public int id_magasin { get; set; }
 
-        [OneToOne]
+        [ManyToOne]
         public Magasin magasin { get; set; }
 
         //Association Produit

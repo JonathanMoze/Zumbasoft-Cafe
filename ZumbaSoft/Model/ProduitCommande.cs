@@ -4,10 +4,16 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+
 namespace ZumbaSoft.Model
 {
     public class ProduitCommande
     {
+
+        [PrimaryKey, AutoIncrement]
+        public int id_produitCommande { get; set; }
+
+
         //Association Produit
         [ForeignKey(typeof(Produit))]
         public int id_produit { get; set; }
@@ -27,5 +33,6 @@ namespace ZumbaSoft.Model
 
         //Entre 0 et 1
         public double reduc { get; set; }
+
     }
 }
