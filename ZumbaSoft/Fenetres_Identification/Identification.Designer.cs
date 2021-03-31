@@ -34,14 +34,15 @@ namespace ZumbaSoft.Fenetres_Identification
             this.passwordField = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonCreationCompte = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // connection_button
             // 
-            this.connection_button.Location = new System.Drawing.Point(504, 387);
+            this.connection_button.Location = new System.Drawing.Point(107, 238);
+            this.connection_button.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.connection_button.Name = "connection_button";
-            this.connection_button.Size = new System.Drawing.Size(131, 23);
+            this.connection_button.Size = new System.Drawing.Size(150, 31);
             this.connection_button.TabIndex = 0;
             this.connection_button.Text = "Se connecter";
             this.connection_button.UseVisualStyleBackColor = true;
@@ -49,57 +50,61 @@ namespace ZumbaSoft.Fenetres_Identification
             // 
             // loginField
             // 
-            this.loginField.Location = new System.Drawing.Point(226, 115);
+            this.loginField.Location = new System.Drawing.Point(186, 90);
+            this.loginField.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.loginField.Name = "loginField";
-            this.loginField.Size = new System.Drawing.Size(134, 23);
+            this.loginField.Size = new System.Drawing.Size(153, 27);
             this.loginField.TabIndex = 1;
             // 
             // passwordField
             // 
-            this.passwordField.Location = new System.Drawing.Point(226, 196);
+            this.passwordField.Location = new System.Drawing.Point(186, 145);
+            this.passwordField.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.passwordField.Name = "passwordField";
-            this.passwordField.Size = new System.Drawing.Size(133, 23);
+            this.passwordField.Size = new System.Drawing.Size(151, 27);
             this.passwordField.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(85, 118);
+            this.label1.Location = new System.Drawing.Point(25, 94);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 15);
+            this.label1.Size = new System.Drawing.Size(46, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "Login";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(85, 204);
+            this.label2.Location = new System.Drawing.Point(25, 156);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 15);
+            this.label2.Size = new System.Drawing.Size(98, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = "mot de passe";
             // 
-            // button2
+            // buttonCreationCompte
             // 
-            this.button2.Location = new System.Drawing.Point(319, 387);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(131, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Creer un compte";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonCreationCompte.Location = new System.Drawing.Point(189, 13);
+            this.buttonCreationCompte.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonCreationCompte.Name = "buttonCreationCompte";
+            this.buttonCreationCompte.Size = new System.Drawing.Size(150, 31);
+            this.buttonCreationCompte.TabIndex = 5;
+            this.buttonCreationCompte.Text = "Creer un compte";
+            this.buttonCreationCompte.UseVisualStyleBackColor = true;
+            this.buttonCreationCompte.Click += new System.EventHandler(this.buttonCreationCompte_Click);
             // 
             // Identification
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(374, 307);
+            this.Controls.Add(this.buttonCreationCompte);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.passwordField);
             this.Controls.Add(this.loginField);
             this.Controls.Add(this.connection_button);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Identification";
             this.Text = "Identification";
             this.ResumeLayout(false);
@@ -114,6 +119,6 @@ namespace ZumbaSoft.Fenetres_Identification
         private System.Windows.Forms.TextBox passwordField;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonCreationCompte;
     }
 }

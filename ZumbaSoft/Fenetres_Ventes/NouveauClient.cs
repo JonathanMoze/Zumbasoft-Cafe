@@ -40,7 +40,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             client.nom = textBoxNom.Text;
             client.prenom = textBoxPrenom.Text;
             client.telephone = textBoxTel.Text;
-            client.mail = textBoxMail.Text;
+            client.email = textBoxMail.Text;
             client.date_naissance = dateTimeNaissance.Value;
             client.adresse = adresse;
         }
@@ -48,7 +48,7 @@ namespace ZumbaSoft.Fenetres_Ventes
 
         public bool correctInformations()
         {
-            if(comboBoxCivilité.SelectedItem == null || comboBoxStatus == null)
+            if(comboBoxCivilité.SelectedItem == null || comboBoxStatus.SelectedItem == null)
             {
                 return false;
             }

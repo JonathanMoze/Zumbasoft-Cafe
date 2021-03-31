@@ -13,6 +13,9 @@ namespace ZumbaSoft.Fenetres_Identification
 {
     public partial class Identification : Form
     {
+
+        public Utilisateur uConnecte;
+
         SQLiteConnection database;
         public Identification(SQLiteConnection db)
         {
@@ -38,7 +41,8 @@ namespace ZumbaSoft.Fenetres_Identification
                 {
                     if (pass.Equals(passwordField.Text))
                     {
-                        Accueil.connect = database.Table<Utilisateur>().Where(x => x.login.Equals(loginField.Text)).ToList()[0];
+                        Utilisateur u = database.Table<Utilisateur>().Where(x => x.login.Equals(log_in)).ToList()[0];
+                        uConnecte = database.GetWithChildren<Utilisateur>(u.id_personne);
                         this.DialogResult = DialogResult.OK;//retour positif de la fenêtre.
                         this.DestroyHandle();
                         MessageBox.Show("Vous êtes connecté.");
@@ -62,30 +66,10 @@ namespace ZumbaSoft.Fenetres_Identification
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonCreationCompte_Click(object sender, EventArgs e)
         {
-            #region check null
-            string log_in = loginField.Text;
-            string pass = passwordField.Text;
-            if (log_in != null && pass != null)
-            {
-                if (!check_login(log_in))
-                {
-                    Utilisateur user = new Utilisateur
-                    {
-                        login = log_in,
-                        mot_de_passe = pass
-                    };
-                    database.Insert(user);
-                    Accueil.connect = user;
-
-                }
-                else
-                {
-                    MessageBox.Show("veuillez renseigner le champ mot de passe et le champ login.");
-                }
-            }
-            #endregion
+            CreationCompte cp = new CreationCompte(database);
+            cp.Show();
         }
 
         /// <summary>
@@ -96,7 +80,15 @@ namespace ZumbaSoft.Fenetres_Identification
         private bool check_login(string client)
         {
             List<Utilisateur> test = database.Table<Utilisateur>().Where(x => x.login.Equals(client)).ToList();
-            return test[0]!=null;
+            if (test.Count > 0)
+            {
+                return test[0] != null;
+            }
+            else
+            {
+                return false;
+            }
+
         }
 
         /// <summary>
