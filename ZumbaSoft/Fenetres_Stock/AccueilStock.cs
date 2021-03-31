@@ -70,12 +70,6 @@ namespace ZumbaSoft.Fenetres_Stock
             }
         }
 
-        private void buttonAccueil_Click(object sender, EventArgs e)
-        {
-            DialogResult = DialogResult.OK;
-            this.Close();
-        }
-
         private void buttonNouvelleCmd_Click(object sender, EventArgs e)
         {
             GestionDeLaCommande gc = new GestionDeLaCommande(DB,magasin);
@@ -376,6 +370,12 @@ namespace ZumbaSoft.Fenetres_Stock
                 }
             }
             
+        }
+
+        private void goBackButton_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.OK;
+            this.Close();
         }
     }
 

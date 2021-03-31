@@ -75,8 +75,6 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
@@ -165,7 +163,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.textBoxAdr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
             this.textBoxAdr.Enabled = false;
             this.textBoxAdr.ForeColor = System.Drawing.Color.White;
-            this.textBoxAdr.Location = new System.Drawing.Point(25, 176);
+            this.textBoxAdr.Location = new System.Drawing.Point(25, 104);
             this.textBoxAdr.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxAdr.Name = "textBoxAdr";
             this.textBoxAdr.Size = new System.Drawing.Size(174, 27);
@@ -177,7 +175,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.buttonAdr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAdr.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonAdr.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonAdr.Location = new System.Drawing.Point(221, 174);
+            this.buttonAdr.Location = new System.Drawing.Point(221, 100);
             this.buttonAdr.Margin = new System.Windows.Forms.Padding(4);
             this.buttonAdr.Name = "buttonAdr";
             this.buttonAdr.Size = new System.Drawing.Size(178, 35);
@@ -192,7 +190,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.labelAdr.BackColor = System.Drawing.Color.Transparent;
             this.labelAdr.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelAdr.ForeColor = System.Drawing.Color.White;
-            this.labelAdr.Location = new System.Drawing.Point(25, 148);
+            this.labelAdr.Location = new System.Drawing.Point(25, 68);
             this.labelAdr.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelAdr.Name = "labelAdr";
             this.labelAdr.Size = new System.Drawing.Size(69, 20);
@@ -220,7 +218,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.labelMdp.BackColor = System.Drawing.Color.Transparent;
             this.labelMdp.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelMdp.ForeColor = System.Drawing.Color.White;
-            this.labelMdp.Location = new System.Drawing.Point(215, 68);
+            this.labelMdp.Location = new System.Drawing.Point(25, 150);
             this.labelMdp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelMdp.Name = "labelMdp";
             this.labelMdp.Size = new System.Drawing.Size(106, 20);
@@ -231,10 +229,10 @@ namespace ZumbaSoft.Fenetres_Magasin
             // 
             this.textBoxNewMdp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
             this.textBoxNewMdp.ForeColor = System.Drawing.Color.White;
-            this.textBoxNewMdp.Location = new System.Drawing.Point(221, 104);
+            this.textBoxNewMdp.Location = new System.Drawing.Point(25, 178);
             this.textBoxNewMdp.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNewMdp.Name = "textBoxNewMdp";
-            this.textBoxNewMdp.Size = new System.Drawing.Size(178, 27);
+            this.textBoxNewMdp.Size = new System.Drawing.Size(374, 27);
             this.textBoxNewMdp.TabIndex = 10;
             // 
             // listViewRapports
@@ -691,8 +689,6 @@ namespace ZumbaSoft.Fenetres_Magasin
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.textBox1);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.labelAdr);
             this.panel3.Controls.Add(this.textBoxAdr);
@@ -706,29 +702,6 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(423, 295);
             this.panel3.TabIndex = 63;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(20, 68);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 20);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "Nom du magasin :";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(25, 104);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(174, 27);
-            this.textBox1.TabIndex = 18;
             // 
             // label7
             // 
@@ -775,7 +748,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(750, 51);
             this.label8.TabIndex = 5;
-            this.label8.Text = "Modifier le magasin";
+            this.label8.Text = "Propriétés du magasin";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label9
@@ -911,7 +884,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.panelERROR.Controls.Add(this.label17);
             this.panelERROR.Controls.Add(this.label18);
             this.panelERROR.Controls.Add(this.buttonContactAdmin);
-            this.panelERROR.Location = new System.Drawing.Point(2, 48);
+            this.panelERROR.Location = new System.Drawing.Point(0, 48);
             this.panelERROR.Name = "panelERROR";
             this.panelERROR.Size = new System.Drawing.Size(1120, 127);
             this.panelERROR.TabIndex = 63;
@@ -988,6 +961,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.Controls.Add(this.panel7);
             this.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AccueilMagasin";
             this.Text = "Gestion des magasins";
             this.Load += new System.EventHandler(this.AccueilMagasin_Load);
@@ -1058,8 +1032,6 @@ namespace ZumbaSoft.Fenetres_Magasin
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label8;

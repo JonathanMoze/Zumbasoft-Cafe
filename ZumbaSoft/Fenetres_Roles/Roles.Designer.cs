@@ -262,7 +262,7 @@ namespace ZumbaSoft.Fenetres_Roles
             this.ConfirmationSR.BackColor = System.Drawing.Color.Transparent;
             this.ConfirmationSR.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ConfirmationSR.ForeColor = System.Drawing.SystemColors.Control;
-            this.ConfirmationSR.Location = new System.Drawing.Point(135, 93);
+            this.ConfirmationSR.Location = new System.Drawing.Point(155, 93);
             this.ConfirmationSR.Name = "ConfirmationSR";
             this.ConfirmationSR.Size = new System.Drawing.Size(178, 24);
             this.ConfirmationSR.TabIndex = 2;

@@ -70,7 +70,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.textBoxComplement.Location = new System.Drawing.Point(154, 295);
             this.textBoxComplement.Name = "textBoxComplement";
             this.textBoxComplement.Size = new System.Drawing.Size(188, 27);
-            this.textBoxComplement.TabIndex = 2;
+            this.textBoxComplement.TabIndex = 4;
             // 
             // labelVille
             // 
@@ -92,7 +92,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.textBoxVille.Location = new System.Drawing.Point(154, 232);
             this.textBoxVille.Name = "textBoxVille";
             this.textBoxVille.Size = new System.Drawing.Size(188, 27);
-            this.textBoxVille.TabIndex = 5;
+            this.textBoxVille.TabIndex = 3;
             this.textBoxVille.TextChanged += new System.EventHandler(this.textBoxVille_TextChanged);
             // 
             // labelCodePostal
@@ -115,7 +115,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.textBoxCodePostal.Location = new System.Drawing.Point(154, 169);
             this.textBoxCodePostal.Name = "textBoxCodePostal";
             this.textBoxCodePostal.Size = new System.Drawing.Size(82, 27);
-            this.textBoxCodePostal.TabIndex = 6;
+            this.textBoxCodePostal.TabIndex = 2;
             this.textBoxCodePostal.TextChanged += new System.EventHandler(this.textBoxCodePostal_TextChanged);
             // 
             // textBoxAdresse
@@ -126,7 +126,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.textBoxAdresse.Location = new System.Drawing.Point(154, 111);
             this.textBoxAdresse.Name = "textBoxAdresse";
             this.textBoxAdresse.Size = new System.Drawing.Size(188, 27);
-            this.textBoxAdresse.TabIndex = 8;
+            this.textBoxAdresse.TabIndex = 1;
             this.textBoxAdresse.TextChanged += new System.EventHandler(this.textBoxAdresse_TextChanged);
             // 
             // labelAdresse
@@ -198,7 +198,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.buttonAnnuler.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAnnuler.Name = "buttonAnnuler";
             this.buttonAnnuler.Size = new System.Drawing.Size(110, 30);
-            this.buttonAnnuler.TabIndex = 3;
+            this.buttonAnnuler.TabIndex = 5;
             this.buttonAnnuler.Text = "Annuler";
             this.buttonAnnuler.UseVisualStyleBackColor = false;
             this.buttonAnnuler.Click += new System.EventHandler(this.buttonAnnuler_Click);
@@ -213,7 +213,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.buttonOK.Margin = new System.Windows.Forms.Padding(2);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(110, 30);
-            this.buttonOK.TabIndex = 2;
+            this.buttonOK.TabIndex = 6;
             this.buttonOK.Text = "Ajouter";
             this.buttonOK.UseVisualStyleBackColor = false;
             this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
@@ -225,7 +225,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.backgroundBlock1.Location = new System.Drawing.Point(0, 1);
             this.backgroundBlock1.Margin = new System.Windows.Forms.Padding(2);
             this.backgroundBlock1.Name = "backgroundBlock1";
-            this.backgroundBlock1.Size = new System.Drawing.Size(419, 73);
+            this.backgroundBlock1.Size = new System.Drawing.Size(419, 80);
             this.backgroundBlock1.TabIndex = 16;
             // 
             // label1

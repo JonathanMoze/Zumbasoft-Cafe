@@ -310,6 +310,7 @@
             this.Controls.Add(this.title);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Accueil";
             this.Text = "ZumbaSoft - Accueil";

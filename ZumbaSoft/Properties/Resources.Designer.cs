@@ -83,6 +83,16 @@ namespace ZumbaSoft.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap background_big {
+            get {
+                object obj = ResourceManager.GetObject("background_big", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dbERROR {
             get {
                 object obj = ResourceManager.GetObject("dbERROR", resourceCulture);
