@@ -28,15 +28,11 @@ namespace ZumbaSoft.Model
         public List<Panier> paniersVendus { get; set; }
 
         //Association Magasin
-        [OneToOne]
+        [ManyToOne]
         public Magasin magasin { get; set; }
 
         [ForeignKey(typeof(Magasin))]
         public int id_magasin { get; set; }
-
-        //Association Disponibilite
-        [OneToMany]
-        public List<Disponibilite> dispos { get; set; }
 
         //Association Role
         [OneToOne]

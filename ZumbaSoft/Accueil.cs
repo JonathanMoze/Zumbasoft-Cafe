@@ -20,6 +20,7 @@ namespace ZumbaSoft
     public partial class Accueil : Form
     {
         SQLiteConnection db;
+        Utilisateur uConnected;//utilisateur courant connecté. Cette ligne est là uniquement pour indiquer la nécessité de l'attribut (à modifier pour qu'il ne soit plus static).
         Magasin magasin;
 
         public Accueil()
@@ -105,12 +106,11 @@ namespace ZumbaSoft
             DialogResult dr = m.ShowDialog();
             if ( dr == DialogResult.OK)
             {
-                // TODO
+                uConnected = m.uConnecte;
                 this.Visible = true;
             }
             if( dr == DialogResult.Cancel)
             {
-                //DO NOTHING
                 this.Visible = true;
             }
         }
