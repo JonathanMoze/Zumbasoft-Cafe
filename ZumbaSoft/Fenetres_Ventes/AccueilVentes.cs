@@ -243,6 +243,13 @@ namespace ZumbaSoft.Fenetres_Ventes
 
                 labelErreur.Visible = false;
                 DB.InsertWithChildren(panierClient);
+                PopUpConfirmation pop = new PopUpConfirmation();
+                if (pop.ShowDialog() == DialogResult.OK)
+                {
+                    this.Close();
+                    AccueilVente av = new AccueilVente(DB, magasin);
+                    av.Show();
+                }
             }
             else
             {

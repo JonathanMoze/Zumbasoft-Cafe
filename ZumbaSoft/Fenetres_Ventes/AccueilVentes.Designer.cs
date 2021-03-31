@@ -296,7 +296,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.buttonFacture.Name = "buttonFacture";
             this.buttonFacture.Size = new System.Drawing.Size(169, 42);
             this.buttonFacture.TabIndex = 3;
-            this.buttonFacture.Text = "Générer la facture";
+            this.buttonFacture.Text = "Valider le panier";
             this.buttonFacture.UseVisualStyleBackColor = false;
             this.buttonFacture.Click += new System.EventHandler(this.buttonFacture_Click);
             // 
