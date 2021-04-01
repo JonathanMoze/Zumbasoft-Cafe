@@ -15,7 +15,7 @@ namespace ZumbaSoft.Model
         public string nom { get; set; }
 
         //Association Droit
-        [OneToMany]
+        [ManyToMany(typeof(DroitToRole))]
         public List<Droit> droits { get; set; }
 
         public override string ToString()

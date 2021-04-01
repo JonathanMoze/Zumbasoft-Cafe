@@ -15,7 +15,7 @@ namespace ZumbaSoft.Fenetres_Identification
     public partial class CreationCompte : Form
     {
         SQLiteConnection DB;
-        Adresse adresse;
+        public Adresse adresse;
         Utilisateur utilisateur;
 
         public CreationCompte(SQLiteConnection db)
@@ -122,7 +122,7 @@ namespace ZumbaSoft.Fenetres_Identification
             this.Close();
         }
 
-        private void buttonValider_Click(object sender, EventArgs e)
+        public void buttonValider_Click(object sender, EventArgs e)
         {
             if (correctInformations())
             {

@@ -46,7 +46,7 @@ namespace ZumbaSoft.Fenetres_Identification
             this.connection_button.TabIndex = 0;
             this.connection_button.Text = "Se connecter";
             this.connection_button.UseVisualStyleBackColor = true;
-            this.connection_button.Click += new System.EventHandler(this.button1_Click);
+            this.connection_button.Click += new System.EventHandler(this.connection_button_Click);
             // 
             // loginField
             // 
@@ -115,8 +115,8 @@ namespace ZumbaSoft.Fenetres_Identification
         #endregion
 
         private System.Windows.Forms.Button connection_button;
-        private System.Windows.Forms.TextBox loginField;
-        private System.Windows.Forms.TextBox passwordField;
+        public System.Windows.Forms.TextBox loginField;
+        public System.Windows.Forms.TextBox passwordField;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonCreationCompte;

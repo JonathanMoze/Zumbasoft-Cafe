@@ -104,14 +104,14 @@ namespace ZumbaSoft.Fenetres_Roles
             }
         }
 
-        private void ajouterRoles_Click(object sender, EventArgs e)
+        public void ajouterRoles_Click(object sender, EventArgs e)
         {
             if (nomRole.Text != "")
             {
                 Role r = new Role();
                 r.nom = nomRole.Text;
                 r.droits = new List<Droit>();
-                DB.Insert(r);
+                DB.InsertWithChildren(r);
                 initListRoles();
                 nomRole.Text = "";
                 erreurAjout.Visible = false;
@@ -134,7 +134,7 @@ namespace ZumbaSoft.Fenetres_Roles
 
         }
 
-        private void supprimerRole_Click(object sender, EventArgs e)
+        public void supprimerRole_Click(object sender, EventArgs e)
         {
             if (ConfirmationSR.Checked && choixRoles.SelectedItem != null)
             {
@@ -149,14 +149,14 @@ namespace ZumbaSoft.Fenetres_Roles
             }
         }
 
-        private void goBackButton_Click(object sender, EventArgs e)
+        public void goBackButton_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;
             this.Close();
         }
 
 
-        private void msgBDstatusERROR_Click(object sender, EventArgs e)
+        public void msgBDstatusERROR_Click(object sender, EventArgs e)
         {
             if (!panelERROR.Visible)
             {
@@ -175,7 +175,7 @@ namespace ZumbaSoft.Fenetres_Roles
 
 
 
-        private void buttonContactAdmin_Click(object sender, EventArgs e)
+        public void buttonContactAdmin_Click(object sender, EventArgs e)
         {
             Process OpenMailClient = new Process();
             DateTime date = DateTime.Now;
@@ -192,7 +192,7 @@ namespace ZumbaSoft.Fenetres_Roles
 
         }
 
-        private void buttonBackHome_Click(object sender, EventArgs e)
+        public void buttonBackHome_Click(object sender, EventArgs e)
         {
             panelERROR.Visible = false;
             DialogResult = DialogResult.OK;
