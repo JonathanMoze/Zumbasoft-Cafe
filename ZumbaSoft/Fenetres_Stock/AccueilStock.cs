@@ -19,6 +19,10 @@ namespace ZumbaSoft.Fenetres_Stock
         Magasin magasin;
         SQLiteConnection DB;
 
+        /// <summary>
+        /// Constructeur du présent formulaire.
+        /// </summary>
+        /// <param name="db">La connection actuelle à la base de données.</param>
         public AccueilStock(SQLiteConnection db)
         {
             InitializeComponent();
@@ -31,6 +35,7 @@ namespace ZumbaSoft.Fenetres_Stock
             initTableauCommandes();
             initItemsColors();
         }
+
         /// <summary>
         /// Fill the grid of all product in stock using the DataBase.
         /// </summary>
@@ -97,6 +102,11 @@ namespace ZumbaSoft.Fenetres_Stock
             }
         }
 
+        /// <summary>
+        /// Méthode pour ajouter une commande de produit à la BD.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonNouvelleCmd_Click(object sender, EventArgs e)
         {
             GestionDeLaCommande gc = new GestionDeLaCommande(DB,magasin);
@@ -112,6 +122,12 @@ namespace ZumbaSoft.Fenetres_Stock
             }
         }
 
+        /// <summary>
+        /// Méthode pour modifier une commande déjà existante dans la BD.
+        /// Attention, elle ne permet pas la suppression.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonModifierCmd_Click(object sender, EventArgs e)
         {
             List<Commande> commandes = DB.GetAllWithChildren<Commande>();
@@ -194,6 +210,10 @@ namespace ZumbaSoft.Fenetres_Stock
             }
         }
 
+        /// <summary>
+        /// Méthode pour encaisser une commande en stock.
+        /// </summary>
+        /// <param name="commande">La commande à partir de laquelle on encaisse.</param>
         private void transferToStock(Commande commande)
         {
             List<ProduitEnStock> allPes = DB.GetAllWithChildren<ProduitEnStock>();//.FindAll(pes => pes.id_magasin == commande.id_magasin);
@@ -273,19 +293,40 @@ namespace ZumbaSoft.Fenetres_Stock
             initTableauAndFieldsStock();
         }
 
+        /// <summary>
+        /// Classe comparatrice de deux produits.
+        /// </summary>
         public class ProduitComparer : IEqualityComparer<Produit>
         {
+            /// <summary>
+            /// Méthode pour comparer si deux produits sont les mêmes.
+            /// On considère que deux produits sont égaux s'ils ont le même nom.
+            /// </summary>
+            /// <param name="x">Le premier produit.</param>
+            /// <param name="y">Le second produit.</param>
+            /// <returns>True si les deux sont égaux, false sinon.</returns>
             public bool Equals([AllowNull] Produit x, [AllowNull] Produit y)
             {
                 return x.nom == y.nom;
             }
 
+            /// <summary>
+            /// Méthode pour obtenir un HashCode de produit.
+            /// </summary>
+            /// <param name="obj">le produit dont on veut le hashcode.</param>
+            /// <returns>le code du produit.</returns>
             public int GetHashCode([DisallowNull] Produit obj)
             {
                 return obj.GetHashCode();
             }
         }
 
+        /// <summary>
+        /// Méthode pour supprimer une commande donnée.
+        /// Cette méthode passe par un formulaire spécialisé.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonSuppCmd_Click(object sender, EventArgs e)
         {
             List<Commande> commandes = DB.GetAllWithChildren<Commande>();
@@ -399,6 +440,11 @@ namespace ZumbaSoft.Fenetres_Stock
             
         }
 
+        /// <summary>
+        /// Méthode de navigation pour revenir en arrière dans l'application.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void goBackButton_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;
