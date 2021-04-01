@@ -448,7 +448,7 @@ namespace ZumbaSoft.Fenetres_Ventes
         private System.Windows.Forms.Label labelQuantite;
         private System.Windows.Forms.Button buttonPlus;
         private System.Windows.Forms.Button buttonMoins;
-        private System.Windows.Forms.Label labelPrixTotal;
+        public System.Windows.Forms.Label labelPrixTotal;
         private System.Windows.Forms.Label labelErreur;
         private System.Windows.Forms.Label labelRuptureStock;
     }

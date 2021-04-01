@@ -253,7 +253,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             }
             else
             {
-                labelErreur.Visible = true;s
+                labelErreur.Visible = true;
             }
         }
     }

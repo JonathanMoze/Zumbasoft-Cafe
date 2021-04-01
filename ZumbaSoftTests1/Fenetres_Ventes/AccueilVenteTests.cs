@@ -15,10 +15,10 @@ namespace ZumbaSoft.Fenetres_Ventes.Tests
         SQLiteConnection db;
         Magasin m;
 
-        [TestMethod()]
-        public void AccueilVenteTest()
+        public AccueilVenteTests()
         {
             InitializeDataBase();
+            m = new Magasin();
         }
 
         public void InitializeDataBase()
@@ -53,8 +53,10 @@ namespace ZumbaSoft.Fenetres_Ventes.Tests
 
             Client c1 = new Client();
             c1.nom = "Martin";
+            c1.prenom = "Terrier";
             Client c2 = new Client();
             c2.nom = "Stephane";
+            c2.prenom = "Fossé";
 
             db.InsertWithChildren(c1);
             db.InsertWithChildren(c2);
@@ -72,13 +74,57 @@ namespace ZumbaSoft.Fenetres_Ventes.Tests
         [TestMethod()]
         public void refreshListPanierTest()
         {
-            Assert.Fail();
+            db.DeleteAll<ProduitCommande>();
+            db.DeleteAll<Produit>();
+
+            Produit prod = new Produit();
+            prod.nom = "cafetière";
+            prod.prix_vente_TTC = 110;
+            prod.code_barre = 41545;
+            prod.prix_vente_HT = 100;
+
+            db.InsertWithChildren(prod);
+
+            ProduitCommande p = new ProduitCommande();
+            p.produit = prod;
+            p.quantite = 6;
+
+
+            AccueilVente c = new AccueilVente(db, m);
+
+            c.panierClient.produits.Add(p);
+
+            c.refreshListPanier();
+            Assert.IsTrue(c.listView1.Items.Count == 1); 
+
         }
 
         [TestMethod()]
         public void refreshPrixTotalTest()
         {
-            Assert.Fail();
+            db.DeleteAll<ProduitCommande>();
+            db.DeleteAll<Produit>();
+
+            Produit prod = new Produit();
+            prod.nom = "cafetière";
+            prod.prix_vente_TTC = 110;
+            prod.code_barre = 41545;
+            prod.prix_vente_HT = 100;
+
+            db.InsertWithChildren(prod);
+
+            ProduitCommande p = new ProduitCommande();
+            p.produit = prod;
+            p.quantite = 6;
+
+
+            AccueilVente c = new AccueilVente(db, m);
+
+            c.panierClient.produits.Add(p);
+
+
+            c.refreshPrixTotal();
+            Assert.AreEqual(c.labelPrixTotal.Text, "Montant Total : " + "660" + "€");
         }
 
         [TestMethod()]
