@@ -107,7 +107,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             }
         }
 
-        private void buttonOK_Click(object sender, EventArgs e)
+        public void buttonOK_Click(object sender, EventArgs e)
         {
             if (fieldIsValid())
             {

@@ -11,17 +11,15 @@ using SQLite;
 
 namespace ZumbaSoft.Fenetres_Magasin
 {
-    public partial class Confirmation : Form
+    public partial class SupprimerMagasin : Form
     {
         Magasin magasin;
-        SQLiteConnection DB;
 
-        public Confirmation(Magasin magasin, SQLiteConnection db)
+        public SupprimerMagasin(Magasin magasin)
         {
             InitializeComponent();
             initItemsColors();
             this.magasin = magasin;
-            this.DB = db;
         }
 
         public void initItemsColors()
@@ -41,7 +39,6 @@ namespace ZumbaSoft.Fenetres_Magasin
 
         private void buttonSupprimer_Click(object sender, EventArgs e)
         {
-            DB.Delete(magasin,true);
             DialogResult = DialogResult.OK;
             this.Close();
         }

@@ -19,9 +19,9 @@ namespace ZumbaSoft
 {
     public partial class Accueil : Form
     {
-        SQLiteConnection db;
-        Utilisateur uConnected;//utilisateur courant connecté. Cette ligne est là uniquement pour indiquer la nécessité de l'attribut (à modifier pour qu'il ne soit plus static).
-        Magasin magasin;
+        public SQLiteConnection db;
+        public Utilisateur uConnected;//utilisateur courant connecté. Cette ligne est là uniquement pour indiquer la nécessité de l'attribut (à modifier pour qu'il ne soit plus static).
+        public Magasin magasin;
 
         public Accueil()
         {

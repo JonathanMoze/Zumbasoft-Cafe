@@ -12,124 +12,34 @@ namespace ZumbaSoft.Tests
     public class AccueilTests
     {
 
-        SQLiteConnection db;
-
-        public AccueilTests()
-        {
-            InitializeDataBase();
-        }
-
-        public void InitializeDataBase()
-        {
-            string databasePath = System.IO.Path.GetFullPath("./../../../DataBase.db");
-            db = new SQLiteConnection(databasePath);
-            db.CreateTable<Adresse>();
-            db.CreateTable<Genre>();
-            db.CreateTable<Produit>();
-            db.CreateTable<Client>();
-            db.CreateTable<Commande>();
-            db.CreateTable<Disponibilite>();
-            db.CreateTable<Droit>();
-            db.CreateTable<FicheDePaye>();
-            db.CreateTable<Fournisseur>();
-            db.CreateTable<Magasin>();
-            db.CreateTable<Panier>();
-            db.CreateTable<Personne>();
-            db.CreateTable<ProduitCommande>();
-            db.CreateTable<ProduitEnStock>();
-            db.CreateTable<Rapport>();
-            db.CreateTable<Role>();
-            db.CreateTable<Utilisateur>();
-        }
-
-        [TestMethod()]
-        public void AccueilTest()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
-        public void AccueilTest1()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
-        public void initItemsColorsTest()
-        {
-            Assert.Fail();
-        }
 
         [TestMethod()]
         public void InitializeDataBaseTest()
         {
-            Assert.Fail();
-        }
+            Accueil accueil = new ZumbaSoft.Accueil();
 
-        [TestMethod()]
-        public void RoleButton_ClickTest()
-        {
-            Assert.Fail();
-        }
+            List<string> allTablesName = new List<string>(){ "Adresse", "Genre", "Produit", "Client", "Commande", "Disponibilite", "Droit", "FicheDePaye", "Magasin","Fournisseur", "Panier", "Personne", "ProduitCommande", "ProduitEnStock", "Rapport", "Role", "Utilisateur" };
+            int nbTable = allTablesName.Count;
 
-        [TestMethod()]
-        public void buttonGestionMag_ClickTest()
-        {
-            Assert.Fail();
-        }
+            //Vérifie qu'il n'y a pas des tables étrangères.
+            foreach (TableMapping map in accueil.db.TableMappings)
+            {
+                if (!allTablesName.Contains(map.TableName))
+                {
+                    if (!map.TableName.Equals("ColumnInfo"))
+                    {
+                        Assert.Fail("La table " + map.TableName + " ne devrait pas être créée.");
+                    }
 
-        [TestMethod()]
-        public void buttonSeConnecter_ClickTest()
-        {
-            Assert.Fail();
-        }
+                }
+                else
+                {
+                    nbTable--;
+                }
+            }
 
-        [TestMethod()]
-        public void buttonGestionStock_ClickTest()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
-        public void quitButton_ClickTest()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
-        public void buttonGestionProduits_ClickTest()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
-        public void buttonGestionStock_Click_1Test()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
-        public void buttonAcceptConditions_ClickTest()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
-        public void label3_ClickTest()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
-        public void buttonGestionVentes_ClickTest()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
-        public void Accueil_FormClosedTest()
-        {
-            Assert.Fail();
+            //Vérifie que toutes les tables attendue sont bien présentent.
+            Assert.AreEqual(0,nbTable);
         }
     }
 }
