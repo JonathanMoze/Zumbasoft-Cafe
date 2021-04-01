@@ -1,7 +1,7 @@
 ﻿
 namespace ZumbaSoft.Fenetres_Magasin
 {
-    partial class Confirmation
+    partial class SupprimerMagasin
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace ZumbaSoft.Fenetres_Magasin
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Confirmation));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SupprimerMagasin));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonSupprimer = new System.Windows.Forms.Button();

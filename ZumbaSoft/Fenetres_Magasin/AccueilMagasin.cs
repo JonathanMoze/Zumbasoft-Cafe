@@ -17,19 +17,20 @@ namespace ZumbaSoft.Fenetres_Magasin
     {
         SQLiteConnection DB;
         Magasin magasin;
-        Adresse newAdresse;
+        public Adresse newAdresse;
 
         public AccueilMagasin(SQLiteConnection db)
         {
             InitializeComponent();
             DB = db;
-            initListMagasin();
+            updateListMagasin();
             initItemsColors();
             checkDB();
         }
 
-        public void initListMagasin()
+        public void updateListMagasin()
         {
+            listMagasin.Items.Clear();
             foreach (Magasin m in DB.GetAllWithChildren<Magasin>())
             {
                 listMagasin.Items.Add(m);
@@ -37,7 +38,7 @@ namespace ZumbaSoft.Fenetres_Magasin
         }
 
 
-        public void initItemsColors()
+        private void initItemsColors()
         {
             panel1.BackColor = Color.FromArgb(95, 12, 12, 12);
             panel2.BackColor = Color.FromArgb(95, 12, 12, 12);
@@ -64,7 +65,7 @@ namespace ZumbaSoft.Fenetres_Magasin
 
         }
 
-        public void checkDB()
+        private void checkDB()
         {
             var database = new FileInfo("../../../DataBase.db");
             if (!database.Exists)
@@ -171,11 +172,6 @@ namespace ZumbaSoft.Fenetres_Magasin
             else { listViewEmployes.Items.Add("Aucun"); }
         }
 
-        private void boutonSupprimer_Click(object sender, EventArgs e)
-        {
-            
-        }
-
 
         public Magasin initObjectMagasin()
         {
@@ -189,7 +185,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             return magasin;
         }
 
-        public bool fieldsNewMagasinIsValid()
+        private bool fieldsNewMagasinIsValid()
         {
             if (textBoxNewMdp.Text == "")
             {
@@ -218,7 +214,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.Close();
         }
 
-        private void buttonAjouter_Click(object sender, EventArgs e)
+        public void buttonAjouter_Click(object sender, EventArgs e)
         {
             if (fieldsNewMagasinIsValid())
             {
@@ -236,7 +232,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             textBoxNewMdp.Text = "";
         }
 
-        private void buttonAdr_Click(object sender, EventArgs e)
+        public void buttonAdr_Click(object sender, EventArgs e)
         {
             NouvelleAdresse newAdr = new NouvelleAdresse(DB);
             if (newAdr.ShowDialog() == DialogResult.OK)
@@ -246,15 +242,14 @@ namespace ZumbaSoft.Fenetres_Magasin
             }
         }
 
-        private void buttonModifMdp_Click(object sender, EventArgs e)
+        public void buttonModifMdp_Click(object sender, EventArgs e)
         {
             if (fielModifMagasinIsValid())
             {
                 magasin.mot_de_passe = textBoxModifMdp.Text;
                 DB.UpdateWithChildren(magasin);
 
-                listMagasin.Items.Clear();
-                initListMagasin();
+                updateListMagasin();
                 UpdateInfoField();
 
                 textBoxModifMdp.Text = "";
@@ -302,23 +297,31 @@ namespace ZumbaSoft.Fenetres_Magasin
             //TODO
         }
 
-        private void buttonSupprimer_Click(object sender, EventArgs e)
+        public void buttonSupprimer_Click(object sender, EventArgs e)
         {
-            Confirmation supprimerMagasin = new Confirmation(magasin, DB);
-            if(supprimerMagasin.ShowDialog() == DialogResult.OK)
+            if(magasin != null)
             {
-                var deletedMag = magasin;
-                magasin = null;
-                listMagasin.SelectedIndex = 0;
-                listMagasin.Items.Clear();
-                initListMagasin();
-                UpdateInfoField();
+                SupprimerMagasin supprimerMagasin = new SupprimerMagasin(magasin);
+                if (supprimerMagasin.ShowDialog() == DialogResult.OK)
+                {
+                    DB.Delete(magasin);
+                    magasin = null;
+                    listMagasin.SelectedIndex = 0;
+                    clearAllField();
+                    updateListMagasin();
+                }
             }
         }
 
-        private void AccueilMagasin_Load(object sender, EventArgs e)
+        private void clearAllField()
         {
-
+            labelCurrentAdresse.Text = "";
+            labelCurrentMdp.Text = "";
+            listViewEmployes.Clear();
+            listViewCommandes.Clear();
+            listViewRapports.Clear();
+            listViewStock.Clear();
+            textBoxModifMdp.Text = "";
         }
 
         private void goBackButton_Click(object sender, EventArgs e)
