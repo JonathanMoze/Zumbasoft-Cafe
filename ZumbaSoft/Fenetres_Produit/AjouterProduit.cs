@@ -16,6 +16,10 @@ namespace ZumbaSoft.Fenetres_Produit
         SQLiteConnection DB;
         public Produit produit;
 
+        /// <summary>
+        /// Constructeur d'un formulaire d'ajout de produit.
+        /// </summary>
+        /// <param name="db">La connection actuelle à la base de données.</param>
         public AjouterProduit(SQLiteConnection db)
         {
             InitializeComponent();
@@ -24,6 +28,9 @@ namespace ZumbaSoft.Fenetres_Produit
             initItemsColors();
         }
 
+        /// <summary>
+        /// Méthode d'initialisation de l'accession des enfants des objets.
+        /// </summary>
         public void initComboBoxes()
         {
             comboBoxFournisseur.Items.Clear();
@@ -41,6 +48,10 @@ namespace ZumbaSoft.Fenetres_Produit
 
         }
 
+        /// <summary>
+        /// Méthode pour initialiser un nouveau produit correctement.
+        /// </summary>
+        /// <returns>Le produit initialisé via cette méthode.</returns>
         public Produit initObjetProduit(){
             produit = new Produit();
             produit.nom = textBoxNom.Text;
@@ -74,6 +85,10 @@ namespace ZumbaSoft.Fenetres_Produit
 
         }
 
+        /// <summary>
+        /// Méthode pour initialiser les couleurs du formulaire.
+        /// Cette méthode n'est destinée à être appelée qu'une seule fois.
+        /// </summary>
         public void initItemsColors()
         {
             backgroundBlock1.BackColor = Color.FromArgb(50, 12, 12, 12);
@@ -88,6 +103,12 @@ namespace ZumbaSoft.Fenetres_Produit
             buttonFournisseurs.BackColor = Color.FromArgb(50, 12, 12, 12);
         }
 
+        /// <summary>
+        /// Méthode pour gérer le clic sur le bouton d'accès aux genres.
+        /// Attention, celle-ci déploie le formulaire correspondant.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonGenre_Click(object sender, EventArgs e)
         {
             AccueilGenre accGenre = new AccueilGenre(DB, this);
@@ -95,6 +116,11 @@ namespace ZumbaSoft.Fenetres_Produit
             initComboBoxes();
         }
 
+        /// <summary>
+        /// Méthode pour accéder à la gestion des fournisseurs.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonFournisseurs_Click(object sender, EventArgs e)
         {
             AccueilFournisseur accFourni = new AccueilFournisseur(DB, this);
@@ -102,6 +128,11 @@ namespace ZumbaSoft.Fenetres_Produit
             initComboBoxes();
         }
 
+        /// <summary>
+        /// Méthode pour insérer un nouveau produit dans la BD.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonOK_Click(object sender, EventArgs e)
         {
             produit = initObjetProduit();
@@ -110,6 +141,11 @@ namespace ZumbaSoft.Fenetres_Produit
             this.Close();
         }
 
+        /// <summary>
+        /// Méthode pour annuler la procédure.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonCancel_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;

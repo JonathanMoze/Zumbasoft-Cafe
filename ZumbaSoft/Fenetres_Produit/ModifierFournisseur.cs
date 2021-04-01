@@ -16,6 +16,12 @@ namespace ZumbaSoft.Fenetres_Produit
         SQLiteConnection DB;
         AccueilFournisseur af;
 
+        /// <summary>
+        /// Constructeur du panel de modification d'un fournisseur.
+        /// </summary>
+        /// <param name="af">La fenêtre d'accueil de gestion des fournisseurs à partir de laquelle ce formulaire a été appelé.</param>
+        /// <param name="f">Le fournisseur à modifier.</param>
+        /// <param name="db">La connection actuelle à la base de données.</param>
         public ModifierFournisseur(AccueilFournisseur af, Fournisseur f, SQLiteConnection db)
         {
             InitializeComponent();
@@ -25,6 +31,9 @@ namespace ZumbaSoft.Fenetres_Produit
             InitInfoField();
         }
 
+        /// <summary>
+        /// Méthode pour pré-remplir les champs avec les valeurs actuelles du fournisseur.
+        /// </summary>
         public void InitInfoField()
         {
             textBoxNom.PlaceholderText = fournisseur.nom;
@@ -57,6 +66,11 @@ namespace ZumbaSoft.Fenetres_Produit
             }
         }
 
+        /// <summary>
+        /// Méthode pour valider les modifications du fournisseur.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonOKParamMag_Click(object sender, EventArgs e)
         {
             fournisseur.telephone = textBoxNewTel.PlaceholderText;
@@ -69,12 +83,22 @@ namespace ZumbaSoft.Fenetres_Produit
             this.Close();
         }
 
+        /// <summary>
+        /// Méthode pour annuler toute la procédure de modification d'un fournisseur.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonAnnulParamMag_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
             this.Close();
         }
 
+        /// <summary>
+        /// Méthode pour enregistrer les modifications d'un fournisseur.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonModifs_Click(object sender, EventArgs e)
         {
             if(textBoxNom.Text != "")

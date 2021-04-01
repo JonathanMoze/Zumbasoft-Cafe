@@ -15,6 +15,12 @@ namespace ZumbaSoft.Fenetres_Produit
     {
         SQLiteConnection DB;
         Produit produit;
+
+        /// <summary>
+        /// Constructeur du formulaire courant.
+        /// </summary>
+        /// <param name="p">Le produit courant.</param>
+        /// <param name="db">La connection actuelle à la BD.</param>
         public ModifierProduit(Produit p,SQLiteConnection db)
         {
             InitializeComponent();
@@ -25,7 +31,9 @@ namespace ZumbaSoft.Fenetres_Produit
             TitreNomProduit.Text = p.nom;
         }
 
-
+        /// <summary>
+        /// Méthode pour initialiser les formulaires.
+        /// </summary>
         public void initComboBoxes()
         {
             comboBoxFournisseur.Items.Clear();
@@ -43,6 +51,9 @@ namespace ZumbaSoft.Fenetres_Produit
 
         }
 
+        /// <summary>
+        /// Méthode pour initialiser les champs.
+        /// </summary>
         public void initChamps()
         {
             textBoxNom.PlaceholderText = produit.nom;
@@ -62,19 +73,33 @@ namespace ZumbaSoft.Fenetres_Produit
 
         }
 
+        /// <summary>
+        /// Méthode pour gérer le clic sur un bouton de gestion d'un genre.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonGenre_Click(object sender, EventArgs e)
         {
             AccueilGenre accGenre = new AccueilGenre(DB, this);
             accGenre.Show();
         }
 
+        /// <summary>
+        /// Méthode pour gérer la modificationn d'un fournisseur.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonFournisseurs_Click(object sender, EventArgs e)
         {
             AccueilFournisseur accFourni = new AccueilFournisseur(DB, this);
             accFourni.Show();
         }
 
-
+        /// <summary>
+        /// Méthode pour valider le formulaire et le vérifier.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonValider_Click(object sender, EventArgs e)
         {
             if (textBoxNom.Text != "")
@@ -120,12 +145,22 @@ namespace ZumbaSoft.Fenetres_Produit
 
         }
 
+        /// <summary>
+        /// Méthode pour annuler la procédure.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonAnnuler_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
             this.Close();
         }
 
+        /// <summary>
+        /// Méthode pour valider le formulaire.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void butonOk_Click(object sender, EventArgs e)
         {
             produit.nom = textBoxNom.PlaceholderText;

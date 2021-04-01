@@ -16,6 +16,12 @@ namespace ZumbaSoft.Fenetres_Produit
     {
         Genre genre;
         SQLiteConnection DB;
+
+        /// <summary>
+        /// Constructeur de ce formulaire.
+        /// </summary>
+        /// <param name="genre">Le grenre à partir duquel ce formulaire est appelé.</param>
+        /// <param name="db">La connection actuelle à la BD.</param>
         public ModifierGenre(Genre genre, SQLiteConnection db)
         {
             InitializeComponent();
@@ -26,11 +32,18 @@ namespace ZumbaSoft.Fenetres_Produit
 
         }
 
+        /// <summary>
+        /// Méthode pour initialiser les champs.
+        /// </summary>
         public void InitInfoField()
         {
             labelCurrentIntitule.Text = genre.intitule;
         }
 
+        /// <summary>
+        /// Méthode d'initialisation des couleurs.
+        /// Elle n'est destinée à être appelée qu'une seule fois.
+        /// </summary>
         public void initItemsColors()
         {
             backgroundBlock1.BackColor = Color.FromArgb(50, 12, 12, 12);
@@ -40,6 +53,11 @@ namespace ZumbaSoft.Fenetres_Produit
             buttonModifMdp.BackColor = Color.FromArgb(50, 12, 12, 12);
         }
 
+        /// <summary>
+        /// Méthode pour valider le formulaire.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonOK_Click(object sender, EventArgs e)
         {
             genre.intitule = textBoxIntitule.Text;
@@ -48,6 +66,11 @@ namespace ZumbaSoft.Fenetres_Produit
             this.Close();
         }
 
+        /// <summary>
+        /// Méthode pour retirer le message d'erreur en cas de modification du texte.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonModifMdp_Click(object sender, EventArgs e)
         {
             if (textBoxIntitule.Visible != true)
