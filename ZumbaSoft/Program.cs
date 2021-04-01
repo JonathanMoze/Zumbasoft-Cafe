@@ -17,7 +17,7 @@ namespace ZumbaSoft
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Accueil());
+            Application.Run(new ConnexionMagasin());
         }
     }
 }

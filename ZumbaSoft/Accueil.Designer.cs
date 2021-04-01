@@ -313,6 +313,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Accueil";
             this.Text = "ZumbaSoft - Accueil";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Accueil_FormClosed);
             this.backgroundBlock.ResumeLayout(false);
             this.panelConditions.ResumeLayout(false);
             this.ResumeLayout(false);
