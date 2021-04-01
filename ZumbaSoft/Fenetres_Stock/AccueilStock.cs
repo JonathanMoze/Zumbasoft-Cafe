@@ -29,6 +29,7 @@ namespace ZumbaSoft.Fenetres_Stock
 
             initTableauAndFieldsStock();
             initTableauCommandes();
+            initItemsColors();
         }
         /// <summary>
         /// Fill the grid of all product in stock using the DataBase.
@@ -51,6 +52,32 @@ namespace ZumbaSoft.Fenetres_Stock
             textBoxNbArticle.Text = nbArticle.ToString();
             textBoxValeurStk.Text = valStock.ToString() + " €";
         }
+
+
+        /// <summary>
+        /// Set all tranpasrent elements effects.
+        /// </summary>
+        public void initItemsColors()
+        {
+            
+            panel4.BackColor = Color.FromArgb(80, 12, 12, 12);
+            panel5.BackColor = Color.FromArgb(80, 12, 12, 12);
+
+            panel1.BackColor = Color.FromArgb(80, 12, 12, 12);
+            panel2.BackColor = Color.FromArgb(80, 12, 12, 12);
+
+
+            buttonAjouterStk.BackColor = Color.FromArgb(80, 12, 12, 12);
+            buttonModifierCmd.BackColor = Color.FromArgb(80, 12, 12, 12);
+            buttonNouvelleCmd.BackColor = Color.FromArgb(80, 12, 12, 12);
+            buttonSupprimerStk.BackColor = Color.FromArgb(80, 12, 12, 12);
+            buttonSuppStock.BackColor = Color.FromArgb(80, 12, 12, 12);
+
+            
+
+
+        }
+
         /// <summary>
         /// Fill the grid of all command using the DataBase.
         /// </summary>
@@ -377,6 +404,8 @@ namespace ZumbaSoft.Fenetres_Stock
             DialogResult = DialogResult.OK;
             this.Close();
         }
+
+
     }
 
 }

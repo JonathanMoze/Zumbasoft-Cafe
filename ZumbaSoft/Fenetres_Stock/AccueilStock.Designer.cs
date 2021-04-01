@@ -29,6 +29,8 @@ namespace ZumbaSoft.Fenetres_Stock
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AccueilStock));
             this.labelListProdStock = new System.Windows.Forms.Label();
             this.buttonSuppStock = new System.Windows.Forms.Button();
@@ -41,7 +43,15 @@ namespace ZumbaSoft.Fenetres_Stock
             this.fournisseur = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.etat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prixTotalTTC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBoxValeurStk = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.buttonAjouterStk = new System.Windows.Forms.Button();
+            this.buttonSupprimerStk = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBoxNbArticle = new System.Windows.Forms.TextBox();
             this.tableauStock = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomArticle = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,19 +59,6 @@ namespace ZumbaSoft.Fenetres_Stock
             this.quantite = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prixUnitaire = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBoxValeurStk = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.buttonAjouterStk = new System.Windows.Forms.Button();
-            this.buttonSupprimerStk = new System.Windows.Forms.Button();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBoxNbArticle = new System.Windows.Forms.TextBox();
             this.labelDate = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.programName = new System.Windows.Forms.Label();
@@ -74,50 +71,52 @@ namespace ZumbaSoft.Fenetres_Stock
             this.panel5 = new System.Windows.Forms.Panel();
             this.goBackButton = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.tableauCommandes)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableauStock)).BeginInit();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.homeIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbERROR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbOK)).BeginInit();
             this.panel5.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelListProdStock
             // 
             this.labelListProdStock.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelListProdStock.AutoSize = true;
-            this.labelListProdStock.Location = new System.Drawing.Point(10, 163);
+            this.labelListProdStock.BackColor = System.Drawing.Color.Transparent;
+            this.labelListProdStock.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelListProdStock.Location = new System.Drawing.Point(38, 76);
             this.labelListProdStock.Name = "labelListProdStock";
-            this.labelListProdStock.Size = new System.Drawing.Size(183, 20);
+            this.labelListProdStock.Size = new System.Drawing.Size(207, 20);
             this.labelListProdStock.TabIndex = 1;
-            this.labelListProdStock.Text = "Liste des produits en stock";
+            this.labelListProdStock.Text = "Liste des produits en stock :";
             // 
             // buttonSuppStock
             // 
-            this.buttonSuppStock.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSuppStock.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonSuppStock.BackColor = System.Drawing.Color.Transparent;
             this.buttonSuppStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSuppStock.Location = new System.Drawing.Point(8, 408);
+            this.buttonSuppStock.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonSuppStock.Location = new System.Drawing.Point(60, 201);
             this.buttonSuppStock.Margin = new System.Windows.Forms.Padding(8, 56, 8, 56);
             this.buttonSuppStock.Name = "buttonSuppStock";
-            this.buttonSuppStock.Size = new System.Drawing.Size(103, 42);
+            this.buttonSuppStock.Size = new System.Drawing.Size(107, 35);
             this.buttonSuppStock.TabIndex = 4;
             this.buttonSuppStock.Text = "Supprimer";
-            this.buttonSuppStock.UseVisualStyleBackColor = true;
+            this.buttonSuppStock.UseVisualStyleBackColor = false;
             this.buttonSuppStock.Click += new System.EventHandler(this.buttonSuppCmd_Click);
             // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(721, 163);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label2.Location = new System.Drawing.Point(727, 76);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(146, 20);
@@ -126,32 +125,32 @@ namespace ZumbaSoft.Fenetres_Stock
             // 
             // buttonNouvelleCmd
             // 
-            this.buttonNouvelleCmd.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonNouvelleCmd.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonNouvelleCmd.BackColor = System.Drawing.Color.Transparent;
             this.buttonNouvelleCmd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNouvelleCmd.Location = new System.Drawing.Point(8, 106);
+            this.buttonNouvelleCmd.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonNouvelleCmd.Location = new System.Drawing.Point(29, 124);
             this.buttonNouvelleCmd.Margin = new System.Windows.Forms.Padding(8, 56, 8, 56);
             this.buttonNouvelleCmd.Name = "buttonNouvelleCmd";
-            this.buttonNouvelleCmd.Size = new System.Drawing.Size(103, 39);
+            this.buttonNouvelleCmd.Size = new System.Drawing.Size(172, 33);
             this.buttonNouvelleCmd.TabIndex = 34;
-            this.buttonNouvelleCmd.Text = "Nouvelle";
-            this.buttonNouvelleCmd.UseVisualStyleBackColor = true;
+            this.buttonNouvelleCmd.Text = "Nouvelle Commande";
+            this.buttonNouvelleCmd.UseVisualStyleBackColor = false;
             this.buttonNouvelleCmd.Click += new System.EventHandler(this.buttonNouvelleCmd_Click);
             // 
             // buttonModifierCmd
             // 
-            this.buttonModifierCmd.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonModifierCmd.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonModifierCmd.BackColor = System.Drawing.Color.Transparent;
             this.buttonModifierCmd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonModifierCmd.Location = new System.Drawing.Point(8, 241);
+            this.buttonModifierCmd.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonModifierCmd.Location = new System.Drawing.Point(60, 290);
             this.buttonModifierCmd.Margin = new System.Windows.Forms.Padding(8, 40, 8, 40);
             this.buttonModifierCmd.Name = "buttonModifierCmd";
-            this.buttonModifierCmd.Size = new System.Drawing.Size(103, 71);
+            this.buttonModifierCmd.Size = new System.Drawing.Size(107, 71);
             this.buttonModifierCmd.TabIndex = 35;
-            this.buttonModifierCmd.Text = "Afficher \r\n/\r\nModifier";
-            this.buttonModifierCmd.UseVisualStyleBackColor = true;
+            this.buttonModifierCmd.Text = "Afficher \r\n/\r\n Modifier";
+            this.buttonModifierCmd.UseVisualStyleBackColor = false;
             this.buttonModifierCmd.Click += new System.EventHandler(this.buttonModifierCmd_Click);
             // 
             // tableauCommandes
@@ -160,6 +159,15 @@ namespace ZumbaSoft.Fenetres_Stock
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableauCommandes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tableauCommandes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tableauCommandes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.tableauCommandes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tableauCommandes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.reference,
@@ -167,14 +175,14 @@ namespace ZumbaSoft.Fenetres_Stock
             this.fournisseur,
             this.etat,
             this.prixTotalTTC});
-            this.tableauCommandes.Location = new System.Drawing.Point(600, -101);
+            this.tableauCommandes.Location = new System.Drawing.Point(38, 104);
             this.tableauCommandes.Margin = new System.Windows.Forms.Padding(2);
             this.tableauCommandes.MultiSelect = false;
             this.tableauCommandes.Name = "tableauCommandes";
             this.tableauCommandes.ReadOnly = true;
             this.tableauCommandes.RowHeadersWidth = 62;
             this.tableauCommandes.RowTemplate.Height = 33;
-            this.tableauCommandes.Size = new System.Drawing.Size(584, 506);
+            this.tableauCommandes.Size = new System.Drawing.Size(448, 556);
             this.tableauCommandes.TabIndex = 37;
             // 
             // reference
@@ -212,27 +220,133 @@ namespace ZumbaSoft.Fenetres_Stock
             this.prixTotalTTC.Name = "prixTotalTTC";
             this.prixTotalTTC.ReadOnly = true;
             // 
-            // tableLayoutPanel1
+            // label1
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.AutoSize = true;
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 122F));
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.tableauStock, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(10, 113);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(8);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1303, 510);
-            this.tableLayoutPanel1.TabIndex = 38;
+            this.label1.AutoSize = true;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(-1436, 631);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(193, 19);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "Gestion des commandes";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft YaHei Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label7.Location = new System.Drawing.Point(49, 438);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(135, 20);
+            this.label7.TabIndex = 39;
+            this.label7.Text = "Valeur des stocks :";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // textBoxValeurStk
+            // 
+            this.textBoxValeurStk.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxValeurStk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
+            this.textBoxValeurStk.Enabled = false;
+            this.textBoxValeurStk.ForeColor = System.Drawing.Color.White;
+            this.textBoxValeurStk.Location = new System.Drawing.Point(48, 473);
+            this.textBoxValeurStk.Margin = new System.Windows.Forms.Padding(2, 8, 2, 8);
+            this.textBoxValeurStk.Name = "textBoxValeurStk";
+            this.textBoxValeurStk.Size = new System.Drawing.Size(128, 27);
+            this.textBoxValeurStk.TabIndex = 4;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label4.Location = new System.Drawing.Point(37, 48);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(151, 19);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Gestion des stocks";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label5.Location = new System.Drawing.Point(39, 272);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(149, 19);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Infos sur les stocks";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // buttonAjouterStk
+            // 
+            this.buttonAjouterStk.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonAjouterStk.BackColor = System.Drawing.Color.Transparent;
+            this.buttonAjouterStk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAjouterStk.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonAjouterStk.Location = new System.Drawing.Point(58, 99);
+            this.buttonAjouterStk.Margin = new System.Windows.Forms.Padding(8, 32, 8, 32);
+            this.buttonAjouterStk.Name = "buttonAjouterStk";
+            this.buttonAjouterStk.Size = new System.Drawing.Size(104, 33);
+            this.buttonAjouterStk.TabIndex = 2;
+            this.buttonAjouterStk.Text = "Ajouter";
+            this.buttonAjouterStk.UseVisualStyleBackColor = false;
+            this.buttonAjouterStk.Click += new System.EventHandler(this.buttonAjouterStk_Click);
+            // 
+            // buttonSupprimerStk
+            // 
+            this.buttonSupprimerStk.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonSupprimerStk.BackColor = System.Drawing.Color.Transparent;
+            this.buttonSupprimerStk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSupprimerStk.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonSupprimerStk.Location = new System.Drawing.Point(58, 176);
+            this.buttonSupprimerStk.Margin = new System.Windows.Forms.Padding(8, 32, 8, 32);
+            this.buttonSupprimerStk.Name = "buttonSupprimerStk";
+            this.buttonSupprimerStk.Size = new System.Drawing.Size(104, 35);
+            this.buttonSupprimerStk.TabIndex = 3;
+            this.buttonSupprimerStk.Text = "Supprimer";
+            this.buttonSupprimerStk.UseVisualStyleBackColor = false;
+            this.buttonSupprimerStk.Click += new System.EventHandler(this.buttonSupprimerStk_Click);
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft YaHei Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label6.Location = new System.Drawing.Point(48, 331);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(133, 20);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Nombre d\'articles :";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // textBoxNbArticle
+            // 
+            this.textBoxNbArticle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxNbArticle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
+            this.textBoxNbArticle.Enabled = false;
+            this.textBoxNbArticle.ForeColor = System.Drawing.Color.White;
+            this.textBoxNbArticle.Location = new System.Drawing.Point(49, 368);
+            this.textBoxNbArticle.Margin = new System.Windows.Forms.Padding(2, 8, 2, 8);
+            this.textBoxNbArticle.Name = "textBoxNbArticle";
+            this.textBoxNbArticle.Size = new System.Drawing.Size(126, 27);
+            this.textBoxNbArticle.TabIndex = 5;
             // 
             // tableauStock
             // 
@@ -240,6 +354,15 @@ namespace ZumbaSoft.Fenetres_Stock
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableauStock.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tableauStock.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tableauStock.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.tableauStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tableauStock.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -248,14 +371,14 @@ namespace ZumbaSoft.Fenetres_Stock
             this.quantite,
             this.prixUnitaire,
             this.dataGridViewTextBoxColumn3});
-            this.tableauStock.Location = new System.Drawing.Point(2, 2);
+            this.tableauStock.Location = new System.Drawing.Point(739, 104);
             this.tableauStock.Margin = new System.Windows.Forms.Padding(2);
             this.tableauStock.MultiSelect = false;
             this.tableauStock.Name = "tableauStock";
             this.tableauStock.ReadOnly = true;
             this.tableauStock.RowHeadersWidth = 62;
             this.tableauStock.RowTemplate.Height = 33;
-            this.tableauStock.Size = new System.Drawing.Size(526, 506);
+            this.tableauStock.Size = new System.Drawing.Size(449, 555);
             this.tableauStock.TabIndex = 38;
             // 
             // dataGridViewTextBoxColumn1
@@ -300,241 +423,13 @@ namespace ZumbaSoft.Fenetres_Stock
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel2.ColumnCount = 1;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.buttonSuppStock, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.buttonModifierCmd, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.buttonNouvelleCmd, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(1182, 2);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 4;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(119, 506);
-            this.tableLayoutPanel2.TabIndex = 39;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(2, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 50);
-            this.label1.TabIndex = 36;
-            this.label1.Text = "Gestion des commandes";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel3.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel3.ColumnCount = 1;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel5, 0, 5);
-            this.tableLayoutPanel3.Controls.Add(this.label4, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.label5, 0, 3);
-            this.tableLayoutPanel3.Controls.Add(this.buttonAjouterStk, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.buttonSupprimerStk, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 0, 4);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(532, 2);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 6;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.67194F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.16996F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(116, 506);
-            this.tableLayoutPanel3.TabIndex = 40;
-            // 
-            // tableLayoutPanel5
-            // 
-            this.tableLayoutPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel5.ColumnCount = 1;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Controls.Add(this.label7, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.textBoxValeurStk, 0, 1);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(2, 405);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(2);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 2;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(112, 99);
-            this.tableLayoutPanel5.TabIndex = 5;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label7.Location = new System.Drawing.Point(2, 0);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(108, 49);
-            this.label7.TabIndex = 39;
-            this.label7.Text = "Valeur des stocks :";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // textBoxValeurStk
-            // 
-            this.textBoxValeurStk.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxValeurStk.Enabled = false;
-            this.textBoxValeurStk.Location = new System.Drawing.Point(2, 57);
-            this.textBoxValeurStk.Margin = new System.Windows.Forms.Padding(2, 8, 2, 8);
-            this.textBoxValeurStk.Name = "textBoxValeurStk";
-            this.textBoxValeurStk.Size = new System.Drawing.Size(108, 27);
-            this.textBoxValeurStk.TabIndex = 4;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label4.Location = new System.Drawing.Point(2, 0);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 54);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Gestion des stocks";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label5.Location = new System.Drawing.Point(2, 252);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(112, 50);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Infos sur les stocks";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // buttonAjouterStk
-            // 
-            this.buttonAjouterStk.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAjouterStk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAjouterStk.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonAjouterStk.Location = new System.Drawing.Point(8, 86);
-            this.buttonAjouterStk.Margin = new System.Windows.Forms.Padding(8, 32, 8, 32);
-            this.buttonAjouterStk.Name = "buttonAjouterStk";
-            this.buttonAjouterStk.Size = new System.Drawing.Size(100, 33);
-            this.buttonAjouterStk.TabIndex = 2;
-            this.buttonAjouterStk.Text = "Ajouter";
-            this.buttonAjouterStk.UseVisualStyleBackColor = true;
-            this.buttonAjouterStk.Click += new System.EventHandler(this.buttonAjouterStk_Click);
-            // 
-            // buttonSupprimerStk
-            // 
-            this.buttonSupprimerStk.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonSupprimerStk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSupprimerStk.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonSupprimerStk.Location = new System.Drawing.Point(8, 183);
-            this.buttonSupprimerStk.Margin = new System.Windows.Forms.Padding(8, 32, 8, 32);
-            this.buttonSupprimerStk.Name = "buttonSupprimerStk";
-            this.buttonSupprimerStk.Size = new System.Drawing.Size(100, 37);
-            this.buttonSupprimerStk.TabIndex = 3;
-            this.buttonSupprimerStk.Text = "Supprimer";
-            this.buttonSupprimerStk.UseVisualStyleBackColor = true;
-            this.buttonSupprimerStk.Click += new System.EventHandler(this.buttonSupprimerStk_Click);
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel4.ColumnCount = 1;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Controls.Add(this.label6, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.textBoxNbArticle, 0, 1);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(2, 304);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 2;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(112, 97);
-            this.tableLayoutPanel4.TabIndex = 4;
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label6.Location = new System.Drawing.Point(2, 0);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(108, 48);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Nombre d\'articles :";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // textBoxNbArticle
-            // 
-            this.textBoxNbArticle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxNbArticle.Enabled = false;
-            this.textBoxNbArticle.Location = new System.Drawing.Point(2, 56);
-            this.textBoxNbArticle.Margin = new System.Windows.Forms.Padding(2, 8, 2, 8);
-            this.textBoxNbArticle.Name = "textBoxNbArticle";
-            this.textBoxNbArticle.Size = new System.Drawing.Size(108, 27);
-            this.textBoxNbArticle.TabIndex = 5;
-            // 
             // labelDate
             // 
             this.labelDate.AutoSize = true;
             this.labelDate.BackColor = System.Drawing.Color.Transparent;
             this.labelDate.Font = new System.Drawing.Font("Microsoft YaHei UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelDate.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.labelDate.Location = new System.Drawing.Point(1231, 67);
+            this.labelDate.Location = new System.Drawing.Point(1311, 63);
             this.labelDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDate.Name = "labelDate";
             this.labelDate.Size = new System.Drawing.Size(109, 19);
@@ -678,47 +573,87 @@ namespace ZumbaSoft.Fenetres_Stock
             this.label8.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.Snow;
             this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label8.Location = new System.Drawing.Point(1103, 63);
+            this.label8.Location = new System.Drawing.Point(1183, 59);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(127, 24);
             this.label8.TabIndex = 62;
             this.label8.Text = "Stock datant du :";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label3.Location = new System.Drawing.Point(37, 36);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(151, 50);
+            this.label3.TabIndex = 63;
+            this.label3.Text = "Gestion des commandes";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
+            this.panel1.Controls.Add(this.buttonAjouterStk);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.textBoxValeurStk);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.buttonSupprimerStk);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.textBoxNbArticle);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Location = new System.Drawing.Point(485, 105);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(228, 555);
+            this.panel1.TabIndex = 64;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.buttonSuppStock);
+            this.panel2.Controls.Add(this.buttonModifierCmd);
+            this.panel2.Controls.Add(this.buttonNouvelleCmd);
+            this.panel2.Location = new System.Drawing.Point(1185, 105);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(228, 555);
+            this.panel2.TabIndex = 65;
+            // 
             // AccueilStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1438, 741);
+            this.ClientSize = new System.Drawing.Size(1442, 741);
+            this.Controls.Add(this.tableauStock);
+            this.Controls.Add(this.tableauCommandes);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel5);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.tableauCommandes);
             this.Controls.Add(this.labelDate);
-            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelListProdStock);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "AccueilStock";
             this.Text = "Gestion des Stocks";
             ((System.ComponentModel.ISupportInitialize)(this.tableauCommandes)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tableauStock)).EndInit();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
-            this.tableLayoutPanel5.ResumeLayout(false);
-            this.tableLayoutPanel5.PerformLayout();
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel4.PerformLayout();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.homeIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbERROR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbOK)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -731,24 +666,19 @@ namespace ZumbaSoft.Fenetres_Stock
         private System.Windows.Forms.Button buttonNouvelleCmd;
         private System.Windows.Forms.Button buttonModifierCmd;
         private System.Windows.Forms.DataGridView tableauCommandes;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.DataGridView tableauStock;
         private System.Windows.Forms.DataGridViewTextBoxColumn reference;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDeCommande;
         private System.Windows.Forms.DataGridViewTextBoxColumn fournisseur;
         private System.Windows.Forms.DataGridViewTextBoxColumn etat;
         private System.Windows.Forms.DataGridViewTextBoxColumn prixTotalTTC;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBoxValeurStk;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button buttonAjouterStk;
         private System.Windows.Forms.Button buttonSupprimerStk;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBoxNbArticle;
         private System.Windows.Forms.Label labelDate;
@@ -769,5 +699,8 @@ namespace ZumbaSoft.Fenetres_Stock
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button goBackButton;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

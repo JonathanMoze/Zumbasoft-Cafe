@@ -27,6 +27,7 @@ namespace ZumbaSoft.Fenetres_Stock
             DB = db;
             magasin = m;
             initListProduit();
+            initItemsColors();
         }
 
         /// <summary>
@@ -46,6 +47,22 @@ namespace ZumbaSoft.Fenetres_Stock
             {
                 listBoxProduits.Items.Add("Aucun produit.");
             }
+        }
+
+
+        /// <summary>
+        /// Initialise tranparent effects.
+        /// </summary>
+        public void initItemsColors()
+        {
+            panel1.BackColor = Color.FromArgb(50, 12, 12, 12);
+            panel2.BackColor = Color.FromArgb(50, 12, 12, 12);
+
+            backgroundBlock1.BackColor = Color.FromArgb(50, 12, 12, 12);
+            backgroundBlock2.BackColor = Color.FromArgb(80, 12, 12, 12);
+            buttonAjouterStock.BackColor = Color.FromArgb(50, 12, 12, 12);
+            buttonSelectionner.BackColor = Color.FromArgb(50, 12, 12, 12);
+            buttonAnnuler.BackColor = Color.FromArgb(50, 12, 12, 12);
         }
 
         /// <summary>

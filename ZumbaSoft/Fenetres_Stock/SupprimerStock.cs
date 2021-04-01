@@ -24,7 +24,8 @@ namespace ZumbaSoft.Fenetres_Stock
             DB = db;
             PES = ps;
             initField();
-            
+            initItemsColors();
+
         }
 
         private void initField()
@@ -38,6 +39,15 @@ namespace ZumbaSoft.Fenetres_Stock
             {
                 barreQtt.Maximum = PES.quantite;
             }
+        }
+
+        public void initItemsColors()
+        {
+            backgroundBlock1.BackColor = Color.FromArgb(90, System.Drawing.Color.Red);
+            backgroundBlock2.BackColor = Color.FromArgb(80, 12, 12, 12);
+            buttonAnuuler.BackColor = Color.FromArgb(50, 12, 12, 12);
+            buttonSupprimer.BackColor = Color.FromArgb(50, 12, 12, 12);
+
         }
 
         private void buttonSupprimer_Click(object sender, EventArgs e)
@@ -71,5 +81,6 @@ namespace ZumbaSoft.Fenetres_Stock
             DialogResult = DialogResult.Cancel;
             this.Close();
         }
+
     }
 }
