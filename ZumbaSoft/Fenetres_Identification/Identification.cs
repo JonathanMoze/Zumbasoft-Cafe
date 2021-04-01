@@ -21,6 +21,14 @@ namespace ZumbaSoft.Fenetres_Identification
         {
             InitializeComponent();
             database = db;
+            initItemsColors();
+        }
+
+        public void initItemsColors()
+        {
+            backgroundBlock1.BackColor = Color.FromArgb(50, 12, 12, 12);
+            connection_button.BackColor = Color.FromArgb(50, 12, 12, 12);
+            buttonCreationCompte.BackColor = Color.FromArgb(50, 12, 12, 12);
         }
 
         #region log-in
