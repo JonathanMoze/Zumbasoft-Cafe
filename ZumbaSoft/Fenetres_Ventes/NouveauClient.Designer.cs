@@ -230,12 +230,14 @@ namespace ZumbaSoft.Fenetres_Ventes
             // 
             // buttonNvAdresse
             // 
+            this.buttonNvAdresse.BackColor = System.Drawing.Color.Transparent;
+            this.buttonNvAdresse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonNvAdresse.Location = new System.Drawing.Point(171, 611);
             this.buttonNvAdresse.Name = "buttonNvAdresse";
             this.buttonNvAdresse.Size = new System.Drawing.Size(207, 29);
             this.buttonNvAdresse.TabIndex = 17;
             this.buttonNvAdresse.Text = "Nouvelle adresse";
-            this.buttonNvAdresse.UseVisualStyleBackColor = true;
+            this.buttonNvAdresse.UseVisualStyleBackColor = false;
             this.buttonNvAdresse.Click += new System.EventHandler(this.buttonNvAdresse_Click);
             // 
             // labelErreur
@@ -258,7 +260,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.backgroundBlock1.Location = new System.Drawing.Point(-1, 0);
             this.backgroundBlock1.Margin = new System.Windows.Forms.Padding(2);
             this.backgroundBlock1.Name = "backgroundBlock1";
-            this.backgroundBlock1.Size = new System.Drawing.Size(508, 80);
+            this.backgroundBlock1.Size = new System.Drawing.Size(430, 80);
             this.backgroundBlock1.TabIndex = 28;
             // 
             // label1

@@ -113,33 +113,7 @@ namespace ZumbaSoft.Fenetres_Produit
             this.Close();
         }
 
-        private void buttonModifs_Click(object sender, EventArgs e)
-        {
-            if(textBoxNom.Text != "")
-            {
-                textBoxNom.PlaceholderText = textBoxNom.Text;
-                textBoxNom.Text = "";
-            }
-
-            if (textBoxNewTel.Text != "")
-            {
-                textBoxNewTel.PlaceholderText = textBoxNewTel.Text;
-                textBoxNewTel.Text = "";
-            }
-
-            if (textBoxEmail.Text != "")
-            {
-                textBoxEmail.PlaceholderText = textBoxEmail.Text;
-                textBoxEmail.Text = "";
-            }
-
-            if (textBoxContrat.Text != "")
-            {
-                textBoxContrat.PlaceholderText = textBoxContrat.Text;
-                textBoxContrat.Text = "";
-            }
-
-        }
+        
 
         private void buttonAdr_Click(object sender, EventArgs e)
         {

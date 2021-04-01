@@ -261,7 +261,7 @@ namespace ZumbaSoft.Fenetres_Produit
             this.labelEtatContratFourni.Name = "labelEtatContratFourni";
             this.labelEtatContratFourni.Size = new System.Drawing.Size(117, 19);
             this.labelEtatContratFourni.TabIndex = 50;
-            this.labelEtatContratFourni.Text = "Etat du contrat :";
+            this.labelEtatContratFourni.Text = "État du contrat :";
             // 
             // labelMailfourni
             // 
