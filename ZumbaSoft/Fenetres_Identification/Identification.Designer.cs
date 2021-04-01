@@ -60,6 +60,7 @@ namespace ZumbaSoft.Fenetres_Identification
             // loginField
             // 
             this.loginField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
+            this.loginField.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.loginField.Location = new System.Drawing.Point(166, 179);
             this.loginField.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.loginField.Name = "loginField";
@@ -69,6 +70,7 @@ namespace ZumbaSoft.Fenetres_Identification
             // passwordField
             // 
             this.passwordField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
+            this.passwordField.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.passwordField.Location = new System.Drawing.Point(166, 237);
             this.passwordField.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.passwordField.Name = "passwordField";
