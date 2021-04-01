@@ -430,11 +430,11 @@ namespace ZumbaSoft.Fenetres_Identification
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBoxLogin;
+        public System.Windows.Forms.TextBox textBoxLogin;
         private System.Windows.Forms.Label labelLogin;
-        private System.Windows.Forms.TextBox textBoxPassword;
+        public System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.Label labelPassword;
-        private System.Windows.Forms.ComboBox comboBoxRole;
+        public System.Windows.Forms.ComboBox comboBoxRole;
         private System.Windows.Forms.Label labelRole;
         private System.Windows.Forms.Panel backgroundBlock1;
         private System.Windows.Forms.Label label1;
@@ -443,21 +443,21 @@ namespace ZumbaSoft.Fenetres_Identification
         private System.Windows.Forms.Button buttonAjouter;
         private System.Windows.Forms.Label labelErreur;
         private System.Windows.Forms.Button buttonNvAdresse;
-        private System.Windows.Forms.TextBox textBoxAdr;
-        private System.Windows.Forms.DateTimePicker dateTimeNaissance;
-        private System.Windows.Forms.TextBox textBoxMail;
-        private System.Windows.Forms.TextBox textBoxTel;
-        private System.Windows.Forms.TextBox textBoxPrenom;
-        private System.Windows.Forms.TextBox textBoxNom;
+        public System.Windows.Forms.TextBox textBoxAdr;
+        public System.Windows.Forms.DateTimePicker dateTimeNaissance;
+        public System.Windows.Forms.TextBox textBoxMail;
+        public System.Windows.Forms.TextBox textBoxTel;
+        public System.Windows.Forms.TextBox textBoxPrenom;
+        public System.Windows.Forms.TextBox textBoxNom;
         private System.Windows.Forms.Label labelAdresse;
         private System.Windows.Forms.Label labelDateNaissance;
         private System.Windows.Forms.Label labelMail;
         private System.Windows.Forms.Label labelTel;
         private System.Windows.Forms.Label labelPrenom;
         private System.Windows.Forms.Label labelNom;
-        private System.Windows.Forms.ComboBox comboBoxStatus;
+        public System.Windows.Forms.ComboBox comboBoxStatus;
         private System.Windows.Forms.Label labelStatus;
-        private System.Windows.Forms.ComboBox comboBoxCivilité;
+        public System.Windows.Forms.ComboBox comboBoxCivilité;
         private System.Windows.Forms.Label labelCivilite;
     }
 }

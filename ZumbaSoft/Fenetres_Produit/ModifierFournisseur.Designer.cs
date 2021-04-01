@@ -366,7 +366,7 @@ namespace ZumbaSoft.Fenetres_Produit
         private System.Windows.Forms.TextBox textBoxNewTel;
         private System.Windows.Forms.TextBox textBoxContrat;
         private System.Windows.Forms.TextBox textBoxEmail;
-        private System.Windows.Forms.TextBox textBoxNom;
+        public System.Windows.Forms.TextBox textBoxNom;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label labelEtatContratFourni;
         private System.Windows.Forms.Label labelMailfourni;
