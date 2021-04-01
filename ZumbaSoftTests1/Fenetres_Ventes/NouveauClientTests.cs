@@ -15,8 +15,7 @@ namespace ZumbaSoft.Fenetres_Ventes.Tests
         SQLiteConnection db;
         Client client;
 
-        [TestMethod()]
-        public void NouveauClientTest()
+        public  NouveauClientTests()
         {
             InitializeDataBase();
         }
@@ -53,12 +52,21 @@ namespace ZumbaSoft.Fenetres_Ventes.Tests
             NouveauClient c = new NouveauClient(db);
             AccueilClient ac = new AccueilClient(db, client);
 
-            c.textBoxNom.Text = "Thomas";
-            c.buttonValider_Click(null, null);
+            c.comboBoxCivilité.SelectedItem = EnumCivilite.Monsieur;
+            c.comboBoxStatus.SelectedItem = EnumStatus.Actif;
+            c.textBoxNom.Text = "Moze";
+            c.textBoxPrenom.Text = "Jonathan";
+            c.textBoxTel.Text = "0683543525";
+            c.textBoxMail.Text = "test@gmail.com";
+            c.dateTimeNaissance.Value = new DateTime(2000, 3, 1);
+            c.adresse = new Adresse();
 
-            Assert.IsTrue(ac.listClient.Items.Count == 1);
+            c.buttonValider_Click(null, null);
+            ac.initListClient();
+
+            Assert.IsTrue(db.GetAllWithChildren<Client>().Count == 1);
             Client ctest1 = (Client)ac.listClient.Items[0];
-            Assert.IsTrue(ctest1.nom == "Thomas");
+            Assert.IsTrue(ctest1.nom == "Moze");
         }
     }
 }

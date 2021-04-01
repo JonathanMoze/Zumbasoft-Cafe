@@ -43,6 +43,7 @@ namespace ZumbaSoft
             db.CreateTable<Rapport>();
             db.CreateTable<Role>();
             db.CreateTable<Utilisateur>();
+            db.CreateTable<DroitToRole>();
             return db;
         }
 

@@ -16,8 +16,7 @@ namespace ZumbaSoft.Fenetres_Ventes.Tests
         SQLiteConnection db;
         Client client;
 
-        [TestMethod()]
-        public void AccueilClientTest()
+        public AccueilClientTests()
         {
             InitializeDataBase();
         }
@@ -52,9 +51,11 @@ namespace ZumbaSoft.Fenetres_Ventes.Tests
             db.DeleteAll<Client>();
 
             Client c1 = new Client();
-            c1.nom = "Julien";
+            c1.prenom = "Julien";
+            c1.nom = "Marchand";
             Client c2 = new Client();
-            c2.nom = "Antoine";
+            c2.prenom = "Antoine";
+            c2.nom = "Test";
 
             db.InsertWithChildren(c1);
             db.InsertWithChildren(c2);
