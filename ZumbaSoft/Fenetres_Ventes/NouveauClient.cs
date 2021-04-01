@@ -23,6 +23,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             InitializeComponent();
             DB = db;
             initComboBoxes();
+            initItemsColors();
         }
 
 
@@ -30,6 +31,14 @@ namespace ZumbaSoft.Fenetres_Ventes
         {
             comboBoxCivilité.DataSource = Enum.GetValues(typeof(EnumCivilite));
             comboBoxStatus.DataSource = Enum.GetValues(typeof(EnumStatus));
+        }
+
+        public void initItemsColors()
+        {
+            backgroundBlock1.BackColor = Color.FromArgb(50, 12, 12, 12);
+            backgroundBlock2.BackColor = Color.FromArgb(80, 12, 12, 12);
+            buttonAjouter.BackColor = Color.FromArgb(50, 12, 12, 12);
+            buttonAnnuler.BackColor = Color.FromArgb(50, 12, 12, 12);
         }
 
         public void initClient()
@@ -118,5 +127,6 @@ namespace ZumbaSoft.Fenetres_Ventes
                 labelErreur.Visible = true;
             }
         }
+
     }
 }

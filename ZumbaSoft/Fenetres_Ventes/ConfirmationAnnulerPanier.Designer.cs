@@ -29,6 +29,7 @@ namespace ZumbaSoft.Fenetres_Ventes
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfirmationAnnulerPanier));
             this.label2 = new System.Windows.Forms.Label();
             this.backgroundBlock2 = new System.Windows.Forms.Panel();
             this.buttonAnnuler = new System.Windows.Forms.Button();
@@ -43,10 +44,11 @@ namespace ZumbaSoft.Fenetres_Ventes
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(36, 132);
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label2.Location = new System.Drawing.Point(24, 132);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(231, 20);
+            this.label2.Size = new System.Drawing.Size(253, 20);
             this.label2.TabIndex = 26;
             this.label2.Text = "Êtes vous sur d\'annuler le panier ?";
             // 
@@ -111,6 +113,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(524, 257);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.backgroundBlock2);

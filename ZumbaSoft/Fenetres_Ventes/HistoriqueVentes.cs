@@ -20,6 +20,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             InitializeComponent();
             DB = db;
             initListVentes();
+            initItemsColors();
         }
 
         private void HistoriqueVentes_Load(object sender, EventArgs e)
@@ -50,6 +51,20 @@ namespace ZumbaSoft.Fenetres_Ventes
                 lst = new ListViewItem(arr);
                 listViewVentesPassees.Items.Add(lst);
             }  
+        }
+
+        public void initItemsColors()
+        {
+            backgroundBlock1.BackColor = Color.FromArgb(80, 12, 12, 12);
+            backgroundBlock2.BackColor = Color.FromArgb(80, 12, 12, 12);
+
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.OK;
+            this.Close();
         }
     }
 }

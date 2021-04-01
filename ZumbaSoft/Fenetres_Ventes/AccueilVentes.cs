@@ -26,6 +26,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             magasin = m;
             initListClients();
             initPanier();
+            initItemsColors();
         }
 
 
@@ -44,6 +45,24 @@ namespace ZumbaSoft.Fenetres_Ventes
             panierClient.date = DateTime.Now;
             panierClient.magasin = magasin;
             panierClient.produits = new List<ProduitCommande>();
+        }
+
+        public void initItemsColors()
+        {
+            panel1.BackColor = Color.FromArgb(95, 12, 12, 12);
+            panel2.BackColor = Color.FromArgb(95, 12, 12, 12);
+            panel3.BackColor = Color.FromArgb(95, 12, 12, 12);
+            panel4.BackColor = Color.FromArgb(80, 12, 12, 12);
+            panel5.BackColor = Color.FromArgb(80, 12, 12, 12);
+            panel6.BackColor = Color.FromArgb(80, 12, 12, 12);
+            panel7.BackColor = Color.FromArgb(80, 12, 12, 12);
+            panel8.BackColor = Color.FromArgb(80, 12, 12, 12);
+            panel9.BackColor = Color.FromArgb(80, 12, 12, 12);
+            panel10.BackColor = Color.FromArgb(80, 12, 12, 12);
+
+            buttonCatalogueProd.BackColor = Color.FromArgb(80, 12, 12, 12);
+            buttonNvClient.BackColor = Color.FromArgb(80, 12, 12, 12);
+
         }
 
 

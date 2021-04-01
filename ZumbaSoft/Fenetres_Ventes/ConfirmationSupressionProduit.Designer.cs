@@ -29,13 +29,14 @@ namespace ZumbaSoft.Fenetres_Ventes
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfirmationSupressionProduit));
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.backgroundBlock2 = new System.Windows.Forms.Panel();
             this.buttonAnnuler = new System.Windows.Forms.Button();
             this.buttonSupprimer = new System.Windows.Forms.Button();
             this.backgroundBlock1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.backgroundBlock2.SuspendLayout();
             this.backgroundBlock1.SuspendLayout();
             this.SuspendLayout();
@@ -52,17 +53,6 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.label3.TabIndex = 0;
             this.label3.Text = "Confirmation de suppression";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(36, 132);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(315, 20);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "Êtes vous sur de vouloir supprimer le produit ?";
-            // 
             // backgroundBlock2
             // 
             this.backgroundBlock2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
@@ -77,6 +67,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             // 
             this.buttonAnnuler.BackColor = System.Drawing.Color.Transparent;
             this.buttonAnnuler.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonAnnuler.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonAnnuler.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.buttonAnnuler.Location = new System.Drawing.Point(204, 14);
             this.buttonAnnuler.Name = "buttonAnnuler";
@@ -90,6 +81,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             // 
             this.buttonSupprimer.BackColor = System.Drawing.Color.Transparent;
             this.buttonSupprimer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonSupprimer.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonSupprimer.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.buttonSupprimer.Location = new System.Drawing.Point(369, 14);
             this.buttonSupprimer.Name = "buttonSupprimer";
@@ -120,10 +112,23 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.label1.TabIndex = 0;
             this.label1.Text = "Confirmation de suppression";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label2.Location = new System.Drawing.Point(35, 134);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(347, 20);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "Êtes vous sur de vouloir supprimer le produit ?";
+            // 
             // ConfirmationSupressionProduit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(524, 257);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.backgroundBlock2);
@@ -141,11 +146,11 @@ namespace ZumbaSoft.Fenetres_Ventes
         #endregion
 
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel backgroundBlock2;
         private System.Windows.Forms.Button buttonAnnuler;
         private System.Windows.Forms.Button buttonSupprimer;
         private System.Windows.Forms.Panel backgroundBlock1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
