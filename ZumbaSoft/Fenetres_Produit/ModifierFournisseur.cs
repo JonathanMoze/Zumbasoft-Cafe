@@ -57,7 +57,7 @@ namespace ZumbaSoft.Fenetres_Produit
             }
         }
 
-        private void buttonOKParamMag_Click(object sender, EventArgs e)
+        public void buttonOKParamMag_Click(object sender, EventArgs e)
         {
             fournisseur.telephone = textBoxNewTel.PlaceholderText;
             fournisseur.nom = textBoxNom.PlaceholderText;

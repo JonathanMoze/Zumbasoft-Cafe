@@ -255,7 +255,7 @@ namespace ZumbaSoft.Fenetres_Produit
         private System.Windows.Forms.Label labelTel;
         private System.Windows.Forms.Button buttonAnnulParamMag;
         private System.Windows.Forms.Button buttonOKParamMag;
-        private System.Windows.Forms.TextBox textBoxNom;
+        public System.Windows.Forms.TextBox textBoxNom;
         private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.Label labelMail;
         private System.Windows.Forms.TextBox textBoxContrat;
