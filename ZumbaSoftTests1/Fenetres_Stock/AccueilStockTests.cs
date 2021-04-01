@@ -56,32 +56,17 @@ namespace ZumbaSoft.Fenetres_Stock.Tests
         }
 
         [TestMethod()]
-        public void initTableauAndFieldsStockTest()
+        public void initTableaux()
         {
             DB.DeleteAll<ProduitEnStock>();
+            DB.DeleteAll<Commande>();
+            DB.DeleteAll<Magasin>();
 
-            foreach(Produit p in produits)
+            foreach (Produit p in produits)
             {
                 ProduitEnStock pes = new ProduitEnStock() { produit = p, quantite = 1, magasin = new Magasin() };
                 DB.InsertWithChildren(pes);
             }
-
-            AccueilStock accueilStock = new AccueilStock(DB);
-
-            Assert.AreEqual(10 + 1, accueilStock.tableauStock.Rows.Count);
-            Assert.AreEqual("10", accueilStock.textBoxNbArticle.Text);
-            Assert.AreEqual("20 €", accueilStock.textBoxValeurStk.Text);
-        }
-
-
-        [TestMethod()]
-        public void initTableauCommandesTest()
-        {
-            DB.DeleteAll<Commande>();
-            DB.DeleteAll<Magasin>();
-
-            // Avoid error from the Stock grid
-            initTableauAndFieldsStockTest();
 
             Magasin magasin = new Magasin();
             DB.Insert(magasin);
@@ -98,6 +83,9 @@ namespace ZumbaSoft.Fenetres_Stock.Tests
             AccueilStock accueilStock = new AccueilStock(DB);
 
             Assert.AreEqual(10 + 1, accueilStock.tableauCommandes.Rows.Count);
+            Assert.AreEqual(10 + 1, accueilStock.tableauStock.Rows.Count);
+            Assert.AreEqual("10", accueilStock.textBoxNbArticle.Text);
+            Assert.AreEqual("20 €", accueilStock.textBoxValeurStk.Text);
         }
     }
 }
