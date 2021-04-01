@@ -18,19 +18,19 @@ namespace ZumbaSoft.Fenetres_Magasin
         SQLiteConnection DB;
         Magasin magasin;
         Utilisateur user;
-        Adresse newAdresse;
+        public Adresse newAdresse;
 
         public AccueilMagasin(SQLiteConnection db, Utilisateur uConnected)
         {
             InitializeComponent();
             DB = db;
             user = uConnected;
-            initListMagasin();
+            updateListMagasin();
             initItemsColors();
             checkDB();
         }
 
-        public void initListMagasin()
+        public void updateListMagasin()
         {
             foreach (Magasin m in DB.GetAllWithChildren<Magasin>())
             {
@@ -256,7 +256,7 @@ namespace ZumbaSoft.Fenetres_Magasin
                 DB.UpdateWithChildren(magasin);
 
                 listMagasin.Items.Clear();
-                initListMagasin();
+                updateListMagasin();
                 UpdateInfoField();
 
                 textBoxModifMdp.Text = "";
@@ -306,14 +306,14 @@ namespace ZumbaSoft.Fenetres_Magasin
 
         private void buttonSupprimer_Click(object sender, EventArgs e)
         {
-            Confirmation supprimerMagasin = new Confirmation(magasin, DB);
+            SupprimerMagasin supprimerMagasin = new SupprimerMagasin(magasin);
             if(supprimerMagasin.ShowDialog() == DialogResult.OK)
             {
                 var deletedMag = magasin;
                 magasin = null;
                 listMagasin.SelectedIndex = 0;
                 listMagasin.Items.Clear();
-                initListMagasin();
+                updateListMagasin();
                 UpdateInfoField();
             }
         }
