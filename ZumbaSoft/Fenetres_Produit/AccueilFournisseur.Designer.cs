@@ -217,7 +217,7 @@ namespace ZumbaSoft.Fenetres_Produit
 
         #endregion
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListBox listFournisseur;
+        public System.Windows.Forms.ListBox listFournisseur;
         private System.Windows.Forms.Label erreurListevide;
         private System.Windows.Forms.Panel backgroundBlock;
         private System.Windows.Forms.Button buttonAjouterGenre;

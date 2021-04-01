@@ -4,23 +4,24 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using SQLite;
-using SQLiteNetExtensions;
-using SQLiteNetExtensions.Extensions;
 using ZumbaSoft.Model;
+using SQLiteNetExtensions.Extensions;
 
 namespace ZumbaSoft.Fenetres_Produit.Tests
 {
     [TestClass()]
-    public class AjouterFournisseurTests
+    public class SupprimerFournisseurTests
     {
         SQLiteConnection db;
         FormProduit fourni;
+        Fournisseur fournisseur;
 
         [TestMethod()]
-        public void AjouterFournisseurTest()
+        public void SupprimerFournisseurTest()
         {
             InitializeDataBase();
         }
+
         public void InitializeDataBase()
         {
             string databasePath = System.IO.Path.GetFullPath("./../../../DataBase.db");
@@ -46,24 +47,24 @@ namespace ZumbaSoft.Fenetres_Produit.Tests
         }
 
         [TestMethod()]
-        public void buttonOK_ClickTest()
+        public void buttonSupprimer_ClickTest()
         {
             db.DeleteAll<Fournisseur>();
-            AjouterFournisseur f = new AjouterFournisseur(db);
-            AccueilFournisseur af = new AccueilFournisseur(db, fourni);
 
-            f.textBoxNom.Text = "Ninous";
-            f.textBoxMailFourni.Text = "mathilde@gmail.com";
-            f.textBoxEtatFourni.Text = "test";
-            f.textBoxTelFourni.Text = "0793847539";
-            f.adresse = new Adresse();
+            Fournisseur f1 = new Fournisseur();
+            f1.nom = "fourni1";
+            db.InsertWithChildren(f1);
 
-            f.buttonOK_Click(null, null);
-            af.initListFournisseur();
+            AccueilFournisseur f = new AccueilFournisseur(db, fourni);
+            SupprimerFournisseur sf = new SupprimerFournisseur(fournisseur,db);
+            f.initListFournisseur();
 
-            Assert.IsTrue(db.GetAllWithChildren<Fournisseur>().Count == 1);
-            Fournisseur ftest1 = (Fournisseur)af.listFournisseur.Items[0];
-            Assert.IsTrue(ftest1.nom == "Ninous");
+            Assert.IsTrue(f.listFournisseur.Items.Count == 1);
+            f.listFournisseur.SelectedIndex = 0;
+            sf.buttonSupprimer_Click(null, null);
+            f.initListFournisseur();
+
+            Assert.IsTrue(f.listFournisseur.Items.Count == 0);
         }
     }
 }

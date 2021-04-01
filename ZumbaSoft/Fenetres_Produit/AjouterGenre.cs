@@ -38,7 +38,7 @@ namespace ZumbaSoft.Fenetres_Produit
             buttonOK.BackColor = Color.FromArgb(50, 12, 12, 12);
         }
 
-        private void buttonOK_Click(object sender, EventArgs e)
+        public void buttonOK_Click(object sender, EventArgs e)
         {
                 genre = initObjectGenre();
                 DB.InsertWithChildren(genre);
