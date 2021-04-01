@@ -94,7 +94,7 @@ namespace ZumbaSoft.Fenetres_Ventes
         }
 
 
-        private void buttonNvClient_Click(object sender, EventArgs e)
+        public void buttonNvClient_Click(object sender, EventArgs e)
         {
             NouveauClient nvc = new NouveauClient(DB);
             if (nvc.ShowDialog() == DialogResult.OK)
@@ -122,7 +122,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             labelNomClient.Text = c.ToString();
         }
 
-        private void buttonCatalogueProd_Click(object sender, EventArgs e)
+        public void buttonCatalogueProd_Click(object sender, EventArgs e)
         {
             RechercheProduit rp = new RechercheProduit(DB);
             if(rp.ShowDialog() == DialogResult.OK)
@@ -167,7 +167,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             }  
         }
 
-        private void buttonPlus_Click(object sender, EventArgs e)
+        public void buttonPlus_Click(object sender, EventArgs e)
         {
             int index = listView1.SelectedItems[0].Index;
             ProduitCommande produit = panierClient.produits[index];
@@ -185,7 +185,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             }
         }
 
-        private void buttonMoins_Click(object sender, EventArgs e)
+        public void buttonMoins_Click(object sender, EventArgs e)
         {
             labelRuptureStock.Visible = false;
             int index = listView1.SelectedItems[0].Index;
@@ -253,7 +253,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             }
             else
             {
-                labelErreur.Visible = true;
+                labelErreur.Visible = true;s
             }
         }
     }

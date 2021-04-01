@@ -430,7 +430,7 @@ namespace ZumbaSoft.Fenetres_Ventes
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBoxRechercheClient;
-        private System.Windows.Forms.ListBox listBox1RechercheClient;
+        public System.Windows.Forms.ListBox listBox1RechercheClient;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
