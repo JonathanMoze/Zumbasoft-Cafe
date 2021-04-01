@@ -139,6 +139,7 @@ namespace ZumbaSoft.Fenetres_Produit
             this.Controls.Add(this.backgroundBlock1);
             this.Controls.Add(this.textBoxRecherche);
             this.Controls.Add(this.listBoxProduits);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "RechercheProduit";
             this.Text = "RechercheProduit";
             this.backgroundBlock1.ResumeLayout(false);

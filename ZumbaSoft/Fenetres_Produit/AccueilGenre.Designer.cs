@@ -231,6 +231,7 @@ namespace ZumbaSoft.Fenetres_Produit
             this.Controls.Add(this.label2);
             this.Controls.Add(this.erreurListevide);
             this.Controls.Add(this.listGenre);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "AccueilGenre";
             this.Text = "Gestion des genres";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AccueilGenre_FormClosed);

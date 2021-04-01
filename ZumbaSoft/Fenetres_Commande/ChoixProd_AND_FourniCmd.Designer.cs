@@ -340,6 +340,7 @@ namespace ZumbaSoft.Fenetres_Commande
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.buttonSelectionner);
             this.Controls.Add(this.labelErreurBarreQtt);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ChoixProd_AND_FourniCmd";
             this.Text = "ChoixProd_Fourni";

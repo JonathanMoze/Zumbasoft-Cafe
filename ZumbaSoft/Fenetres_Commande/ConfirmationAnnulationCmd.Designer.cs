@@ -121,6 +121,7 @@ namespace ZumbaSoft.Fenetres_Commande
             this.Controls.Add(this.labelTexte);
             this.Controls.Add(this.backgroundBlock1);
             this.Controls.Add(this.backgroundBlock2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ConfirmationAnnulationCmd";
             this.Text = "ConfirmationAnnulationCmd";

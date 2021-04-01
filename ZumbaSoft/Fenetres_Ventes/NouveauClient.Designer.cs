@@ -343,6 +343,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.Controls.Add(this.labelCivilite);
             this.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "NouveauClient";
             this.Text = "NouveauClient";
             this.backgroundBlock1.ResumeLayout(false);

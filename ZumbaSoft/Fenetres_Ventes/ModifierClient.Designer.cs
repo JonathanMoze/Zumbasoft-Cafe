@@ -274,6 +274,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.Controls.Add(this.labelStatus);
             this.Controls.Add(this.comboBoxCivilité);
             this.Controls.Add(this.labelCivilite);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ModifierClient";
             this.Text = "ModifierClient";
             this.ResumeLayout(false);

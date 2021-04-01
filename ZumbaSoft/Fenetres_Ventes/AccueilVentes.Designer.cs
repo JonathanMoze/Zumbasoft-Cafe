@@ -620,6 +620,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel10);
             this.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "AccueilVente";
             this.Text = "AccueilVente";
             this.Load += new System.EventHandler(this.AccueilVentes_Load);

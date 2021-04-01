@@ -227,6 +227,7 @@ namespace ZumbaSoft
             this.Controls.Add(this.title);
             this.Controls.Add(this.backgroundBlock);
             this.Controls.Add(this.labelErreur);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ConnexionMagasin";
             this.Text = "ConnexionMagasin";
             this.backgroundBlock.ResumeLayout(false);

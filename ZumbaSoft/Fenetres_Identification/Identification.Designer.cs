@@ -104,6 +104,7 @@ namespace ZumbaSoft.Fenetres_Identification
             this.Controls.Add(this.passwordField);
             this.Controls.Add(this.loginField);
             this.Controls.Add(this.connection_button);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Identification";
             this.Text = "Identification";

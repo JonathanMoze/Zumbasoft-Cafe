@@ -206,6 +206,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.Controls.Add(this.erreurListevide);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.listClient);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "AccueilClient";
             this.Text = "AccueilClient";
             this.backgroundBlock.ResumeLayout(false);

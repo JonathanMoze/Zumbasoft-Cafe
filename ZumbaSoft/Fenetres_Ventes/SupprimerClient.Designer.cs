@@ -118,6 +118,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.Controls.Add(this.backgroundBlock2);
             this.Controls.Add(this.backgroundBlock1);
             this.Controls.Add(this.label2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "SupprimerClient";
             this.Text = "SupprimerClient";
             this.backgroundBlock2.ResumeLayout(false);

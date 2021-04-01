@@ -150,6 +150,7 @@ namespace ZumbaSoft.Fenetres_Stock
             this.Controls.Add(this.barreQtt);
             this.Controls.Add(this.labelTexte);
             this.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SupprimerStock";
             this.Text = "SupprimerStock";

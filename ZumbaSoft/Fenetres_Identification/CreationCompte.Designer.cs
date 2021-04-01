@@ -323,6 +323,7 @@ namespace ZumbaSoft.Fenetres_Identification
             this.Controls.Add(this.labelStatus);
             this.Controls.Add(this.comboBoxCivilité);
             this.Controls.Add(this.labelCivilite);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "CreationCompte";
             this.Text = "CreationCompte";
             this.ResumeLayout(false);
