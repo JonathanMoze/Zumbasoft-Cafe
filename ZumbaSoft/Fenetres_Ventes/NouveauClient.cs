@@ -105,7 +105,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.Close();
         }
 
-        private void buttonValider_Click(object sender, EventArgs e)
+        public void buttonValider_Click(object sender, EventArgs e)
         {
             if (correctInformations())
             {

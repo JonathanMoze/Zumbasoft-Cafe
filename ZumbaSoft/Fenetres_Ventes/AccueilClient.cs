@@ -46,7 +46,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             }
         }
 
-        private void buttonAjouterClient_Click(object sender, EventArgs e)
+        public void buttonAjouterClient_Click(object sender, EventArgs e)
         {
             NouveauClient newClient = new NouveauClient(DB);
             if (newClient.ShowDialog() == DialogResult.OK)
@@ -55,7 +55,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             }
         }
 
-        private void buttonModifierClient_Click(object sender, EventArgs e)
+        public void buttonModifierClient_Click(object sender, EventArgs e)
         {
             if (listClient.SelectedItem != null)
             {
@@ -68,7 +68,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             }
         }
 
-        private void buttonSupprimerClient_Click(object sender, EventArgs e)
+        public void buttonSupprimerClient_Click(object sender, EventArgs e)
         {
             var c = (Client)listClient.SelectedItem;
             SupprimerClient supprimer = new SupprimerClient(c, DB);

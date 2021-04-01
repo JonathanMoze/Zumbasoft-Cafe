@@ -297,7 +297,7 @@ namespace ZumbaSoft.Fenetres_Ventes
         private System.Windows.Forms.Button buttonAccueil;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label erreurListevide;
-        private System.Windows.Forms.ListBox listClient;
+        public System.Windows.Forms.ListBox listClient;
         private System.Windows.Forms.Panel backgroundBlock;
         private System.Windows.Forms.Button buttonAjouterClient;
         private System.Windows.Forms.Button buttonModifierClient;

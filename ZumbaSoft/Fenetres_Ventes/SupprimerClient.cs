@@ -22,7 +22,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.DB = db;
         }
 
-        private void buttonSupprimer_Click(object sender, EventArgs e)
+        public void buttonSupprimer_Click(object sender, EventArgs e)
         {
             DB.Delete(client);
             DialogResult = DialogResult.OK;

@@ -282,7 +282,7 @@ namespace ZumbaSoft.Fenetres_Ventes
         private System.Windows.Forms.Label labelMail;
         private System.Windows.Forms.Label labelDateNaissance;
         private System.Windows.Forms.Label labelAdresse;
-        private System.Windows.Forms.TextBox textBoxNom;
+        public System.Windows.Forms.TextBox textBoxNom;
         private System.Windows.Forms.TextBox textBoxPrenom;
         private System.Windows.Forms.TextBox textBoxTel;
         private System.Windows.Forms.TextBox textBoxMail;
