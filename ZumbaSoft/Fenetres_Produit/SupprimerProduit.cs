@@ -33,7 +33,7 @@ namespace ZumbaSoft.Fenetres_Produit
 
         }
 
-        private void buttonSupprimer_Click(object sender, EventArgs e)
+        public void buttonSupprimer_Click(object sender, EventArgs e)
         {
             DB.Delete(produit);
             DialogResult = DialogResult.OK;

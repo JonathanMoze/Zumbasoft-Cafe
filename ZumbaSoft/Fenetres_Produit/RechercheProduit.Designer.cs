@@ -103,7 +103,7 @@ namespace ZumbaSoft.Fenetres_Produit
 
         #endregion
 
-        private System.Windows.Forms.ListBox listBoxProduits;
+        public System.Windows.Forms.ListBox listBoxProduits;
         private System.Windows.Forms.Label labelSelectionnez;
         private System.Windows.Forms.TextBox textBoxRecherche;
         private System.Windows.Forms.Button buttonValider;

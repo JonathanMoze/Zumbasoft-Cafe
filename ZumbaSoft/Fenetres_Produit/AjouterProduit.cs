@@ -102,7 +102,7 @@ namespace ZumbaSoft.Fenetres_Produit
             initComboBoxes();
         }
 
-        private void buttonOK_Click(object sender, EventArgs e)
+        public void buttonOK_Click(object sender, EventArgs e)
         {
             produit = initObjetProduit();
             DB.InsertWithChildren(produit);
