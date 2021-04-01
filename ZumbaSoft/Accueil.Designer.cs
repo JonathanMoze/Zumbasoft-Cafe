@@ -56,10 +56,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label1.Location = new System.Drawing.Point(458, 496);
+            this.label1.Location = new System.Drawing.Point(401, 372);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(204, 23);
+            this.label1.Size = new System.Drawing.Size(170, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Accéder à la gestion des :";
             // 
@@ -70,10 +70,10 @@
             this.buttonGestionMag.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonGestionMag.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonGestionMag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.buttonGestionMag.Location = new System.Drawing.Point(229, 18);
+            this.buttonGestionMag.Location = new System.Drawing.Point(200, 14);
             this.buttonGestionMag.Margin = new System.Windows.Forms.Padding(2);
             this.buttonGestionMag.Name = "buttonGestionMag";
-            this.buttonGestionMag.Size = new System.Drawing.Size(178, 51);
+            this.buttonGestionMag.Size = new System.Drawing.Size(156, 38);
             this.buttonGestionMag.TabIndex = 1;
             this.buttonGestionMag.Text = "Magasins";
             this.buttonGestionMag.UseVisualStyleBackColor = false;
@@ -86,10 +86,10 @@
             this.buttonGestionRoles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonGestionRoles.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonGestionRoles.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.buttonGestionRoles.Location = new System.Drawing.Point(22, 18);
+            this.buttonGestionRoles.Location = new System.Drawing.Point(19, 14);
             this.buttonGestionRoles.Margin = new System.Windows.Forms.Padding(2);
             this.buttonGestionRoles.Name = "buttonGestionRoles";
-            this.buttonGestionRoles.Size = new System.Drawing.Size(178, 51);
+            this.buttonGestionRoles.Size = new System.Drawing.Size(156, 38);
             this.buttonGestionRoles.TabIndex = 2;
             this.buttonGestionRoles.Text = "Rôles";
             this.buttonGestionRoles.UseVisualStyleBackColor = false;
@@ -101,10 +101,10 @@
             this.title.BackColor = System.Drawing.Color.Transparent;
             this.title.Font = new System.Drawing.Font("Microsoft YaHei UI", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.title.ForeColor = System.Drawing.Color.Gainsboro;
-            this.title.Location = new System.Drawing.Point(319, 279);
+            this.title.Location = new System.Drawing.Point(279, 209);
             this.title.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(466, 106);
+            this.title.Size = new System.Drawing.Size(375, 86);
             this.title.TabIndex = 3;
             this.title.Text = "OUATELSE";
             // 
@@ -114,10 +114,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.Aquamarine;
-            this.label2.Location = new System.Drawing.Point(487, 260);
+            this.label2.Location = new System.Drawing.Point(426, 195);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 27);
+            this.label2.Size = new System.Drawing.Size(104, 21);
             this.label2.TabIndex = 4;
             this.label2.Text = "ZUMBASOFT";
             // 
@@ -128,10 +128,10 @@
             this.buttonGestionStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonGestionStock.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonGestionStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.buttonGestionStock.Location = new System.Drawing.Point(435, 18);
+            this.buttonGestionStock.Location = new System.Drawing.Point(381, 14);
             this.buttonGestionStock.Margin = new System.Windows.Forms.Padding(2);
             this.buttonGestionStock.Name = "buttonGestionStock";
-            this.buttonGestionStock.Size = new System.Drawing.Size(178, 51);
+            this.buttonGestionStock.Size = new System.Drawing.Size(156, 38);
             this.buttonGestionStock.TabIndex = 5;
             this.buttonGestionStock.Text = " Stocks";
             this.buttonGestionStock.UseVisualStyleBackColor = false;
@@ -144,10 +144,10 @@
             this.buttonSeConnecter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSeConnecter.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonSeConnecter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.buttonSeConnecter.Location = new System.Drawing.Point(579, 640);
+            this.buttonSeConnecter.Location = new System.Drawing.Point(507, 480);
             this.buttonSeConnecter.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSeConnecter.Name = "buttonSeConnecter";
-            this.buttonSeConnecter.Size = new System.Drawing.Size(206, 34);
+            this.buttonSeConnecter.Size = new System.Drawing.Size(180, 26);
             this.buttonSeConnecter.TabIndex = 6;
             this.buttonSeConnecter.Text = "Se connecter";
             this.buttonSeConnecter.UseVisualStyleBackColor = false;
@@ -161,10 +161,10 @@
             this.backgroundBlock.Controls.Add(this.buttonGestionStock);
             this.backgroundBlock.Controls.Add(this.buttonGestionRoles);
             this.backgroundBlock.Controls.Add(this.buttonGestionProduits);
-            this.backgroundBlock.Location = new System.Drawing.Point(29, 527);
+            this.backgroundBlock.Location = new System.Drawing.Point(25, 395);
             this.backgroundBlock.Margin = new System.Windows.Forms.Padding(2);
             this.backgroundBlock.Name = "backgroundBlock";
-            this.backgroundBlock.Size = new System.Drawing.Size(1051, 86);
+            this.backgroundBlock.Size = new System.Drawing.Size(920, 64);
             this.backgroundBlock.TabIndex = 7;
             // 
             // buttonGestionVentes
@@ -174,10 +174,10 @@
             this.buttonGestionVentes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonGestionVentes.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonGestionVentes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.buttonGestionVentes.Location = new System.Drawing.Point(848, 18);
+            this.buttonGestionVentes.Location = new System.Drawing.Point(742, 14);
             this.buttonGestionVentes.Margin = new System.Windows.Forms.Padding(2);
             this.buttonGestionVentes.Name = "buttonGestionVentes";
-            this.buttonGestionVentes.Size = new System.Drawing.Size(178, 51);
+            this.buttonGestionVentes.Size = new System.Drawing.Size(156, 38);
             this.buttonGestionVentes.TabIndex = 7;
             this.buttonGestionVentes.Text = "Ventes";
             this.buttonGestionVentes.UseVisualStyleBackColor = false;
@@ -189,10 +189,10 @@
             this.buttonGestionProduits.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonGestionProduits.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonGestionProduits.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.buttonGestionProduits.Location = new System.Drawing.Point(642, 18);
+            this.buttonGestionProduits.Location = new System.Drawing.Point(562, 14);
             this.buttonGestionProduits.Margin = new System.Windows.Forms.Padding(2);
             this.buttonGestionProduits.Name = "buttonGestionProduits";
-            this.buttonGestionProduits.Size = new System.Drawing.Size(178, 51);
+            this.buttonGestionProduits.Size = new System.Drawing.Size(156, 38);
             this.buttonGestionProduits.TabIndex = 6;
             this.buttonGestionProduits.Text = "Produits";
             this.buttonGestionProduits.UseVisualStyleBackColor = false;
@@ -205,10 +205,10 @@
             this.quitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.quitButton.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.quitButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.quitButton.Location = new System.Drawing.Point(332, 640);
+            this.quitButton.Location = new System.Drawing.Point(290, 480);
             this.quitButton.Margin = new System.Windows.Forms.Padding(2);
             this.quitButton.Name = "quitButton";
-            this.quitButton.Size = new System.Drawing.Size(206, 34);
+            this.quitButton.Size = new System.Drawing.Size(180, 26);
             this.quitButton.TabIndex = 8;
             this.quitButton.Text = "Quitter";
             this.quitButton.UseVisualStyleBackColor = false;
@@ -220,10 +220,10 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label3.Location = new System.Drawing.Point(348, 385);
+            this.label3.Location = new System.Drawing.Point(304, 289);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(409, 20);
+            this.label3.Size = new System.Drawing.Size(321, 16);
             this.label3.TabIndex = 9;
             this.label3.Text = "En utilisant ce logiciel, vous acceptez ces conditions d\'utilisation.";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -234,10 +234,10 @@
             this.panelConditions.Controls.Add(this.buttonAcceptConditions);
             this.panelConditions.Controls.Add(this.label5);
             this.panelConditions.Controls.Add(this.label4);
-            this.panelConditions.Location = new System.Drawing.Point(788, 21);
+            this.panelConditions.Location = new System.Drawing.Point(690, 16);
             this.panelConditions.Margin = new System.Windows.Forms.Padding(2);
             this.panelConditions.Name = "panelConditions";
-            this.panelConditions.Size = new System.Drawing.Size(292, 482);
+            this.panelConditions.Size = new System.Drawing.Size(256, 362);
             this.panelConditions.TabIndex = 10;
             // 
             // buttonAcceptConditions
@@ -247,10 +247,10 @@
             this.buttonAcceptConditions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAcceptConditions.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonAcceptConditions.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.buttonAcceptConditions.Location = new System.Drawing.Point(14, 434);
+            this.buttonAcceptConditions.Location = new System.Drawing.Point(12, 326);
             this.buttonAcceptConditions.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAcceptConditions.Name = "buttonAcceptConditions";
-            this.buttonAcceptConditions.Size = new System.Drawing.Size(264, 34);
+            this.buttonAcceptConditions.Size = new System.Drawing.Size(231, 26);
             this.buttonAcceptConditions.TabIndex = 11;
             this.buttonAcceptConditions.Text = "J\'accepte ces conditions";
             this.buttonAcceptConditions.UseVisualStyleBackColor = false;
@@ -261,10 +261,10 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label5.Location = new System.Drawing.Point(14, 18);
+            this.label5.Location = new System.Drawing.Point(12, 14);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(249, 56);
+            this.label5.Size = new System.Drawing.Size(218, 42);
             this.label5.TabIndex = 12;
             this.label5.Text = "EXTRAIT DES CONDITIONS D\'UTILISATION";
             // 
@@ -273,10 +273,10 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label4.Location = new System.Drawing.Point(14, 76);
+            this.label4.Location = new System.Drawing.Point(12, 57);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(264, 345);
+            this.label4.Size = new System.Drawing.Size(231, 259);
             this.label4.TabIndex = 11;
             this.label4.Text = resources.GetString("label4.Text");
             // 
@@ -286,19 +286,19 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label6.Location = new System.Drawing.Point(29, 21);
+            this.label6.Location = new System.Drawing.Point(25, 16);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 20);
+            this.label6.Size = new System.Drawing.Size(60, 16);
             this.label6.TabIndex = 11;
             this.label6.Text = "Version 1.0";
             // 
             // Accueil
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1113, 696);
+            this.ClientSize = new System.Drawing.Size(974, 522);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panelConditions);
             this.Controls.Add(this.label3);

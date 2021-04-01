@@ -15,6 +15,11 @@ namespace ZumbaSoft.Fenetres_Produit
         Fournisseur fournisseur;
         SQLiteConnection DB;
 
+        /// <summary>
+        /// Constructeur du formulaire.
+        /// </summary>
+        /// <param name="f"></param>
+        /// <param name="db"></param>
         public SupprimerFournisseur(Fournisseur f, SQLiteConnection db)
         {
             InitializeComponent();
@@ -23,6 +28,9 @@ namespace ZumbaSoft.Fenetres_Produit
             this.DB = db;
         }
 
+        /// <summary>
+        /// Méthode d'initialisation des couleurs du formulaire.
+        /// </summary>
         public void initItemsColors()
         {
             backgroundBlock1.BackColor = Color.FromArgb(90, System.Drawing.Color.Red);
@@ -31,6 +39,11 @@ namespace ZumbaSoft.Fenetres_Produit
             buttonSupprimer.BackColor = Color.FromArgb(50, 12, 12, 12);
         }
 
+        /// <summary>
+        /// Méthode pour supprimer le fournisseyr.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonSupprimer_Click(object sender, EventArgs e)
         {
             DB.Delete(fournisseur);
@@ -38,6 +51,11 @@ namespace ZumbaSoft.Fenetres_Produit
             this.Close();
         }
 
+        /// <summary>
+        /// Méthode pour annuler la procédure.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonAnnuler_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;

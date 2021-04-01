@@ -15,6 +15,12 @@ namespace ZumbaSoft.Fenetres_Produit
     {
         SQLiteConnection DB;
         Produit produit;
+
+        /// <summary>
+        /// Méthode 
+        /// </summary>
+        /// <param name="p"></param>
+        /// <param name="db"></param>
         public SupprimerProduit(Produit p, SQLiteConnection db)
         {
             InitializeComponent();
