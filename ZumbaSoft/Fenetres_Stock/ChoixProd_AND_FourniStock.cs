@@ -166,7 +166,7 @@ namespace ZumbaSoft.Fenetres_Stock
         /// <summary>
         /// Permet de rendre les champs de produit innaccessible et ceux de fournisseur accessible.
         /// </summary>
-        private void swithToFourni()
+        public void swithToFourni()
         {
             buttonSelectionner.Enabled = false;
             listBoxProduits.Enabled = false;
