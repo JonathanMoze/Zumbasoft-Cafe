@@ -29,8 +29,6 @@ namespace ZumbaSoft.Fenetres_Stock
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AccueilStock));
             this.labelListProdStock = new System.Windows.Forms.Label();
             this.buttonSuppStock = new System.Windows.Forms.Button();
@@ -116,7 +114,7 @@ namespace ZumbaSoft.Fenetres_Stock
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(727, 76);
+            this.label2.Location = new System.Drawing.Point(735, 76);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(146, 20);
@@ -160,14 +158,6 @@ namespace ZumbaSoft.Fenetres_Stock
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableauCommandes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tableauCommandes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tableauCommandes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.tableauCommandes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tableauCommandes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.reference,
@@ -175,7 +165,7 @@ namespace ZumbaSoft.Fenetres_Stock
             this.fournisseur,
             this.etat,
             this.prixTotalTTC});
-            this.tableauCommandes.Location = new System.Drawing.Point(38, 104);
+            this.tableauCommandes.Location = new System.Drawing.Point(737, 104);
             this.tableauCommandes.Margin = new System.Windows.Forms.Padding(2);
             this.tableauCommandes.MultiSelect = false;
             this.tableauCommandes.Name = "tableauCommandes";
@@ -355,14 +345,6 @@ namespace ZumbaSoft.Fenetres_Stock
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableauStock.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tableauStock.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tableauStock.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.tableauStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tableauStock.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -371,7 +353,7 @@ namespace ZumbaSoft.Fenetres_Stock
             this.quantite,
             this.prixUnitaire,
             this.dataGridViewTextBoxColumn3});
-            this.tableauStock.Location = new System.Drawing.Point(739, 104);
+            this.tableauStock.Location = new System.Drawing.Point(38, 105);
             this.tableauStock.Margin = new System.Windows.Forms.Padding(2);
             this.tableauStock.MultiSelect = false;
             this.tableauStock.Name = "tableauStock";

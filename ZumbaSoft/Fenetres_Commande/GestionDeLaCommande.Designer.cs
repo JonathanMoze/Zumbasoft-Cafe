@@ -29,7 +29,7 @@ namespace ZumbaSoft.Fenetres_Commande
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelTitle = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestionDeLaCommande));
             this.textBoxRef = new System.Windows.Forms.TextBox();
             this.labelRef = new System.Windows.Forms.Label();
             this.tableauProd = new System.Windows.Forms.DataGridView();
@@ -38,17 +38,14 @@ namespace ZumbaSoft.Fenetres_Commande
             this.quantite_produit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prixUnitaire_TTC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prixTotale_TTC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buttonAnnulerCmd = new System.Windows.Forms.Button();
-            this.buttonAjouterProd = new System.Windows.Forms.Button();
+            this.buttonAjouterProd_1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxTotalTTC = new System.Windows.Forms.TextBox();
-            this.buttonEnregisterCmd = new System.Windows.Forms.Button();
             this.labelFournisseur = new System.Windows.Forms.Label();
             this.textBoxFournisseur = new System.Windows.Forms.TextBox();
             this.buttonPlusPrd = new System.Windows.Forms.Button();
             this.buttonMoinsPrd = new System.Windows.Forms.Button();
             this.buttonSupprimerPrd = new System.Windows.Forms.Button();
-            this.labelEtat = new System.Windows.Forms.Label();
             this.checkBoxCommande = new System.Windows.Forms.CheckBox();
             this.checkBoxLivre = new System.Windows.Forms.CheckBox();
             this.checkBoxRecept = new System.Windows.Forms.CheckBox();
@@ -56,37 +53,43 @@ namespace ZumbaSoft.Fenetres_Commande
             this.textBoxCmdLe = new System.Windows.Forms.TextBox();
             this.labelMag = new System.Windows.Forms.Label();
             this.textBoxRecep = new System.Windows.Forms.TextBox();
-            this.flowLayoutPanelButtons = new System.Windows.Forms.FlowLayoutPanel();
+            this.backgroundBlock = new System.Windows.Forms.Panel();
+            this.backgroundBlock4 = new System.Windows.Forms.Panel();
+            this.backgroundBlock2 = new System.Windows.Forms.Panel();
+            this.buttonAnnulerCmd = new System.Windows.Forms.Button();
             this.buttonAnnuler = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.buttonEnregisterCmd = new System.Windows.Forms.Button();
+            this.backgroundBlock1 = new System.Windows.Forms.Panel();
+            this.labelTitle = new System.Windows.Forms.Label();
+            this.backgroundBlock3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.tableauProd)).BeginInit();
-            this.flowLayoutPanelButtons.SuspendLayout();
+            this.backgroundBlock.SuspendLayout();
+            this.backgroundBlock4.SuspendLayout();
+            this.backgroundBlock2.SuspendLayout();
+            this.backgroundBlock1.SuspendLayout();
+            this.backgroundBlock3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // labelTitle
-            // 
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelTitle.Location = new System.Drawing.Point(13, 13);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(159, 38);
-            this.labelTitle.TabIndex = 0;
-            this.labelTitle.Text = "Commande";
             // 
             // textBoxRef
             // 
+            this.textBoxRef.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
             this.textBoxRef.Enabled = false;
-            this.textBoxRef.Location = new System.Drawing.Point(150, 69);
+            this.textBoxRef.ForeColor = System.Drawing.Color.White;
+            this.textBoxRef.Location = new System.Drawing.Point(179, 143);
+            this.textBoxRef.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxRef.Name = "textBoxRef";
-            this.textBoxRef.Size = new System.Drawing.Size(150, 31);
+            this.textBoxRef.Size = new System.Drawing.Size(198, 27);
             this.textBoxRef.TabIndex = 1;
             // 
             // labelRef
             // 
             this.labelRef.AutoSize = true;
-            this.labelRef.Location = new System.Drawing.Point(13, 72);
+            this.labelRef.BackColor = System.Drawing.Color.Transparent;
+            this.labelRef.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelRef.Location = new System.Drawing.Point(38, 32);
+            this.labelRef.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelRef.Name = "labelRef";
-            this.labelRef.Size = new System.Drawing.Size(97, 25);
+            this.labelRef.Size = new System.Drawing.Size(83, 20);
             this.labelRef.TabIndex = 3;
             this.labelRef.Text = "Référence :";
             // 
@@ -102,12 +105,13 @@ namespace ZumbaSoft.Fenetres_Commande
             this.quantite_produit,
             this.prixUnitaire_TTC,
             this.prixTotale_TTC});
-            this.tableauProd.Location = new System.Drawing.Point(12, 233);
+            this.tableauProd.Location = new System.Drawing.Point(31, 280);
+            this.tableauProd.Margin = new System.Windows.Forms.Padding(2);
             this.tableauProd.Name = "tableauProd";
             this.tableauProd.RowHeadersWidth = 62;
             this.tableauProd.RowTemplate.Height = 33;
             this.tableauProd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tableauProd.Size = new System.Drawing.Size(755, 340);
+            this.tableauProd.Size = new System.Drawing.Size(814, 325);
             this.tableauProd.TabIndex = 13;
             // 
             // id_produit
@@ -145,272 +149,373 @@ namespace ZumbaSoft.Fenetres_Commande
             this.prixTotale_TTC.Name = "prixTotale_TTC";
             this.prixTotale_TTC.Width = 150;
             // 
-            // buttonAnnulerCmd
+            // buttonAjouterProd_1
             // 
-            this.buttonAnnulerCmd.Location = new System.Drawing.Point(432, 3);
-            this.buttonAnnulerCmd.Name = "buttonAnnulerCmd";
-            this.buttonAnnulerCmd.Size = new System.Drawing.Size(247, 34);
-            this.buttonAnnulerCmd.TabIndex = 14;
-            this.buttonAnnulerCmd.Text = "Annuler la commande";
-            this.buttonAnnulerCmd.UseVisualStyleBackColor = true;
-            this.buttonAnnulerCmd.Click += new System.EventHandler(this.buttonAnnulerCmd_Click);
-            // 
-            // buttonAjouterProd
-            // 
-            this.buttonAjouterProd.Location = new System.Drawing.Point(210, 3);
-            this.buttonAjouterProd.Name = "buttonAjouterProd";
-            this.buttonAjouterProd.Size = new System.Drawing.Size(216, 34);
-            this.buttonAjouterProd.TabIndex = 15;
-            this.buttonAjouterProd.Text = "Ajouter des produits";
-            this.buttonAjouterProd.UseVisualStyleBackColor = true;
-            this.buttonAjouterProd.Click += new System.EventHandler(this.buttonAjouterProd_Click);
+            this.buttonAjouterProd_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAjouterProd_1.ForeColor = System.Drawing.Color.Transparent;
+            this.buttonAjouterProd_1.Image = ((System.Drawing.Image)(resources.GetObject("buttonAjouterProd_1.Image")));
+            this.buttonAjouterProd_1.Location = new System.Drawing.Point(14, 175);
+            this.buttonAjouterProd_1.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonAjouterProd_1.Name = "buttonAjouterProd_1";
+            this.buttonAjouterProd_1.Size = new System.Drawing.Size(50, 51);
+            this.buttonAjouterProd_1.TabIndex = 15;
+            this.buttonAjouterProd_1.UseVisualStyleBackColor = true;
+            this.buttonAjouterProd_1.Click += new System.EventHandler(this.buttonAjouterProd_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(773, 461);
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.Location = new System.Drawing.Point(551, 12);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 30);
+            this.label1.Size = new System.Drawing.Size(110, 25);
             this.label1.TabIndex = 16;
             this.label1.Text = "Total TTC :";
             // 
             // textBoxTotalTTC
             // 
+            this.textBoxTotalTTC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
             this.textBoxTotalTTC.Enabled = false;
-            this.textBoxTotalTTC.Location = new System.Drawing.Point(774, 495);
+            this.textBoxTotalTTC.ForeColor = System.Drawing.Color.White;
+            this.textBoxTotalTTC.Location = new System.Drawing.Point(669, 12);
+            this.textBoxTotalTTC.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTotalTTC.Name = "textBoxTotalTTC";
-            this.textBoxTotalTTC.Size = new System.Drawing.Size(150, 31);
+            this.textBoxTotalTTC.Size = new System.Drawing.Size(125, 27);
             this.textBoxTotalTTC.TabIndex = 17;
-            // 
-            // buttonEnregisterCmd
-            // 
-            this.buttonEnregisterCmd.Enabled = false;
-            this.buttonEnregisterCmd.Location = new System.Drawing.Point(685, 3);
-            this.buttonEnregisterCmd.Name = "buttonEnregisterCmd";
-            this.buttonEnregisterCmd.Size = new System.Drawing.Size(238, 34);
-            this.buttonEnregisterCmd.TabIndex = 18;
-            this.buttonEnregisterCmd.Text = "Enregistrer la commande";
-            this.buttonEnregisterCmd.UseVisualStyleBackColor = true;
-            this.buttonEnregisterCmd.Click += new System.EventHandler(this.buttonEnregisterCmd_Click);
             // 
             // labelFournisseur
             // 
             this.labelFournisseur.AutoSize = true;
-            this.labelFournisseur.Location = new System.Drawing.Point(12, 148);
+            this.labelFournisseur.BackColor = System.Drawing.Color.Transparent;
+            this.labelFournisseur.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelFournisseur.Location = new System.Drawing.Point(33, 74);
+            this.labelFournisseur.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelFournisseur.Name = "labelFournisseur";
-            this.labelFournisseur.Size = new System.Drawing.Size(103, 25);
+            this.labelFournisseur.Size = new System.Drawing.Size(98, 20);
             this.labelFournisseur.TabIndex = 19;
-            this.labelFournisseur.Text = "Fournisseur";
+            this.labelFournisseur.Text = " Fournisseur :";
             // 
             // textBoxFournisseur
             // 
+            this.textBoxFournisseur.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
             this.textBoxFournisseur.Enabled = false;
-            this.textBoxFournisseur.Location = new System.Drawing.Point(150, 145);
+            this.textBoxFournisseur.ForeColor = System.Drawing.Color.White;
+            this.textBoxFournisseur.Location = new System.Drawing.Point(179, 183);
+            this.textBoxFournisseur.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxFournisseur.Name = "textBoxFournisseur";
-            this.textBoxFournisseur.Size = new System.Drawing.Size(150, 31);
+            this.textBoxFournisseur.Size = new System.Drawing.Size(198, 27);
             this.textBoxFournisseur.TabIndex = 20;
             // 
             // buttonPlusPrd
             // 
             this.buttonPlusPrd.Enabled = false;
+            this.buttonPlusPrd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPlusPrd.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonPlusPrd.Location = new System.Drawing.Point(875, 232);
+            this.buttonPlusPrd.ForeColor = System.Drawing.Color.Transparent;
+            this.buttonPlusPrd.Image = ((System.Drawing.Image)(resources.GetObject("buttonPlusPrd.Image")));
+            this.buttonPlusPrd.Location = new System.Drawing.Point(14, 16);
+            this.buttonPlusPrd.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonPlusPrd.MaximumSize = new System.Drawing.Size(200, 200);
             this.buttonPlusPrd.Name = "buttonPlusPrd";
-            this.buttonPlusPrd.Size = new System.Drawing.Size(71, 69);
+            this.buttonPlusPrd.Size = new System.Drawing.Size(50, 51);
             this.buttonPlusPrd.TabIndex = 22;
-            this.buttonPlusPrd.Text = "+";
             this.buttonPlusPrd.UseVisualStyleBackColor = true;
             this.buttonPlusPrd.Click += new System.EventHandler(this.buttonPlusPrd_Click);
             // 
             // buttonMoinsPrd
             // 
             this.buttonMoinsPrd.Enabled = false;
+            this.buttonMoinsPrd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMoinsPrd.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonMoinsPrd.Location = new System.Drawing.Point(786, 232);
+            this.buttonMoinsPrd.ForeColor = System.Drawing.Color.Transparent;
+            this.buttonMoinsPrd.Image = ((System.Drawing.Image)(resources.GetObject("buttonMoinsPrd.Image")));
+            this.buttonMoinsPrd.Location = new System.Drawing.Point(14, 97);
+            this.buttonMoinsPrd.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonMoinsPrd.MaximumSize = new System.Drawing.Size(200, 200);
             this.buttonMoinsPrd.Name = "buttonMoinsPrd";
-            this.buttonMoinsPrd.Size = new System.Drawing.Size(71, 69);
+            this.buttonMoinsPrd.Size = new System.Drawing.Size(50, 51);
             this.buttonMoinsPrd.TabIndex = 23;
-            this.buttonMoinsPrd.Text = "-";
             this.buttonMoinsPrd.UseVisualStyleBackColor = true;
             this.buttonMoinsPrd.Click += new System.EventHandler(this.buttonMoinsPrd_Click);
             // 
             // buttonSupprimerPrd
             // 
             this.buttonSupprimerPrd.Enabled = false;
-            this.buttonSupprimerPrd.Location = new System.Drawing.Point(786, 307);
+            this.buttonSupprimerPrd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSupprimerPrd.ForeColor = System.Drawing.Color.Transparent;
+            this.buttonSupprimerPrd.Image = ((System.Drawing.Image)(resources.GetObject("buttonSupprimerPrd.Image")));
+            this.buttonSupprimerPrd.Location = new System.Drawing.Point(14, 256);
+            this.buttonSupprimerPrd.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonSupprimerPrd.MaximumSize = new System.Drawing.Size(200, 200);
             this.buttonSupprimerPrd.Name = "buttonSupprimerPrd";
-            this.buttonSupprimerPrd.Size = new System.Drawing.Size(160, 34);
+            this.buttonSupprimerPrd.Size = new System.Drawing.Size(50, 51);
             this.buttonSupprimerPrd.TabIndex = 24;
-            this.buttonSupprimerPrd.Text = "Supprimer";
             this.buttonSupprimerPrd.UseVisualStyleBackColor = true;
             this.buttonSupprimerPrd.Click += new System.EventHandler(this.buttonSupprimerPrd_Click);
             // 
-            // labelEtat
-            // 
-            this.labelEtat.AutoSize = true;
-            this.labelEtat.Location = new System.Drawing.Point(404, 68);
-            this.labelEtat.Name = "labelEtat";
-            this.labelEtat.Size = new System.Drawing.Size(51, 25);
-            this.labelEtat.TabIndex = 5;
-            this.labelEtat.Text = "Etat :";
-            // 
             // checkBoxCommande
             // 
-            this.checkBoxCommande.AutoSize = true;
+            this.checkBoxCommande.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBoxCommande.BackColor = System.Drawing.Color.Transparent;
             this.checkBoxCommande.Enabled = false;
-            this.checkBoxCommande.Location = new System.Drawing.Point(461, 68);
+            this.checkBoxCommande.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBoxCommande.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.checkBoxCommande.Location = new System.Drawing.Point(760, 16);
+            this.checkBoxCommande.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxCommande.Name = "checkBoxCommande";
-            this.checkBoxCommande.Size = new System.Drawing.Size(131, 29);
+            this.checkBoxCommande.Size = new System.Drawing.Size(110, 30);
             this.checkBoxCommande.TabIndex = 6;
             this.checkBoxCommande.Text = "Commandé";
-            this.checkBoxCommande.UseVisualStyleBackColor = true;
+            this.checkBoxCommande.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBoxCommande.UseVisualStyleBackColor = false;
             this.checkBoxCommande.CheckedChanged += new System.EventHandler(this.checkBoxCommande_CheckedChanged);
             // 
             // checkBoxLivre
             // 
-            this.checkBoxLivre.AutoSize = true;
+            this.checkBoxLivre.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBoxLivre.BackColor = System.Drawing.Color.Transparent;
             this.checkBoxLivre.Enabled = false;
-            this.checkBoxLivre.Location = new System.Drawing.Point(598, 68);
+            this.checkBoxLivre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBoxLivre.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.checkBoxLivre.Location = new System.Drawing.Point(760, 51);
+            this.checkBoxLivre.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxLivre.Name = "checkBoxLivre";
-            this.checkBoxLivre.Size = new System.Drawing.Size(74, 29);
+            this.checkBoxLivre.Size = new System.Drawing.Size(110, 30);
             this.checkBoxLivre.TabIndex = 7;
             this.checkBoxLivre.Text = "Livré";
-            this.checkBoxLivre.UseVisualStyleBackColor = true;
+            this.checkBoxLivre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBoxLivre.UseVisualStyleBackColor = false;
             this.checkBoxLivre.CheckedChanged += new System.EventHandler(this.checkBoxLivre_CheckedChanged);
             // 
             // checkBoxRecept
             // 
-            this.checkBoxRecept.AutoSize = true;
+            this.checkBoxRecept.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBoxRecept.BackColor = System.Drawing.Color.Transparent;
             this.checkBoxRecept.Enabled = false;
-            this.checkBoxRecept.Location = new System.Drawing.Point(678, 68);
+            this.checkBoxRecept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBoxRecept.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.checkBoxRecept.Location = new System.Drawing.Point(760, 86);
+            this.checkBoxRecept.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxRecept.Name = "checkBoxRecept";
-            this.checkBoxRecept.Size = new System.Drawing.Size(135, 29);
+            this.checkBoxRecept.Size = new System.Drawing.Size(110, 30);
             this.checkBoxRecept.TabIndex = 8;
             this.checkBoxRecept.Text = "Réceptionné";
-            this.checkBoxRecept.UseVisualStyleBackColor = true;
+            this.checkBoxRecept.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBoxRecept.UseVisualStyleBackColor = false;
             this.checkBoxRecept.CheckedChanged += new System.EventHandler(this.checkBoxRecept_CheckedChanged);
             // 
             // labelDateCmd
             // 
             this.labelDateCmd.AutoSize = true;
-            this.labelDateCmd.Location = new System.Drawing.Point(351, 109);
+            this.labelDateCmd.BackColor = System.Drawing.Color.Transparent;
+            this.labelDateCmd.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelDateCmd.Location = new System.Drawing.Point(414, 34);
+            this.labelDateCmd.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDateCmd.Name = "labelDateCmd";
-            this.labelDateCmd.Size = new System.Drawing.Size(132, 25);
+            this.labelDateCmd.Size = new System.Drawing.Size(111, 20);
             this.labelDateCmd.TabIndex = 9;
             this.labelDateCmd.Text = "Commandé le :";
             // 
             // textBoxCmdLe
             // 
+            this.textBoxCmdLe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
             this.textBoxCmdLe.Enabled = false;
-            this.textBoxCmdLe.Location = new System.Drawing.Point(489, 106);
+            this.textBoxCmdLe.ForeColor = System.Drawing.Color.White;
+            this.textBoxCmdLe.Location = new System.Drawing.Point(554, 31);
+            this.textBoxCmdLe.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxCmdLe.Name = "textBoxCmdLe";
-            this.textBoxCmdLe.Size = new System.Drawing.Size(150, 31);
+            this.textBoxCmdLe.Size = new System.Drawing.Size(121, 27);
             this.textBoxCmdLe.TabIndex = 11;
             // 
             // labelMag
             // 
             this.labelMag.AutoSize = true;
-            this.labelMag.Location = new System.Drawing.Point(13, 109);
+            this.labelMag.BackColor = System.Drawing.Color.Transparent;
+            this.labelMag.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelMag.Location = new System.Drawing.Point(414, 74);
+            this.labelMag.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelMag.Name = "labelMag";
-            this.labelMag.Size = new System.Drawing.Size(117, 25);
+            this.labelMag.Size = new System.Drawing.Size(99, 20);
             this.labelMag.TabIndex = 4;
             this.labelMag.Text = "Réception le :";
             // 
             // textBoxRecep
             // 
+            this.textBoxRecep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
             this.textBoxRecep.Enabled = false;
-            this.textBoxRecep.Location = new System.Drawing.Point(150, 106);
+            this.textBoxRecep.ForeColor = System.Drawing.Color.White;
+            this.textBoxRecep.Location = new System.Drawing.Point(554, 71);
+            this.textBoxRecep.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxRecep.Name = "textBoxRecep";
-            this.textBoxRecep.Size = new System.Drawing.Size(150, 31);
+            this.textBoxRecep.Size = new System.Drawing.Size(121, 27);
             this.textBoxRecep.TabIndex = 2;
             // 
-            // flowLayoutPanelButtons
+            // backgroundBlock
             // 
-            this.flowLayoutPanelButtons.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanelButtons.AutoSize = true;
-            this.flowLayoutPanelButtons.Controls.Add(this.buttonAnnuler);
-            this.flowLayoutPanelButtons.Controls.Add(this.buttonAjouterProd);
-            this.flowLayoutPanelButtons.Controls.Add(this.buttonAnnulerCmd);
-            this.flowLayoutPanelButtons.Controls.Add(this.buttonEnregisterCmd);
-            this.flowLayoutPanelButtons.Location = new System.Drawing.Point(12, 579);
-            this.flowLayoutPanelButtons.Name = "flowLayoutPanelButtons";
-            this.flowLayoutPanelButtons.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.flowLayoutPanelButtons.Size = new System.Drawing.Size(941, 40);
-            this.flowLayoutPanelButtons.TabIndex = 25;
+            this.backgroundBlock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
+            this.backgroundBlock.Controls.Add(this.buttonPlusPrd);
+            this.backgroundBlock.Controls.Add(this.buttonAjouterProd_1);
+            this.backgroundBlock.Controls.Add(this.buttonMoinsPrd);
+            this.backgroundBlock.Controls.Add(this.buttonSupprimerPrd);
+            this.backgroundBlock.Location = new System.Drawing.Point(867, 280);
+            this.backgroundBlock.Margin = new System.Windows.Forms.Padding(2);
+            this.backgroundBlock.Name = "backgroundBlock";
+            this.backgroundBlock.Size = new System.Drawing.Size(78, 325);
+            this.backgroundBlock.TabIndex = 27;
+            // 
+            // backgroundBlock4
+            // 
+            this.backgroundBlock4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
+            this.backgroundBlock4.Controls.Add(this.label1);
+            this.backgroundBlock4.Controls.Add(this.textBoxTotalTTC);
+            this.backgroundBlock4.Location = new System.Drawing.Point(31, 626);
+            this.backgroundBlock4.Margin = new System.Windows.Forms.Padding(2);
+            this.backgroundBlock4.Name = "backgroundBlock4";
+            this.backgroundBlock4.Size = new System.Drawing.Size(814, 51);
+            this.backgroundBlock4.TabIndex = 28;
+            // 
+            // backgroundBlock2
+            // 
+            this.backgroundBlock2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
+            this.backgroundBlock2.Controls.Add(this.buttonAnnulerCmd);
+            this.backgroundBlock2.Controls.Add(this.buttonAnnuler);
+            this.backgroundBlock2.Controls.Add(this.buttonEnregisterCmd);
+            this.backgroundBlock2.Location = new System.Drawing.Point(0, 702);
+            this.backgroundBlock2.Margin = new System.Windows.Forms.Padding(2);
+            this.backgroundBlock2.Name = "backgroundBlock2";
+            this.backgroundBlock2.Size = new System.Drawing.Size(976, 54);
+            this.backgroundBlock2.TabIndex = 75;
+            // 
+            // buttonAnnulerCmd
+            // 
+            this.buttonAnnulerCmd.BackColor = System.Drawing.Color.Transparent;
+            this.buttonAnnulerCmd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAnnulerCmd.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonAnnulerCmd.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonAnnulerCmd.Location = new System.Drawing.Point(523, 13);
+            this.buttonAnnulerCmd.Name = "buttonAnnulerCmd";
+            this.buttonAnnulerCmd.Size = new System.Drawing.Size(197, 29);
+            this.buttonAnnulerCmd.TabIndex = 64;
+            this.buttonAnnulerCmd.Text = "Annuler la commande";
+            this.buttonAnnulerCmd.UseVisualStyleBackColor = false;
+            this.buttonAnnulerCmd.Click += new System.EventHandler(this.buttonAnnulerCmd_Click);
             // 
             // buttonAnnuler
             // 
-            this.buttonAnnuler.Location = new System.Drawing.Point(3, 3);
+            this.buttonAnnuler.BackColor = System.Drawing.Color.Transparent;
+            this.buttonAnnuler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAnnuler.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonAnnuler.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonAnnuler.Location = new System.Drawing.Point(31, 13);
+            this.buttonAnnuler.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAnnuler.Name = "buttonAnnuler";
-            this.buttonAnnuler.Size = new System.Drawing.Size(201, 34);
-            this.buttonAnnuler.TabIndex = 19;
+            this.buttonAnnuler.Size = new System.Drawing.Size(105, 29);
+            this.buttonAnnuler.TabIndex = 63;
             this.buttonAnnuler.Text = "Annuler";
-            this.buttonAnnuler.UseVisualStyleBackColor = true;
+            this.buttonAnnuler.UseVisualStyleBackColor = false;
             this.buttonAnnuler.Click += new System.EventHandler(this.buttonAnnuler_Click);
             // 
-            // label2
+            // buttonEnregisterCmd
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 205);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 25);
-            this.label2.TabIndex = 26;
-            this.label2.Text = "Produits :";
+            this.buttonEnregisterCmd.BackColor = System.Drawing.Color.Transparent;
+            this.buttonEnregisterCmd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEnregisterCmd.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonEnregisterCmd.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonEnregisterCmd.Location = new System.Drawing.Point(739, 13);
+            this.buttonEnregisterCmd.Name = "buttonEnregisterCmd";
+            this.buttonEnregisterCmd.Size = new System.Drawing.Size(216, 29);
+            this.buttonEnregisterCmd.TabIndex = 47;
+            this.buttonEnregisterCmd.Text = "Enregistrer la commande";
+            this.buttonEnregisterCmd.UseVisualStyleBackColor = false;
+            this.buttonEnregisterCmd.Click += new System.EventHandler(this.buttonEnregisterCmd_Click);
+            // 
+            // backgroundBlock1
+            // 
+            this.backgroundBlock1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
+            this.backgroundBlock1.Controls.Add(this.labelTitle);
+            this.backgroundBlock1.Location = new System.Drawing.Point(0, -1);
+            this.backgroundBlock1.Margin = new System.Windows.Forms.Padding(2);
+            this.backgroundBlock1.Name = "backgroundBlock1";
+            this.backgroundBlock1.Size = new System.Drawing.Size(976, 84);
+            this.backgroundBlock1.TabIndex = 76;
+            // 
+            // labelTitle
+            // 
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.BackColor = System.Drawing.Color.Transparent;
+            this.labelTitle.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelTitle.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelTitle.Location = new System.Drawing.Point(24, 24);
+            this.labelTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(368, 36);
+            this.labelTitle.TabIndex = 0;
+            this.labelTitle.Text = "Gestion d\'une commande";
+            // 
+            // backgroundBlock3
+            // 
+            this.backgroundBlock3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
+            this.backgroundBlock3.Controls.Add(this.labelRef);
+            this.backgroundBlock3.Controls.Add(this.labelMag);
+            this.backgroundBlock3.Controls.Add(this.labelFournisseur);
+            this.backgroundBlock3.Controls.Add(this.labelDateCmd);
+            this.backgroundBlock3.Controls.Add(this.textBoxRecep);
+            this.backgroundBlock3.Controls.Add(this.textBoxCmdLe);
+            this.backgroundBlock3.Controls.Add(this.checkBoxRecept);
+            this.backgroundBlock3.Controls.Add(this.checkBoxCommande);
+            this.backgroundBlock3.Controls.Add(this.checkBoxLivre);
+            this.backgroundBlock3.Location = new System.Drawing.Point(31, 112);
+            this.backgroundBlock3.Margin = new System.Windows.Forms.Padding(2);
+            this.backgroundBlock3.Name = "backgroundBlock3";
+            this.backgroundBlock3.Size = new System.Drawing.Size(914, 132);
+            this.backgroundBlock3.TabIndex = 77;
             // 
             // GestionDeLaCommande
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(958, 631);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.flowLayoutPanelButtons);
-            this.Controls.Add(this.buttonSupprimerPrd);
-            this.Controls.Add(this.buttonMoinsPrd);
-            this.Controls.Add(this.buttonPlusPrd);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(974, 754);
+            this.Controls.Add(this.backgroundBlock1);
+            this.Controls.Add(this.backgroundBlock2);
             this.Controls.Add(this.textBoxFournisseur);
-            this.Controls.Add(this.labelFournisseur);
-            this.Controls.Add(this.textBoxTotalTTC);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.tableauProd);
-            this.Controls.Add(this.textBoxCmdLe);
-            this.Controls.Add(this.labelDateCmd);
-            this.Controls.Add(this.checkBoxRecept);
-            this.Controls.Add(this.checkBoxLivre);
-            this.Controls.Add(this.checkBoxCommande);
-            this.Controls.Add(this.labelEtat);
-            this.Controls.Add(this.labelMag);
-            this.Controls.Add(this.labelRef);
-            this.Controls.Add(this.textBoxRecep);
             this.Controls.Add(this.textBoxRef);
-            this.Controls.Add(this.labelTitle);
+            this.Controls.Add(this.backgroundBlock);
+            this.Controls.Add(this.backgroundBlock4);
+            this.Controls.Add(this.backgroundBlock3);
+            this.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "GestionDeLaCommande";
             this.Text = "Gestion Commande";
             ((System.ComponentModel.ISupportInitialize)(this.tableauProd)).EndInit();
-            this.flowLayoutPanelButtons.ResumeLayout(false);
+            this.backgroundBlock.ResumeLayout(false);
+            this.backgroundBlock4.ResumeLayout(false);
+            this.backgroundBlock4.PerformLayout();
+            this.backgroundBlock2.ResumeLayout(false);
+            this.backgroundBlock1.ResumeLayout(false);
+            this.backgroundBlock1.PerformLayout();
+            this.backgroundBlock3.ResumeLayout(false);
+            this.backgroundBlock3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.TextBox textBoxRef;
         private System.Windows.Forms.Label labelRef;
         private System.Windows.Forms.DataGridView tableauProd;
-        private System.Windows.Forms.Button buttonAnnulerCmd;
-        private System.Windows.Forms.Button buttonAjouterProd;
+        private System.Windows.Forms.Button buttonAjouterProd_1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxTotalTTC;
-        private System.Windows.Forms.Button buttonEnregisterCmd;
         private System.Windows.Forms.Label labelFournisseur;
         private System.Windows.Forms.TextBox textBoxFournisseur;
         private System.Windows.Forms.Button buttonPlusPrd;
         private System.Windows.Forms.Button buttonMoinsPrd;
         private System.Windows.Forms.Button buttonSupprimerPrd;
-        private System.Windows.Forms.Label labelEtat;
         private System.Windows.Forms.CheckBox checkBoxCommande;
         private System.Windows.Forms.CheckBox checkBoxLivre;
         private System.Windows.Forms.CheckBox checkBoxRecept;
@@ -418,13 +523,19 @@ namespace ZumbaSoft.Fenetres_Commande
         private System.Windows.Forms.TextBox textBoxCmdLe;
         private System.Windows.Forms.Label labelMag;
         private System.Windows.Forms.TextBox textBoxRecep;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelButtons;
-        private System.Windows.Forms.Button buttonAnnuler;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_produit;
         private System.Windows.Forms.DataGridViewTextBoxColumn nom_produit;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantite_produit;
         private System.Windows.Forms.DataGridViewTextBoxColumn prixUnitaire_TTC;
         private System.Windows.Forms.DataGridViewTextBoxColumn prixTotale_TTC;
+        private System.Windows.Forms.Panel backgroundBlock;
+        private System.Windows.Forms.Panel backgroundBlock4;
+        private System.Windows.Forms.Panel backgroundBlock2;
+        private System.Windows.Forms.Button buttonAnnuler;
+        private System.Windows.Forms.Button buttonEnregisterCmd;
+        private System.Windows.Forms.Button buttonAnnulerCmd;
+        private System.Windows.Forms.Panel backgroundBlock1;
+        private System.Windows.Forms.Label labelTitle;
+        private System.Windows.Forms.Panel backgroundBlock3;
     }
 }

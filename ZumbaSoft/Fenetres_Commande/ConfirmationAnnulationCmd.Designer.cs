@@ -29,74 +29,115 @@ namespace ZumbaSoft.Fenetres_Commande
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonAnnuler = new System.Windows.Forms.Button();
-            this.buttonConfirmer = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfirmationAnnulationCmd));
+            this.backgroundBlock1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.backgroundBlock2 = new System.Windows.Forms.Panel();
+            this.buttonConfirmer = new System.Windows.Forms.Button();
+            this.buttonAnnuler = new System.Windows.Forms.Button();
+            this.labelTexte = new System.Windows.Forms.Label();
+            this.backgroundBlock1.SuspendLayout();
+            this.backgroundBlock2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // buttonAnnuler
+            // backgroundBlock1
             // 
-            this.buttonAnnuler.Location = new System.Drawing.Point(8, 201);
-            this.buttonAnnuler.Name = "buttonAnnuler";
-            this.buttonAnnuler.Size = new System.Drawing.Size(112, 34);
-            this.buttonAnnuler.TabIndex = 0;
-            this.buttonAnnuler.Text = "Annuler";
-            this.buttonAnnuler.UseVisualStyleBackColor = true;
-            this.buttonAnnuler.Click += new System.EventHandler(this.buttonAnnuler_Click);
+            this.backgroundBlock1.BackColor = System.Drawing.Color.Tomato;
+            this.backgroundBlock1.Controls.Add(this.label1);
+            this.backgroundBlock1.Location = new System.Drawing.Point(-8, -1);
+            this.backgroundBlock1.Name = "backgroundBlock1";
+            this.backgroundBlock1.Size = new System.Drawing.Size(524, 91);
+            this.backgroundBlock1.TabIndex = 18;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.Location = new System.Drawing.Point(35, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(168, 36);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Annulation";
+            // 
+            // backgroundBlock2
+            // 
+            this.backgroundBlock2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
+            this.backgroundBlock2.Controls.Add(this.buttonConfirmer);
+            this.backgroundBlock2.Controls.Add(this.buttonAnnuler);
+            this.backgroundBlock2.Location = new System.Drawing.Point(-3, 189);
+            this.backgroundBlock2.Name = "backgroundBlock2";
+            this.backgroundBlock2.Size = new System.Drawing.Size(524, 55);
+            this.backgroundBlock2.TabIndex = 17;
             // 
             // buttonConfirmer
             // 
-            this.buttonConfirmer.Location = new System.Drawing.Point(311, 201);
+            this.buttonConfirmer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonConfirmer.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonConfirmer.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonConfirmer.Location = new System.Drawing.Point(383, 14);
+            this.buttonConfirmer.Margin = new System.Windows.Forms.Padding(2);
             this.buttonConfirmer.Name = "buttonConfirmer";
-            this.buttonConfirmer.Size = new System.Drawing.Size(112, 34);
+            this.buttonConfirmer.Size = new System.Drawing.Size(125, 30);
             this.buttonConfirmer.TabIndex = 1;
             this.buttonConfirmer.Text = "Confirmer";
             this.buttonConfirmer.UseVisualStyleBackColor = true;
             this.buttonConfirmer.Click += new System.EventHandler(this.buttonConfirmer_Click);
             // 
-            // label1
+            // buttonAnnuler
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(8, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(298, 38);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Annulation commande";
+            this.buttonAnnuler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAnnuler.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonAnnuler.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonAnnuler.Location = new System.Drawing.Point(235, 14);
+            this.buttonAnnuler.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonAnnuler.Name = "buttonAnnuler";
+            this.buttonAnnuler.Size = new System.Drawing.Size(125, 30);
+            this.buttonAnnuler.TabIndex = 0;
+            this.buttonAnnuler.Text = "Annuler";
+            this.buttonAnnuler.UseVisualStyleBackColor = true;
+            this.buttonAnnuler.Click += new System.EventHandler(this.buttonAnnuler_Click);
             // 
-            // label2
+            // labelTexte
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 90);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(415, 50);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Etes vous sur de vouloir annuler cette commande ?\r\nCette action est définitive.\r\n" +
-    "";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelTexte.AutoSize = true;
+            this.labelTexte.BackColor = System.Drawing.Color.Transparent;
+            this.labelTexte.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelTexte.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelTexte.Location = new System.Drawing.Point(27, 122);
+            this.labelTexte.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelTexte.Name = "labelTexte";
+            this.labelTexte.Size = new System.Drawing.Size(360, 38);
+            this.labelTexte.TabIndex = 19;
+            this.labelTexte.Text = "Voulez-vous vraiment abandonner la commande ?\r\nCette action est irréversible.";
             // 
             // ConfirmationAnnulationCmd
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(436, 250);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.buttonConfirmer);
-            this.Controls.Add(this.buttonAnnuler);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(513, 243);
+            this.Controls.Add(this.labelTexte);
+            this.Controls.Add(this.backgroundBlock1);
+            this.Controls.Add(this.backgroundBlock2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ConfirmationAnnulationCmd";
             this.Text = "ConfirmationAnnulationCmd";
+            this.backgroundBlock1.ResumeLayout(false);
+            this.backgroundBlock1.PerformLayout();
+            this.backgroundBlock2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button buttonAnnuler;
-        private System.Windows.Forms.Button buttonConfirmer;
+        private System.Windows.Forms.Panel backgroundBlock1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel backgroundBlock2;
+        private System.Windows.Forms.Button buttonConfirmer;
+        private System.Windows.Forms.Button buttonAnnuler;
+        private System.Windows.Forms.Label labelTexte;
     }
 }

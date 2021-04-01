@@ -30,7 +30,7 @@ namespace ZumbaSoft.Fenetres_Stock
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SupprimerStock));
-            this.buttonAnuuler = new System.Windows.Forms.Button();
+            this.buttonAnnuler = new System.Windows.Forms.Button();
             this.buttonSupprimer = new System.Windows.Forms.Button();
             this.labelTexte = new System.Windows.Forms.Label();
             this.barreQtt = new System.Windows.Forms.NumericUpDown();
@@ -42,19 +42,19 @@ namespace ZumbaSoft.Fenetres_Stock
             this.backgroundBlock1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // buttonAnuuler
+            // buttonAnnuler
             // 
-            this.buttonAnuuler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAnuuler.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonAnuuler.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonAnuuler.Location = new System.Drawing.Point(235, 14);
-            this.buttonAnuuler.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonAnuuler.Name = "buttonAnuuler";
-            this.buttonAnuuler.Size = new System.Drawing.Size(125, 30);
-            this.buttonAnuuler.TabIndex = 0;
-            this.buttonAnuuler.Text = "Annuler";
-            this.buttonAnuuler.UseVisualStyleBackColor = true;
-            this.buttonAnuuler.Click += new System.EventHandler(this.buttonAnuuler_Click);
+            this.buttonAnnuler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAnnuler.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonAnnuler.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonAnnuler.Location = new System.Drawing.Point(235, 14);
+            this.buttonAnnuler.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonAnnuler.Name = "buttonAnnuler";
+            this.buttonAnnuler.Size = new System.Drawing.Size(125, 30);
+            this.buttonAnnuler.TabIndex = 0;
+            this.buttonAnnuler.Text = "Annuler";
+            this.buttonAnnuler.UseVisualStyleBackColor = true;
+            this.buttonAnnuler.Click += new System.EventHandler(this.buttonAnuuler_Click);
             // 
             // buttonSupprimer
             // 
@@ -112,7 +112,7 @@ namespace ZumbaSoft.Fenetres_Stock
             // 
             this.backgroundBlock2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
             this.backgroundBlock2.Controls.Add(this.buttonSupprimer);
-            this.backgroundBlock2.Controls.Add(this.buttonAnuuler);
+            this.backgroundBlock2.Controls.Add(this.buttonAnnuler);
             this.backgroundBlock2.Location = new System.Drawing.Point(-6, 188);
             this.backgroundBlock2.Name = "backgroundBlock2";
             this.backgroundBlock2.Size = new System.Drawing.Size(524, 55);
@@ -164,7 +164,7 @@ namespace ZumbaSoft.Fenetres_Stock
 
         #endregion
 
-        private System.Windows.Forms.Button buttonAnuuler;
+        private System.Windows.Forms.Button buttonAnnuler;
         private System.Windows.Forms.Button buttonSupprimer;
         private System.Windows.Forms.Label labelTexte;
         private System.Windows.Forms.NumericUpDown barreQtt;

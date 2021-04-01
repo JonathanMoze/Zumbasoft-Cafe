@@ -26,6 +26,7 @@ namespace ZumbaSoft.Fenetres_Commande
             produits = p;
             labelProduit.Text += fournisseur.nom + " :";
             initListProd();
+            initItemsColors();
         }
 
         private void initListProd()
@@ -42,6 +43,19 @@ namespace ZumbaSoft.Fenetres_Commande
                 listBoxProduits.Items.Add("Aucun autre produit.");
                 buttonAjouter.Enabled = false;
             }
+        }
+
+        /// <summary>
+        /// Initialise tranparent effects.
+        /// </summary>
+        public void initItemsColors()
+        {
+            panel1.BackColor = Color.FromArgb(50, 12, 12, 12);
+
+            backgroundBlock1.BackColor = Color.FromArgb(50, 12, 12, 12);
+            backgroundBlock2.BackColor = Color.FromArgb(80, 12, 12, 12);
+            buttonAjouter.BackColor = Color.FromArgb(50, 12, 12, 12);
+            buttonAnnuler.BackColor = Color.FromArgb(50, 12, 12, 12);
         }
 
         private void barreQuantite_ValueChanged(object sender, EventArgs e)
@@ -81,5 +95,7 @@ namespace ZumbaSoft.Fenetres_Commande
             DialogResult = DialogResult.Cancel;
             this.Close();
         }
+
+
     }
 }

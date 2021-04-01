@@ -83,5 +83,6 @@ namespace ZumbaSoft.Fenetres_Ventes
             DialogResult = DialogResult.OK;
             this.Close();
         }
+
     }
 }

@@ -79,7 +79,7 @@ namespace ZumbaSoft.Fenetres_Stock
             this.buttonSelectionner.Location = new System.Drawing.Point(440, 315);
             this.buttonSelectionner.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSelectionner.Name = "buttonSelectionner";
-            this.buttonSelectionner.Size = new System.Drawing.Size(122, 27);
+            this.buttonSelectionner.Size = new System.Drawing.Size(122, 32);
             this.buttonSelectionner.TabIndex = 62;
             this.buttonSelectionner.Text = "Sélectionner";
             this.buttonSelectionner.UseVisualStyleBackColor = false;
@@ -125,6 +125,7 @@ namespace ZumbaSoft.Fenetres_Stock
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label3.Location = new System.Drawing.Point(17, 13);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
@@ -197,6 +198,7 @@ namespace ZumbaSoft.Fenetres_Stock
             this.labelProduit.AutoSize = true;
             this.labelProduit.BackColor = System.Drawing.Color.Transparent;
             this.labelProduit.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelProduit.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.labelProduit.Location = new System.Drawing.Point(21, 13);
             this.labelProduit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelProduit.Name = "labelProduit";
@@ -219,9 +221,12 @@ namespace ZumbaSoft.Fenetres_Stock
             // 
             // barreQuantite
             // 
-            this.barreQuantite.Location = new System.Drawing.Point(449, 244);
+            this.barreQuantite.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
+            this.barreQuantite.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.barreQuantite.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.barreQuantite.Location = new System.Drawing.Point(449, 236);
             this.barreQuantite.Name = "barreQuantite";
-            this.barreQuantite.Size = new System.Drawing.Size(100, 27);
+            this.barreQuantite.Size = new System.Drawing.Size(100, 29);
             this.barreQuantite.TabIndex = 50;
             this.barreQuantite.ValueChanged += new System.EventHandler(this.barreQuantite_ValueChanged);
             // 
@@ -266,9 +271,9 @@ namespace ZumbaSoft.Fenetres_Stock
             this.label1.Location = new System.Drawing.Point(12, 22);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(287, 36);
+            this.label1.Size = new System.Drawing.Size(301, 36);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Ajout d\'une adresse";
+            this.label1.Text = "Ajout dans les stocks";
             // 
             // backgroundBlock2
             // 

@@ -1,6 +1,7 @@
 ﻿using SQLite;
 using SQLiteNetExtensions.Extensions;
 using System;
+using System.Drawing;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Windows.Forms;
@@ -22,8 +23,8 @@ namespace ZumbaSoft.Fenetres_Commande
         public GestionDeLaCommande(SQLiteConnection db, Magasin magasin)
         {
             InitializeComponent();
+            initItemsColors();
             DB = db;
-            initButtons();
             commande = new Commande();
             commande.PTC = new List<ProduitToCommande>();
             commande.magasin = magasin;
@@ -32,13 +33,27 @@ namespace ZumbaSoft.Fenetres_Commande
             textBoxCmdLe.Text = DateTime.Today.ToString("d");
         }
 
-        private void initButtons()
+
+        /// <summary>
+        /// Initialise tranparent effects.
+        /// </summary>
+        public void initItemsColors()
         {
-            int size = (flowLayoutPanelButtons.Width / 4) - 3 * 4; 
-            buttonAnnuler.Width = size;
-            buttonAjouterProd.Width = size;
-            buttonAnnulerCmd.Width = size;
-            buttonEnregisterCmd.Width = size;
+
+            backgroundBlock.BackColor = Color.FromArgb(80, 12, 12, 12);
+            backgroundBlock1.BackColor = Color.FromArgb(80, 12, 12, 12);
+            backgroundBlock2.BackColor = Color.FromArgb(80, 12, 12, 12);
+            backgroundBlock3.BackColor = Color.FromArgb(80, 12, 12, 12);
+            backgroundBlock4.BackColor = Color.FromArgb(80, 12, 12, 12);
+
+            buttonAjouterProd_1.BackColor = Color.FromArgb(50, 12, 12, 12);
+            buttonAnnuler.BackColor = Color.FromArgb(50, 12, 12, 12);
+            buttonAnnulerCmd.BackColor = Color.FromArgb(50, 12, 12, 12);
+            buttonEnregisterCmd.BackColor = Color.FromArgb(50, 12, 12, 12);
+            buttonMoinsPrd.BackColor = Color.FromArgb(50, 12, 12, 12);
+            buttonPlusPrd.BackColor = Color.FromArgb(50, 12, 12, 12);
+            buttonSupprimerPrd.BackColor = Color.FromArgb(50, 12, 12, 12);
+
         }
 
         /// <summary>
@@ -96,6 +111,7 @@ namespace ZumbaSoft.Fenetres_Commande
             commande = cmd;
             chekTheRightBox();
             initFieldCommande();
+            initItemsColors();
         }
 
         public void chekTheRightBox()
@@ -104,12 +120,15 @@ namespace ZumbaSoft.Fenetres_Commande
             {
                 case Commande.EnumEtatCmd.Commande:
                     checkBoxCommande.Checked = true;
+                    
                     break;
                 case Commande.EnumEtatCmd.Livre:
                     checkBoxLivre.Checked = true;
+                    
                     break;
                 case Commande.EnumEtatCmd.Receptionne:
                     checkBoxRecept.Checked = true;
+                    
                     break;
             }
         }
@@ -147,7 +166,7 @@ namespace ZumbaSoft.Fenetres_Commande
                 buttonAnnulerCmd.Enabled = false;
                 buttonSupprimerPrd.Enabled = false;
                 buttonPlusPrd.Enabled = false;
-                buttonAjouterProd.Enabled = false;
+                buttonAjouterProd_1.Enabled = false;
                 buttonMoinsPrd.Enabled = false;
             }
             else
@@ -351,19 +370,28 @@ namespace ZumbaSoft.Fenetres_Commande
         {
             if (checkBoxCommande.CheckState == CheckState.Checked)
             {
+                checkBoxCommande.BackColor = System.Drawing.Color.ForestGreen;
                 checkBoxLivre.Checked = false;
                 checkBoxRecept.Checked = false;
                 commande.etat = Commande.EnumEtatCmd.Commande;
-            } 
+            } else
+            {
+                checkBoxCommande.BackColor = System.Drawing.Color.DarkRed;
+            }
         }
 
         private void checkBoxLivre_CheckedChanged(object sender, EventArgs e)
         {
             if(checkBoxLivre.CheckState == CheckState.Checked)
             {
+                checkBoxLivre.BackColor = System.Drawing.Color.ForestGreen;
                 checkBoxCommande.Checked = false;
                 checkBoxRecept.Checked = false;
                 commande.etat = Commande.EnumEtatCmd.Livre;
+            }
+            else
+            {
+                checkBoxLivre.BackColor = System.Drawing.Color.DarkRed;
             }
         }
 
@@ -371,6 +399,7 @@ namespace ZumbaSoft.Fenetres_Commande
         {
             if(checkBoxRecept.CheckState == CheckState.Checked)
             {
+                checkBoxRecept.BackColor = System.Drawing.Color.ForestGreen;
                 checkBoxCommande.Checked = false;
                 checkBoxLivre.Checked = false;
                 commande.etat = Commande.EnumEtatCmd.Receptionne;
@@ -380,6 +409,8 @@ namespace ZumbaSoft.Fenetres_Commande
             else
             {
                 textBoxRecep.Text = "";
+                checkBoxRecept.BackColor = System.Drawing.Color.DarkRed;
+                
             }
             
         }
