@@ -126,23 +126,5 @@ namespace ZumbaSoft.Fenetres_Ventes.Tests
             c.refreshPrixTotal();
             Assert.AreEqual(c.labelPrixTotal.Text, "Montant Total : " + "660" + "€");
         }
-
-        [TestMethod()]
-        public void buttonCatalogueProd_ClickTest()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
-        public void buttonPlus_ClickTest()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
-        public void buttonMoins_ClickTest()
-        {
-            Assert.Fail();
-        }
     }
 }
