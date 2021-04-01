@@ -18,7 +18,7 @@ namespace ZumbaSoft.Tests
         {
             Accueil accueil = new ZumbaSoft.Accueil();
 
-            List<string> allTablesName = new List<string>(){ "Adresse", "Genre", "Produit", "Client", "Commande", "Disponibilite", "Droit", "FicheDePaye", "Magasin","Fournisseur", "Panier", "Personne", "ProduitCommande", "ProduitEnStock", "Rapport", "Role", "Utilisateur", "DroitToRole" };
+            List<string> allTablesName = new List<string>(){ "Adresse", "ProduitToCommande", "Genre", "Produit", "Client", "Commande", "Disponibilite", "Droit", "FicheDePaye", "Magasin","Fournisseur", "Panier", "Personne", "ProduitCommande", "ProduitEnStock", "Rapport", "Role", "Utilisateur", "DroitToRole" };
             int nbTable = allTablesName.Count;
 
             //Vérifie qu'il n'y a pas des tables étrangères.

@@ -72,6 +72,7 @@ namespace ZumbaSoft
             db.CreateTable<Panier>();
             db.CreateTable<Personne>();
             db.CreateTable<ProduitCommande>();
+            db.CreateTable<ProduitToCommande>();
             db.CreateTable<ProduitEnStock>();
             db.CreateTable<Rapport>();
             db.CreateTable<Role>();
