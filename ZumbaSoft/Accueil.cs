@@ -40,6 +40,7 @@ namespace ZumbaSoft
             buttonGestionStock.BackColor = Color.FromArgb(80, 12, 12, 12);
             buttonGestionProduits.BackColor = Color.FromArgb(80, 12, 12, 12);
             buttonGestionVentes.BackColor = Color.FromArgb(80, 12, 12, 12);
+            buttonGestionClients.BackColor = Color.FromArgb(80, 12, 12, 12);
             buttonAcceptConditions.BackColor = Color.FromArgb(80, 1, 1, 1);
 
             buttonSeConnecter.BackColor = Color.FromArgb(99, 1, 1, 1);

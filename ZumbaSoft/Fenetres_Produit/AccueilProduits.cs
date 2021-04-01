@@ -65,7 +65,7 @@ namespace ZumbaSoft.Fenetres_Produit
 
         public void checkDB()
         {
-            var database = new FileInfo("DataBase.db");
+            var database = new FileInfo("../../../DataBase.db");
             if (!database.Exists)
             {
                 msgBDstatusERROR.Visible = true;

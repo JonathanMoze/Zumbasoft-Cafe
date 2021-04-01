@@ -6,9 +6,11 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using SQLite;
+using System.IO;
 using SQLiteNetExtensions.Extensions;
 using ZumbaSoft.Model;
 using ZumbaSoft.Fenetres_Produit;
+using System.Diagnostics;
 
 namespace ZumbaSoft.Fenetres_Ventes
 {
@@ -29,6 +31,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             initListClients();
             initPanier();
             initItemsColors();
+            checkDB();
         }
 
 
@@ -47,6 +50,46 @@ namespace ZumbaSoft.Fenetres_Ventes
             panierClient.date = DateTime.Now;
             panierClient.magasin = magasin;
             panierClient.produits = new List<ProduitCommande>();
+        }
+
+        public void checkDB()
+        {
+            var database = new FileInfo("../../../DataBase.db");
+            if (!database.Exists)
+            {
+                msgBDstatusERROR.Visible = true;
+                msgBDstatusOK.Visible = false;
+
+                dbERROR.Visible = true;
+                dbOK.Visible = false;
+
+                var t = new Timer();
+                t.Interval = 2000; // Durée de l'attente avant l'affichage du message
+                t.Tick += (s, e) =>
+                {
+                    panelERROR.Visible = true;
+                    t.Stop();
+                };
+                t.Start();
+
+                var t2 = new Timer();
+                t2.Interval = 8000; // Durée de l'affichage du message
+                t2.Tick += (s, e) =>
+                {
+                    panelERROR.Visible = false;
+                    t2.Stop();
+                };
+                t2.Start();
+
+            }
+            else
+            {
+                msgBDstatusERROR.Visible = false;
+                msgBDstatusOK.Visible = true;
+
+                dbERROR.Visible = false;
+                dbOK.Visible = true;
+            }
         }
 
         public void initItemsColors()
@@ -280,6 +323,45 @@ namespace ZumbaSoft.Fenetres_Ventes
 
         private void goBackButton_Click(object sender, EventArgs e)
         {
+            DialogResult = DialogResult.OK;
+            this.Close();
+        }
+
+        private void msgBDstatusERROR_Click(object sender, EventArgs e)
+        {
+            if (!panelERROR.Visible)
+            {
+                panelERROR.Visible = true;
+                var t = new Timer();
+                t.Interval = 8000; // Durée de l'affichage du message
+                t.Tick += (s, e) =>
+                {
+                    panelERROR.Visible = false;
+                    t.Stop();
+                };
+                t.Start();
+            }
+        }
+
+        private void buttonContactAdmin_Click(object sender, EventArgs e)
+        {
+            Process OpenMailClient = new Process();
+            DateTime date = DateTime.Now;
+            String emailAddress = "mrkafeine@gmail.com";
+            String subject = "Rapport d'erreur - BD introuvable";
+            String body = "---------------------------------%0a%0aRapport d'erreur  OUATELSE : le " + date.ToString("MM/dd/yyyy") + " à " + date.ToString("HH:mm") + " : ERREUR 01 - Impossible d'accéder à la base de données : le fichier correspondant à la base de données (Database.db) est introuvable.%0a%0aRépondez directement à ce mail pour échanger avec le magasin concerné.%0a%0a---------------------------------%0a%0aEntrez des détails ici (que s'est-il passé avant l'apparition de ce problème, d'éventuelles remarques...) :";
+
+            string filename = "mailto:" + emailAddress + "?subject=" + subject + "&body=" + body;
+            Process myProcess = new Process();
+            myProcess.StartInfo.FileName = filename;
+            myProcess.StartInfo.UseShellExecute = true;
+            myProcess.StartInfo.RedirectStandardOutput = false;
+            myProcess.Start();
+        }
+
+        private void buttonBackHome_Click(object sender, EventArgs e)
+        {
+            panelERROR.Visible = false;
             DialogResult = DialogResult.OK;
             this.Close();
         }
