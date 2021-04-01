@@ -17,10 +17,12 @@ namespace ZumbaSoft.Fenetres_Produit
     public partial class AccueilProduits : Form
     {
         SQLiteConnection DB;
-        public AccueilProduits(SQLiteConnection db)
+        Utilisateur user;
+        public AccueilProduits(SQLiteConnection db, Utilisateur uConnected)
         {
             InitializeComponent();
             DB = db;
+            user = uConnected;
             initListProduits();
             initItemsColors();
             checkDB();

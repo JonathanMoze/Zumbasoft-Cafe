@@ -15,13 +15,12 @@ namespace ZumbaSoft.Fenetres_Ventes
     public partial class AccueilClient : Form
     {
         SQLiteConnection DB;
-        Client client;
         
-        public AccueilClient(SQLiteConnection db, Client c)
+        
+        public AccueilClient(SQLiteConnection db)
         {
             InitializeComponent();
             DB = db;
-            client = c;
             initListClient();
         }
 

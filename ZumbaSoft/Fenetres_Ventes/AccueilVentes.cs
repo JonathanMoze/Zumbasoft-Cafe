@@ -15,14 +15,16 @@ namespace ZumbaSoft.Fenetres_Ventes
     public partial class AccueilVente : Form
     {
         Magasin magasin;
+        Utilisateur user;
         SQLiteConnection DB;
         public Client client;
         public Panier panierClient;
         
-        public AccueilVente(SQLiteConnection db, Magasin m)
+        public AccueilVente(SQLiteConnection db, Magasin m, Utilisateur uConnected)
         {
             InitializeComponent();
             DB = db;
+            user = uConnected;
             magasin = m;
             initListClients();
             initPanier();
@@ -236,7 +238,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             if(cp.ShowDialog() == DialogResult.OK)
             {
                 this.Close();
-                AccueilVente av = new AccueilVente(DB, magasin);
+                AccueilVente av = new AccueilVente(DB, magasin, user);
                 av.Show();
             }
             
@@ -266,7 +268,7 @@ namespace ZumbaSoft.Fenetres_Ventes
                 if (pop.ShowDialog() == DialogResult.OK)
                 {
                     this.Close();
-                    AccueilVente av = new AccueilVente(DB, magasin);
+                    AccueilVente av = new AccueilVente(DB, magasin, user);
                     av.Show();
                 }
             }

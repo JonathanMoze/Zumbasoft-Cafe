@@ -17,12 +17,14 @@ namespace ZumbaSoft.Fenetres_Magasin
     {
         SQLiteConnection DB;
         Magasin magasin;
+        Utilisateur user;
         Adresse newAdresse;
 
-        public AccueilMagasin(SQLiteConnection db)
+        public AccueilMagasin(SQLiteConnection db, Utilisateur uConnected)
         {
             InitializeComponent();
             DB = db;
+            user = uConnected;
             initListMagasin();
             initItemsColors();
             checkDB();

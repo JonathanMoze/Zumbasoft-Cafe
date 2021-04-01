@@ -18,10 +18,12 @@ namespace ZumbaSoft.Fenetres_Roles
     {
 
         SQLiteConnection DB;
-        public Roles(SQLiteConnection database)
+        Utilisateur user;
+        public Roles(SQLiteConnection database, Utilisateur uConnected)
         {
             InitializeComponent();
             DB = database;
+            user = uConnected;
             initListRoles();
             initItemsColors();
             checkDB();

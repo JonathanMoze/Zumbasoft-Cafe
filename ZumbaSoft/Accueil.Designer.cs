@@ -46,6 +46,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.buttonGestionClients = new System.Windows.Forms.Button();
             this.backgroundBlock.SuspendLayout();
             this.panelConditions.SuspendLayout();
             this.SuspendLayout();
@@ -70,10 +71,10 @@
             this.buttonGestionMag.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonGestionMag.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonGestionMag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.buttonGestionMag.Location = new System.Drawing.Point(229, 18);
+            this.buttonGestionMag.Location = new System.Drawing.Point(195, 18);
             this.buttonGestionMag.Margin = new System.Windows.Forms.Padding(2);
             this.buttonGestionMag.Name = "buttonGestionMag";
-            this.buttonGestionMag.Size = new System.Drawing.Size(178, 51);
+            this.buttonGestionMag.Size = new System.Drawing.Size(138, 51);
             this.buttonGestionMag.TabIndex = 1;
             this.buttonGestionMag.Text = "Magasins";
             this.buttonGestionMag.UseVisualStyleBackColor = false;
@@ -89,7 +90,7 @@
             this.buttonGestionRoles.Location = new System.Drawing.Point(22, 18);
             this.buttonGestionRoles.Margin = new System.Windows.Forms.Padding(2);
             this.buttonGestionRoles.Name = "buttonGestionRoles";
-            this.buttonGestionRoles.Size = new System.Drawing.Size(178, 51);
+            this.buttonGestionRoles.Size = new System.Drawing.Size(138, 51);
             this.buttonGestionRoles.TabIndex = 2;
             this.buttonGestionRoles.Text = "Rôles";
             this.buttonGestionRoles.UseVisualStyleBackColor = false;
@@ -128,10 +129,10 @@
             this.buttonGestionStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonGestionStock.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonGestionStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.buttonGestionStock.Location = new System.Drawing.Point(435, 18);
+            this.buttonGestionStock.Location = new System.Drawing.Point(371, 18);
             this.buttonGestionStock.Margin = new System.Windows.Forms.Padding(2);
             this.buttonGestionStock.Name = "buttonGestionStock";
-            this.buttonGestionStock.Size = new System.Drawing.Size(178, 51);
+            this.buttonGestionStock.Size = new System.Drawing.Size(138, 51);
             this.buttonGestionStock.TabIndex = 5;
             this.buttonGestionStock.Text = " Stocks";
             this.buttonGestionStock.UseVisualStyleBackColor = false;
@@ -144,7 +145,7 @@
             this.buttonSeConnecter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSeConnecter.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonSeConnecter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.buttonSeConnecter.Location = new System.Drawing.Point(579, 640);
+            this.buttonSeConnecter.Location = new System.Drawing.Point(574, 640);
             this.buttonSeConnecter.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSeConnecter.Name = "buttonSeConnecter";
             this.buttonSeConnecter.Size = new System.Drawing.Size(206, 34);
@@ -155,7 +156,8 @@
             // 
             // backgroundBlock
             // 
-            this.backgroundBlock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
+            this.backgroundBlock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
+            this.backgroundBlock.Controls.Add(this.buttonGestionClients);
             this.backgroundBlock.Controls.Add(this.buttonGestionVentes);
             this.backgroundBlock.Controls.Add(this.buttonGestionMag);
             this.backgroundBlock.Controls.Add(this.buttonGestionStock);
@@ -174,10 +176,10 @@
             this.buttonGestionVentes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonGestionVentes.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonGestionVentes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.buttonGestionVentes.Location = new System.Drawing.Point(848, 18);
+            this.buttonGestionVentes.Location = new System.Drawing.Point(718, 18);
             this.buttonGestionVentes.Margin = new System.Windows.Forms.Padding(2);
             this.buttonGestionVentes.Name = "buttonGestionVentes";
-            this.buttonGestionVentes.Size = new System.Drawing.Size(178, 51);
+            this.buttonGestionVentes.Size = new System.Drawing.Size(138, 51);
             this.buttonGestionVentes.TabIndex = 7;
             this.buttonGestionVentes.Text = "Ventes";
             this.buttonGestionVentes.UseVisualStyleBackColor = false;
@@ -190,10 +192,10 @@
             this.buttonGestionProduits.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonGestionProduits.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonGestionProduits.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.buttonGestionProduits.Location = new System.Drawing.Point(642, 18);
+            this.buttonGestionProduits.Location = new System.Drawing.Point(545, 18);
             this.buttonGestionProduits.Margin = new System.Windows.Forms.Padding(2);
             this.buttonGestionProduits.Name = "buttonGestionProduits";
-            this.buttonGestionProduits.Size = new System.Drawing.Size(178, 51);
+            this.buttonGestionProduits.Size = new System.Drawing.Size(138, 51);
             this.buttonGestionProduits.TabIndex = 6;
             this.buttonGestionProduits.Text = "Produits";
             this.buttonGestionProduits.UseVisualStyleBackColor = false;
@@ -294,6 +296,22 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "Version 1.0";
             // 
+            // buttonGestionClients
+            // 
+            this.buttonGestionClients.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
+            this.buttonGestionClients.FlatAppearance.BorderSize = 0;
+            this.buttonGestionClients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonGestionClients.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonGestionClients.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonGestionClients.Location = new System.Drawing.Point(893, 18);
+            this.buttonGestionClients.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonGestionClients.Name = "buttonGestionClients";
+            this.buttonGestionClients.Size = new System.Drawing.Size(138, 51);
+            this.buttonGestionClients.TabIndex = 8;
+            this.buttonGestionClients.Text = "Clients";
+            this.buttonGestionClients.UseVisualStyleBackColor = false;
+            this.buttonGestionClients.Click += new System.EventHandler(this.buttonGestionClients_Click);
+            // 
             // Accueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -341,6 +359,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button buttonGestionClients;
     }
 }
 

@@ -17,13 +17,14 @@ namespace ZumbaSoft.Fenetres_Stock
     public partial class AccueilStock : Form
     {
         Magasin magasin;
+        Utilisateur user;
         SQLiteConnection DB;
 
-        public AccueilStock(SQLiteConnection db)
+        public AccueilStock(SQLiteConnection db, Utilisateur uConnected)
         {
             InitializeComponent();
             DB = db;
-
+            user = uConnected;
             labelDate.Text = DateTime.Today.ToString("d");
             //labelMagasin.Text = magasin.ToString();
 

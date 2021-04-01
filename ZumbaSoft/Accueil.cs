@@ -23,12 +23,7 @@ namespace ZumbaSoft
         Utilisateur uConnected;//utilisateur courant connecté. Cette ligne est là uniquement pour indiquer la nécessité de l'attribut (à modifier pour qu'il ne soit plus static).
         Magasin magasin;
 
-        public Accueil()
-        {
-            InitializeComponent();
-            db = InitializeDataBase();
-            initItemsColors();
-        }
+
         public Accueil(SQLiteConnection database, Magasin mag)
         {
             InitializeComponent();
@@ -83,7 +78,7 @@ namespace ZumbaSoft
 
         private void RoleButton_Click(object sender, EventArgs e)
         {
-            Roles r = new Roles(db);
+            Roles r = new Roles(db, uConnected);
             this.Visible = false;
             if (r.ShowDialog() == DialogResult.OK)
             {
@@ -93,7 +88,7 @@ namespace ZumbaSoft
 
         private void buttonGestionMag_Click(object sender, EventArgs e)
         {
-            AccueilMagasin m = new AccueilMagasin(db);
+            AccueilMagasin m = new AccueilMagasin(db, uConnected);
             this.Visible = false;
             if (m.ShowDialog() == DialogResult.OK)
             {
@@ -119,7 +114,7 @@ namespace ZumbaSoft
 
         private void buttonGestionStock_Click(object sender, EventArgs e)
         {
-            AccueilStock s = new AccueilStock(db);
+            AccueilStock s = new AccueilStock(db, uConnected);
             this.Visible = false;
             if (s.ShowDialog() == DialogResult.OK)
             {
@@ -134,7 +129,7 @@ namespace ZumbaSoft
 
         private void buttonGestionProduits_Click(object sender, EventArgs e)
         {
-            AccueilProduits p = new AccueilProduits(db);
+            AccueilProduits p = new AccueilProduits(db, uConnected);
             this.Visible = false;
             if (p.ShowDialog() == DialogResult.OK)
             {
@@ -144,7 +139,7 @@ namespace ZumbaSoft
 
         private void buttonGestionStock_Click_1(object sender, EventArgs e)
         {
-            AccueilStock st = new AccueilStock(db);
+            AccueilStock st = new AccueilStock(db, uConnected);
             this.Visible = false;
             if (st.ShowDialog() == DialogResult.OK)
             {
@@ -170,7 +165,7 @@ namespace ZumbaSoft
 
         private void buttonGestionVentes_Click(object sender, EventArgs e)
         {
-            AccueilVente ve = new AccueilVente(db, magasin);
+            AccueilVente ve = new AccueilVente(db, magasin, uConnected);
             this.Visible = false;
             if (ve.ShowDialog() == DialogResult.OK)
             {
@@ -181,6 +176,16 @@ namespace ZumbaSoft
         private void Accueil_FormClosed(object sender, FormClosedEventArgs e)
         {
             DialogResult = DialogResult.OK;
+        }
+
+        private void buttonGestionClients_Click(object sender, EventArgs e)
+        {
+            AccueilClient c = new AccueilClient(db);
+            this.Visible = false;
+            if (c.ShowDialog() == DialogResult.OK)
+            {
+                this.Visible = true;
+            }
         }
     }
 }
