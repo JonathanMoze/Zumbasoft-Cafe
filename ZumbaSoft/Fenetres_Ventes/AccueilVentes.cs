@@ -275,5 +275,11 @@ namespace ZumbaSoft.Fenetres_Ventes
                 labelErreur.Visible = true;
             }
         }
+
+        private void goBackButton_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.OK;
+            this.Close();
+        }
     }
 }

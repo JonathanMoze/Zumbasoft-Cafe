@@ -96,7 +96,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(26, 16);
+            this.label1.Location = new System.Drawing.Point(18, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 31);
             this.label1.TabIndex = 1;
@@ -113,10 +113,10 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(26, 60);
+            this.listView1.Location = new System.Drawing.Point(24, 55);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(379, 478);
+            this.listView1.Size = new System.Drawing.Size(478, 419);
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
@@ -151,7 +151,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.buttonCatalogueProd.BackColor = System.Drawing.Color.Transparent;
             this.buttonCatalogueProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCatalogueProd.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonCatalogueProd.Location = new System.Drawing.Point(39, 53);
+            this.buttonCatalogueProd.Location = new System.Drawing.Point(29, 83);
             this.buttonCatalogueProd.Name = "buttonCatalogueProd";
             this.buttonCatalogueProd.Size = new System.Drawing.Size(169, 42);
             this.buttonCatalogueProd.TabIndex = 3;
@@ -161,18 +161,20 @@ namespace ZumbaSoft.Fenetres_Ventes
             // 
             // labelCatalogue
             // 
-            this.labelCatalogue.AutoSize = true;
+            this.labelCatalogue.BackColor = System.Drawing.Color.Transparent;
             this.labelCatalogue.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelCatalogue.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.labelCatalogue.Location = new System.Drawing.Point(12, 23);
+            this.labelCatalogue.Location = new System.Drawing.Point(29, 23);
             this.labelCatalogue.Name = "labelCatalogue";
-            this.labelCatalogue.Size = new System.Drawing.Size(228, 20);
+            this.labelCatalogue.Size = new System.Drawing.Size(169, 40);
             this.labelCatalogue.TabIndex = 4;
             this.labelCatalogue.Text = "Ajouter un produit au panier : ";
+            this.labelCatalogue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label2.Location = new System.Drawing.Point(27, 23);
@@ -208,9 +210,9 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
             this.panel2.Controls.Add(this.buttonCatalogueProd);
             this.panel2.Controls.Add(this.labelCatalogue);
-            this.panel2.Location = new System.Drawing.Point(22, 21);
+            this.panel2.Location = new System.Drawing.Point(20, 21);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(250, 114);
+            this.panel2.Size = new System.Drawing.Size(228, 146);
             this.panel2.TabIndex = 10;
             // 
             // panel3
@@ -226,6 +228,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label3.Location = new System.Drawing.Point(69, 11);
@@ -293,6 +296,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label5.Location = new System.Drawing.Point(69, 11);
@@ -315,9 +319,9 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.buttonAnnulerCommand.BackColor = System.Drawing.Color.Firebrick;
             this.buttonAnnulerCommand.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAnnulerCommand.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonAnnulerCommand.Location = new System.Drawing.Point(22, 525);
+            this.buttonAnnulerCommand.Location = new System.Drawing.Point(20, 525);
             this.buttonAnnulerCommand.Name = "buttonAnnulerCommand";
-            this.buttonAnnulerCommand.Size = new System.Drawing.Size(250, 42);
+            this.buttonAnnulerCommand.Size = new System.Drawing.Size(228, 42);
             this.buttonAnnulerCommand.TabIndex = 5;
             this.buttonAnnulerCommand.Text = "Annuler la commande";
             this.buttonAnnulerCommand.UseVisualStyleBackColor = false;
@@ -328,9 +332,9 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
             this.panel5.Controls.Add(this.buttonFacture);
             this.panel5.Controls.Add(this.label7);
-            this.panel5.Location = new System.Drawing.Point(22, 158);
+            this.panel5.Location = new System.Drawing.Point(20, 182);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(250, 114);
+            this.panel5.Size = new System.Drawing.Size(228, 114);
             this.panel5.TabIndex = 11;
             // 
             // buttonFacture
@@ -338,7 +342,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.buttonFacture.BackColor = System.Drawing.Color.ForestGreen;
             this.buttonFacture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonFacture.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonFacture.Location = new System.Drawing.Point(39, 53);
+            this.buttonFacture.Location = new System.Drawing.Point(29, 53);
             this.buttonFacture.Name = "buttonFacture";
             this.buttonFacture.Size = new System.Drawing.Size(169, 42);
             this.buttonFacture.TabIndex = 3;
@@ -349,9 +353,10 @@ namespace ZumbaSoft.Fenetres_Ventes
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label7.Location = new System.Drawing.Point(59, 21);
+            this.label7.Location = new System.Drawing.Point(49, 21);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(126, 20);
             this.label7.TabIndex = 4;
@@ -363,7 +368,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.buttonPlus.FlatAppearance.BorderSize = 0;
             this.buttonPlus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPlus.Image = ((System.Drawing.Image)(resources.GetObject("buttonPlus.Image")));
-            this.buttonPlus.Location = new System.Drawing.Point(418, 60);
+            this.buttonPlus.Location = new System.Drawing.Point(24, 517);
             this.buttonPlus.Name = "buttonPlus";
             this.buttonPlus.Size = new System.Drawing.Size(50, 50);
             this.buttonPlus.TabIndex = 14;
@@ -377,7 +382,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.buttonMoins.FlatAppearance.BorderSize = 0;
             this.buttonMoins.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMoins.Image = ((System.Drawing.Image)(resources.GetObject("buttonMoins.Image")));
-            this.buttonMoins.Location = new System.Drawing.Point(418, 117);
+            this.buttonMoins.Location = new System.Drawing.Point(80, 517);
             this.buttonMoins.Name = "buttonMoins";
             this.buttonMoins.Size = new System.Drawing.Size(50, 50);
             this.buttonMoins.TabIndex = 15;
@@ -390,7 +395,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.labelPrixTotal.AutoSize = true;
             this.labelPrixTotal.BackColor = System.Drawing.Color.Transparent;
             this.labelPrixTotal.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.labelPrixTotal.Location = new System.Drawing.Point(237, 547);
+            this.labelPrixTotal.Location = new System.Drawing.Point(369, 487);
             this.labelPrixTotal.Name = "labelPrixTotal";
             this.labelPrixTotal.Size = new System.Drawing.Size(109, 20);
             this.labelPrixTotal.TabIndex = 16;
@@ -400,9 +405,9 @@ namespace ZumbaSoft.Fenetres_Ventes
             // 
             this.labelErreur.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(1)))));
             this.labelErreur.ForeColor = System.Drawing.Color.Tomato;
-            this.labelErreur.Location = new System.Drawing.Point(22, 307);
+            this.labelErreur.Location = new System.Drawing.Point(20, 307);
             this.labelErreur.Name = "labelErreur";
-            this.labelErreur.Size = new System.Drawing.Size(250, 68);
+            this.labelErreur.Size = new System.Drawing.Size(228, 68);
             this.labelErreur.TabIndex = 17;
             this.labelErreur.Text = "Erreur : veuillez vérifier qu\'un client a été selectionné et que le panier n\'est " +
     "pas vide";
@@ -414,7 +419,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.labelRuptureStock.AutoSize = true;
             this.labelRuptureStock.BackColor = System.Drawing.Color.Transparent;
             this.labelRuptureStock.ForeColor = System.Drawing.Color.Tomato;
-            this.labelRuptureStock.Location = new System.Drawing.Point(87, 420);
+            this.labelRuptureStock.Location = new System.Drawing.Point(69, 419);
             this.labelRuptureStock.Name = "labelRuptureStock";
             this.labelRuptureStock.Size = new System.Drawing.Size(131, 20);
             this.labelRuptureStock.TabIndex = 18;
@@ -550,6 +555,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.goBackButton.TabIndex = 8;
             this.goBackButton.Text = "RETOUR À L\'ACCUEIL";
             this.goBackButton.UseVisualStyleBackColor = false;
+            this.goBackButton.Click += new System.EventHandler(this.goBackButton_Click);
             // 
             // panel8
             // 
@@ -572,9 +578,9 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.panel9.Controls.Add(this.labelRuptureStock);
             this.panel9.Controls.Add(this.labelErreur);
             this.panel9.Controls.Add(this.buttonAnnulerCommand);
-            this.panel9.Location = new System.Drawing.Point(850, 80);
+            this.panel9.Location = new System.Drawing.Point(884, 80);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(294, 580);
+            this.panel9.Size = new System.Drawing.Size(269, 580);
             this.panel9.TabIndex = 67;
             // 
             // panel10
@@ -588,7 +594,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.panel10.Controls.Add(this.label1);
             this.panel10.Location = new System.Drawing.Point(340, 80);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(484, 580);
+            this.panel10.Size = new System.Drawing.Size(523, 580);
             this.panel10.TabIndex = 68;
             // 
             // labelQuantite
@@ -596,7 +602,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.labelQuantite.AutoSize = true;
             this.labelQuantite.BackColor = System.Drawing.Color.Transparent;
             this.labelQuantite.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.labelQuantite.Location = new System.Drawing.Point(296, 24);
+            this.labelQuantite.Location = new System.Drawing.Point(24, 487);
             this.labelQuantite.Name = "labelQuantite";
             this.labelQuantite.Size = new System.Drawing.Size(76, 20);
             this.labelQuantite.TabIndex = 17;
@@ -620,7 +626,6 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);

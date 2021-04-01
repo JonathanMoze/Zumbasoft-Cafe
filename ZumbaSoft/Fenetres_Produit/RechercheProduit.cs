@@ -23,6 +23,7 @@ namespace ZumbaSoft.Fenetres_Produit
             this.DB = db;
             InitializeComponent();
             initListProduit();
+            initItemsColors();
         }
 
         public void initListProduit()
@@ -43,6 +44,15 @@ namespace ZumbaSoft.Fenetres_Produit
             }
         }
 
+        public void initItemsColors()
+        {
+            backgroundBlock1.BackColor = Color.FromArgb(50, 12, 12, 12);
+            backgroundBlock2.BackColor = Color.FromArgb(80, 12, 12, 12); 
+
+            buttonOK.BackColor = Color.FromArgb(50, 12, 12, 12);
+            buttonCancel.BackColor = Color.FromArgb(50, 12, 12, 12);
+            
+        }
 
 
         private void textBoxRecherche_TextChanged(object sender, EventArgs e)
@@ -75,5 +85,7 @@ namespace ZumbaSoft.Fenetres_Produit
                 this.Close();
             }
         }
+
+
     }
 }

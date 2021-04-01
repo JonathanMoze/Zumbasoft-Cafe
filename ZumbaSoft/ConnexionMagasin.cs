@@ -20,6 +20,7 @@ namespace ZumbaSoft
         {
             InitializeComponent();
             db = InitializeDataBase();
+            initItemsColors();
         }
 
         private SQLiteConnection InitializeDataBase()
@@ -44,6 +45,17 @@ namespace ZumbaSoft
             db.CreateTable<Role>();
             db.CreateTable<Utilisateur>();
             return db;
+        }
+
+        public void initItemsColors()
+        {
+            backgroundBlock.BackColor = Color.FromArgb(99, 1, 1, 1);
+
+            buttonSeConnecter.BackColor = Color.FromArgb(99, 1, 1, 1);
+            buttonAdmin.BackColor = Color.FromArgb(99, 1, 1, 1);
+            quitButton.BackColor = Color.FromArgb(99, 1, 1, 1);
+
+
         }
 
         private void buttonConnexion_Click(object sender, EventArgs e)
@@ -104,6 +116,11 @@ namespace ZumbaSoft
             {
                 this.Close();
             }
+        }
+
+        private void quitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

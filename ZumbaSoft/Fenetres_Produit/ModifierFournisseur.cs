@@ -7,6 +7,9 @@ using System.Text;
 using System.Windows.Forms;
 using ZumbaSoft.Model;
 using SQLite;
+using SQLiteNetExtensions;
+using SQLiteNetExtensions.Extensions;
+using ZumbaSoft.Fenetres_Magasin;
 
 namespace ZumbaSoft.Fenetres_Produit
 {
@@ -14,6 +17,7 @@ namespace ZumbaSoft.Fenetres_Produit
     {
         Fournisseur fournisseur;
         SQLiteConnection DB;
+        public Adresse adresse;
         AccueilFournisseur af;
 
         public ModifierFournisseur(AccueilFournisseur af, Fournisseur f, SQLiteConnection db)
@@ -23,6 +27,7 @@ namespace ZumbaSoft.Fenetres_Produit
             this.DB = db;
             this.af = af;
             InitInfoField();
+            initItemsColors();
         }
 
         public void InitInfoField()
@@ -57,8 +62,41 @@ namespace ZumbaSoft.Fenetres_Produit
             }
         }
 
+        public void initItemsColors()
+        {
+            backgroundBlock1.BackColor = Color.FromArgb(50, 12, 12, 12);
+            backgroundBlock2.BackColor = Color.FromArgb(80, 12, 12, 12);
+            buttonAnnuler.BackColor = Color.FromArgb(50, 12, 12, 12);
+            buttonAdr.BackColor = Color.FromArgb(50, 12, 12, 12);
+            buttonOK.BackColor = Color.FromArgb(50, 12, 12, 12);
+        }
+
         private void buttonOKParamMag_Click(object sender, EventArgs e)
         {
+            if (textBoxNom.Text != "")
+            {
+                textBoxNom.PlaceholderText = textBoxNom.Text;
+                textBoxNom.Text = "";
+            }
+
+            if (textBoxNewTel.Text != "")
+            {
+                textBoxNewTel.PlaceholderText = textBoxNewTel.Text;
+                textBoxNewTel.Text = "";
+            }
+
+            if (textBoxEmail.Text != "")
+            {
+                textBoxEmail.PlaceholderText = textBoxEmail.Text;
+                textBoxEmail.Text = "";
+            }
+
+            if (textBoxContrat.Text != "")
+            {
+                textBoxContrat.PlaceholderText = textBoxContrat.Text;
+                textBoxContrat.Text = "";
+            }
+
             fournisseur.telephone = textBoxNewTel.PlaceholderText;
             fournisseur.nom = textBoxNom.PlaceholderText;
             fournisseur.etat_contrat = textBoxContrat.PlaceholderText;
@@ -101,6 +139,16 @@ namespace ZumbaSoft.Fenetres_Produit
                 textBoxContrat.Text = "";
             }
 
+        }
+
+        private void buttonAdr_Click(object sender, EventArgs e)
+        {
+            NouvelleAdresse newAdr = new NouvelleAdresse(DB);
+            if (newAdr.ShowDialog() == DialogResult.OK)
+            {
+                adresse = newAdr.adr;
+                textBoxAdr.Text = newAdr.adr.adresse;
+            }
         }
     }
 }
