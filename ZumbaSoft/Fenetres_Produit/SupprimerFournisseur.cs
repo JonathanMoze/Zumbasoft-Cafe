@@ -31,7 +31,7 @@ namespace ZumbaSoft.Fenetres_Produit
             buttonSupprimer.BackColor = Color.FromArgb(50, 12, 12, 12);
         }
 
-        private void buttonSupprimer_Click(object sender, EventArgs e)
+        public void buttonSupprimer_Click(object sender, EventArgs e)
         {
             DB.Delete(fournisseur);
             DialogResult = DialogResult.OK;

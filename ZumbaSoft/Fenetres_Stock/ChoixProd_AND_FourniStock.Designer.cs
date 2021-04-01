@@ -344,21 +344,21 @@ namespace ZumbaSoft.Fenetres_Stock
         #endregion
 
         private System.Windows.Forms.Button buttonAnnuler;
-        private System.Windows.Forms.Button buttonSelectionner;
+        public System.Windows.Forms.Button buttonSelectionner;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxRechercheFourni;
+        public System.Windows.Forms.TextBox textBoxRechercheFourni;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListBox listBoxFournisseur;
+        public System.Windows.Forms.ListBox listBoxFournisseur;
         private System.Windows.Forms.Label labelErreurBarreQtt;
         private System.Windows.Forms.Label labelErreurListPrd;
         private System.Windows.Forms.Label labelRechercheProd;
-        private System.Windows.Forms.TextBox textBoxRecherchePrd;
+        public System.Windows.Forms.TextBox textBoxRecherchePrd;
         private System.Windows.Forms.Label labelProduit;
-        private System.Windows.Forms.ListBox listBoxProduits;
-        private System.Windows.Forms.NumericUpDown barreQuantite;
+        public System.Windows.Forms.ListBox listBoxProduits;
+        public System.Windows.Forms.NumericUpDown barreQuantite;
         private System.Windows.Forms.Label labelQuantiteStock;
-        private System.Windows.Forms.Button buttonAjouterStock;
+        public System.Windows.Forms.Button buttonAjouterStock;
         private System.Windows.Forms.Panel backgroundBlock1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel backgroundBlock2;

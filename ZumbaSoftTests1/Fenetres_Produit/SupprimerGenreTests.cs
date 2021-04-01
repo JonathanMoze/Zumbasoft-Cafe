@@ -4,23 +4,24 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using SQLite;
-using SQLiteNetExtensions;
-using SQLiteNetExtensions.Extensions;
 using ZumbaSoft.Model;
+using SQLiteNetExtensions.Extensions;
 
 namespace ZumbaSoft.Fenetres_Produit.Tests
 {
     [TestClass()]
-    public class AjouterFournisseurTests
+    public class SupprimerGenreTests
     {
         SQLiteConnection db;
-        FormProduit fourni;
+        FormProduit gen;
+        Genre genre;
 
         [TestMethod()]
-        public void AjouterFournisseurTest()
+        public void SupprimerGenreTest()
         {
             InitializeDataBase();
         }
+
         public void InitializeDataBase()
         {
             string databasePath = System.IO.Path.GetFullPath("./../../../DataBase.db");
@@ -46,24 +47,24 @@ namespace ZumbaSoft.Fenetres_Produit.Tests
         }
 
         [TestMethod()]
-        public void buttonOK_ClickTest()
+        public void buttonSupprimer_ClickTest()
         {
-            db.DeleteAll<Fournisseur>();
-            AjouterFournisseur f = new AjouterFournisseur(db);
-            AccueilFournisseur af = new AccueilFournisseur(db, fourni);
+            db.DeleteAll<Genre>();
 
-            f.textBoxNom.Text = "Ninous";
-            f.textBoxMailFourni.Text = "mathilde@gmail.com";
-            f.textBoxEtatFourni.Text = "test";
-            f.textBoxTelFourni.Text = "0793847539";
-            f.adresse = new Adresse();
+            Genre g1 = new Genre();
+            g1.intitule = "genre1";
+            db.InsertWithChildren(g1);
 
-            f.buttonOK_Click(null, null);
-            af.initListFournisseur();
+            AccueilGenre g = new AccueilGenre(db, gen);
+            SupprimerGenre sg = new SupprimerGenre(genre, db);
+            g.initListGenre();
 
-            Assert.IsTrue(db.GetAllWithChildren<Fournisseur>().Count == 1);
-            Fournisseur ftest1 = (Fournisseur)af.listFournisseur.Items[0];
-            Assert.IsTrue(ftest1.nom == "Ninous");
+            Assert.IsTrue(g.listGenre.Items.Count == 1);
+            g.listGenre.SelectedIndex = 0;
+            sg.buttonSupprimer_Click(null, null);
+            g.initListGenre();
+
+            Assert.IsTrue(g.listGenre.Items.Count == 0);
         }
     }
 }

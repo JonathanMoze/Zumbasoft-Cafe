@@ -11,13 +11,13 @@ using ZumbaSoft.Model;
 namespace ZumbaSoft.Fenetres_Produit.Tests
 {
     [TestClass()]
-    public class AjouterFournisseurTests
+    public class AjouterGenreTests
     {
         SQLiteConnection db;
-        FormProduit fourni;
+        FormProduit genre;
 
         [TestMethod()]
-        public void AjouterFournisseurTest()
+        public void AjouterGenreTest()
         {
             InitializeDataBase();
         }
@@ -48,22 +48,18 @@ namespace ZumbaSoft.Fenetres_Produit.Tests
         [TestMethod()]
         public void buttonOK_ClickTest()
         {
-            db.DeleteAll<Fournisseur>();
-            AjouterFournisseur f = new AjouterFournisseur(db);
-            AccueilFournisseur af = new AccueilFournisseur(db, fourni);
+            db.DeleteAll<Genre>();
+            AjouterGenre g = new AjouterGenre(db);
+            AccueilGenre ag = new AccueilGenre(db, genre);
 
-            f.textBoxNom.Text = "Ninous";
-            f.textBoxMailFourni.Text = "mathilde@gmail.com";
-            f.textBoxEtatFourni.Text = "test";
-            f.textBoxTelFourni.Text = "0793847539";
-            f.adresse = new Adresse();
+            g.textBoxNom.Text = "capsule";
 
-            f.buttonOK_Click(null, null);
-            af.initListFournisseur();
+            g.buttonOK_Click(null, null);
+            ag.initListGenre();
 
-            Assert.IsTrue(db.GetAllWithChildren<Fournisseur>().Count == 1);
-            Fournisseur ftest1 = (Fournisseur)af.listFournisseur.Items[0];
-            Assert.IsTrue(ftest1.nom == "Ninous");
+            Assert.IsTrue(db.GetAllWithChildren<Genre>().Count == 1);
+            Genre gtest1 = (Genre)ag.listGenre.Items[0];
+            Assert.IsTrue(gtest1.intitule == "capsule");
         }
     }
 }

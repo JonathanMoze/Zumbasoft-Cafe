@@ -34,7 +34,7 @@ namespace ZumbaSoft.Fenetres_Stock
         /// <summary>
         /// Fill the grid of all product in stock using the DataBase.
         /// </summary>
-        private void initTableauAndFieldsStock()
+        public void initTableauAndFieldsStock()
         {
             //Init Tableau
             int nbArticle = 0;
@@ -81,7 +81,7 @@ namespace ZumbaSoft.Fenetres_Stock
         /// <summary>
         /// Fill the grid of all command using the DataBase.
         /// </summary>
-        private void initTableauCommandes()
+        public void initTableauCommandes()
         {
             List<Commande> commandes = DB.GetAllWithChildren<Commande>();
             foreach (Commande commande in commandes)
@@ -194,7 +194,7 @@ namespace ZumbaSoft.Fenetres_Stock
             }
         }
 
-        private void transferToStock(Commande commande)
+        public void transferToStock(Commande commande)
         {
             List<ProduitEnStock> allPes = DB.GetAllWithChildren<ProduitEnStock>();//.FindAll(pes => pes.id_magasin == commande.id_magasin);
             List<Produit> stock = new List<Produit>();

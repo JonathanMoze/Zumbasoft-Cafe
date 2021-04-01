@@ -299,12 +299,12 @@ namespace ZumbaSoft.Fenetres_Produit
         private System.Windows.Forms.Label labelMailfourni;
         private System.Windows.Forms.Label labelEtatContratFourni;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBoxNom;
-        private System.Windows.Forms.TextBox textBoxMailFourni;
-        private System.Windows.Forms.TextBox textBoxEtatFourni;
-        private System.Windows.Forms.TextBox textBoxTelFourni;
-        private System.Windows.Forms.Label labelErreurAdr;
-        private System.Windows.Forms.TextBox textBoxAdr;
+        public System.Windows.Forms.TextBox textBoxNom;
+        public System.Windows.Forms.TextBox textBoxMailFourni;
+        public System.Windows.Forms.TextBox textBoxEtatFourni;
+        public System.Windows.Forms.TextBox textBoxTelFourni;
+        public System.Windows.Forms.Label labelErreurAdr;
+        public System.Windows.Forms.TextBox textBoxAdr;
         private System.Windows.Forms.Button buttonAdr;
         private System.Windows.Forms.Label labelAdr;
         private System.Windows.Forms.Panel backgroundBlock2;
