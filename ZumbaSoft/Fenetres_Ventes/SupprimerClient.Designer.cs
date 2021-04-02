@@ -62,6 +62,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.buttonAnnuler.TabIndex = 3;
             this.buttonAnnuler.Text = "Annuler";
             this.buttonAnnuler.UseVisualStyleBackColor = false;
+            this.buttonAnnuler.Click += new System.EventHandler(this.buttonAnnuler_Click);
             // 
             // buttonSupprimer
             // 
@@ -75,6 +76,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.buttonSupprimer.TabIndex = 2;
             this.buttonSupprimer.Text = "Supprimer";
             this.buttonSupprimer.UseVisualStyleBackColor = false;
+            this.buttonSupprimer.Click += new System.EventHandler(this.buttonSupprimer_Click);
             // 
             // backgroundBlock1
             // 

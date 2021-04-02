@@ -32,6 +32,7 @@ namespace ZumbaSoft.Fenetres_Magasin
 
         public void updateListMagasin()
         {
+            listMagasin.Items.Clear();
             foreach (Magasin m in DB.GetAllWithChildren<Magasin>())
             {
                 listMagasin.Items.Add(m);

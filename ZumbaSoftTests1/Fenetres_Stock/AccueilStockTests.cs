@@ -80,7 +80,7 @@ namespace ZumbaSoft.Fenetres_Stock.Tests
                 DB.InsertWithChildren(commande);
             }
 
-            AccueilStock accueilStock = new AccueilStock(DB);
+            AccueilStock accueilStock = new AccueilStock(DB, null);
 
             Assert.AreEqual(10 + 1, accueilStock.tableauCommandes.Rows.Count);
             Assert.AreEqual(10 + 1, accueilStock.tableauStock.Rows.Count);
