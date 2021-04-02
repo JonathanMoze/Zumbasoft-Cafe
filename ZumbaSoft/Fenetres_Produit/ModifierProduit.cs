@@ -15,6 +15,12 @@ namespace ZumbaSoft.Fenetres_Produit
     {
         SQLiteConnection DB;
         Produit produit;
+
+        /// <summary>
+        /// Constructeur du formulaire courant.
+        /// </summary>
+        /// <param name="p">Le produit courant.</param>
+        /// <param name="db">La connection actuelle à la BD.</param>
         public ModifierProduit(Produit p,SQLiteConnection db)
         {
             InitializeComponent();
@@ -22,11 +28,12 @@ namespace ZumbaSoft.Fenetres_Produit
             DB = db;
             initComboBoxes();
             initChamps();
-            initItemsColors();
             TitreNomProduit.Text = p.nom;
         }
 
-
+        /// <summary>
+        /// Méthode pour initialiser les formulaires.
+        /// </summary>
         public void initComboBoxes()
         {
             comboBoxFournisseur.Items.Clear();
@@ -44,6 +51,9 @@ namespace ZumbaSoft.Fenetres_Produit
 
         }
 
+        /// <summary>
+        /// Méthode pour initialiser les champs.
+        /// </summary>
         public void initChamps()
         {
             textBoxNom.PlaceholderText = produit.nom;
@@ -63,36 +73,35 @@ namespace ZumbaSoft.Fenetres_Produit
 
         }
 
-        public void initItemsColors()
-        {
-            backgroundBlock1.BackColor = Color.FromArgb(50, 12, 12, 12);
-            backgroundBlock2.BackColor = Color.FromArgb(80, 12, 12, 12);
-            backgroundBlock3.BackColor = Color.FromArgb(30, 12, 12, 12);
-            backgroundBlock4.BackColor = Color.FromArgb(30, 12, 12, 12);
-            backgroundBlock5.BackColor = Color.FromArgb(30, 12, 12, 12);
-
-            buttonOK.BackColor = Color.FromArgb(50, 12, 12, 12);
-            buttonCancel.BackColor = Color.FromArgb(50, 12, 12, 12);
-            buttonGenre.BackColor = Color.FromArgb(50, 12, 12, 12);
-            buttonFournisseurs.BackColor = Color.FromArgb(50, 12, 12, 12);
-        }
-
+        /// <summary>
+        /// Méthode pour gérer le clic sur un bouton de gestion d'un genre.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonGenre_Click(object sender, EventArgs e)
         {
             AccueilGenre accGenre = new AccueilGenre(DB, this);
             accGenre.Show();
         }
 
+        /// <summary>
+        /// Méthode pour gérer la modificationn d'un fournisseur.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonFournisseurs_Click(object sender, EventArgs e)
         {
             AccueilFournisseur accFourni = new AccueilFournisseur(DB, this);
             accFourni.Show();
         }
 
-
+        /// <summary>
+        /// Méthode pour valider le formulaire et le vérifier.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonValider_Click(object sender, EventArgs e)
         {
-            
             if (textBoxNom.Text != "")
             {
                 textBoxNom.PlaceholderText = textBoxNom.Text;
@@ -134,35 +143,24 @@ namespace ZumbaSoft.Fenetres_Produit
                 textBoxCouleur.Text = "";
             }
 
-            produit.nom = textBoxNom.PlaceholderText;
-            produit.reference = textBoxRef.PlaceholderText;
-            produit.code_barre = Int32.Parse(textBoxCodeB.PlaceholderText);
-            produit.type = textBoxType.PlaceholderText;
-            produit.marque = textBoxMarque.PlaceholderText;
-            produit.couleur = textBoxCouleur.PlaceholderText;
-
-            produit.prix_achat_HT = numericUpDownAHT.Value;
-            produit.prix_achat_TTC = numericUpDownATTC.Value;
-            produit.prix_vente_HT = numericUpDownVHT.Value;
-            produit.prix_vente_TTC = numericUpDownVTTC.Value;
-            produit.genre = (Genre)comboBoxGenre.SelectedItem;
-            produit.fournisseur = (Fournisseur)comboBoxFournisseur.SelectedItem;
-
-
-            DB.UpdateWithChildren(produit);
-
-
-            DialogResult = DialogResult.OK;
-            this.Close();
-
         }
 
+        /// <summary>
+        /// Méthode pour annuler la procédure.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonAnnuler_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
             this.Close();
         }
 
+        /// <summary>
+        /// Méthode pour valider le formulaire.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void butonOk_Click(object sender, EventArgs e)
         {
             produit.nom = textBoxNom.PlaceholderText;
@@ -186,6 +184,5 @@ namespace ZumbaSoft.Fenetres_Produit
             DialogResult = DialogResult.OK;
             this.Close();
         }
-
     }
 }

@@ -17,32 +17,36 @@ namespace ZumbaSoft.Fenetres_Magasin
     {
         SQLiteConnection DB;
         Magasin magasin;
-        Magasin magasinCourant;
-        Utilisateur user;
-        public Adresse newAdresse;
+        Adresse newAdresse;
 
-        public AccueilMagasin(SQLiteConnection db, Magasin mag, Utilisateur uConnected)
+        /// <summary>
+        /// Constructeur de ce formulaire.
+        /// </summary>
+        /// <param name="db">La connection actuelle à la base de données.</param>
+        public AccueilMagasin(SQLiteConnection db)
         {
             InitializeComponent();
             DB = db;
-            user = uConnected;
-            magasinCourant = mag;
-            updateListMagasin();
+            initListMagasin();
             initItemsColors();
             checkDB();
-            checkMagasinAndUser();
         }
 
-        public void updateListMagasin()
+        /// <summary>
+        /// Méthode pour instancier les objets nécéssaires à la gestion du magasin en RAM.
+        /// </summary>
+        public void initListMagasin()
         {
-            listMagasin.Items.Clear();
             foreach (Magasin m in DB.GetAllWithChildren<Magasin>())
             {
                 listMagasin.Items.Add(m);
             }
         }
 
-
+        /// <summary>
+        /// Méthode d'initalisation des couleurs des objets du formulaire.
+        /// Elle n'est pas destinée à servir ailleurs.
+        /// </summary>
         public void initItemsColors()
         {
             panel1.BackColor = Color.FromArgb(95, 12, 12, 12);
@@ -70,6 +74,10 @@ namespace ZumbaSoft.Fenetres_Magasin
 
         }
 
+        /// <summary>
+        /// Méthode pour vérifier la conexion à la BD.
+        /// Cette méthode renvoie un message d'erreur dans le cas où la BD est introuvable.
+        /// </summary>
         public void checkDB()
         {
             var database = new FileInfo("../../../DataBase.db");
@@ -110,34 +118,21 @@ namespace ZumbaSoft.Fenetres_Magasin
             }
         }
 
-        public void checkMagasinAndUser()
-        {
-            if (magasinCourant != null)
-            {
-                magasinSelectionne.Text = Convert.ToString(magasinCourant);
-            }
-
-            if (user != null)
-            {
-                userSelectionne.Text = Convert.ToString(user);
-                anonymousIcon.Visible = false;
-                userIcon.Visible = true;
-            }
-            else
-            {
-                anonymousIcon.Visible = true;
-                userIcon.Visible = false;
-            }
-        }
-
+        /// <summary>
+        /// Méthode appelée en cas de changement de magasin sélectionné par l'utilisateur.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void listMagasin_SelectedIndexChanged(object sender, EventArgs e)
         {
-                magasin = (Magasin)listMagasin.SelectedItem;
-                EnabledInfoField();
-                UpdateInfoField();
+            magasin = (Magasin)listMagasin.SelectedItem;
+            EnabledInfoField();
+            UpdateInfoField();
         }
         
-
+        /// <summary>
+        /// Méthode pour activer le champ d'informations, qui recense les magasins.
+        /// </summary>
         private void EnabledInfoField()
         {
             buttonModifCmd.Enabled = true;
@@ -148,59 +143,69 @@ namespace ZumbaSoft.Fenetres_Magasin
             buttonSupprimer.Enabled = true;
         }
 
+        /// <summary>
+        /// Méthode pour mettre à jour le panel d'informations.
+        /// Ce panel recense les divers magasins connus de l'application.
+        /// </summary>
         private void UpdateInfoField()
         {
-            if(magasin != null)
+            if (magasin.adresse != null)
             {
-                if (magasin.adresse != null)
-                {
-                    labelCurrentAdresse.Text = magasin.adresse.adresse;
-                }
-                labelCurrentMdp.Text = magasin.mot_de_passe;
-
-                listViewStock.Items.Clear();
-                if (magasin.stock.Count != 0)
-                {
-                    foreach (ProduitEnStock p in magasin.stock)
-                    {
-                        listViewStock.Items.Add(p.ToString());
-                    }
-                }
-                else { listViewStock.Items.Add("Aucun"); }
-
-                listViewRapports.Items.Clear();
-                if (magasin.rapports.Count != 0)
-                {
-                    foreach (Rapport r in magasin.rapports)
-                    {
-                        listViewRapports.Items.Add(r.ToString());
-                    }
-                }
-                else { listViewRapports.Items.Add("Aucun"); }
-
-                listViewCommandes.Items.Clear();
-                if (magasin.commandes.Count != 0)
-                {
-                    foreach (Commande c in magasin.commandes)
-                    {
-                        listViewCommandes.Items.Add(c.ToString());
-                    }
-                }
-                else { listViewCommandes.Items.Add("Aucun"); }
-
-                listViewEmployes.Items.Clear();
-                if (magasin.utilisateurs.Count != 0)
-                {
-                    foreach (Utilisateur u in magasin.utilisateurs)
-                    {
-                        listViewEmployes.Items.Add(u.ToString());
-                    }
-                }
-                else { listViewEmployes.Items.Add("Aucun"); }
+                labelCurrentAdresse.Text = magasin.adresse.adresse;
             }
+            labelCurrentMdp.Text = magasin.mot_de_passe;
+
+            listViewStock.Items.Clear();
+            if (magasin.stock.Count != 0)
+            {
+                foreach (ProduitEnStock p in magasin.stock)
+                {
+                    listViewStock.Items.Add(p.ToString());
+                }
+            }
+            else { listViewStock.Items.Add("Aucun"); }
+
+            listViewRapports.Items.Clear();
+            if (magasin.rapports.Count != 0)
+            {
+                foreach (Rapport r in magasin.rapports)
+                {
+                    listViewRapports.Items.Add(r.ToString());
+                }
+            }
+            else { listViewRapports.Items.Add("Aucun"); }
+
+            listViewCommandes.Items.Clear();
+            if (magasin.commandes.Count != 0)
+            {
+                foreach (Commande c in magasin.commandes)
+                {
+                    listViewCommandes.Items.Add(c.ToString());
+                }
+            }
+            else { listViewCommandes.Items.Add("Aucun"); }
+
+            listViewEmployes.Items.Clear();
+            if (magasin.utilisateurs.Count != 0)
+            {
+                foreach (Utilisateur u in magasin.utilisateurs)
+                {
+                    listViewEmployes.Items.Add(u.ToString());
+                }
+            }
+            else { listViewEmployes.Items.Add("Aucun"); }
+        }
+
+        private void boutonSupprimer_Click(object sender, EventArgs e)
+        {
             
         }
 
+        /// <summary>
+        /// Méthode pour ajouter un magasin dans la liste des magasins connus de l'application.
+        /// Nécessite la connection à la BD.
+        /// </summary>
+        /// <returns></returns>
         public Magasin initObjectMagasin()
         {
             magasin = new Magasin();
@@ -213,6 +218,10 @@ namespace ZumbaSoft.Fenetres_Magasin
             return magasin;
         }
 
+        /// <summary>
+        /// Méthode pour vérifier que l'ajout d'un magasin est valide.
+        /// </summary>
+        /// <returns>true si le formulaire est correctement rempli, false sinon.</returns>
         public bool fieldsNewMagasinIsValid()
         {
             if (textBoxNewMdp.Text == "")
@@ -236,12 +245,23 @@ namespace ZumbaSoft.Fenetres_Magasin
             return true;
         }
 
+        /// <summary>
+        /// Méthode pour gérer le retour à l'accueil de l'application.
+        /// Celle-ci se fait via le bouton "retour à l'accueil" uniquement.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonAccueil_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;
             this.Close();
         }
 
+        /// <summary>
+        /// Méthode pour déployer le formulaire d'ajout de magasin dans le panneau concerné.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonAjouter_Click(object sender, EventArgs e)
         {
             if (fieldsNewMagasinIsValid())
@@ -254,12 +274,20 @@ namespace ZumbaSoft.Fenetres_Magasin
             }
         }
 
+        /// <summary>
+        /// Méthode pour vider le formulaire d'ajout de magasin.
+        /// </summary>
         private void clearNewMagasinField()
         {
             textBoxAdr.Text = "";
             textBoxNewMdp.Text = "";
         }
 
+        /// <summary>
+        /// Méthode pour obtenir une nouvelle adresse pour un magasin.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonAdr_Click(object sender, EventArgs e)
         {
             NouvelleAdresse newAdr = new NouvelleAdresse(DB);
@@ -270,6 +298,11 @@ namespace ZumbaSoft.Fenetres_Magasin
             }
         }
 
+        /// <summary>
+        /// Méthode pour gérer la modification de mots de passe par l'utilisateur.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonModifMdp_Click(object sender, EventArgs e)
         {
             if (fielModifMagasinIsValid())
@@ -278,7 +311,7 @@ namespace ZumbaSoft.Fenetres_Magasin
                 DB.UpdateWithChildren(magasin);
 
                 listMagasin.Items.Clear();
-                updateListMagasin();
+                initListMagasin();
                 UpdateInfoField();
 
                 textBoxModifMdp.Text = "";
@@ -288,6 +321,10 @@ namespace ZumbaSoft.Fenetres_Magasin
             }
         }
 
+        /// <summary>
+        /// Méthode pour vérifier le formulaire de modification d'un magasin.
+        /// </summary>
+        /// <returns>True si tout s'est bien passé, false sinon.</returns>
         private bool fielModifMagasinIsValid()
         {
             if (textBoxModifMdp.Text == "")
@@ -326,41 +363,46 @@ namespace ZumbaSoft.Fenetres_Magasin
             //TODO
         }
 
-        public void buttonSupprimer_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Méthode pour gérer la suppression d'un magasin.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonSupprimer_Click(object sender, EventArgs e)
         {
-            if (magasin != null)
+            Confirmation supprimerMagasin = new Confirmation(magasin, DB);
+            if(supprimerMagasin.ShowDialog() == DialogResult.OK)
             {
-                SupprimerMagasin supprimerMagasin = new SupprimerMagasin(magasin);
-                if (supprimerMagasin.ShowDialog() == DialogResult.OK)
-                {
-                    DB.Delete(magasin);
-                    magasin = null;
-                    listMagasin.SelectedIndex = 0;
-                    clearAllField();
-                    updateListMagasin();
-                }
+                var deletedMag = magasin;
+                magasin = null;
+                listMagasin.SelectedIndex = 0;
+                listMagasin.Items.Clear();
+                initListMagasin();
+                UpdateInfoField();
             }
         }
 
-
-
-        private void clearAllField()
+        private void AccueilMagasin_Load(object sender, EventArgs e)
         {
-            labelCurrentAdresse.Text = "";
-            labelCurrentMdp.Text = "";
-            listViewEmployes.Clear();
-            listViewCommandes.Clear();
-            listViewRapports.Clear();
-            listViewStock.Clear();
-            textBoxModifMdp.Text = "";
+
         }
 
+        /// <summary>
+        /// Méthode pour fermer la fenêtre courante.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void goBackButton_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;
             this.Close();
         }
 
+        /// <summary>
+        /// Méthode pour afficher le message d'erreur en cas de problèmes de connection à la BD.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void msgBDstatusERROR_Click(object sender, EventArgs e)
         {
             if (!panelERROR.Visible)
@@ -377,8 +419,11 @@ namespace ZumbaSoft.Fenetres_Magasin
             }
         }
 
-
-
+        /// <summary>
+        /// Méthode pour créer un email de contact aux administrateurs en cas d'erreur, notamment de connection à la BD.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonContactAdmin_Click(object sender, EventArgs e)
         {
             Process OpenMailClient = new Process();
@@ -396,6 +441,11 @@ namespace ZumbaSoft.Fenetres_Magasin
 
         }
 
+        /// <summary>
+        /// Méthode pour retourner à l'écran d'accueil.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonBackHome_Click(object sender, EventArgs e)
         {
             panelERROR.Visible = false;

@@ -18,20 +18,24 @@ namespace ZumbaSoft.Fenetres_Roles
     {
 
         SQLiteConnection DB;
-        Utilisateur user;
-        Magasin magasin;
-        public Roles(SQLiteConnection database, Magasin mag, Utilisateur uConnected)
+
+        /// <summary>
+        /// Constructeur de l'écran d'accueil de gestion des rôles.
+        /// </summary>
+        /// <param name="database">La connection actuelle à la base de données.</param>
+        public Roles(SQLiteConnection database)
         {
             InitializeComponent();
             DB = database;
-            magasin = mag;
-            user = uConnected;
             initListRoles();
             initItemsColors();
             checkDB();
-            checkMagasinAndUser();
         }
 
+        /// <summary>
+        /// Méthode pour initialiser les couleurs de la fenêtre.
+        /// Elle n'est appelée qu'une seule fois.
+        /// </summary>
         public void initItemsColors()
         {
             panel1.BackColor = Color.FromArgb(95, 12, 12, 12);
@@ -48,6 +52,10 @@ namespace ZumbaSoft.Fenetres_Roles
             buttonContactAdmin.BackColor = Color.FromArgb(80, 12, 12, 12);
         }
 
+        /// <summary>
+        /// Méthode pour vérifier la connection à la base de données.
+        /// En cas de problèmes, un message d'erreur est affiché.
+        /// </summary>
         public void checkDB()
         {
             var database = new FileInfo("../../../DataBase.db");
@@ -88,25 +96,9 @@ namespace ZumbaSoft.Fenetres_Roles
             }
         }
 
-        public void checkMagasinAndUser()
-        {
-            if (magasin != null)
-            {
-                magasinSelectionne.Text = Convert.ToString(magasin);
-            }
-
-            if (user != null)
-            {
-                userSelectionne.Text = Convert.ToString(user);
-                anonymousIcon.Visible = false;
-                userIcon.Visible = true;
-            } else
-            {
-                anonymousIcon.Visible = true;
-                userIcon.Visible = false;
-            }
-        }
-
+        /// <summary>
+        /// Méthode pour initialiser les Rôles manipulés en RAM.
+        /// </summary>
         public void initListRoles()
         {
             choixRoles.Items.Clear();
@@ -128,14 +120,20 @@ namespace ZumbaSoft.Fenetres_Roles
             }
         }
 
-        public void ajouterRoles_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Méthode pour gérer l'ajout d'un nouveau rôle dans la BD.
+        /// Elle passe par un formulaire spécialisé.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ajouterRoles_Click(object sender, EventArgs e)
         {
             if (nomRole.Text != "")
             {
                 Role r = new Role();
                 r.nom = nomRole.Text;
                 r.droits = new List<Droit>();
-                DB.InsertWithChildren(r);
+                DB.Insert(r);
                 initListRoles();
                 nomRole.Text = "";
                 erreurAjout.Visible = false;
@@ -158,7 +156,13 @@ namespace ZumbaSoft.Fenetres_Roles
 
         }
 
-        public void supprimerRole_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Méthode pour gérer la suppression d'un rôle de la base. Attention, cette opération est définitive.
+        /// Elle passe par un formulaire spécialisé.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void supprimerRole_Click(object sender, EventArgs e)
         {
             if (ConfirmationSR.Checked && choixRoles.SelectedItem != null)
             {
@@ -173,14 +177,23 @@ namespace ZumbaSoft.Fenetres_Roles
             }
         }
 
-        public void goBackButton_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Méthode pour revenir en arrière dans l'application.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void goBackButton_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;
             this.Close();
         }
 
-
-        public void msgBDstatusERROR_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Méthode pour afficher le message d'erreur en cas de problèmes d'accès à la BD.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void msgBDstatusERROR_Click(object sender, EventArgs e)
         {
             if (!panelERROR.Visible)
             {
@@ -197,9 +210,13 @@ namespace ZumbaSoft.Fenetres_Roles
             
         }
 
-
-
-        public void buttonContactAdmin_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Méthode pour envoyer un mail préfabriqué aux admins afin de leur communiquer un problème de base de données.
+        /// Cette méthode permet d'éviter ainsi les problèmes de mails d'erreur inutiles.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonContactAdmin_Click(object sender, EventArgs e)
         {
             Process OpenMailClient = new Process();
             DateTime date = DateTime.Now;
@@ -216,7 +233,12 @@ namespace ZumbaSoft.Fenetres_Roles
 
         }
 
-        public void buttonBackHome_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Méthode pour revenir à l'écran d'accueil, proprement et simplement.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonBackHome_Click(object sender, EventArgs e)
         {
             panelERROR.Visible = false;
             DialogResult = DialogResult.OK;

@@ -19,12 +19,26 @@ namespace ZumbaSoft
 {
     public partial class Accueil : Form
     {
-        public SQLiteConnection db;
-        public Utilisateur uConnected;//utilisateur courant connecté. Cette ligne est là uniquement pour indiquer la nécessité de l'attribut (à modifier pour qu'il ne soit plus static).
-        public Magasin magasin;
+        SQLiteConnection db;
+        Utilisateur uConnected;//utilisateur courant connecté. Cette ligne est là uniquement pour indiquer la nécessité de l'attribut (à modifier pour qu'il ne soit plus static).
+        Magasin magasin;
 
+        /// <summary>
+        /// Constructeur d'un nouvel accueil lorsqu'il n'y a pas de conection à la BD.
+        /// Celle-ci est donc instanciée manuellement.
+        /// </summary>
+        public Accueil()
+        {
+            InitializeComponent();
+            db = InitializeDataBase();
+            initItemsColors();
+        }
 
-        public Accueil(SQLiteConnection database, Magasin mag)
+        /// <summary>
+        /// Constructeur d'un nouvel accueil pour une connexion déjà existante à la base de données.
+        /// </summary>
+        /// <param name="db">La connection actuelle.</param>
+        public Accueil(SQLiteConnection db)
         {
             InitializeComponent();
             db = database;
@@ -32,15 +46,10 @@ namespace ZumbaSoft
             initItemsColors();
         }
 
-
-        public Accueil()
-        {
-            InitializeComponent();
-            db = InitializeDataBase();
-            magasin = null;
-            initItemsColors();
-        }
-
+        /// <summary>
+        /// Méthode pour initialiser les couleurs de chaque élément de la fenêtre d'accueil.
+        /// Elle n'est destinée à être appelée qu'en interne au sein du constructeur.
+        /// </summary>
         public void initItemsColors()
         {
             backgroundBlock.BackColor = Color.FromArgb(99, 1, 1, 1);
@@ -49,7 +58,6 @@ namespace ZumbaSoft
             buttonGestionStock.BackColor = Color.FromArgb(80, 12, 12, 12);
             buttonGestionProduits.BackColor = Color.FromArgb(80, 12, 12, 12);
             buttonGestionVentes.BackColor = Color.FromArgb(80, 12, 12, 12);
-            buttonGestionClients.BackColor = Color.FromArgb(80, 12, 12, 12);
             buttonAcceptConditions.BackColor = Color.FromArgb(80, 1, 1, 1);
 
             buttonSeConnecter.BackColor = Color.FromArgb(99, 1, 1, 1);
@@ -60,7 +68,11 @@ namespace ZumbaSoft
 
         }
 
-        public SQLiteConnection InitializeDataBase()
+        /// <summary>
+        /// Méthode pour initialiser une connection à la base de données embarquée de l'application.
+        /// </summary>
+        /// <returns>La connexion, ensuite transmise dans toute l'application pour son fonctionnement.</returns>
+        private SQLiteConnection InitializeDataBase()
         {
             string databasePath = System.IO.Path.GetFullPath("./../../../DataBase.db");
             SQLiteConnection db = new SQLiteConnection(databasePath);
@@ -77,20 +89,23 @@ namespace ZumbaSoft
             db.CreateTable<Panier>();
             db.CreateTable<Personne>();
             db.CreateTable<ProduitCommande>();
-            db.CreateTable<ProduitToCommande>();
             db.CreateTable<ProduitEnStock>();
             db.CreateTable<Rapport>();
             db.CreateTable<Role>();
             db.CreateTable<Utilisateur>();
-            db.CreateTable<DroitToRole>();
             return db;
         }
 
         
-
-        public void RoleButton_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Gestionnaire de l'évènement : clic sur le bouton "gérer les rôles".
+        /// Cette méthode est aussi utilisée pour déployer le formulaire des rôles.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void RoleButton_Click(object sender, EventArgs e)
         {
-            Roles r = new Roles(db, magasin, uConnected);
+            Roles r = new Roles(db);
             this.Visible = false;
             if (r.ShowDialog() == DialogResult.OK)
             {
@@ -98,9 +113,14 @@ namespace ZumbaSoft
             }
         }
 
-        public void buttonGestionMag_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Méthode permettant de déployer l'écran de gestion des magasins.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonGestionMag_Click(object sender, EventArgs e)
         {
-            AccueilMagasin m = new AccueilMagasin(db, magasin, uConnected);
+            AccueilMagasin m = new AccueilMagasin(db);
             this.Visible = false;
             if (m.ShowDialog() == DialogResult.OK)
             {
@@ -108,7 +128,12 @@ namespace ZumbaSoft
             }
         }
 
-        public void buttonSeConnecter_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Méthode pour déployer le formulaire de connection.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonSeConnecter_Click(object sender, EventArgs e)
         {
             Identification m = new Identification(db);
             this.Visible = false;
@@ -124,9 +149,14 @@ namespace ZumbaSoft
             }
         }
 
-        public void buttonGestionStock_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Méthode d'accès aux formulaires de gestion des stocks de l'entreprise.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonGestionStock_Click(object sender, EventArgs e)
         {
-            AccueilStock s = new AccueilStock(db, magasin, uConnected);
+            AccueilStock s = new AccueilStock(db);
             this.Visible = false;
             if (s.ShowDialog() == DialogResult.OK)
             {
@@ -134,14 +164,24 @@ namespace ZumbaSoft
             }
         }
 
-        public void quitButton_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Méthode de meurtre propre de l'application.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void quitButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        public void buttonGestionProduits_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Méthode pour accéder au panel de gestion des produits par magasin.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonGestionProduits_Click(object sender, EventArgs e)
         {
-            AccueilProduits p = new AccueilProduits(db, magasin, uConnected);
+            AccueilProduits p = new AccueilProduits(db);
             this.Visible = false;
             if (p.ShowDialog() == DialogResult.OK)
             {
@@ -149,9 +189,14 @@ namespace ZumbaSoft
             }
         }
 
-        public void buttonGestionStock_Click_1(object sender, EventArgs e)
+        /// <summary>
+        /// Méthode pour déployer le menu de gestion des stocks.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonGestionStock_Click_1(object sender, EventArgs e)
         {
-            AccueilStock st = new AccueilStock(db, magasin, uConnected);
+            AccueilStock st = new AccueilStock(db);
             this.Visible = false;
             if (st.ShowDialog() == DialogResult.OK)
             {
@@ -159,12 +204,23 @@ namespace ZumbaSoft
             }
         }
 
-        public void buttonAcceptConditions_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Boutons pour accepter les conditions d'utilisation du logiciel.
+        /// Une fois celles-ci acceptées, le panel devient invisible.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonAcceptConditions_Click(object sender, EventArgs e)
         {
             panelConditions.Visible = false;
         }
 
-        public void label3_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Méthode pour déployer le panel des conditions d'utilisation.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void label3_Click(object sender, EventArgs e)
         {
             if (panelConditions.Visible)
             {
@@ -175,9 +231,9 @@ namespace ZumbaSoft
             }
         }
 
-        public void buttonGestionVentes_Click(object sender, EventArgs e)
+        private void buttonGestionVentes_Click(object sender, EventArgs e)
         {
-            AccueilVente ve = new AccueilVente(db, magasin, uConnected);
+            AccueilVente ve = new AccueilVente(db, magasin);
             this.Visible = false;
             if (ve.ShowDialog() == DialogResult.OK)
             {
@@ -185,19 +241,9 @@ namespace ZumbaSoft
             }
         }
 
-        public void Accueil_FormClosed(object sender, FormClosedEventArgs e)
+        private void Accueil_FormClosed(object sender, FormClosedEventArgs e)
         {
             DialogResult = DialogResult.OK;
-        }
-
-        private void buttonGestionClients_Click(object sender, EventArgs e)
-        {
-            AccueilClient c = new AccueilClient(db);
-            this.Visible = false;
-            if (c.ShowDialog() == DialogResult.OK)
-            {
-                this.Visible = true;
-            }
         }
     }
 }

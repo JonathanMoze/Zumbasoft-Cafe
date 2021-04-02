@@ -15,6 +15,12 @@ namespace ZumbaSoft.Fenetres_Produit
     {
         SQLiteConnection DB;
         Produit produit;
+
+        /// <summary>
+        /// Constructeur du formulaire de suppression de produit.
+        /// </summary>
+        /// <param name="p"></param>
+        /// <param name="db"></param>
         public SupprimerProduit(Produit p, SQLiteConnection db)
         {
             InitializeComponent();
@@ -24,6 +30,10 @@ namespace ZumbaSoft.Fenetres_Produit
 
         }
 
+        /// <summary>
+        /// Méthode pour initialiser les couleurs du formulaire.
+        /// Elle n'est appelée qu'une fois.
+        /// </summary>
         public void initItemsColors()
         {
             backgroundBlock1.BackColor = Color.FromArgb(90, System.Drawing.Color.Red);
@@ -33,13 +43,23 @@ namespace ZumbaSoft.Fenetres_Produit
 
         }
 
-        public void buttonSupprimer_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Méthode pour valider la suppression d'un produit.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonSupprimer_Click(object sender, EventArgs e)
         {
             DB.Delete(produit);
             DialogResult = DialogResult.OK;
             this.Close();
         }
 
+        /// <summary>
+        /// Méthode pour annuler toute la procédure.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonAnnuler_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;

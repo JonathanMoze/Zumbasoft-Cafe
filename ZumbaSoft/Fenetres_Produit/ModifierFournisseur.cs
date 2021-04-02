@@ -7,9 +7,6 @@ using System.Text;
 using System.Windows.Forms;
 using ZumbaSoft.Model;
 using SQLite;
-using SQLiteNetExtensions;
-using SQLiteNetExtensions.Extensions;
-using ZumbaSoft.Fenetres_Magasin;
 
 namespace ZumbaSoft.Fenetres_Produit
 {
@@ -17,9 +14,14 @@ namespace ZumbaSoft.Fenetres_Produit
     {
         Fournisseur fournisseur;
         SQLiteConnection DB;
-        public Adresse adresse;
         AccueilFournisseur af;
 
+        /// <summary>
+        /// Constructeur du panel de modification d'un fournisseur.
+        /// </summary>
+        /// <param name="af">La fenêtre d'accueil de gestion des fournisseurs à partir de laquelle ce formulaire a été appelé.</param>
+        /// <param name="f">Le fournisseur à modifier.</param>
+        /// <param name="db">La connection actuelle à la base de données.</param>
         public ModifierFournisseur(AccueilFournisseur af, Fournisseur f, SQLiteConnection db)
         {
             InitializeComponent();
@@ -27,9 +29,11 @@ namespace ZumbaSoft.Fenetres_Produit
             this.DB = db;
             this.af = af;
             InitInfoField();
-            initItemsColors();
         }
 
+        /// <summary>
+        /// Méthode pour pré-remplir les champs avec les valeurs actuelles du fournisseur.
+        /// </summary>
         public void InitInfoField()
         {
             textBoxNom.PlaceholderText = fournisseur.nom;
@@ -62,18 +66,42 @@ namespace ZumbaSoft.Fenetres_Produit
             }
         }
 
-        public void initItemsColors()
+        /// <summary>
+        /// Méthode pour valider les modifications du fournisseur.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonOKParamMag_Click(object sender, EventArgs e)
         {
-            backgroundBlock1.BackColor = Color.FromArgb(50, 12, 12, 12);
-            backgroundBlock2.BackColor = Color.FromArgb(80, 12, 12, 12);
-            buttonAnnuler.BackColor = Color.FromArgb(50, 12, 12, 12);
-            buttonAdr.BackColor = Color.FromArgb(50, 12, 12, 12);
-            buttonOK.BackColor = Color.FromArgb(50, 12, 12, 12);
+            fournisseur.telephone = textBoxNewTel.PlaceholderText;
+            fournisseur.nom = textBoxNom.PlaceholderText;
+            fournisseur.etat_contrat = textBoxContrat.PlaceholderText;
+            fournisseur.mail = textBoxEmail.PlaceholderText;
+            DB.Update(fournisseur);
+            af.initListFournisseur();
+            DialogResult = DialogResult.OK;
+            this.Close();
         }
 
-        public void buttonOKParamMag_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Méthode pour annuler toute la procédure de modification d'un fournisseur.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonAnnulParamMag_Click(object sender, EventArgs e)
         {
-            if (textBoxNom.Text != "")
+            DialogResult = DialogResult.Cancel;
+            this.Close();
+        }
+
+        /// <summary>
+        /// Méthode pour enregistrer les modifications d'un fournisseur.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonModifs_Click(object sender, EventArgs e)
+        {
+            if(textBoxNom.Text != "")
             {
                 textBoxNom.PlaceholderText = textBoxNom.Text;
                 textBoxNom.Text = "";
@@ -97,32 +125,6 @@ namespace ZumbaSoft.Fenetres_Produit
                 textBoxContrat.Text = "";
             }
 
-            fournisseur.telephone = textBoxNewTel.PlaceholderText;
-            fournisseur.nom = textBoxNom.PlaceholderText;
-            fournisseur.etat_contrat = textBoxContrat.PlaceholderText;
-            fournisseur.mail = textBoxEmail.PlaceholderText;
-            DB.Update(fournisseur);
-            af.initListFournisseur();
-            DialogResult = DialogResult.OK;
-            this.Close();
-        }
-
-        private void buttonAnnulParamMag_Click(object sender, EventArgs e)
-        {
-            DialogResult = DialogResult.Cancel;
-            this.Close();
-        }
-
-        
-
-        private void buttonAdr_Click(object sender, EventArgs e)
-        {
-            NouvelleAdresse newAdr = new NouvelleAdresse(DB);
-            if (newAdr.ShowDialog() == DialogResult.OK)
-            {
-                adresse = newAdr.adr;
-                textBoxAdr.Text = newAdr.adr.adresse;
-            }
         }
     }
 }

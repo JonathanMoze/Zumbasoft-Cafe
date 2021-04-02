@@ -17,20 +17,23 @@ namespace ZumbaSoft.Fenetres_Produit
     public partial class AccueilProduits : Form
     {
         SQLiteConnection DB;
-        Utilisateur user;
-        Magasin magasin;
-        public AccueilProduits(SQLiteConnection db, Magasin mag, Utilisateur uConnected)
+
+        /// <summary>
+        /// Constructeur d'un nouvel AccueilProduits.
+        /// </summary>
+        /// <param name="db">La connection actuelle à la base de données.</param>
+        public AccueilProduits(SQLiteConnection db)
         {
             InitializeComponent();
             DB = db;
-            user = uConnected;
-            magasin = mag;
             initListProduits();
             initItemsColors();
             checkDB();
-            checkMagasinAndUser();
         }
 
+        /// <summary>
+        /// Méthode pour initialiser la liste des produits à manipuler en RAM.
+        /// </summary>
         public void initListProduits()
         {
             listProduits.Items.Clear();
@@ -52,6 +55,9 @@ namespace ZumbaSoft.Fenetres_Produit
             }
         }
 
+        /// <summary>
+        /// Méthode pour initialiser les couleurs du formulaire.
+        /// </summary>
         public void initItemsColors()
         {
             backgroundBlock.BackColor = Color.FromArgb(50, 12, 12, 12);
@@ -66,9 +72,13 @@ namespace ZumbaSoft.Fenetres_Produit
             buttonSupprimerProduit.Enabled = false;
         }
 
+        /// <summary>
+        /// Méthode de vérification de l'accès à la base de données.
+        /// Dans le cas où l'accès n'ests pas fonctionnel, un message d'erreur est renvoyé.
+        /// </summary>
         public void checkDB()
         {
-            var database = new FileInfo("../../../DataBase.db");
+            var database = new FileInfo("DataBase.db");
             if (!database.Exists)
             {
                 msgBDstatusERROR.Visible = true;
@@ -106,26 +116,12 @@ namespace ZumbaSoft.Fenetres_Produit
             }
         }
 
-        public void checkMagasinAndUser()
-        {
-            if (magasin != null)
-            {
-                magasinSelectionne.Text = Convert.ToString(magasin);
-            }
-
-            if (user != null)
-            {
-                userSelectionne.Text = Convert.ToString(user);
-                anonymousIcon.Visible = false;
-                userIcon.Visible = true;
-            }
-            else
-            {
-                anonymousIcon.Visible = true;
-                userIcon.Visible = false;
-            }
-        }
-
+        /// <summary>
+        /// Méthode pour supprimer un produit de la BD.
+        /// Attention, cette méthode demande une confirmation à l'utilisateur.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonSupprimerProduit_Click(object sender, EventArgs e)
         {
             if (listProduits.SelectedItem != null)
@@ -139,12 +135,17 @@ namespace ZumbaSoft.Fenetres_Produit
             }
         }
 
+        /// <summary>
+        /// Méthode pour modifier un produit dans la BD.
+        /// Cette méthode passe par une boîte de dialogue.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonModifierProduit_Click(object sender, EventArgs e)
         {
             if (listProduits.SelectedItem != null)
             {
                 Produit p = (Produit)listProduits.SelectedItem;
-                p = DB.GetWithChildren<Produit>(p.id_produit);
                 ModifierProduit paramétrer = new ModifierProduit(p, DB);
                 if (paramétrer.ShowDialog() == DialogResult.OK)
                 {
@@ -153,6 +154,12 @@ namespace ZumbaSoft.Fenetres_Produit
             }
         }
 
+        /// <summary>
+        /// Méthode pour ajouter un produit dans la BD.
+        /// Cette méthode passe par une boîte de dialogue.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonAjouterProduit_Click(object sender, EventArgs e)
         {
             AjouterProduit ajouterproduit = new AjouterProduit(DB);
@@ -162,12 +169,23 @@ namespace ZumbaSoft.Fenetres_Produit
             }
         }
 
+        /// <summary>
+        /// Méthode pour revenir au formuulaire précédent une fois que les manipulations sont finies.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void goBackButton_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;
             this.Close();
         }
 
+        /// <summary>
+        /// Méthode pour générer un mail de rapport de bug aux administrateurs.
+        /// Le mail généré est automatique, évitant les rapports inutiles.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonContactAdmin_Click(object sender, EventArgs e)
         {
             Process OpenMailClient = new Process();
@@ -184,6 +202,11 @@ namespace ZumbaSoft.Fenetres_Produit
             myProcess.Start();
         }
 
+        /// <summary>
+        /// Méthode pour retourner au menu principal de l'application.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonBackHome_Click(object sender, EventArgs e)
         {
             panelERROR.Visible = false;
@@ -191,6 +214,11 @@ namespace ZumbaSoft.Fenetres_Produit
             this.Close();
         }
 
+        /// <summary>
+        /// Méthode pour gérer le click sur un message d'erreur de la BD.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void msgBDstatusERROR_Click(object sender, EventArgs e)
         {
             if (!panelERROR.Visible)
@@ -208,11 +236,19 @@ namespace ZumbaSoft.Fenetres_Produit
 
         }
 
+        /// <summary>
+        /// Méthode pour gérer le changement de produit sélectionné par l'utilisateur.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void listProduits_SelectedIndexChanged(object sender, EventArgs e)
         {
             EnabledInfoField();
         }
 
+        /// <summary>
+        /// Méthode pour activer les boutons de sélection d'un produit sélectionné.
+        /// </summary>
         private void EnabledInfoField()
         {
             buttonModifierProduit.Enabled = true;

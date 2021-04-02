@@ -15,6 +15,11 @@ namespace ZumbaSoft.Fenetres_Produit
         Genre genre;
         SQLiteConnection DB;
 
+        /// <summary>
+        /// Constructeur du formulaire.
+        /// </summary>
+        /// <param name="genre">Le genre à supprimmer.</param>
+        /// <param name="db">La connection actuelle à la base de données.</param>
         public SupprimerGenre(Genre genre, SQLiteConnection db)
         {
             InitializeComponent();
@@ -23,6 +28,10 @@ namespace ZumbaSoft.Fenetres_Produit
             this.DB = db;
         }
 
+        /// <summary>
+        /// Méthode pour initialiser les couleurs du formulaire.
+        /// Elle n'est destinée à être appelée qu'une seule fois.
+        /// </summary>
         public void initItemsColors()
         {
             backgroundBlock1.BackColor = Color.FromArgb(90, System.Drawing.Color.Red);
@@ -32,13 +41,23 @@ namespace ZumbaSoft.Fenetres_Produit
 
         }
 
+        /// <summary>
+        /// Méthode pour annuler toute la procédure.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonAnnuler_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
             this.Close();
         }
 
-        public void buttonSupprimer_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Méthode pour valider la suppression.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonSupprimer_Click(object sender, EventArgs e)
         {
             DB.Delete(genre);
             DialogResult = DialogResult.OK;

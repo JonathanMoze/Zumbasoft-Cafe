@@ -16,6 +16,12 @@ namespace ZumbaSoft.Fenetres_Produit
     {
         SQLiteConnection DB;
         FormProduit formPrecedent;
+
+        /// <summary>
+        /// Constructeur de l'accueil de l'écran de gestion des fournisseurs.
+        /// </summary>
+        /// <param name="db">La connection actuelle à la base de données.</param>
+        /// <param name="f">Le formulaire de produits à partir duquel celui-ci est appelé.</param>
         public AccueilFournisseur(SQLiteConnection db, FormProduit f)
         {
             InitializeComponent();
@@ -25,6 +31,9 @@ namespace ZumbaSoft.Fenetres_Produit
             initItemsColors();
         }
 
+        /// <summary>
+        /// Méthode pour initialiser la liste des fournisseurs en RAM.
+        /// </summary>
         public void initListFournisseur()
         {
 
@@ -46,6 +55,10 @@ namespace ZumbaSoft.Fenetres_Produit
             }
         }
 
+        /// <summary>
+        /// Méthode pour initialiser les couleurs du formulaire.
+        /// Elle n'est destinée à être appelée qu'une seule fois.
+        /// </summary>
         public void initItemsColors()
         {
             backgroundBlock.BackColor = Color.FromArgb(50, 12, 12, 12);
@@ -58,6 +71,12 @@ namespace ZumbaSoft.Fenetres_Produit
 
         }
 
+        /// <summary>
+        /// Méthode pour supprimer un fournisseur de la base de données.
+        /// Attention, elle fait appel au formulaire de confirmation.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonSupprimerFournisseur_Click(object sender, EventArgs e)
         {
             var f = (Fournisseur)listFournisseur.SelectedItem;
@@ -68,6 +87,11 @@ namespace ZumbaSoft.Fenetres_Produit
             }
         }
 
+        /// <summary>
+        /// Méthode pour ajouter un fournisseur à la liste des fournisseurs connus.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonAjouterFournisseur_Click(object sender, EventArgs e)
         {
             AjouterFournisseur ajoutFournisseur = new AjouterFournisseur(DB);
@@ -77,6 +101,11 @@ namespace ZumbaSoft.Fenetres_Produit
             }
         }
 
+        /// <summary>
+        /// Méthode pour modifier un fournisseur existant.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonModifierFournisseur_Click(object sender, EventArgs e)
         {
             if (listFournisseur.SelectedItem != null)
@@ -90,13 +119,21 @@ namespace ZumbaSoft.Fenetres_Produit
             }
         }
 
-
-
+        /// <summary>
+        /// Méthode pour faire un retour arrière vers l'écran de gestion des fournisseurs.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AccueilFournisseur_FormClosed(object sender, FormClosedEventArgs e)
         {
             formPrecedent.initComboBoxes();
         }
 
+        /// <summary>
+        /// Méthode pour faire un retour en arrière en annulant toute la procédure.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void goBackButton_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
