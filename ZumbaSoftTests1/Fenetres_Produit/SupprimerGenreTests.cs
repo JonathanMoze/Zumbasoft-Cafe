@@ -14,10 +14,7 @@ namespace ZumbaSoft.Fenetres_Produit.Tests
     {
         SQLiteConnection db;
         FormProduit gen;
-        Genre genre;
-
-        [TestMethod()]
-        public void SupprimerGenreTest()
+        public  SupprimerGenreTests()
         {
             InitializeDataBase();
         }
@@ -56,7 +53,7 @@ namespace ZumbaSoft.Fenetres_Produit.Tests
             db.InsertWithChildren(g1);
 
             AccueilGenre g = new AccueilGenre(db, gen);
-            SupprimerGenre sg = new SupprimerGenre(genre, db);
+            SupprimerGenre sg = new SupprimerGenre(g1, db);
             g.initListGenre();
 
             Assert.IsTrue(g.listGenre.Items.Count == 1);

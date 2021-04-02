@@ -16,8 +16,7 @@ namespace ZumbaSoft.Fenetres_Produit.Tests
         SQLiteConnection db;
         FormProduit fourni;
 
-        [TestMethod()]
-        public void AjouterFournisseurTest()
+        public AjouterFournisseurTests()
         {
             InitializeDataBase();
         }
@@ -57,11 +56,13 @@ namespace ZumbaSoft.Fenetres_Produit.Tests
             f.textBoxEtatFourni.Text = "test";
             f.textBoxTelFourni.Text = "0793847539";
             f.adresse = new Adresse();
+            f.textBoxAdr.Text = "ok";
 
             f.buttonOK_Click(null, null);
             af.initListFournisseur();
 
-            Assert.IsTrue(db.GetAllWithChildren<Fournisseur>().Count == 1);
+            int test = db.GetAllWithChildren<Fournisseur>().Count;
+            Assert.IsTrue( test == 1);
             Fournisseur ftest1 = (Fournisseur)af.listFournisseur.Items[0];
             Assert.IsTrue(ftest1.nom == "Ninous");
         }

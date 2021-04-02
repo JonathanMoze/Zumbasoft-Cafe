@@ -14,10 +14,8 @@ namespace ZumbaSoft.Fenetres_Produit.Tests
     {
         SQLiteConnection db;
         FormProduit fourni;
-        Fournisseur fournisseur;
 
-        [TestMethod()]
-        public void SupprimerFournisseurTest()
+        public SupprimerFournisseurTests()
         {
             InitializeDataBase();
         }
@@ -56,7 +54,7 @@ namespace ZumbaSoft.Fenetres_Produit.Tests
             db.InsertWithChildren(f1);
 
             AccueilFournisseur f = new AccueilFournisseur(db, fourni);
-            SupprimerFournisseur sf = new SupprimerFournisseur(fournisseur,db);
+            SupprimerFournisseur sf = new SupprimerFournisseur(f1,db);
             f.initListFournisseur();
 
             Assert.IsTrue(f.listFournisseur.Items.Count == 1);

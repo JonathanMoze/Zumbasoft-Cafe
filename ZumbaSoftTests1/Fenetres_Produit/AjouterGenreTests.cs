@@ -16,8 +16,7 @@ namespace ZumbaSoft.Fenetres_Produit.Tests
         SQLiteConnection db;
         FormProduit genre;
 
-        [TestMethod()]
-        public void AjouterGenreTest()
+        public AjouterGenreTests()
         {
             InitializeDataBase();
         }
