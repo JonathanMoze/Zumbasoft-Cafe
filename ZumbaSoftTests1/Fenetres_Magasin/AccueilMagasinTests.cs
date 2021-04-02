@@ -58,7 +58,7 @@ namespace ZumbaSoft.Fenetres_Magasin.Tests
                 db.InsertWithChildren(mag);
             }
 
-            AccueilMagasin am = new AccueilMagasin(db,null);
+            AccueilMagasin am = new AccueilMagasin(db,null, null);
 
             am.updateListMagasin();
 
@@ -78,7 +78,7 @@ namespace ZumbaSoft.Fenetres_Magasin.Tests
             db.DeleteAll<Magasin>();
             db.DeleteAll<Adresse>();
 
-            AccueilMagasin am = new AccueilMagasin(db,null);
+            AccueilMagasin am = new AccueilMagasin(db,null, null);
 
             for (int i = 0; i < 20; i++)
             {
