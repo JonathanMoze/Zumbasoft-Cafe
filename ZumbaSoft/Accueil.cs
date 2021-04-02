@@ -90,7 +90,7 @@ namespace ZumbaSoft
 
         public void RoleButton_Click(object sender, EventArgs e)
         {
-            Roles r = new Roles(db, uConnected);
+            Roles r = new Roles(db, magasin, uConnected);
             this.Visible = false;
             if (r.ShowDialog() == DialogResult.OK)
             {
@@ -100,7 +100,7 @@ namespace ZumbaSoft
 
         public void buttonGestionMag_Click(object sender, EventArgs e)
         {
-            AccueilMagasin m = new AccueilMagasin(db, uConnected);
+            AccueilMagasin m = new AccueilMagasin(db, magasin, uConnected);
             this.Visible = false;
             if (m.ShowDialog() == DialogResult.OK)
             {
@@ -126,7 +126,7 @@ namespace ZumbaSoft
 
         public void buttonGestionStock_Click(object sender, EventArgs e)
         {
-            AccueilStock s = new AccueilStock(db, uConnected);
+            AccueilStock s = new AccueilStock(db, magasin, uConnected);
             this.Visible = false;
             if (s.ShowDialog() == DialogResult.OK)
             {
@@ -141,7 +141,7 @@ namespace ZumbaSoft
 
         public void buttonGestionProduits_Click(object sender, EventArgs e)
         {
-            AccueilProduits p = new AccueilProduits(db, uConnected);
+            AccueilProduits p = new AccueilProduits(db, magasin, uConnected);
             this.Visible = false;
             if (p.ShowDialog() == DialogResult.OK)
             {
@@ -151,7 +151,7 @@ namespace ZumbaSoft
 
         public void buttonGestionStock_Click_1(object sender, EventArgs e)
         {
-            AccueilStock st = new AccueilStock(db, uConnected);
+            AccueilStock st = new AccueilStock(db, magasin, uConnected);
             this.Visible = false;
             if (st.ShowDialog() == DialogResult.OK)
             {

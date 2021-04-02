@@ -55,6 +55,7 @@ namespace ZumbaSoft.Fenetres_Identification
             this.connection_button.TabIndex = 0;
             this.connection_button.Text = "Se connecter";
             this.connection_button.UseVisualStyleBackColor = false;
+            this.connection_button.Click += new System.EventHandler(this.connection_button_Click);
             // 
             // loginField
             // 

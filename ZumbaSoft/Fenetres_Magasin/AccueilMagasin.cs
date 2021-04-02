@@ -20,14 +20,16 @@ namespace ZumbaSoft.Fenetres_Magasin
         Utilisateur user;
         public Adresse newAdresse;
 
-        public AccueilMagasin(SQLiteConnection db, Utilisateur uConnected)
+        public AccueilMagasin(SQLiteConnection db, Magasin mag, Utilisateur uConnected)
         {
             InitializeComponent();
             DB = db;
             user = uConnected;
+            magasin = mag;
             updateListMagasin();
             initItemsColors();
             checkDB();
+            checkMagasinAndUser();
         }
 
         public void updateListMagasin()
@@ -104,6 +106,26 @@ namespace ZumbaSoft.Fenetres_Magasin
 
                 dbERROR.Visible = false;
                 dbOK.Visible = true;
+            }
+        }
+
+        public void checkMagasinAndUser()
+        {
+            if (magasin != null)
+            {
+                magasinSelectionne.Text = Convert.ToString(magasin);
+            }
+
+            if (user != null)
+            {
+                userSelectionne.Text = Convert.ToString(user);
+                anonymousIcon.Visible = false;
+                userIcon.Visible = true;
+            }
+            else
+            {
+                anonymousIcon.Visible = true;
+                userIcon.Visible = false;
             }
         }
 

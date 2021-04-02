@@ -22,11 +22,12 @@ namespace ZumbaSoft.Fenetres_Stock
         Utilisateur user;
         SQLiteConnection DB;
 
-        public AccueilStock(SQLiteConnection db, Utilisateur uConnected)
+        public AccueilStock(SQLiteConnection db, Magasin mag, Utilisateur uConnected)
         {
             InitializeComponent();
             DB = db;
             user = uConnected;
+            magasin = mag;
             labelDate.Text = DateTime.Today.ToString("d");
             //labelMagasin.Text = magasin.ToString();
 
@@ -34,6 +35,7 @@ namespace ZumbaSoft.Fenetres_Stock
             initTableauCommandes();
             initItemsColors();
             checkDB();
+            checkMagasinAndUser();
         }
         /// <summary>
         /// Fill the grid of all product in stock using the DataBase.
@@ -97,6 +99,25 @@ namespace ZumbaSoft.Fenetres_Stock
             }
         }
 
+        public void checkMagasinAndUser()
+        {
+            if (magasin != null)
+            {
+                magasinSelectionne.Text = Convert.ToString(magasin);
+            }
+
+            if (user != null)
+            {
+                userSelectionne.Text = Convert.ToString(user);
+                anonymousIcon.Visible = false;
+                userIcon.Visible = true;
+            }
+            else
+            {
+                anonymousIcon.Visible = true;
+                userIcon.Visible = false;
+            }
+        }
 
         /// <summary>
         /// Set all tranpasrent elements effects.

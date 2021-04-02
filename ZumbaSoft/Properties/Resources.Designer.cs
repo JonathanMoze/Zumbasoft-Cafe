@@ -163,6 +163,26 @@ namespace ZumbaSoft.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_decision_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-decision-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_male_user_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-male-user-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_minus_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-minus-48", resourceCulture);

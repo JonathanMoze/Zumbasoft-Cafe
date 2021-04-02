@@ -22,16 +22,17 @@ namespace ZumbaSoft.Fenetres_Ventes
         public Client client;
         public Panier panierClient;
         
-        public AccueilVente(SQLiteConnection db, Magasin m, Utilisateur uConnected)
+        public AccueilVente(SQLiteConnection db, Magasin mag, Utilisateur uConnected)
         {
             InitializeComponent();
             DB = db;
             user = uConnected;
-            magasin = m;
+            magasin = mag;
             initListClients();
             initPanier();
             initItemsColors();
             checkDB();
+            checkMagasinAndUser();
         }
 
 
@@ -89,6 +90,26 @@ namespace ZumbaSoft.Fenetres_Ventes
 
                 dbERROR.Visible = false;
                 dbOK.Visible = true;
+            }
+        }
+
+        public void checkMagasinAndUser()
+        {
+            if (magasin != null)
+            {
+                magasinSelectionne.Text = Convert.ToString(magasin);
+            }
+
+            if (user != null)
+            {
+                userSelectionne.Text = Convert.ToString(user);
+                anonymousIcon.Visible = false;
+                userIcon.Visible = true;
+            }
+            else
+            {
+                anonymousIcon.Visible = true;
+                userIcon.Visible = false;
             }
         }
 

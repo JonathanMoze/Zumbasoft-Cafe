@@ -63,6 +63,9 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.panel5 = new System.Windows.Forms.Panel();
             this.goBackButton = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.anonymousIcon = new System.Windows.Forms.PictureBox();
+            this.userSelectionne = new System.Windows.Forms.Label();
+            this.userIcon = new System.Windows.Forms.PictureBox();
             this.programName = new System.Windows.Forms.Label();
             this.homeIcon = new System.Windows.Forms.PictureBox();
             this.dbERROR = new System.Windows.Forms.PictureBox();
@@ -96,6 +99,8 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.buttonContactAdmin = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.anonymousIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.homeIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbERROR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbOK)).BeginInit();
@@ -114,10 +119,10 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.listMagasin.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.listMagasin.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.listMagasin.FormattingEnabled = true;
-            this.listMagasin.ItemHeight = 27;
+            this.listMagasin.ItemHeight = 23;
             this.listMagasin.Location = new System.Drawing.Point(0, 53);
             this.listMagasin.Name = "listMagasin";
-            this.listMagasin.Size = new System.Drawing.Size(232, 216);
+            this.listMagasin.Size = new System.Drawing.Size(232, 207);
             this.listMagasin.TabIndex = 0;
             this.listMagasin.SelectedIndexChanged += new System.EventHandler(this.listMagasin_SelectedIndexChanged);
             // 
@@ -140,7 +145,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.labelErreurAdr.Location = new System.Drawing.Point(25, 220);
             this.labelErreurAdr.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelErreurAdr.Name = "labelErreurAdr";
-            this.labelErreurAdr.Size = new System.Drawing.Size(252, 21);
+            this.labelErreurAdr.Size = new System.Drawing.Size(212, 20);
             this.labelErreurAdr.TabIndex = 17;
             this.labelErreurAdr.Text = "Veuillez saisir une adresse valide";
             this.labelErreurAdr.Visible = false;
@@ -166,7 +171,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.textBoxAdr.Location = new System.Drawing.Point(25, 104);
             this.textBoxAdr.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxAdr.Name = "textBoxAdr";
-            this.textBoxAdr.Size = new System.Drawing.Size(174, 30);
+            this.textBoxAdr.Size = new System.Drawing.Size(174, 27);
             this.textBoxAdr.TabIndex = 15;
             // 
             // buttonAdr
@@ -193,7 +198,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.labelAdr.Location = new System.Drawing.Point(25, 68);
             this.labelAdr.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelAdr.Name = "labelAdr";
-            this.labelAdr.Size = new System.Drawing.Size(84, 24);
+            this.labelAdr.Size = new System.Drawing.Size(69, 20);
             this.labelAdr.TabIndex = 13;
             this.labelAdr.Text = "Adresse :";
             // 
@@ -221,7 +226,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.labelMdp.Location = new System.Drawing.Point(25, 150);
             this.labelMdp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelMdp.Name = "labelMdp";
-            this.labelMdp.Size = new System.Drawing.Size(130, 24);
+            this.labelMdp.Size = new System.Drawing.Size(106, 20);
             this.labelMdp.TabIndex = 11;
             this.labelMdp.Text = "Mot de passe :";
             // 
@@ -232,7 +237,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.textBoxNewMdp.Location = new System.Drawing.Point(25, 178);
             this.textBoxNewMdp.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNewMdp.Name = "textBoxNewMdp";
-            this.textBoxNewMdp.Size = new System.Drawing.Size(374, 30);
+            this.textBoxNewMdp.Size = new System.Drawing.Size(374, 27);
             this.textBoxNewMdp.TabIndex = 10;
             // 
             // listViewRapports
@@ -378,7 +383,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.labelCurrentAdresse.Location = new System.Drawing.Point(105, 66);
             this.labelCurrentAdresse.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCurrentAdresse.Name = "labelCurrentAdresse";
-            this.labelCurrentAdresse.Size = new System.Drawing.Size(75, 24);
+            this.labelCurrentAdresse.Size = new System.Drawing.Size(64, 20);
             this.labelCurrentAdresse.TabIndex = 45;
             this.labelCurrentAdresse.Text = "Aucune";
             // 
@@ -390,7 +395,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.labelCurrentMdp.Location = new System.Drawing.Point(157, 103);
             this.labelCurrentMdp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCurrentMdp.Name = "labelCurrentMdp";
-            this.labelCurrentMdp.Size = new System.Drawing.Size(65, 24);
+            this.labelCurrentMdp.Size = new System.Drawing.Size(55, 20);
             this.labelCurrentMdp.TabIndex = 44;
             this.labelCurrentMdp.Text = "Aucun";
             // 
@@ -403,7 +408,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.labelEmployes.Location = new System.Drawing.Point(82, 65);
             this.labelEmployes.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelEmployes.Name = "labelEmployes";
-            this.labelEmployes.Size = new System.Drawing.Size(98, 27);
+            this.labelEmployes.Size = new System.Drawing.Size(82, 23);
             this.labelEmployes.TabIndex = 42;
             this.labelEmployes.Text = "Employés";
             // 
@@ -416,7 +421,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.labelCommande.Location = new System.Drawing.Point(310, 65);
             this.labelCommande.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCommande.Name = "labelCommande";
-            this.labelCommande.Size = new System.Drawing.Size(127, 27);
+            this.labelCommande.Size = new System.Drawing.Size(106, 23);
             this.labelCommande.TabIndex = 41;
             this.labelCommande.Text = "Commandes";
             // 
@@ -429,7 +434,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.labelStock.Location = new System.Drawing.Point(587, 65);
             this.labelStock.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelStock.Name = "labelStock";
-            this.labelStock.Size = new System.Drawing.Size(61, 27);
+            this.labelStock.Size = new System.Drawing.Size(50, 23);
             this.labelStock.TabIndex = 40;
             this.labelStock.Text = "Stock";
             // 
@@ -442,7 +447,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.labelModifMagAdresse.Location = new System.Drawing.Point(18, 65);
             this.labelModifMagAdresse.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelModifMagAdresse.Name = "labelModifMagAdresse";
-            this.labelModifMagAdresse.Size = new System.Drawing.Size(84, 24);
+            this.labelModifMagAdresse.Size = new System.Drawing.Size(69, 20);
             this.labelModifMagAdresse.TabIndex = 39;
             this.labelModifMagAdresse.Text = "Adresse :";
             // 
@@ -453,7 +458,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.textBoxModifMdp.Location = new System.Drawing.Point(23, 166);
             this.textBoxModifMdp.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxModifMdp.Name = "textBoxModifMdp";
-            this.textBoxModifMdp.Size = new System.Drawing.Size(295, 30);
+            this.textBoxModifMdp.Size = new System.Drawing.Size(295, 27);
             this.textBoxModifMdp.TabIndex = 38;
             // 
             // labelModifMagMDP
@@ -465,7 +470,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.labelModifMagMDP.Location = new System.Drawing.Point(18, 101);
             this.labelModifMagMDP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelModifMagMDP.Name = "labelModifMagMDP";
-            this.labelModifMagMDP.Size = new System.Drawing.Size(130, 24);
+            this.labelModifMagMDP.Size = new System.Drawing.Size(106, 20);
             this.labelModifMagMDP.TabIndex = 37;
             this.labelModifMagMDP.Text = "Mot de passe :";
             // 
@@ -478,7 +483,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.label5.Location = new System.Drawing.Point(18, 137);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(209, 24);
+            this.label5.Size = new System.Drawing.Size(171, 20);
             this.label5.TabIndex = 56;
             this.label5.Text = "Nouveau mot de passe :";
             // 
@@ -526,6 +531,9 @@ namespace ZumbaSoft.Fenetres_Magasin
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
+            this.panel4.Controls.Add(this.anonymousIcon);
+            this.panel4.Controls.Add(this.userSelectionne);
+            this.panel4.Controls.Add(this.userIcon);
             this.panel4.Controls.Add(this.programName);
             this.panel4.Controls.Add(this.homeIcon);
             this.panel4.Controls.Add(this.dbERROR);
@@ -537,6 +545,44 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1120, 49);
             this.panel4.TabIndex = 59;
+            // 
+            // anonymousIcon
+            // 
+            this.anonymousIcon.BackColor = System.Drawing.Color.Transparent;
+            this.anonymousIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.anonymousIcon.Image = ((System.Drawing.Image)(resources.GetObject("anonymousIcon.Image")));
+            this.anonymousIcon.Location = new System.Drawing.Point(530, 8);
+            this.anonymousIcon.Name = "anonymousIcon";
+            this.anonymousIcon.Size = new System.Drawing.Size(33, 33);
+            this.anonymousIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.anonymousIcon.TabIndex = 21;
+            this.anonymousIcon.TabStop = false;
+            this.anonymousIcon.Visible = false;
+            // 
+            // userSelectionne
+            // 
+            this.userSelectionne.BackColor = System.Drawing.Color.Transparent;
+            this.userSelectionne.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.userSelectionne.ForeColor = System.Drawing.Color.Snow;
+            this.userSelectionne.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.userSelectionne.Location = new System.Drawing.Point(570, 12);
+            this.userSelectionne.Name = "userSelectionne";
+            this.userSelectionne.Size = new System.Drawing.Size(188, 25);
+            this.userSelectionne.TabIndex = 20;
+            this.userSelectionne.Text = "Non connecté";
+            this.userSelectionne.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // userIcon
+            // 
+            this.userIcon.BackColor = System.Drawing.Color.Transparent;
+            this.userIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.userIcon.Image = ((System.Drawing.Image)(resources.GetObject("userIcon.Image")));
+            this.userIcon.Location = new System.Drawing.Point(529, 8);
+            this.userIcon.Name = "userIcon";
+            this.userIcon.Size = new System.Drawing.Size(33, 33);
+            this.userIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.userIcon.TabIndex = 19;
+            this.userIcon.TabStop = false;
             // 
             // programName
             // 
@@ -556,7 +602,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.homeIcon.BackColor = System.Drawing.Color.Transparent;
             this.homeIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.homeIcon.Image = ((System.Drawing.Image)(resources.GetObject("homeIcon.Image")));
-            this.homeIcon.Location = new System.Drawing.Point(317, 9);
+            this.homeIcon.Location = new System.Drawing.Point(296, 9);
             this.homeIcon.Name = "homeIcon";
             this.homeIcon.Size = new System.Drawing.Size(31, 30);
             this.homeIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -594,12 +640,12 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.magasinSelectionne.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.magasinSelectionne.ForeColor = System.Drawing.Color.Snow;
             this.magasinSelectionne.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.magasinSelectionne.Location = new System.Drawing.Point(354, 6);
+            this.magasinSelectionne.Location = new System.Drawing.Point(333, 6);
             this.magasinSelectionne.Name = "magasinSelectionne";
             this.magasinSelectionne.Size = new System.Drawing.Size(188, 38);
             this.magasinSelectionne.TabIndex = 11;
             this.magasinSelectionne.Text = "Aucun magasin sélectionné";
-            this.magasinSelectionne.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.magasinSelectionne.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // msgBDstatusERROR
             // 
@@ -814,7 +860,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.textBox2.Location = new System.Drawing.Point(23, 166);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(295, 31);
+            this.textBox2.Size = new System.Drawing.Size(295, 27);
             this.textBox2.TabIndex = 38;
             // 
             // label13
@@ -927,7 +973,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.label18.Location = new System.Drawing.Point(21, 13);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(112, 25);
+            this.label18.Size = new System.Drawing.Size(91, 19);
             this.label18.TabIndex = 39;
             this.label18.Text = "ERREUR 01";
             // 
@@ -947,7 +993,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             // 
             // AccueilMagasin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1120, 750);
@@ -968,6 +1014,8 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.anonymousIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.homeIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbERROR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbOK)).EndInit();
@@ -1051,5 +1099,8 @@ namespace ZumbaSoft.Fenetres_Magasin
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Button buttonContactAdmin;
         private System.Windows.Forms.Button buttonBackHome;
+        private System.Windows.Forms.PictureBox anonymousIcon;
+        private System.Windows.Forms.Label userSelectionne;
+        private System.Windows.Forms.PictureBox userIcon;
     }
 }

@@ -46,6 +46,9 @@ namespace ZumbaSoft.Fenetres_Roles
             this.label3 = new System.Windows.Forms.Label();
             this.ConfirmationSR = new System.Windows.Forms.CheckBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.anonymousIcon = new System.Windows.Forms.PictureBox();
+            this.userSelectionne = new System.Windows.Forms.Label();
+            this.userIcon = new System.Windows.Forms.PictureBox();
             this.programName = new System.Windows.Forms.Label();
             this.homeIcon = new System.Windows.Forms.PictureBox();
             this.dbERROR = new System.Windows.Forms.PictureBox();
@@ -64,6 +67,8 @@ namespace ZumbaSoft.Fenetres_Roles
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.anonymousIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.homeIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbERROR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbOK)).BeginInit();
@@ -272,6 +277,9 @@ namespace ZumbaSoft.Fenetres_Roles
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
+            this.panel4.Controls.Add(this.anonymousIcon);
+            this.panel4.Controls.Add(this.userSelectionne);
+            this.panel4.Controls.Add(this.userIcon);
             this.panel4.Controls.Add(this.programName);
             this.panel4.Controls.Add(this.homeIcon);
             this.panel4.Controls.Add(this.dbERROR);
@@ -283,6 +291,44 @@ namespace ZumbaSoft.Fenetres_Roles
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1045, 49);
             this.panel4.TabIndex = 4;
+            // 
+            // anonymousIcon
+            // 
+            this.anonymousIcon.BackColor = System.Drawing.Color.Transparent;
+            this.anonymousIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.anonymousIcon.Image = ((System.Drawing.Image)(resources.GetObject("anonymousIcon.Image")));
+            this.anonymousIcon.Location = new System.Drawing.Point(522, 7);
+            this.anonymousIcon.Name = "anonymousIcon";
+            this.anonymousIcon.Size = new System.Drawing.Size(33, 33);
+            this.anonymousIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.anonymousIcon.TabIndex = 18;
+            this.anonymousIcon.TabStop = false;
+            this.anonymousIcon.Visible = false;
+            // 
+            // userSelectionne
+            // 
+            this.userSelectionne.BackColor = System.Drawing.Color.Transparent;
+            this.userSelectionne.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.userSelectionne.ForeColor = System.Drawing.Color.Snow;
+            this.userSelectionne.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.userSelectionne.Location = new System.Drawing.Point(562, 11);
+            this.userSelectionne.Name = "userSelectionne";
+            this.userSelectionne.Size = new System.Drawing.Size(188, 25);
+            this.userSelectionne.TabIndex = 17;
+            this.userSelectionne.Text = "Non connecté";
+            this.userSelectionne.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // userIcon
+            // 
+            this.userIcon.BackColor = System.Drawing.Color.Transparent;
+            this.userIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.userIcon.Image = ((System.Drawing.Image)(resources.GetObject("userIcon.Image")));
+            this.userIcon.Location = new System.Drawing.Point(521, 7);
+            this.userIcon.Name = "userIcon";
+            this.userIcon.Size = new System.Drawing.Size(33, 33);
+            this.userIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.userIcon.TabIndex = 16;
+            this.userIcon.TabStop = false;
             // 
             // programName
             // 
@@ -302,7 +348,7 @@ namespace ZumbaSoft.Fenetres_Roles
             this.homeIcon.BackColor = System.Drawing.Color.Transparent;
             this.homeIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.homeIcon.Image = ((System.Drawing.Image)(resources.GetObject("homeIcon.Image")));
-            this.homeIcon.Location = new System.Drawing.Point(300, 8);
+            this.homeIcon.Location = new System.Drawing.Point(290, 8);
             this.homeIcon.Name = "homeIcon";
             this.homeIcon.Size = new System.Drawing.Size(31, 30);
             this.homeIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -340,12 +386,12 @@ namespace ZumbaSoft.Fenetres_Roles
             this.magasinSelectionne.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.magasinSelectionne.ForeColor = System.Drawing.Color.Snow;
             this.magasinSelectionne.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.magasinSelectionne.Location = new System.Drawing.Point(337, 11);
+            this.magasinSelectionne.Location = new System.Drawing.Point(327, 11);
             this.magasinSelectionne.Name = "magasinSelectionne";
             this.magasinSelectionne.Size = new System.Drawing.Size(188, 25);
             this.magasinSelectionne.TabIndex = 11;
             this.magasinSelectionne.Text = "Aucun magasin sélectionné";
-            this.magasinSelectionne.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.magasinSelectionne.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // msgBDstatusERROR
             // 
@@ -491,6 +537,8 @@ namespace ZumbaSoft.Fenetres_Roles
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.anonymousIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.homeIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbERROR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbOK)).EndInit();
@@ -534,5 +582,8 @@ namespace ZumbaSoft.Fenetres_Roles
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Button buttonContactAdmin;
+        private System.Windows.Forms.PictureBox userIcon;
+        private System.Windows.Forms.PictureBox anonymousIcon;
+        private System.Windows.Forms.Label userSelectionne;
     }
 }

@@ -73,6 +73,7 @@ namespace ZumbaSoft
             // textBoxVille
             // 
             this.textBoxVille.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
+            this.textBoxVille.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.textBoxVille.Location = new System.Drawing.Point(221, 34);
             this.textBoxVille.Name = "textBoxVille";
             this.textBoxVille.Size = new System.Drawing.Size(159, 27);
@@ -81,6 +82,7 @@ namespace ZumbaSoft
             // textBoxMdp
             // 
             this.textBoxMdp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
+            this.textBoxMdp.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.textBoxMdp.Location = new System.Drawing.Point(221, 71);
             this.textBoxMdp.Name = "textBoxMdp";
             this.textBoxMdp.Size = new System.Drawing.Size(195, 27);

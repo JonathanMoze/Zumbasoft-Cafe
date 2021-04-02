@@ -52,6 +52,9 @@ namespace ZumbaSoft.Fenetres_Produit
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.buttonContactAdmin = new System.Windows.Forms.Button();
+            this.anonymousIcon = new System.Windows.Forms.PictureBox();
+            this.userSelectionne = new System.Windows.Forms.Label();
+            this.userIcon = new System.Windows.Forms.PictureBox();
             this.backgroundBlock.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.homeIcon)).BeginInit();
@@ -59,6 +62,8 @@ namespace ZumbaSoft.Fenetres_Produit
             ((System.ComponentModel.ISupportInitialize)(this.dbOK)).BeginInit();
             this.panel5.SuspendLayout();
             this.panelERROR.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.anonymousIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -166,6 +171,9 @@ namespace ZumbaSoft.Fenetres_Produit
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
+            this.panel4.Controls.Add(this.anonymousIcon);
+            this.panel4.Controls.Add(this.userSelectionne);
+            this.panel4.Controls.Add(this.userIcon);
             this.panel4.Controls.Add(this.programName);
             this.panel4.Controls.Add(this.homeIcon);
             this.panel4.Controls.Add(this.dbERROR);
@@ -196,7 +204,7 @@ namespace ZumbaSoft.Fenetres_Produit
             this.homeIcon.BackColor = System.Drawing.Color.Transparent;
             this.homeIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.homeIcon.Image = ((System.Drawing.Image)(resources.GetObject("homeIcon.Image")));
-            this.homeIcon.Location = new System.Drawing.Point(294, 9);
+            this.homeIcon.Location = new System.Drawing.Point(282, 9);
             this.homeIcon.Name = "homeIcon";
             this.homeIcon.Size = new System.Drawing.Size(31, 30);
             this.homeIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -234,7 +242,7 @@ namespace ZumbaSoft.Fenetres_Produit
             this.magasinSelectionne.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.magasinSelectionne.ForeColor = System.Drawing.Color.Snow;
             this.magasinSelectionne.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.magasinSelectionne.Location = new System.Drawing.Point(335, 13);
+            this.magasinSelectionne.Location = new System.Drawing.Point(323, 13);
             this.magasinSelectionne.Name = "magasinSelectionne";
             this.magasinSelectionne.Size = new System.Drawing.Size(189, 25);
             this.magasinSelectionne.TabIndex = 11;
@@ -362,6 +370,44 @@ namespace ZumbaSoft.Fenetres_Produit
             this.buttonContactAdmin.UseVisualStyleBackColor = false;
             this.buttonContactAdmin.Click += new System.EventHandler(this.buttonContactAdmin_Click);
             // 
+            // anonymousIcon
+            // 
+            this.anonymousIcon.BackColor = System.Drawing.Color.Transparent;
+            this.anonymousIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.anonymousIcon.Image = ((System.Drawing.Image)(resources.GetObject("anonymousIcon.Image")));
+            this.anonymousIcon.Location = new System.Drawing.Point(516, 8);
+            this.anonymousIcon.Name = "anonymousIcon";
+            this.anonymousIcon.Size = new System.Drawing.Size(33, 33);
+            this.anonymousIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.anonymousIcon.TabIndex = 21;
+            this.anonymousIcon.TabStop = false;
+            this.anonymousIcon.Visible = false;
+            // 
+            // userSelectionne
+            // 
+            this.userSelectionne.BackColor = System.Drawing.Color.Transparent;
+            this.userSelectionne.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.userSelectionne.ForeColor = System.Drawing.Color.Snow;
+            this.userSelectionne.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.userSelectionne.Location = new System.Drawing.Point(556, 12);
+            this.userSelectionne.Name = "userSelectionne";
+            this.userSelectionne.Size = new System.Drawing.Size(188, 25);
+            this.userSelectionne.TabIndex = 20;
+            this.userSelectionne.Text = "Non connecté";
+            this.userSelectionne.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // userIcon
+            // 
+            this.userIcon.BackColor = System.Drawing.Color.Transparent;
+            this.userIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.userIcon.Image = ((System.Drawing.Image)(resources.GetObject("userIcon.Image")));
+            this.userIcon.Location = new System.Drawing.Point(515, 8);
+            this.userIcon.Name = "userIcon";
+            this.userIcon.Size = new System.Drawing.Size(33, 33);
+            this.userIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.userIcon.TabIndex = 19;
+            this.userIcon.TabStop = false;
+            // 
             // AccueilProduits
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -387,6 +433,8 @@ namespace ZumbaSoft.Fenetres_Produit
             this.panel5.PerformLayout();
             this.panelERROR.ResumeLayout(false);
             this.panelERROR.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.anonymousIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userIcon)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -414,5 +462,8 @@ namespace ZumbaSoft.Fenetres_Produit
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Button buttonContactAdmin;
+        private System.Windows.Forms.PictureBox anonymousIcon;
+        private System.Windows.Forms.Label userSelectionne;
+        private System.Windows.Forms.PictureBox userIcon;
     }
 }

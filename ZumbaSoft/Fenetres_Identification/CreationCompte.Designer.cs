@@ -213,6 +213,7 @@ namespace ZumbaSoft.Fenetres_Identification
             this.buttonNvAdresse.TabIndex = 72;
             this.buttonNvAdresse.Text = "Nouvelle adresse";
             this.buttonNvAdresse.UseVisualStyleBackColor = false;
+            this.buttonNvAdresse.Click += new System.EventHandler(this.buttonNvAdresse_Click);
             // 
             // textBoxAdr
             // 

@@ -22,6 +22,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             InitializeComponent();
             DB = db;
             initListClient();
+            initItemsColors();
         }
 
         public void initListClient()
@@ -43,6 +44,18 @@ namespace ZumbaSoft.Fenetres_Ventes
             {
                 erreurListevide.Visible = true;
             }
+        }
+
+        public void initItemsColors()
+        {
+            backgroundBlock.BackColor = Color.FromArgb(50, 12, 12, 12);
+            buttonAjouterGenre.BackColor = Color.FromArgb(50, 12, 12, 12);
+            buttonModifierGenre.BackColor = Color.FromArgb(50, 12, 12, 12);
+            buttonSupprimerGenre.BackColor = Color.FromArgb(50, 12, 12, 12);
+            erreurListevide.BackColor = Color.FromArgb(50, 12, 12, 12);
+            panel1.BackColor = Color.FromArgb(50, 12, 12, 12);
+            panel4.BackColor = Color.FromArgb(80, 12, 12, 12);
+
         }
 
         public void buttonAjouterClient_Click(object sender, EventArgs e)

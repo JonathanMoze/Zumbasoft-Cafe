@@ -19,14 +19,17 @@ namespace ZumbaSoft.Fenetres_Roles
 
         SQLiteConnection DB;
         Utilisateur user;
-        public Roles(SQLiteConnection database, Utilisateur uConnected)
+        Magasin magasin;
+        public Roles(SQLiteConnection database, Magasin mag, Utilisateur uConnected)
         {
             InitializeComponent();
             DB = database;
+            magasin = mag;
             user = uConnected;
             initListRoles();
             initItemsColors();
             checkDB();
+            checkMagasinAndUser();
         }
 
         public void initItemsColors()
@@ -82,6 +85,25 @@ namespace ZumbaSoft.Fenetres_Roles
 
                 dbERROR.Visible = false;
                 dbOK.Visible = true;
+            }
+        }
+
+        public void checkMagasinAndUser()
+        {
+            if (magasin != null)
+            {
+                magasinSelectionne.Text = Convert.ToString(magasin);
+            }
+
+            if (user != null)
+            {
+                userSelectionne.Text = Convert.ToString(user);
+                anonymousIcon.Visible = false;
+                userIcon.Visible = true;
+            } else
+            {
+                anonymousIcon.Visible = true;
+                userIcon.Visible = false;
             }
         }
 

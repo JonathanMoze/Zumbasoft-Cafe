@@ -18,14 +18,17 @@ namespace ZumbaSoft.Fenetres_Produit
     {
         SQLiteConnection DB;
         Utilisateur user;
-        public AccueilProduits(SQLiteConnection db, Utilisateur uConnected)
+        Magasin magasin;
+        public AccueilProduits(SQLiteConnection db, Magasin mag, Utilisateur uConnected)
         {
             InitializeComponent();
             DB = db;
             user = uConnected;
+            magasin = mag;
             initListProduits();
             initItemsColors();
             checkDB();
+            checkMagasinAndUser();
         }
 
         public void initListProduits()
@@ -100,6 +103,26 @@ namespace ZumbaSoft.Fenetres_Produit
 
                 dbERROR.Visible = false;
                 dbOK.Visible = true;
+            }
+        }
+
+        public void checkMagasinAndUser()
+        {
+            if (magasin != null)
+            {
+                magasinSelectionne.Text = Convert.ToString(magasin);
+            }
+
+            if (user != null)
+            {
+                userSelectionne.Text = Convert.ToString(user);
+                anonymousIcon.Visible = false;
+                userIcon.Visible = true;
+            }
+            else
+            {
+                anonymousIcon.Visible = true;
+                userIcon.Visible = false;
             }
         }
 

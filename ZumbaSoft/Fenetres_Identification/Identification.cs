@@ -108,5 +108,7 @@ namespace ZumbaSoft.Fenetres_Identification
             return database.Table<Utilisateur>().Where(x => x.login.Equals(client)).ToList()[0].mot_de_passe;
         }
         #endregion
+
+ 
     }
 }
