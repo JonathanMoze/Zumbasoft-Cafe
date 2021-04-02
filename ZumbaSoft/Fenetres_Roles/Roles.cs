@@ -223,5 +223,11 @@ namespace ZumbaSoft.Fenetres_Roles
             this.Close();
         }
 
+        private void Roles_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            panelERROR.Visible = false;
+            DialogResult = DialogResult.OK;
+            this.Close();
+        }
     }
 }

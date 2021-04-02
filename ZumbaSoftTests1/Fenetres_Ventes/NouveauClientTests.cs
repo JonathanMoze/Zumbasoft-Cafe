@@ -50,7 +50,7 @@ namespace ZumbaSoft.Fenetres_Ventes.Tests
         {
             db.DeleteAll<Client>();
             NouveauClient c = new NouveauClient(db);
-            AccueilClient ac = new AccueilClient(db);
+            AccueilClient ac = new AccueilClient(db, null, null);
 
             c.comboBoxCivilité.SelectedItem = EnumCivilite.Monsieur;
             c.comboBoxStatus.SelectedItem = EnumStatus.Actif;

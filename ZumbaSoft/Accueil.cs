@@ -192,7 +192,7 @@ namespace ZumbaSoft
 
         private void buttonGestionClients_Click(object sender, EventArgs e)
         {
-            AccueilClient c = new AccueilClient(db);
+            AccueilClient c = new AccueilClient(db, magasin, uConnected);
             this.Visible = false;
             if (c.ShowDialog() == DialogResult.OK)
             {

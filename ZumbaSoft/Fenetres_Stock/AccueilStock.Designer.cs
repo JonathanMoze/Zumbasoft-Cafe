@@ -748,6 +748,7 @@ namespace ZumbaSoft.Fenetres_Stock
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AccueilStock";
             this.Text = "Gestion des stocks";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AccueilStock_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.tableauCommandes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableauStock)).EndInit();
             this.panel4.ResumeLayout(false);

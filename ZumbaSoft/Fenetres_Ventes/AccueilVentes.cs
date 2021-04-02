@@ -125,6 +125,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             panel8.BackColor = Color.FromArgb(80, 12, 12, 12);
             panel9.BackColor = Color.FromArgb(80, 12, 12, 12);
             panel10.BackColor = Color.FromArgb(80, 12, 12, 12);
+            panelERROR.BackColor = Color.FromArgb(100, 120, 1, 1);
 
             buttonCatalogueProd.BackColor = Color.FromArgb(80, 12, 12, 12);
             buttonNvClient.BackColor = Color.FromArgb(80, 12, 12, 12);
@@ -395,6 +396,13 @@ namespace ZumbaSoft.Fenetres_Ventes
             {
                 this.Visible = true;
             }
+        }
+
+        private void AccueilVente_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            panelERROR.Visible = false;
+            DialogResult = DialogResult.OK;
+            this.Close();
         }
     }
 }

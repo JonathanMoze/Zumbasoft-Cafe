@@ -425,6 +425,7 @@ namespace ZumbaSoft.Fenetres_Produit
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AccueilProduits";
             this.Text = "Gestion des produits";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AccueilProduits_FormClosed);
             this.backgroundBlock.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.anonymousIcon)).EndInit();

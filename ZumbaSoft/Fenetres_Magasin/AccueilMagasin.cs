@@ -402,5 +402,12 @@ namespace ZumbaSoft.Fenetres_Magasin
             DialogResult = DialogResult.OK;
             this.Close();
         }
+
+        private void AccueilMagasin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            panelERROR.Visible = false;
+            DialogResult = DialogResult.OK;
+            this.Close();
+        }
     }
 }

@@ -76,6 +76,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.goBackButton = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.buttonHistoriqueVente = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.labelQuantite = new System.Windows.Forms.Label();
             this.panelERROR = new System.Windows.Forms.Panel();
@@ -83,7 +84,6 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.buttonContactAdmin = new System.Windows.Forms.Button();
-            this.buttonHistoriqueVente = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -638,6 +638,19 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.panel9.Size = new System.Drawing.Size(269, 580);
             this.panel9.TabIndex = 67;
             // 
+            // buttonHistoriqueVente
+            // 
+            this.buttonHistoriqueVente.BackColor = System.Drawing.Color.Transparent;
+            this.buttonHistoriqueVente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHistoriqueVente.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonHistoriqueVente.Location = new System.Drawing.Point(20, 476);
+            this.buttonHistoriqueVente.Name = "buttonHistoriqueVente";
+            this.buttonHistoriqueVente.Size = new System.Drawing.Size(228, 42);
+            this.buttonHistoriqueVente.TabIndex = 5;
+            this.buttonHistoriqueVente.Text = "Historique des ventes";
+            this.buttonHistoriqueVente.UseVisualStyleBackColor = false;
+            this.buttonHistoriqueVente.Click += new System.EventHandler(this.buttonHistoriqueVente_Click);
+            // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
@@ -730,19 +743,6 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.buttonContactAdmin.UseVisualStyleBackColor = false;
             this.buttonContactAdmin.Click += new System.EventHandler(this.buttonContactAdmin_Click);
             // 
-            // buttonHistoriqueVente
-            // 
-            this.buttonHistoriqueVente.BackColor = System.Drawing.Color.Transparent;
-            this.buttonHistoriqueVente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonHistoriqueVente.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonHistoriqueVente.Location = new System.Drawing.Point(20, 476);
-            this.buttonHistoriqueVente.Name = "buttonHistoriqueVente";
-            this.buttonHistoriqueVente.Size = new System.Drawing.Size(228, 42);
-            this.buttonHistoriqueVente.TabIndex = 5;
-            this.buttonHistoriqueVente.Text = "Historique des ventes";
-            this.buttonHistoriqueVente.UseVisualStyleBackColor = false;
-            this.buttonHistoriqueVente.Click += new System.EventHandler(this.buttonHistoriqueVente_Click);
-            // 
             // AccueilVente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -760,6 +760,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AccueilVente";
             this.Text = "Gestion des ventes";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AccueilVente_FormClosed);
             this.Load += new System.EventHandler(this.AccueilVentes_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

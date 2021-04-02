@@ -1011,6 +1011,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AccueilMagasin";
             this.Text = "Gestion des magasins";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AccueilMagasin_FormClosed);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);

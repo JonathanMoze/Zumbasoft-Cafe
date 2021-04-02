@@ -218,5 +218,12 @@ namespace ZumbaSoft.Fenetres_Produit
             buttonModifierProduit.Enabled = true;
             buttonSupprimerProduit.Enabled = true;
         }
+
+        private void AccueilProduits_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            panelERROR.Visible = false;
+            DialogResult = DialogResult.OK;
+            this.Close();
+        }
     }
 }

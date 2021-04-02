@@ -532,6 +532,7 @@ namespace ZumbaSoft.Fenetres_Roles
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Roles";
             this.Text = "Gestion des rôles";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Roles_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

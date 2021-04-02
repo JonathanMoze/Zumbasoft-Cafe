@@ -70,8 +70,22 @@ namespace ZumbaSoft.Fenetres_Produit.Tests
         public void buttonOK_ClickTest()
         {
             db.DeleteAll<Produit>();
+            db.DeleteAll<Genre>();
+            db.DeleteAll<Fournisseur>();
+
+            Genre g = new Genre();
+            g.intitule = "test";
+
+            Fournisseur f = new Fournisseur();
+            f.nom = "testfourni";
+            f.adresse = new Adresse();
+
+            db.InsertWithChildren(g);
+            db.InsertWithChildren(f);
 
             AjouterProduit ap = new AjouterProduit(db);
+
+            ap.initComboBoxes();
 
            
             ap.textBoxNom.Text = "NomProduit";
@@ -88,8 +102,8 @@ namespace ZumbaSoft.Fenetres_Produit.Tests
             ap.textBoxType.Text = "TypeProduit";
             ap.textBoxMarque.Text = "MarqueProduit";
             ap.textBoxCouleur.Text = "CouleurProduit";
-            ap.comboBoxGenre.SelectedItem = 0;
-            ap.comboBoxFournisseur.SelectedItem = 0;
+            ap.comboBoxGenre.SelectedIndex = 0;
+            ap.comboBoxFournisseur.SelectedIndex = 0;
 
             ap.buttonOK_Click(null,null);
 

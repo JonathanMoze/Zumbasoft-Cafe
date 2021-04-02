@@ -508,6 +508,13 @@ namespace ZumbaSoft.Fenetres_Stock
                 t.Start();
             }
         }
+
+        private void AccueilStock_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            panelERROR.Visible = false;
+            DialogResult = DialogResult.OK;
+            this.Close();
+        }
     }
 
 }
