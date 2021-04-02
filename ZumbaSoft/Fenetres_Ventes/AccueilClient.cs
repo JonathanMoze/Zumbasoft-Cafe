@@ -49,11 +49,11 @@ namespace ZumbaSoft.Fenetres_Ventes
         public void initItemsColors()
         {
             backgroundBlock.BackColor = Color.FromArgb(50, 12, 12, 12);
-            buttonAjouterGenre.BackColor = Color.FromArgb(50, 12, 12, 12);
-            buttonModifierGenre.BackColor = Color.FromArgb(50, 12, 12, 12);
-            buttonSupprimerGenre.BackColor = Color.FromArgb(50, 12, 12, 12);
+            buttonAjouterClient.BackColor = Color.FromArgb(50, 12, 12, 12);
+            buttonModifierClient.BackColor = Color.FromArgb(50, 12, 12, 12);
+            buttonSupprimerClient.BackColor = Color.FromArgb(50, 12, 12, 12);
             erreurListevide.BackColor = Color.FromArgb(50, 12, 12, 12);
-            panel1.BackColor = Color.FromArgb(50, 12, 12, 12);
+            panel2.BackColor = Color.FromArgb(50, 12, 12, 12);
             panel4.BackColor = Color.FromArgb(80, 12, 12, 12);
 
         }
