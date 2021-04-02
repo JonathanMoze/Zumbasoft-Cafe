@@ -144,6 +144,7 @@ namespace ZumbaSoft.Fenetres_Produit
             if (listProduits.SelectedItem != null)
             {
                 Produit p = (Produit)listProduits.SelectedItem;
+                p = DB.GetWithChildren<Produit>(p.id_produit);
                 ModifierProduit paramétrer = new ModifierProduit(p, DB);
                 if (paramétrer.ShowDialog() == DialogResult.OK)
                 {

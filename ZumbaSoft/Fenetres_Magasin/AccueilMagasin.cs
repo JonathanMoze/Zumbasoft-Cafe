@@ -17,6 +17,7 @@ namespace ZumbaSoft.Fenetres_Magasin
     {
         SQLiteConnection DB;
         Magasin magasin;
+        Magasin magasinCourant;
         Utilisateur user;
         public Adresse newAdresse;
 
@@ -25,7 +26,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             InitializeComponent();
             DB = db;
             user = uConnected;
-            magasin = mag;
+            magasinCourant = mag;
             updateListMagasin();
             initItemsColors();
             checkDB();
@@ -111,9 +112,9 @@ namespace ZumbaSoft.Fenetres_Magasin
 
         public void checkMagasinAndUser()
         {
-            if (magasin != null)
+            if (magasinCourant != null)
             {
-                magasinSelectionne.Text = Convert.ToString(magasin);
+                magasinSelectionne.Text = Convert.ToString(magasinCourant);
             }
 
             if (user != null)
@@ -131,13 +132,9 @@ namespace ZumbaSoft.Fenetres_Magasin
 
         private void listMagasin_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(magasin != null)
-            {
                 magasin = (Magasin)listMagasin.SelectedItem;
                 EnabledInfoField();
                 UpdateInfoField();
-            }
-            
         }
         
 
@@ -153,58 +150,56 @@ namespace ZumbaSoft.Fenetres_Magasin
 
         private void UpdateInfoField()
         {
-            if (magasin.adresse != null)
+            if(magasin != null)
             {
-                labelCurrentAdresse.Text = magasin.adresse.adresse;
-            }
-            labelCurrentMdp.Text = magasin.mot_de_passe;
-
-            listViewStock.Items.Clear();
-            if (magasin.stock.Count != 0)
-            {
-                foreach (ProduitEnStock p in magasin.stock)
+                if (magasin.adresse != null)
                 {
-                    listViewStock.Items.Add(p.ToString());
+                    labelCurrentAdresse.Text = magasin.adresse.adresse;
                 }
-            }
-            else { listViewStock.Items.Add("Aucun"); }
+                labelCurrentMdp.Text = magasin.mot_de_passe;
 
-            listViewRapports.Items.Clear();
-            if (magasin.rapports.Count != 0)
-            {
-                foreach (Rapport r in magasin.rapports)
+                listViewStock.Items.Clear();
+                if (magasin.stock.Count != 0)
                 {
-                    listViewRapports.Items.Add(r.ToString());
+                    foreach (ProduitEnStock p in magasin.stock)
+                    {
+                        listViewStock.Items.Add(p.ToString());
+                    }
                 }
-            }
-            else { listViewRapports.Items.Add("Aucun"); }
+                else { listViewStock.Items.Add("Aucun"); }
 
-            listViewCommandes.Items.Clear();
-            if (magasin.commandes.Count != 0)
-            {
-                foreach (Commande c in magasin.commandes)
+                listViewRapports.Items.Clear();
+                if (magasin.rapports.Count != 0)
                 {
-                    listViewCommandes.Items.Add(c.ToString());
+                    foreach (Rapport r in magasin.rapports)
+                    {
+                        listViewRapports.Items.Add(r.ToString());
+                    }
                 }
-            }
-            else { listViewCommandes.Items.Add("Aucun"); }
+                else { listViewRapports.Items.Add("Aucun"); }
 
-            listViewEmployes.Items.Clear();
-            if (magasin.utilisateurs.Count != 0)
-            {
-                foreach (Utilisateur u in magasin.utilisateurs)
+                listViewCommandes.Items.Clear();
+                if (magasin.commandes.Count != 0)
                 {
-                    listViewEmployes.Items.Add(u.ToString());
+                    foreach (Commande c in magasin.commandes)
+                    {
+                        listViewCommandes.Items.Add(c.ToString());
+                    }
                 }
-            }
-            else { listViewEmployes.Items.Add("Aucun"); }
-        }
+                else { listViewCommandes.Items.Add("Aucun"); }
 
-        private void boutonSupprimer_Click(object sender, EventArgs e)
-        {
+                listViewEmployes.Items.Clear();
+                if (magasin.utilisateurs.Count != 0)
+                {
+                    foreach (Utilisateur u in magasin.utilisateurs)
+                    {
+                        listViewEmployes.Items.Add(u.ToString());
+                    }
+                }
+                else { listViewEmployes.Items.Add("Aucun"); }
+            }
             
         }
-
 
         public Magasin initObjectMagasin()
         {
@@ -331,23 +326,33 @@ namespace ZumbaSoft.Fenetres_Magasin
             //TODO
         }
 
-        private void buttonSupprimer_Click(object sender, EventArgs e)
+        public void buttonSupprimer_Click(object sender, EventArgs e)
         {
-            SupprimerMagasin supprimerMagasin = new SupprimerMagasin(magasin);
-            if(supprimerMagasin.ShowDialog() == DialogResult.OK)
+            if (magasin != null)
             {
-                var deletedMag = magasin;
-                magasin = null;
-                listMagasin.SelectedIndex = 0;
-                listMagasin.Items.Clear();
-                updateListMagasin();
-                UpdateInfoField();
+                SupprimerMagasin supprimerMagasin = new SupprimerMagasin(magasin);
+                if (supprimerMagasin.ShowDialog() == DialogResult.OK)
+                {
+                    DB.Delete(magasin);
+                    magasin = null;
+                    listMagasin.SelectedIndex = 0;
+                    clearAllField();
+                    updateListMagasin();
+                }
             }
         }
 
-        private void AccueilMagasin_Load(object sender, EventArgs e)
-        {
 
+
+        private void clearAllField()
+        {
+            labelCurrentAdresse.Text = "";
+            labelCurrentMdp.Text = "";
+            listViewEmployes.Clear();
+            listViewCommandes.Clear();
+            listViewRapports.Clear();
+            listViewStock.Clear();
+            textBoxModifMdp.Text = "";
         }
 
         private void goBackButton_Click(object sender, EventArgs e)

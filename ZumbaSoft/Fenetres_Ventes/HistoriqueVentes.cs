@@ -28,6 +28,9 @@ namespace ZumbaSoft.Fenetres_Ventes
             listViewVentesPassees.View = View.Details;
             listViewVentesPassees.GridLines = true;
             listViewVentesPassees.FullRowSelect = true;
+            listViewProduitsPanier.View = View.Details;
+            listViewProduitsPanier.GridLines = true;
+            listViewProduitsPanier.FullRowSelect = true;
         }
 
         public void initListVentes()
@@ -65,6 +68,32 @@ namespace ZumbaSoft.Fenetres_Ventes
         {
             DialogResult = DialogResult.OK;
             this.Close();
+        }
+
+        private void listViewVentesPassees_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                listViewProduitsPanier.Items.Clear();
+                int index = Int32.Parse(listViewVentesPassees.SelectedItems[0].SubItems[0].Text);
+                panier = DB.GetWithChildren<Panier>(index);
+                foreach(ProduitCommande pc in panier.produits)
+                {
+                    Produit p = DB.GetWithChildren<Produit>(pc.id_produit);
+                    string[] arr = new string[3];
+                    ListViewItem lst;
+                    arr[0] = p.id_produit.ToString();
+                    arr[1] = p.nom;
+                    arr[2] = pc.quantite.ToString();
+                    lst = new ListViewItem(arr);
+                    listViewProduitsPanier.Items.Add(lst);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                ex = null;
+            }
         }
     }
 }

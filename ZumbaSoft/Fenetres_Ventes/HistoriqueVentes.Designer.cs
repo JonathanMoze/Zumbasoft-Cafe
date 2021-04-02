@@ -31,7 +31,6 @@ namespace ZumbaSoft.Fenetres_Ventes
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HistoriqueVentes));
             this.label1 = new System.Windows.Forms.Label();
-            this.listViewProduitsPanier = new System.Windows.Forms.ListView();
             this.listViewVentesPassees = new System.Windows.Forms.ListView();
             this.NumeroVente = new System.Windows.Forms.ColumnHeader();
             this.columnClient = new System.Windows.Forms.ColumnHeader();
@@ -42,6 +41,10 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.programName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.listViewProduitsPanier = new System.Windows.Forms.ListView();
+            this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
             this.backgroundBlock2.SuspendLayout();
             this.backgroundBlock1.SuspendLayout();
             this.SuspendLayout();
@@ -58,15 +61,6 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.label1.TabIndex = 0;
             this.label1.Text = "Historique des ventes effectuées ";
             // 
-            // listViewProduitsPanier
-            // 
-            this.listViewProduitsPanier.HideSelection = false;
-            this.listViewProduitsPanier.Location = new System.Drawing.Point(532, 162);
-            this.listViewProduitsPanier.Name = "listViewProduitsPanier";
-            this.listViewProduitsPanier.Size = new System.Drawing.Size(373, 377);
-            this.listViewProduitsPanier.TabIndex = 2;
-            this.listViewProduitsPanier.UseCompatibleStateImageBehavior = false;
-            // 
             // listViewVentesPassees
             // 
             this.listViewVentesPassees.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -75,10 +69,12 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.columnPrix});
             this.listViewVentesPassees.HideSelection = false;
             this.listViewVentesPassees.Location = new System.Drawing.Point(44, 162);
+            this.listViewVentesPassees.MultiSelect = false;
             this.listViewVentesPassees.Name = "listViewVentesPassees";
             this.listViewVentesPassees.Size = new System.Drawing.Size(390, 377);
             this.listViewVentesPassees.TabIndex = 3;
             this.listViewVentesPassees.UseCompatibleStateImageBehavior = false;
+            this.listViewVentesPassees.SelectedIndexChanged += new System.EventHandler(this.listViewVentesPassees_SelectedIndexChanged);
             // 
             // NumeroVente
             // 
@@ -169,18 +165,49 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.label3.TabIndex = 26;
             this.label3.Text = "Produits du panier";
             // 
+            // listViewProduitsPanier
+            // 
+            this.listViewProduitsPanier.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3});
+            this.listViewProduitsPanier.HideSelection = false;
+            this.listViewProduitsPanier.Location = new System.Drawing.Point(527, 158);
+            this.listViewProduitsPanier.MultiSelect = false;
+            this.listViewProduitsPanier.Name = "listViewProduitsPanier";
+            this.listViewProduitsPanier.Size = new System.Drawing.Size(390, 377);
+            this.listViewProduitsPanier.TabIndex = 27;
+            this.listViewProduitsPanier.UseCompatibleStateImageBehavior = false;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Id_Produit";
+            this.columnHeader1.Width = 140;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Nom";
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader2.Width = 120;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Quantité";
+            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader3.Width = 130;
+            // 
             // HistoriqueVentes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(950, 620);
+            this.Controls.Add(this.listViewProduitsPanier);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.backgroundBlock1);
             this.Controls.Add(this.backgroundBlock2);
             this.Controls.Add(this.listViewVentesPassees);
-            this.Controls.Add(this.listViewProduitsPanier);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -198,7 +225,6 @@ namespace ZumbaSoft.Fenetres_Ventes
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListView listViewProduitsPanier;
         private System.Windows.Forms.ListView listViewVentesPassees;
         public System.Windows.Forms.ColumnHeader NumeroVente;
         public System.Windows.Forms.ColumnHeader columnClient;
@@ -209,5 +235,9 @@ namespace ZumbaSoft.Fenetres_Ventes
         private System.Windows.Forms.Label programName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ListView listViewProduitsPanier;
+        public System.Windows.Forms.ColumnHeader columnHeader1;
+        public System.Windows.Forms.ColumnHeader columnHeader2;
+        public System.Windows.Forms.ColumnHeader columnHeader3;
     }
 }
