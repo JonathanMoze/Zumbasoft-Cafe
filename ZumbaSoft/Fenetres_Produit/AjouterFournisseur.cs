@@ -75,7 +75,7 @@ namespace ZumbaSoft.Fenetres_Produit
             }
         }
 
-        private void buttonOK_Click(object sender, EventArgs e)
+        public void buttonOK_Click(object sender, EventArgs e)
         {
             if (fieldsIsValid())
             {

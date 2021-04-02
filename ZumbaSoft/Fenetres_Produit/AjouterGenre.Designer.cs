@@ -152,7 +152,7 @@ namespace ZumbaSoft.Fenetres_Produit
 
         #endregion
         private System.Windows.Forms.Label labelNomMagasin;
-        private System.Windows.Forms.TextBox textBoxNom;
+        public System.Windows.Forms.TextBox textBoxNom;
         private System.Windows.Forms.Panel backgroundBlock2;
         private System.Windows.Forms.Button buttonAnnuler;
         private System.Windows.Forms.Button buttonOK;

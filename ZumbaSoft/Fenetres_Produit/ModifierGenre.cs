@@ -40,7 +40,7 @@ namespace ZumbaSoft.Fenetres_Produit
             buttonModifMdp.BackColor = Color.FromArgb(50, 12, 12, 12);
         }
 
-        private void buttonOK_Click(object sender, EventArgs e)
+        public void buttonOK_Click(object sender, EventArgs e)
         {
             genre.intitule = textBoxIntitule.Text;
             DB.Update(genre);

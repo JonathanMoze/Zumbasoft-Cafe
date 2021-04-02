@@ -738,7 +738,7 @@ namespace ZumbaSoft.Fenetres_Ventes
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBoxRechercheClient;
-        private System.Windows.Forms.ListBox listBox1RechercheClient;
+        public System.Windows.Forms.ListBox listBox1RechercheClient;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -755,7 +755,7 @@ namespace ZumbaSoft.Fenetres_Ventes
         private System.Windows.Forms.ColumnHeader columnQuantite;
         private System.Windows.Forms.Button buttonPlus;
         private System.Windows.Forms.Button buttonMoins;
-        private System.Windows.Forms.Label labelPrixTotal;
+        public System.Windows.Forms.Label labelPrixTotal;
         private System.Windows.Forms.Label labelErreur;
         private System.Windows.Forms.Label labelRuptureStock;
         private System.Windows.Forms.Panel panel6;

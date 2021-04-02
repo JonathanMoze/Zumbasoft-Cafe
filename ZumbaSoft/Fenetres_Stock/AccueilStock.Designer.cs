@@ -725,8 +725,8 @@ namespace ZumbaSoft.Fenetres_Stock
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonNouvelleCmd;
         private System.Windows.Forms.Button buttonModifierCmd;
-        private System.Windows.Forms.DataGridView tableauCommandes;
-        private System.Windows.Forms.DataGridView tableauStock;
+        public System.Windows.Forms.DataGridView tableauCommandes;
+        public System.Windows.Forms.DataGridView tableauStock;
         private System.Windows.Forms.DataGridViewTextBoxColumn reference;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDeCommande;
         private System.Windows.Forms.DataGridViewTextBoxColumn fournisseur;
@@ -734,13 +734,13 @@ namespace ZumbaSoft.Fenetres_Stock
         private System.Windows.Forms.DataGridViewTextBoxColumn prixTotalTTC;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBoxValeurStk;
+        public System.Windows.Forms.TextBox textBoxValeurStk;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button buttonAjouterStk;
         private System.Windows.Forms.Button buttonSupprimerStk;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBoxNbArticle;
+        public System.Windows.Forms.TextBox textBoxNbArticle;
         private System.Windows.Forms.Label labelDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomArticle;

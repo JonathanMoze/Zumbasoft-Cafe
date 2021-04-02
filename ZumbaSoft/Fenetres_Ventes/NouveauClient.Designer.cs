@@ -358,8 +358,8 @@ namespace ZumbaSoft.Fenetres_Ventes
 
         #endregion
         private System.Windows.Forms.Label labelCivilite;
-        private System.Windows.Forms.ComboBox comboBoxCivilité;
-        private System.Windows.Forms.ComboBox comboBoxStatus;
+        public System.Windows.Forms.ComboBox comboBoxCivilité;
+        public System.Windows.Forms.ComboBox comboBoxStatus;
         private System.Windows.Forms.Label labelStatus;
         private System.Windows.Forms.Label labelNom;
         private System.Windows.Forms.Label labelPrenom;
@@ -367,11 +367,11 @@ namespace ZumbaSoft.Fenetres_Ventes
         private System.Windows.Forms.Label labelMail;
         private System.Windows.Forms.Label labelDateNaissance;
         private System.Windows.Forms.Label labelAdresse;
-        private System.Windows.Forms.TextBox textBoxNom;
-        private System.Windows.Forms.TextBox textBoxPrenom;
-        private System.Windows.Forms.TextBox textBoxTel;
-        private System.Windows.Forms.TextBox textBoxMail;
-        private System.Windows.Forms.DateTimePicker dateTimeNaissance;
+        public System.Windows.Forms.TextBox textBoxNom;
+        public System.Windows.Forms.TextBox textBoxPrenom;
+        public System.Windows.Forms.TextBox textBoxTel;
+        public System.Windows.Forms.TextBox textBoxMail;
+        public System.Windows.Forms.DateTimePicker dateTimeNaissance;
         private System.Windows.Forms.TextBox textBoxAdr;
         private System.Windows.Forms.Button buttonNvAdresse;
         private System.Windows.Forms.Label labelErreur;

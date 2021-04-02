@@ -28,6 +28,8 @@ namespace ZumbaSoft.Fenetres_Produit
 
         public void initListProduit()
         {
+            listBoxProduits.Items.Clear();
+
             if(DB.GetAllWithChildren<Produit>().Count >0)
             {
                 foreach (Produit p in DB.GetAllWithChildren<Produit>())
@@ -76,7 +78,7 @@ namespace ZumbaSoft.Fenetres_Produit
             this.Close();
         }
 
-        private void buttonValider_Click(object sender, EventArgs e)
+        public void buttonValider_Click(object sender, EventArgs e)
         {
             if(listBoxProduits.SelectedItem != null)
             {

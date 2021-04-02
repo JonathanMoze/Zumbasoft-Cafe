@@ -253,7 +253,7 @@ namespace ZumbaSoft.Fenetres_Produit
         private System.Windows.Forms.Button buttonAjouterGenre;
         private System.Windows.Forms.Button buttonModifierGenre;
         private System.Windows.Forms.Button buttonSupprimerGenre;
-        private System.Windows.Forms.ListBox listGenre;
+        public System.Windows.Forms.ListBox listGenre;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel4;

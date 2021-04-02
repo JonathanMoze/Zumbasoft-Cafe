@@ -506,12 +506,12 @@ namespace ZumbaSoft.Fenetres_Roles
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ListBox choixRoles;
+        public System.Windows.Forms.ListBox choixRoles;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label intituleRole;
-        private System.Windows.Forms.TextBox nomRole;
+        public System.Windows.Forms.TextBox nomRole;
         private System.Windows.Forms.Button supprimerRole;
-        private System.Windows.Forms.CheckBox ConfirmationSR;
+        public System.Windows.Forms.CheckBox ConfirmationSR;
         private System.Windows.Forms.Button ajouterRoles;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

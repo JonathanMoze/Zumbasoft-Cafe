@@ -273,12 +273,12 @@ namespace ZumbaSoft.Fenetres_Magasin
 
         #endregion
         private System.Windows.Forms.Label labelComplement;
-        private System.Windows.Forms.TextBox textBoxComplement;
+        public System.Windows.Forms.TextBox textBoxComplement;
         private System.Windows.Forms.Label labelVille;
-        private System.Windows.Forms.TextBox textBoxVille;
+        public System.Windows.Forms.TextBox textBoxVille;
         private System.Windows.Forms.Label labelCodePostal;
-        private System.Windows.Forms.TextBox textBoxCodePostal;
-        private System.Windows.Forms.TextBox textBoxAdresse;
+        public System.Windows.Forms.TextBox textBoxCodePostal;
+        public System.Windows.Forms.TextBox textBoxAdresse;
         private System.Windows.Forms.Label labelAdresse;
         private System.Windows.Forms.Label labelErreurAdr;
         private System.Windows.Forms.Label labelErreurCP;

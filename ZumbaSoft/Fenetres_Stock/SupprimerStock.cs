@@ -50,7 +50,7 @@ namespace ZumbaSoft.Fenetres_Stock
 
         }
 
-        private void buttonSupprimer_Click(object sender, EventArgs e)
+        public void buttonSupprimer_Click(object sender, EventArgs e)
         {
             if(PES.quantite == 0)
             {

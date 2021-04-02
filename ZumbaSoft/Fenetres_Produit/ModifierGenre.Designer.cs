@@ -189,7 +189,7 @@ namespace ZumbaSoft.Fenetres_Produit
         private System.Windows.Forms.Button buttonAnnuler;
         private System.Windows.Forms.Button buttonOK;
         private System.Windows.Forms.Button buttonModifMdp;
-        private System.Windows.Forms.TextBox textBoxIntitule;
+        public System.Windows.Forms.TextBox textBoxIntitule;
         private System.Windows.Forms.Label labelCurrentIntitule;
         private System.Windows.Forms.Label label2;
     }

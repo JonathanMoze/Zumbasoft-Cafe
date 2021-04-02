@@ -37,7 +37,7 @@ namespace ZumbaSoft.Fenetres_Identification
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void button1_Click(object sender, EventArgs e)
+        public void connection_button_Click(object sender, EventArgs e)
         {
             #region check login
             string log_in = loginField.Text;
@@ -52,7 +52,6 @@ namespace ZumbaSoft.Fenetres_Identification
                         Utilisateur u = database.Table<Utilisateur>().Where(x => x.login.Equals(log_in)).ToList()[0];
                         uConnecte = database.GetWithChildren<Utilisateur>(u.id_personne);
                         this.DialogResult = DialogResult.OK;//retour positif de la fenêtre.
-                        this.DestroyHandle();
                         MessageBox.Show("Vous êtes connecté.");
                     }
                     else
@@ -74,7 +73,7 @@ namespace ZumbaSoft.Fenetres_Identification
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void buttonCreationCompte_Click(object sender, EventArgs e)
+        public void buttonCreationCompte_Click(object sender, EventArgs e)
         {
             CreationCompte cp = new CreationCompte(database);
             cp.Show();
@@ -104,7 +103,7 @@ namespace ZumbaSoft.Fenetres_Identification
         /// </summary>
         /// <param name="client">Le mot de passe entré par le client.</param>
         /// <returns>Le mot de passe, avec un nullcheck à faire.</returns>
-        private string get_pass(string client)
+        public string get_pass(string client)
         {
             return database.Table<Utilisateur>().Where(x => x.login.Equals(client)).ToList()[0].mot_de_passe;
         }

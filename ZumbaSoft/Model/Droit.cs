@@ -13,7 +13,7 @@ namespace ZumbaSoft.Model
 
         public string intitule { get; set; }
 
-        [OneToMany]
+        [ManyToMany(typeof(DroitToRole))]
         public List<Role> roles { get; set; }
 
         [ForeignKey(typeof(Role))]
