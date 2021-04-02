@@ -107,9 +107,13 @@ namespace ZumbaSoft.Fenetres_Magasin
 
         private void listMagasin_SelectedIndexChanged(object sender, EventArgs e)
         {
-            magasin = (Magasin)listMagasin.SelectedItem;
-            EnabledInfoField();
-            UpdateInfoField();
+            if(magasin != null)
+            {
+                magasin = (Magasin)listMagasin.SelectedItem;
+                EnabledInfoField();
+                UpdateInfoField();
+            }
+            
         }
         
 
