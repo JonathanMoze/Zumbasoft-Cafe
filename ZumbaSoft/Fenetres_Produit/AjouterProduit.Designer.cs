@@ -529,8 +529,9 @@ namespace ZumbaSoft.Fenetres_Produit
             this.Controls.Add(this.backgroundBlock4);
             this.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AjouterProduit";
-            this.Text = "Ajouter un produit";
+            this.Text = "Ajout d\'un produit";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVHT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAHT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownATTC)).EndInit();

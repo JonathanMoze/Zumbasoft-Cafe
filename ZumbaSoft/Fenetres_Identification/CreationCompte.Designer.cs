@@ -420,8 +420,9 @@ namespace ZumbaSoft.Fenetres_Identification
             this.Controls.Add(this.textBoxLogin);
             this.Controls.Add(this.labelLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CreationCompte";
-            this.Text = "CreationCompte";
+            this.Text = "Création d\'un compte";
             this.backgroundBlock1.ResumeLayout(false);
             this.backgroundBlock1.PerformLayout();
             this.backgroundBlock2.ResumeLayout(false);

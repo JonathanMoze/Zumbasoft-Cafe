@@ -37,6 +37,7 @@
             this.buttonGestionStock = new System.Windows.Forms.Button();
             this.buttonSeConnecter = new System.Windows.Forms.Button();
             this.backgroundBlock = new System.Windows.Forms.Panel();
+            this.buttonGestionClients = new System.Windows.Forms.Button();
             this.buttonGestionVentes = new System.Windows.Forms.Button();
             this.buttonGestionProduits = new System.Windows.Forms.Button();
             this.quitButton = new System.Windows.Forms.Button();
@@ -46,7 +47,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.buttonGestionClients = new System.Windows.Forms.Button();
             this.backgroundBlock.SuspendLayout();
             this.panelConditions.SuspendLayout();
             this.SuspendLayout();
@@ -168,6 +168,22 @@
             this.backgroundBlock.Name = "backgroundBlock";
             this.backgroundBlock.Size = new System.Drawing.Size(1051, 86);
             this.backgroundBlock.TabIndex = 7;
+            // 
+            // buttonGestionClients
+            // 
+            this.buttonGestionClients.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
+            this.buttonGestionClients.FlatAppearance.BorderSize = 0;
+            this.buttonGestionClients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonGestionClients.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonGestionClients.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonGestionClients.Location = new System.Drawing.Point(893, 18);
+            this.buttonGestionClients.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonGestionClients.Name = "buttonGestionClients";
+            this.buttonGestionClients.Size = new System.Drawing.Size(138, 51);
+            this.buttonGestionClients.TabIndex = 8;
+            this.buttonGestionClients.Text = "Clients";
+            this.buttonGestionClients.UseVisualStyleBackColor = false;
+            this.buttonGestionClients.Click += new System.EventHandler(this.buttonGestionClients_Click);
             // 
             // buttonGestionVentes
             // 
@@ -296,22 +312,6 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "Version 1.0";
             // 
-            // buttonGestionClients
-            // 
-            this.buttonGestionClients.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
-            this.buttonGestionClients.FlatAppearance.BorderSize = 0;
-            this.buttonGestionClients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonGestionClients.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonGestionClients.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.buttonGestionClients.Location = new System.Drawing.Point(893, 18);
-            this.buttonGestionClients.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonGestionClients.Name = "buttonGestionClients";
-            this.buttonGestionClients.Size = new System.Drawing.Size(138, 51);
-            this.buttonGestionClients.TabIndex = 8;
-            this.buttonGestionClients.Text = "Clients";
-            this.buttonGestionClients.UseVisualStyleBackColor = false;
-            this.buttonGestionClients.Click += new System.EventHandler(this.buttonGestionClients_Click);
-            // 
             // Accueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -331,7 +331,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Accueil";
-            this.Text = "ZumbaSoft - Accueil";
+            this.Text = "ZumbaSoft";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Accueil_FormClosed);
             this.backgroundBlock.ResumeLayout(false);
             this.panelConditions.ResumeLayout(false);

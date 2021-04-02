@@ -331,9 +331,10 @@ namespace ZumbaSoft.Fenetres_Stock
             this.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ChoixProd_AND_FourniStock";
-            this.Text = "ChoixProd_AND_FourniStock";
+            this.Text = "Ajout d\'un produit";
             ((System.ComponentModel.ISupportInitialize)(this.barreQuantite)).EndInit();
             this.backgroundBlock1.ResumeLayout(false);
             this.backgroundBlock1.PerformLayout();

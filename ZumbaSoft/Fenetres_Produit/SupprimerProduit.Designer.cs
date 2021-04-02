@@ -119,8 +119,9 @@ namespace ZumbaSoft.Fenetres_Produit
             this.Controls.Add(this.labelSuppproduit);
             this.Controls.Add(this.backgroundBlock1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SupprimerProduit";
-            this.Text = "Confirmation de suppression - Produit";
+            this.Text = "Confirmation de suppression";
             this.backgroundBlock1.ResumeLayout(false);
             this.backgroundBlock1.PerformLayout();
             this.backgroundBlock2.ResumeLayout(false);

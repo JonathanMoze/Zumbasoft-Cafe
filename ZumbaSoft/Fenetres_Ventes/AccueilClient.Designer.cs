@@ -207,8 +207,9 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.Controls.Add(this.label2);
             this.Controls.Add(this.listClient);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AccueilClient";
-            this.Text = "AccueilClient";
+            this.Text = "Gestion des clients";
             this.backgroundBlock.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

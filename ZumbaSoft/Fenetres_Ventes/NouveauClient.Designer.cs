@@ -346,8 +346,9 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NouveauClient";
-            this.Text = "NouveauClient";
+            this.Text = "Ajout d\'un client";
             this.backgroundBlock1.ResumeLayout(false);
             this.backgroundBlock1.PerformLayout();
             this.backgroundBlock2.ResumeLayout(false);

@@ -134,8 +134,9 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.Controls.Add(this.backgroundBlock2);
             this.Controls.Add(this.backgroundBlock1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ConfirmationSupressionProduit";
-            this.Text = "ConfirmationSupressionProduit";
+            this.Text = "Confirmation de suppression";
             this.backgroundBlock2.ResumeLayout(false);
             this.backgroundBlock1.ResumeLayout(false);
             this.backgroundBlock1.PerformLayout();

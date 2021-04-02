@@ -340,8 +340,9 @@ namespace ZumbaSoft.Fenetres_Produit
             this.Controls.Add(this.listViewCommandes);
             this.Controls.Add(this.listViewProduits);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ModifierFournisseur";
-            this.Text = "ModifierFournisseur";
+            this.Text = "Modification d\'un fournisseur";
             this.backgroundBlock1.ResumeLayout(false);
             this.backgroundBlock1.PerformLayout();
             this.backgroundBlock2.ResumeLayout(false);

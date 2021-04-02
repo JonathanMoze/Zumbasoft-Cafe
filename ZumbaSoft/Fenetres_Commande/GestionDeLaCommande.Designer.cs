@@ -488,9 +488,10 @@ namespace ZumbaSoft.Fenetres_Commande
             this.Controls.Add(this.backgroundBlock3);
             this.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "GestionDeLaCommande";
-            this.Text = "Gestion Commande";
+            this.Text = "Gestion d\'une commande";
             ((System.ComponentModel.ISupportInitialize)(this.tableauProd)).EndInit();
             this.backgroundBlock.ResumeLayout(false);
             this.backgroundBlock4.ResumeLayout(false);

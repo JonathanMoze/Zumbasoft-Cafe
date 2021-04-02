@@ -183,8 +183,9 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.Controls.Add(this.listViewProduitsPanier);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HistoriqueVentes";
-            this.Text = "HistoriqueVentes";
+            this.Text = "Historique des ventes";
             this.Load += new System.EventHandler(this.HistoriqueVentes_Load);
             this.backgroundBlock2.ResumeLayout(false);
             this.backgroundBlock2.PerformLayout();

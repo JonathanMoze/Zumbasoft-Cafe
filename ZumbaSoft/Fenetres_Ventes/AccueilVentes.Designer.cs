@@ -83,6 +83,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.buttonContactAdmin = new System.Windows.Forms.Button();
+            this.buttonHistoriqueVente = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -626,6 +627,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(123)))), ((int)(((byte)(123)))));
+            this.panel9.Controls.Add(this.buttonHistoriqueVente);
             this.panel9.Controls.Add(this.panel2);
             this.panel9.Controls.Add(this.panel5);
             this.panel9.Controls.Add(this.labelRuptureStock);
@@ -728,6 +730,19 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.buttonContactAdmin.UseVisualStyleBackColor = false;
             this.buttonContactAdmin.Click += new System.EventHandler(this.buttonContactAdmin_Click);
             // 
+            // buttonHistoriqueVente
+            // 
+            this.buttonHistoriqueVente.BackColor = System.Drawing.Color.Transparent;
+            this.buttonHistoriqueVente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHistoriqueVente.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonHistoriqueVente.Location = new System.Drawing.Point(20, 476);
+            this.buttonHistoriqueVente.Name = "buttonHistoriqueVente";
+            this.buttonHistoriqueVente.Size = new System.Drawing.Size(228, 42);
+            this.buttonHistoriqueVente.TabIndex = 5;
+            this.buttonHistoriqueVente.Text = "Historique des ventes";
+            this.buttonHistoriqueVente.UseVisualStyleBackColor = false;
+            this.buttonHistoriqueVente.Click += new System.EventHandler(this.buttonHistoriqueVente_Click);
+            // 
             // AccueilVente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -742,8 +757,9 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.Controls.Add(this.panel10);
             this.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AccueilVente";
-            this.Text = "AccueilVente";
+            this.Text = "Gestion des ventes";
             this.Load += new System.EventHandler(this.AccueilVentes_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -828,5 +844,6 @@ namespace ZumbaSoft.Fenetres_Ventes
         private System.Windows.Forms.PictureBox anonymousIcon;
         private System.Windows.Forms.Label userSelectionne;
         private System.Windows.Forms.PictureBox userIcon;
+        private System.Windows.Forms.Button buttonHistoriqueVente;
     }
 }

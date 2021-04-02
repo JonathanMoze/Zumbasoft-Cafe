@@ -140,8 +140,9 @@ namespace ZumbaSoft.Fenetres_Produit
             this.Controls.Add(this.textBoxNom);
             this.Controls.Add(this.labelNomMagasin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AjouterGenre";
-            this.Text = "Ajouter un genre";
+            this.Text = "Ajout d\'un genre";
             this.backgroundBlock2.ResumeLayout(false);
             this.backgroundBlock1.ResumeLayout(false);
             this.backgroundBlock1.PerformLayout();

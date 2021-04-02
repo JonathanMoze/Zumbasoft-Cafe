@@ -530,8 +530,9 @@ namespace ZumbaSoft.Fenetres_Produit
             this.Controls.Add(this.backgroundBlock4);
             this.Controls.Add(this.backgroundBlock5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ModifierProduit";
-            this.Text = "ModifierProduit";
+            this.Text = "Modification d\'un produit";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVTTC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownATTC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAHT)).EndInit();

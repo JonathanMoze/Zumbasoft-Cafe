@@ -261,6 +261,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.Controls.Add(this.textBoxComplement);
             this.Controls.Add(this.labelComplement);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NouvelleAdresse";
             this.Text = "Ajout d\'une adresse";
             this.backgroundBlock2.ResumeLayout(false);

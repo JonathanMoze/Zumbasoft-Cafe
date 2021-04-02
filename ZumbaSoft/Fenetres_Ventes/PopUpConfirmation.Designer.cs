@@ -71,8 +71,9 @@ namespace ZumbaSoft.Fenetres_Ventes
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PopUpConfirmation";
-            this.Text = "PopUpConfirmation";
+            this.Text = "Confirmation du panier";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -38,6 +38,9 @@ namespace ZumbaSoft.Fenetres_Produit
             this.buttonSupprimerProduit = new System.Windows.Forms.Button();
             this.listProduits = new System.Windows.Forms.ListBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.anonymousIcon = new System.Windows.Forms.PictureBox();
+            this.userSelectionne = new System.Windows.Forms.Label();
+            this.userIcon = new System.Windows.Forms.PictureBox();
             this.programName = new System.Windows.Forms.Label();
             this.homeIcon = new System.Windows.Forms.PictureBox();
             this.dbERROR = new System.Windows.Forms.PictureBox();
@@ -52,18 +55,15 @@ namespace ZumbaSoft.Fenetres_Produit
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.buttonContactAdmin = new System.Windows.Forms.Button();
-            this.anonymousIcon = new System.Windows.Forms.PictureBox();
-            this.userSelectionne = new System.Windows.Forms.Label();
-            this.userIcon = new System.Windows.Forms.PictureBox();
             this.backgroundBlock.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.anonymousIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.homeIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbERROR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbOK)).BeginInit();
             this.panel5.SuspendLayout();
             this.panelERROR.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.anonymousIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -185,6 +185,44 @@ namespace ZumbaSoft.Fenetres_Produit
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1120, 49);
             this.panel4.TabIndex = 60;
+            // 
+            // anonymousIcon
+            // 
+            this.anonymousIcon.BackColor = System.Drawing.Color.Transparent;
+            this.anonymousIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.anonymousIcon.Image = ((System.Drawing.Image)(resources.GetObject("anonymousIcon.Image")));
+            this.anonymousIcon.Location = new System.Drawing.Point(516, 8);
+            this.anonymousIcon.Name = "anonymousIcon";
+            this.anonymousIcon.Size = new System.Drawing.Size(33, 33);
+            this.anonymousIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.anonymousIcon.TabIndex = 21;
+            this.anonymousIcon.TabStop = false;
+            this.anonymousIcon.Visible = false;
+            // 
+            // userSelectionne
+            // 
+            this.userSelectionne.BackColor = System.Drawing.Color.Transparent;
+            this.userSelectionne.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.userSelectionne.ForeColor = System.Drawing.Color.Snow;
+            this.userSelectionne.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.userSelectionne.Location = new System.Drawing.Point(556, 12);
+            this.userSelectionne.Name = "userSelectionne";
+            this.userSelectionne.Size = new System.Drawing.Size(188, 25);
+            this.userSelectionne.TabIndex = 20;
+            this.userSelectionne.Text = "Non connecté";
+            this.userSelectionne.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // userIcon
+            // 
+            this.userIcon.BackColor = System.Drawing.Color.Transparent;
+            this.userIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.userIcon.Image = ((System.Drawing.Image)(resources.GetObject("userIcon.Image")));
+            this.userIcon.Location = new System.Drawing.Point(515, 8);
+            this.userIcon.Name = "userIcon";
+            this.userIcon.Size = new System.Drawing.Size(33, 33);
+            this.userIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.userIcon.TabIndex = 19;
+            this.userIcon.TabStop = false;
             // 
             // programName
             // 
@@ -370,44 +408,6 @@ namespace ZumbaSoft.Fenetres_Produit
             this.buttonContactAdmin.UseVisualStyleBackColor = false;
             this.buttonContactAdmin.Click += new System.EventHandler(this.buttonContactAdmin_Click);
             // 
-            // anonymousIcon
-            // 
-            this.anonymousIcon.BackColor = System.Drawing.Color.Transparent;
-            this.anonymousIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.anonymousIcon.Image = ((System.Drawing.Image)(resources.GetObject("anonymousIcon.Image")));
-            this.anonymousIcon.Location = new System.Drawing.Point(516, 8);
-            this.anonymousIcon.Name = "anonymousIcon";
-            this.anonymousIcon.Size = new System.Drawing.Size(33, 33);
-            this.anonymousIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.anonymousIcon.TabIndex = 21;
-            this.anonymousIcon.TabStop = false;
-            this.anonymousIcon.Visible = false;
-            // 
-            // userSelectionne
-            // 
-            this.userSelectionne.BackColor = System.Drawing.Color.Transparent;
-            this.userSelectionne.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.userSelectionne.ForeColor = System.Drawing.Color.Snow;
-            this.userSelectionne.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.userSelectionne.Location = new System.Drawing.Point(556, 12);
-            this.userSelectionne.Name = "userSelectionne";
-            this.userSelectionne.Size = new System.Drawing.Size(188, 25);
-            this.userSelectionne.TabIndex = 20;
-            this.userSelectionne.Text = "Non connecté";
-            this.userSelectionne.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // userIcon
-            // 
-            this.userIcon.BackColor = System.Drawing.Color.Transparent;
-            this.userIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.userIcon.Image = ((System.Drawing.Image)(resources.GetObject("userIcon.Image")));
-            this.userIcon.Location = new System.Drawing.Point(515, 8);
-            this.userIcon.Name = "userIcon";
-            this.userIcon.Size = new System.Drawing.Size(33, 33);
-            this.userIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.userIcon.TabIndex = 19;
-            this.userIcon.TabStop = false;
-            // 
             // AccueilProduits
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -422,10 +422,13 @@ namespace ZumbaSoft.Fenetres_Produit
             this.Controls.Add(this.erreurListevide);
             this.Controls.Add(this.listProduits);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AccueilProduits";
             this.Text = "Gestion des produits";
             this.backgroundBlock.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.anonymousIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.homeIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbERROR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbOK)).EndInit();
@@ -433,8 +436,6 @@ namespace ZumbaSoft.Fenetres_Produit
             this.panel5.PerformLayout();
             this.panelERROR.ResumeLayout(false);
             this.panelERROR.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.anonymousIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userIcon)).EndInit();
             this.ResumeLayout(false);
 
         }

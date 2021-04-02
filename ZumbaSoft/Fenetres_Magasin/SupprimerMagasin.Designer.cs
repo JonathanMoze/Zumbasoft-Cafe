@@ -104,7 +104,7 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.backgroundBlock2.Size = new System.Drawing.Size(524, 63);
             this.backgroundBlock2.TabIndex = 14;
             // 
-            // Confirmation
+            // SupprimerMagasin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -116,8 +116,9 @@ namespace ZumbaSoft.Fenetres_Magasin
             this.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "Confirmation";
-            this.Text = "Confirmation de suppression - Magasin";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "SupprimerMagasin";
+            this.Text = "Confirmation de suppression";
             this.backgroundBlock1.ResumeLayout(false);
             this.backgroundBlock1.PerformLayout();
             this.backgroundBlock2.ResumeLayout(false);

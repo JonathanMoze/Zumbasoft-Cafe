@@ -25,6 +25,7 @@ namespace ZumbaSoft.Fenetres_Ventes
             DB = db;
             initChamps();
             TitreNomClient.Text = c.ToString();
+            initItemsColors();
         }
 
         public void initChamps()
@@ -41,7 +42,15 @@ namespace ZumbaSoft.Fenetres_Ventes
             textBoxAdr.PlaceholderText = client.adresse.adresse;
         }
 
-        private void buttonValidModifs_Click(object sender, EventArgs e)
+        public void initItemsColors()
+        {
+            backgroundBlock1.BackColor = Color.FromArgb(50, 12, 12, 12);
+            backgroundBlock2.BackColor = Color.FromArgb(80, 12, 12, 12);
+            buttonAjouter.BackColor = Color.FromArgb(50, 12, 12, 12);
+            buttonAnnuler.BackColor = Color.FromArgb(50, 12, 12, 12);
+        }
+
+        private void buttonValider_Click(object sender, EventArgs e)
         {
             if (textBoxNom.Text != "")
             {
@@ -68,10 +77,6 @@ namespace ZumbaSoft.Fenetres_Ventes
                 textBoxMail.Text = "";
             }
 
-        }
-
-        private void buttonValider_Click(object sender, EventArgs e)
-        {
             client.nom = textBoxNom.PlaceholderText;
             client.prenom = textBoxPrenom.PlaceholderText;
             client.telephone = textBoxTel.PlaceholderText;

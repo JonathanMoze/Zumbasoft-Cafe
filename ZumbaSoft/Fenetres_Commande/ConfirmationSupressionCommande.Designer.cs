@@ -122,9 +122,10 @@ namespace ZumbaSoft.Fenetres_Commande
             this.Controls.Add(this.backgroundBlock2);
             this.Controls.Add(this.labelTexte);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ConfirmationSupressionCommande";
-            this.Text = "ConfirmationSupressionCommande";
+            this.Text = "Confirmation de supression";
             this.backgroundBlock1.ResumeLayout(false);
             this.backgroundBlock1.PerformLayout();
             this.backgroundBlock2.ResumeLayout(false);

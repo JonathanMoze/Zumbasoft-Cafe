@@ -386,5 +386,15 @@ namespace ZumbaSoft.Fenetres_Ventes
             DialogResult = DialogResult.OK;
             this.Close();
         }
+
+        private void buttonHistoriqueVente_Click(object sender, EventArgs e)
+        {
+            HistoriqueVentes h = new HistoriqueVentes(DB);
+            this.Visible = false;
+            if (h.ShowDialog() == DialogResult.OK)
+            {
+                this.Visible = true;
+            }
+        }
     }
 }

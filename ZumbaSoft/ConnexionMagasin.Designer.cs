@@ -230,8 +230,9 @@ namespace ZumbaSoft
             this.Controls.Add(this.backgroundBlock);
             this.Controls.Add(this.labelErreur);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ConnexionMagasin";
-            this.Text = "ConnexionMagasin";
+            this.Text = "ZumbaSoft";
             this.backgroundBlock.ResumeLayout(false);
             this.backgroundBlock.PerformLayout();
             this.ResumeLayout(false);

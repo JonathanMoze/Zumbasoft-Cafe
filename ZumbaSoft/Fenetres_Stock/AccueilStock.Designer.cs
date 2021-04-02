@@ -745,8 +745,9 @@ namespace ZumbaSoft.Fenetres_Stock
             this.Controls.Add(this.panel2);
             this.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AccueilStock";
-            this.Text = "Gestion des Stocks";
+            this.Text = "Gestion des stocks";
             ((System.ComponentModel.ISupportInitialize)(this.tableauCommandes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableauStock)).EndInit();
             this.panel4.ResumeLayout(false);

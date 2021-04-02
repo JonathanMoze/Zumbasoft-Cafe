@@ -529,6 +529,7 @@ namespace ZumbaSoft.Fenetres_Roles
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Roles";
             this.Text = "Gestion des rôles";
             this.panel1.ResumeLayout(false);
