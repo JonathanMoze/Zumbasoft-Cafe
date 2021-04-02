@@ -74,6 +74,7 @@ namespace ZumbaSoft.Fenetres_Identification
             this.passwordField.Location = new System.Drawing.Point(166, 237);
             this.passwordField.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.passwordField.Name = "passwordField";
+            this.passwordField.PasswordChar = '•';
             this.passwordField.Size = new System.Drawing.Size(151, 27);
             this.passwordField.TabIndex = 2;
             // 

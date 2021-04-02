@@ -85,6 +85,7 @@ namespace ZumbaSoft
             this.textBoxMdp.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.textBoxMdp.Location = new System.Drawing.Point(221, 71);
             this.textBoxMdp.Name = "textBoxMdp";
+            this.textBoxMdp.PasswordChar = '•';
             this.textBoxMdp.Size = new System.Drawing.Size(195, 27);
             this.textBoxMdp.TabIndex = 4;
             // 

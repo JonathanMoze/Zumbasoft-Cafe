@@ -66,6 +66,7 @@ namespace ZumbaSoft.Fenetres_Identification
             // textBoxLogin
             // 
             this.textBoxLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
+            this.textBoxLogin.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.textBoxLogin.Location = new System.Drawing.Point(155, 120);
             this.textBoxLogin.Name = "textBoxLogin";
             this.textBoxLogin.Size = new System.Drawing.Size(125, 27);
@@ -86,8 +87,10 @@ namespace ZumbaSoft.Fenetres_Identification
             // textBoxPassword
             // 
             this.textBoxPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
+            this.textBoxPassword.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.textBoxPassword.Location = new System.Drawing.Point(155, 162);
             this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.PasswordChar = '•';
             this.textBoxPassword.Size = new System.Drawing.Size(125, 27);
             this.textBoxPassword.TabIndex = 52;
             // 
@@ -106,6 +109,7 @@ namespace ZumbaSoft.Fenetres_Identification
             // comboBoxRole
             // 
             this.comboBoxRole.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(58)))));
+            this.comboBoxRole.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.comboBoxRole.FormattingEnabled = true;
             this.comboBoxRole.Location = new System.Drawing.Point(155, 201);
             this.comboBoxRole.Name = "comboBoxRole";
