@@ -32,6 +32,15 @@ namespace ZumbaSoft
             initItemsColors();
         }
 
+
+        public Accueil()
+        {
+            InitializeComponent();
+            db = InitializeDataBase();
+            magasin = null;
+            initItemsColors();
+        }
+
         public void initItemsColors()
         {
             backgroundBlock.BackColor = Color.FromArgb(99, 1, 1, 1);

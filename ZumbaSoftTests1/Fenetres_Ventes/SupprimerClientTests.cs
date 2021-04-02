@@ -53,7 +53,7 @@ namespace ZumbaSoft.Fenetres_Ventes.Tests
             c1.prenom = "Test";
             db.InsertWithChildren(c1);
 
-            AccueilClient c = new AccueilClient(db, client);
+            AccueilClient c = new AccueilClient(db);
             c.initListClient();
 
             Assert.IsTrue(c.listClient.Items.Count == 1);

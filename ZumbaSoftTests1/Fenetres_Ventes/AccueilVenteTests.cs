@@ -61,7 +61,7 @@ namespace ZumbaSoft.Fenetres_Ventes.Tests
             db.InsertWithChildren(c1);
             db.InsertWithChildren(c2);
 
-            AccueilVente c = new AccueilVente(db,m);
+            AccueilVente c = new AccueilVente(db,m, null);
             c.initListClients();
 
             Assert.IsTrue(c.listBox1RechercheClient.Items.Count == 2);
@@ -90,7 +90,7 @@ namespace ZumbaSoft.Fenetres_Ventes.Tests
             p.quantite = 6;
 
 
-            AccueilVente c = new AccueilVente(db, m);
+            AccueilVente c = new AccueilVente(db, m, null);
 
             c.panierClient.produits.Add(p);
 
@@ -118,7 +118,7 @@ namespace ZumbaSoft.Fenetres_Ventes.Tests
             p.quantite = 6;
 
 
-            AccueilVente c = new AccueilVente(db, m);
+            AccueilVente c = new AccueilVente(db, m, null);
 
             c.panierClient.produits.Add(p);
 

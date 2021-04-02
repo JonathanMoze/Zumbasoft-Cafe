@@ -58,7 +58,7 @@ namespace ZumbaSoft.Fenetres_Roles.Tests
             db.InsertWithChildren(r1);
             db.InsertWithChildren(r2);
 
-            Roles r = new Roles(db);
+            Roles r = new Roles(db, null);
             r.initListRoles();
 
             Assert.IsTrue(r.choixRoles.Items.Count == 2);
@@ -75,7 +75,7 @@ namespace ZumbaSoft.Fenetres_Roles.Tests
         public void ajouterRoles_ClickTest()
         {
             db.DeleteAll<Role>();
-            Roles r = new Roles(db);
+            Roles r = new Roles(db, null);
 
             r.nomRole.Text = "Directeur";
             r.ajouterRoles_Click(null, null);
@@ -94,7 +94,7 @@ namespace ZumbaSoft.Fenetres_Roles.Tests
             r1.nom = "vendeur";
             db.InsertWithChildren(r1);
 
-            Roles r = new Roles(db);
+            Roles r = new Roles(db, null);
             r.initListRoles();
 
             Assert.IsTrue(r.choixRoles.Items.Count == 1);
